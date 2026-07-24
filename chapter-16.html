@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>16 · Foundations of Long/Short Portfolio Management 1a — The Macro Playbook — The Top-Down Macro Read</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="rail" id="rail">
+    <div class="rail__brand">The Macro Playbook</div>
+    <a href="index.html" style="text-decoration:none;color:inherit">
+      <div class="rail__title">The Top-Down<br>Macro Read</div>
+    </a>
+    <div class="rail__sub">Anton Kreil · PTM 2.0 · videos 1–15, distilled</div>
+    <button class="rail__toggle" onclick="document.getElementById('rail').classList.toggle('open')">Chapters ▾</button>
+    <ul class="rail__nav">
+      
+      <li><a href="chapter-01.html"
+             class="">
+        <span class="rn">01</span>
+        <span class="rt">The Framework<small>The framework</small></span>
+      </a></li>
+      
+      <li><a href="chapter-02.html"
+             class="">
+        <span class="rn">02</span>
+        <span class="rt">The Field of Play: Bull &amp; Bear Markets<small>Field of play</small></span>
+      </a></li>
+      
+      <li><a href="chapter-03.html"
+             class="">
+        <span class="rn">03</span>
+        <span class="rt">Gross Domestic Product<small>GDP</small></span>
+      </a></li>
+      
+      <li><a href="chapter-04.html"
+             class="">
+        <span class="rn">04</span>
+        <span class="rt">Leading Indicators 1: Real Interest Rates &amp; the Yield Curve<small>Rates · yield curve</small></span>
+      </a></li>
+      
+      <li><a href="chapter-05.html"
+             class="">
+        <span class="rn">05</span>
+        <span class="rt">Corporate Bonds &amp; Credit Spreads<small>Credit spreads</small></span>
+      </a></li>
+      
+      <li><a href="chapter-06.html"
+             class="">
+        <span class="rn">06</span>
+        <span class="rt">M2 Money Supply: The Accessory Leading Indicator<small>M2 money supply</small></span>
+      </a></li>
+      
+      <li><a href="chapter-07.html"
+             class="">
+        <span class="rn">07</span>
+        <span class="rt">The ISM Manufacturing PMI<small>ISM manufacturing</small></span>
+      </a></li>
+      
+      <li><a href="chapter-08.html"
+             class="">
+        <span class="rn">08</span>
+        <span class="rt">The ISM Non-Manufacturing Report on Business (Services PMI)<small>ISM services</small></span>
+      </a></li>
+      
+      <li><a href="chapter-09.html"
+             class="">
+        <span class="rn">09</span>
+        <span class="rt">Consumer Sentiment<small>UMich sentiment</small></span>
+      </a></li>
+      
+      <li><a href="chapter-10.html"
+             class="">
+        <span class="rn">10</span>
+        <span class="rt">Building Permits: The Housing Leading Indicator<small>Housing · permits</small></span>
+      </a></li>
+      
+      <li><a href="chapter-11.html"
+             class="">
+        <span class="rn">11</span>
+        <span class="rt">NFIB Small Business Optimism Index<small>NFIB small biz</small></span>
+      </a></li>
+      
+      <li><a href="chapter-12.html"
+             class="">
+        <span class="rn">12</span>
+        <span class="rt">Cyclical Commodities as a Leading Indicator<small>Cyclical commodities</small></span>
+      </a></li>
+      
+      <li><a href="chapter-13.html"
+             class="">
+        <span class="rn">13</span>
+        <span class="rt">European Economic Sentiment Indicator (ESI)<small>Europe · ESI</small></span>
+      </a></li>
+      
+      <li><a href="chapter-14.html"
+             class="">
+        <span class="rn">14</span>
+        <span class="rt">China Leading Indicators: Official vs Caixin PMI and Real Rates<small>China · Caixin</small></span>
+      </a></li>
+      
+      <li><a href="chapter-15.html"
+             class="">
+        <span class="rn">15</span>
+        <span class="rt">Recap: Bringing the Leading Indicators Together<small>Recap · coincident</small></span>
+      </a></li>
+      
+      <li><a href="chapter-16.html"
+             class="is-active">
+        <span class="rn">16</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 1a<small>From the macro bias to</small></span>
+      </a></li>
+      
+      <li><a href="chapter-17.html"
+             class="">
+        <span class="rn">17</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 1b<small>Portfolio modelling in</small></span>
+      </a></li>
+      
+      <li><a href="chapter-18.html"
+             class="">
+        <span class="rn">18</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 2<small>Portfolio volatility f</small></span>
+      </a></li>
+      
+      <li><a href="chapter-19.html"
+             class="">
+        <span class="rn">19</span>
+        <span class="rt">Foundations of Long Short Portfolio Management 3<small>Portfolio correlation </small></span>
+      </a></li>
+      
+    </ul>
+    <div class="rail__foot">
+      Distilled from slides + transcript.<br>
+      Every number grounded in the lesson.<br>
+      Not affiliated with ITPM / A. Kreil.
+    </div>
+  </nav>
+  <main class="main">
+    
+<div class="wrap">
+  <header class="hero">
+    <div class="hero__num reveal">Chapter 16 · Leading Indicator · Video 16</div>
+    <h1 class="reveal d1">Foundations of Long/Short Portfolio Management 1a</h1>
+    <p class="hero__sub reveal d1">From the macro bias to WHAT to be long and short — the GDP -&gt; Market -&gt; Sector -&gt; Stock drill-down, GICS classification, spread/ratio trades, and consciously choosing your risk</p>
+    <p class="hero__lead reveal d2">The macro leading-indicator work only set a Long/Short/Neutral bias; this lesson extends the quantitative process to pick the actual longs and shorts — drilling top-down through GICS sectors to the best +++ longs and --- shorts, understanding a portfolio as one big spread trade, and choosing the risk layer (Index / CSS / CSCS / ISCS) each position carries.</p>
+    <div class="hero__chips reveal d3">
+      <span class="chip chip--signal"><span class="dot"></span>Macro sets the bias; now drill top-down to pick longs and shorts.</span>
+      <span class="chip"><b>11</b>&nbsp;min read</span>
+      <span class="chip"><b>22</b>&nbsp;slides</span>
+    </div>
+  </header>
+
+  
+  <section class="gist reveal">
+    <h2>The gist</h2>
+    <ul><li>The top-down macro / leading-indicator work is done: it gave us a Long / Short / Neutral portfolio bias and a lean on which equity sectors to be long and short. This lesson extends the quantitative process to identify WHAT to be long and short (cash equities, not options).</li><li>There is no rule book — only best practices. Trading is a &#39;scientific art&#39;: play probabilities, position for the most likely outcome, and re-shape a stale portfolio when the macro view changes (a rigorous discovery process does NOT mean dogmatic positions).</li><li>&#39;Go where the juice is&#39;: drill GDP -&gt; Market -&gt; Sector -&gt; Stock. The best long is a stock that beats the market, its sector AND the other stocks in it (coded +++); the best short underperforms on all three (---). Everything else is un-optimized.</li><li>GICS gives the map: 11 sectors, 24 industry groups, 69 industries, 158 sub-industries. Anton overlays a Cyclical / Defensive descriptor at the industry level — 41 Cyclical (59%), 22 Defensive (32%), 6 Both/undetermined (9%).</li><li>A spread trade = long Stock A, short Stock B, measured two ways: A - B (spread) or A / B (ratio). Convention: the LONG is written first (minuend / numerator), the SHORT is subtracted / is the denominator, so a chart rising left-to-right means the long outperformed.</li><li>A 10-stock, 5-long / 5-short portfolio IS by definition one big spread trade. You consciously CHOOSE the level of risk by trade type: Index (Market+Sector+Stock, Low return), CSS, CSCS (Very High), ISCS (High) — don&#39;t over-use ISCS or you strip too much risk and fall below market returns.</li></ul>
+  </section>
+  
+
+  
+  <section class="section" id="s1">
+    <div class="section__k">01 / 9</div>
+    <h3>Where we are: the Pro-Trader Systematic Process</h3>
+    
+    <ul class="points"><li>The framework splits into THEORY (the work) and IMPLEMENTATION (real-money positions), underpinned by a Quantitative and a Qualitative Process.</li><li>Flow: Fundamentals (MOST IMPORTANT; PTM+PFTM+self work) -&gt; Timing (Technicals; only basics required) -&gt; Trade Structure (Catalysts; POTM+real-money experience) -&gt; Risk Management (Live Portfolio; &#39;Stay in Motion!&#39;).</li><li>The loop closes on Trader Metrics / Track Record, where statistical significance occurs over 100-150 trades / 12-18 months.</li><li>Theory input = Volatility / Opportunity Set (the IPLT series); Implementation is driven by Real-Money Trading (Institute Trader Mentoring Program / Self Trading).</li></ul>
+    
+    <p class="explain">Anton re-draws the master picture to locate exactly where the course now sits: the theory&#39;s quantitative macro leg is done, so the next step is extending the quantitative process to select the specific longs and shorts.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-16/00-01-40.jpg" alt="Slide: Where we are: the Pro-Trader Systematic Process">
+      <figcaption>Slide · 00:01:40</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s2">
+    <div class="section__k">02 / 9</div>
+    <h3>Extending the quantitative process to pick stocks</h3>
+    
+    <ul class="points"><li>The macro top-down leading indicators gave us (a) whether the portfolio bias should be Long / Short / Neutral and (b) which equity SECTORS to lean long and short, based on our read of the business cycle.</li><li>ISM Manufacturing, ISM non-Manufacturing and the European Sentiment Indicator flag areas of interest for further work on growth trends and qualitative statements.</li><li>The next stage extends the Quantitative Process to identify WHAT to be long and short given the aggregate portfolio bias.</li><li>Focus throughout: selecting stocks as cash-equity positions (not equity options). Options are covered in the POTM series; you will later be shown where options fit into Long/Short Portfolio Management.</li></ul>
+    
+    
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-16/00-04-30.jpg" alt="Slide: Extending the quantitative process to pick stocks">
+      <figcaption>Slide · 00:04:30</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s3">
+    <div class="section__k">03 / 9</div>
+    <h3>There is no rule book</h3>
+    
+    <ul class="points"><li>There are no hard-and-fast rules in trading, only best practices. Trading is not a science nor an art — it is a &#39;scientific art&#39;.</li><li>The best we can do is play probabilities and position for the most likely outcome, which may or may not happen.</li><li>Worked scenario: a 10-stock portfolio with 6 longs / 4 shorts, long 6x Cyclical stocks and short 4x Defensive stocks — then your leading indicators forecast GDP growth to slide.</li><li>Doing nothing would be stupid: the world has changed and the positions are now stale. Best practice is to reshape the book and add more quality SHORT ideas to change its dynamic.</li><li>A rigorous, systematic idea-generation process does NOT mean dogmatic positions — once ideas become live positions you stay flexible.</li></ul>
+    
+    
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-16/00-12-40.jpg" alt="Slide: There is no rule book">
+      <figcaption>Slide · 00:12:40</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s4">
+    <div class="section__k">04 / 9</div>
+    <h3>Go where the juice is: GDP -&gt; Market -&gt; Sector -&gt; Stock</h3>
+    
+    <ul class="points"><li>The discovery phase is a left-to-right decision tree: GDP -&gt; Market (+/-) -&gt; Sector (++ / +- / -+ / --) -&gt; Stocks (a three-sign code).</li><li>Each sign is that item&#39;s performance vs the level above it. The best LONG beats the market, beats its sector AND beats the other stocks in the sector -&gt; coded +++ (circled).</li><li>The best SHORT underperforms the market, its sector AND the other stocks in it -&gt; coded --- (circled).</li><li>Everything yellow is un-optimized: ++- = right sector but wrong stock (lagged its peers); --+ = right short sector/market call but the least-bad (wrong) stock.</li><li>For longs: be in sectors leading the market, long stocks leading the sector. For shorts: sectors lagging the market, short the stocks falling most. Stocks act as the proxy for the sector — no actual sector-product positions needed at this stage.</li></ul>
+    
+    <p class="explain">Because the mandate is absolute return, we want outsized gains, so we drill past the index and optimize at every level — &#39;go where the juice is.&#39;</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-16/00-19-45.jpg" alt="Slide: Go where the juice is: GDP -&gt; Market -&gt; Sector -&gt; Stock">
+      <figcaption>Slide · 00:19:45</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s5">
+    <div class="section__k">05 / 9</div>
+    <h3>GICS: the classification map</h3>
+    
+    <ul class="points"><li>The Global Industry Classification Standard (MSCI / S&amp;P Dow Jones) is a pyramid: GICS -&gt; 11 SECTORS -&gt; 24 INDUSTRY GROUPS -&gt; 69 INDUSTRIES -&gt; 158 SUB-INDUSTRIES.</li><li>The 11 sectors: Energy, Materials, Industrials, Consumer Discretionary, Consumer Staples, Health Care, Financials, Information Technology, Communication Services, Utilities, Real Estate.</li><li>Each company is assigned a SINGLE GICS classification at the sub-industry level by its principal business activity; MSCI/S&amp;P use Revenues as the key factor.</li><li>For traders/PMs, industry classification is the best tool for drilling top-down and analysing bottom-up which stocks to lean long/short — the discovery phase of trade-idea generation. NAICS or other systems can also be used.</li><li>There will ALWAYS be some errors or misclassifications of stocks.</li></ul>
+    
+    
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-16/00-28-00.jpg" alt="Slide: GICS: the classification map">
+      <figcaption>Slide · 00:28:00</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s6">
+    <div class="section__k">06 / 9</div>
+    <h3>Overlaying Cyclical vs Defensive descriptors</h3>
+    
+    <ul class="points"><li>Anton overlays a Cyclical / Defensive descriptor onto the 69 GICS industries in a spreadsheet (checking the 158 sub-industries where an industry is ambiguous).</li><li>Result: Cyclicals 41 (59%), Defensives 22 (32%), Both/undetermined 6 (9%) — 69 industries = 100%.</li><li>The 6 undetermined industries must be resolved by looking at the sub-industries and the individual stocks; overlaying a Cyclical/Defensive label on any classification always runs into this. It comes down to common sense and attention to detail.</li><li>GICS has an annual review and is always changing, so spreadsheets must be updated regularly. A defensive stock can also get lumped into a cyclical sector — the classification is subjective, derived from how a company makes its money.</li><li>Later in the PTM the same descriptors will be assigned to NAICS data yourself.</li></ul>
+    
+    <p class="explain">The classification is a prism/lens through which to view the market and optimize efficient returns — not a rulebook. With a net-long bias to be long Cyclicals, the goal is the RIGHT cyclicals (good stocks for that moment), while shorting bad cyclicals and/or bad defensives, and even being long some good defensives. First identify all companies with good fundamentals (potential longs) and bad fundamentals (potential shorts) — the positive and negative outliers in each sector — and run an inventory of ideas.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-16/00-31-45.jpg" alt="Slide: Overlaying Cyclical vs Defensive descriptors">
+      <figcaption>Slide · 00:31:45</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s7">
+    <div class="section__k">07 / 9</div>
+    <h3>Spread and ratio trades</h3>
+    
+    <ul class="points"><li>A spread trade = long one stock (A) and short another (B). The relationship is computed two ways: (1) A - B (a spread trade), or (2) A / B (a ratio trade). Both are loosely called &#39;spread trades&#39; in vernacular.</li><li>Convention: the stock you want to go LONG is written first (minuend / numerator); the stock you want to SHORT is subtracted / is the denominator. So a chart rising left-to-right means the long outperformed the short.</li><li>Worked example — CHWY Chewy (buy, online pet-supply retailer) vs TSN Tyson Foods (sell, meat distributor), since Chewy&#39;s IPO in June 2019: Spread = $82.87 - $72.71 = $10.16; Ratio = $82.87 / $72.71 = 1.1397.</li><li>Bloomberg ratio panel: Last 1.1397, Mean 0.7272, Off-Avg 0.4126, Median 0.6863, StDev 0.4166, ~0.99 StDev from mean, 84.2 percentile, High 1.8104 (12 Feb 2021), Low 0.2459 (18 Nov 2019) — a stretched, mean-reversion read.</li><li>% performance (equal weight, minus method): CHWY = ($76.33 - $22)/$22 x 100 = 247%; TSN = ($73.69 - $62.76)/$62.76 x 100 = 17.4%; CHWY outperformed TSN by 247% - 17.4% = 229.6%.</li></ul>
+    
+    <p class="explain">The point is the concept of performance — one stock (or basket) outperforming another — which is the mechanism for understanding how a whole long/short portfolio works.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-16/00-51-35.jpg" alt="Slide: Spread and ratio trades">
+      <figcaption>Slide · 00:51:35</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s8">
+    <div class="section__k">08 / 9</div>
+    <h3>Choosing the level of risk: Index / CSS / CSCS / ISCS</h3>
+    
+    <ul class="points"><li>The market decomposes into three risk layers: Market risk (macro/GDP, moves the whole market), Sector risk (a dynamic hitting one sector), and Stock / unique risk (specific to one company). The implied market risk of the S&amp;P 500 at any time is the VIX.</li><li>Long/Short the Index (Market): carries Market + Sector + Stock risk -&gt; LOW return.</li><li>CSS (Cross Sector Spread): long one sector vs short another (sector ETFs) -&gt; no market risk; keeps Sector + Stock -&gt; AVERAGE return.</li><li>CSCS (Cross Sector Constituent Spread): long a stock in one sector vs short a stock in a DIFFERENT sector -&gt; no market risk; keeps Sector + Stock -&gt; VERY HIGH return.</li><li>ISCS (Intra Sector Constituent Spread): long and short two stocks in the SAME sector -&gt; no market and no sector risk; isolates Stock risk -&gt; HIGH return.</li><li>Rule: don&#39;t fill the book with too many ISCS trades — they eliminate too much risk and can drop portfolio risk BELOW market risk, cutting expected returns. Keep a good amount of volatile cross-sector spreads (accept some sector risk) and take a portfolio bias (accept some market risk). Risk elimination assumes correct beta / correlation (beta-hedged) weightings.</li></ul>
+    
+    <p class="explain">We want to make money whether the index rises or falls and do NOT benchmark against index performance — and if the market is up in a quarter we aim to make a lot more than simply being long the index would have paid.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-16/01-14-45.jpg" alt="Slide: Choosing the level of risk: Index / CSS / CSCS / ISCS">
+      <figcaption>Slide · 01:14:45</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s9">
+    <div class="section__k">09 / 9</div>
+    <h3>The whole portfolio IS one big spread trade</h3>
+    
+    <ul class="points"><li>A portfolio of, say, 10 stocks with 5x equally-weighted longs and shorts is by definition one big &#39;spread&#39; trade.</li><li>Stocks Long (1+2+3+4+5) - Stocks Short (6+7+8+9+10) = Portfolio Performance &amp; Value (indexed to 100). Or Longs / Shorts = longs expressed as a % of shorts.</li><li>You make money if all longs rise and all shorts rise less; or if all shorts fall and all longs fall less.</li><li>The key: you have CHOSEN the level of RISK (portfolio volatility) and correlation you want.</li><li>Ideal world = all longs up, all shorts down; that is what to seek when generating ideas. In reality shorts will sometimes rise with longs and longs fall with shorts — minimise the impact, but never put on a short EXPECTING it to rise with a corresponding long (that would be a hedge).</li></ul>
+    
+    
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-16/01-19-10.jpg" alt="Slide: The whole portfolio IS one big spread trade">
+      <figcaption>Slide · 01:19:10</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+
+  
+  <section class="section">
+    <div class="section__k">Reference</div>
+    <h3>Glossary</h3>
+    <ul class="glossary">
+      
+      <li><span class="term">GICS</span><div class="def">Global Industry Classification Standard (MSCI / S&amp;P Dow Jones): 11 sectors, 24 industry groups, 69 industries, 158 sub-industries. Each company gets one classification at the sub-industry level by principal business activity (Revenues as key factor).</div></li>
+      
+      <li><span class="term">Cyclical / Defensive descriptor</span><div class="def">A label Anton overlays on the 69 GICS industries: 41 Cyclical (59%), 22 Defensive (32%), 6 Both/undetermined (9%). Subjective, annually reviewed, resolved for ambiguous cases at the sub-industry / stock level.</div></li>
+      
+      <li><span class="term">Go where the juice is</span><div class="def">The GDP -&gt; Market -&gt; Sector -&gt; Stock top-down funnel. Best long = a stock beating the market, its sector and its peers (+++); best short = one losing on all three (---); anything else is un-optimized.</div></li>
+      
+      <li><span class="term">Spread trade</span><div class="def">Long Stock A, short Stock B, computed as A - B. Convention: the long is written first (minuend); a chart rising left-to-right = the long outperformed.</div></li>
+      
+      <li><span class="term">Ratio trade</span><div class="def">The same pair computed as A / B (long = numerator, short = denominator). A directional out/under-performance gauge; both A-B and A/B are loosely called &#39;spread trades&#39;.</div></li>
+      
+      <li><span class="term">Market / Sector / Stock (unique) risk</span><div class="def">The three risk layers of the market: macro/GDP-driven market risk, a dynamic hitting one sector, and company-specific stock risk. The VIX is the implied market risk of the S&amp;P 500.</div></li>
+      
+      <li><span class="term">CSS</span><div class="def">Cross Sector Spread: long one sector vs short another (sector ETFs). Beta-hedged -&gt; no market risk; keeps sector + stock risk -&gt; Average return.</div></li>
+      
+      <li><span class="term">CSCS</span><div class="def">Cross Sector Constituent Spread: long a stock in one sector vs short a stock in a different sector. No market risk; keeps sector + stock risk -&gt; Very High return.</div></li>
+      
+      <li><span class="term">ISCS</span><div class="def">Intra Sector Constituent Spread: long and short two stocks in the same sector. No market and no sector risk; isolates stock risk -&gt; High return. Don&#39;t over-use it or you fall below market returns.</div></li>
+      
+      <li><span class="term">Scientific art</span><div class="def">Anton&#39;s framing of trading: neither pure science nor pure art. There is no rule book — you play probabilities and position for the most likely outcome.</div></li>
+      
+    </ul>
+  </section>
+  
+
+  <nav class="pager">
+    
+    <a class="prev" href="chapter-15.html">
+      <small>← 15 Previous</small><span>Recap: Bringing the Leading Indicators Together</span></a>
+    
+    
+    <a class="next" href="chapter-17.html">
+      <small>17 Next →</small><span>Foundations of Long/Short Portfolio Management 1b</span></a>
+    
+  </nav>
+</div>
+
+  </main>
+</div>
+</body>
+</html>
