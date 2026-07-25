@@ -220,3 +220,8 @@ a:focus-visible, .node:focus-visible { outline: 2.5px solid var(--brass); outlin
   .masthead { padding: 52px 0 20px; }
   body { font-size: 17px; }
 }
+
+/* per-course tag on the index spine + nav (ITPL Foundations vs PTM 2.0) */
+.node__course{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:.62rem;
+  letter-spacing:.08em;text-transform:uppercase;color:#B8802B;opacity:.85;margin-right:.55rem;
+  vertical-align:middle;font-weight:600;}
