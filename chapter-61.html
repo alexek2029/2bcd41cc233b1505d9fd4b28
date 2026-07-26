@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>POTM Options 07 · Naked Short Puts — The Macro Playbook — The Top-Down Macro Read</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="rail" id="rail">
+    <div class="rail__brand">The Macro Playbook</div>
+    <a href="index.html" style="text-decoration:none;color:inherit">
+      <div class="rail__title">The Top-Down<br>Macro Read</div>
+    </a>
+    <div class="rail__sub">Anton Kreil · ITPL Foundations + PTM 2.0, distilled</div>
+    <button class="rail__toggle" onclick="document.getElementById('rail').classList.toggle('open')">Chapters ▾</button>
+    <ul class="rail__nav">
+      
+      <li><a href="chapter-01.html"
+             class="">
+        <span class="rn">A</span>
+        <span class="rt">Professional Traders vs Retail Traders 101<small>Foundations · What a professional tr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-02.html"
+             class="">
+        <span class="rn">B</span>
+        <span class="rt">Professional Traders vs Retail Traders 102<small>Foundations · Alpha vs absolute retu</small></span>
+      </a></li>
+      
+      <li><a href="chapter-03.html"
+             class="">
+        <span class="rn">C</span>
+        <span class="rt">Realized Volatility 1<small>Foundations · Measuring an instrumen</small></span>
+      </a></li>
+      
+      <li><a href="chapter-04.html"
+             class="">
+        <span class="rn">D</span>
+        <span class="rt">Realized Volatility 2<small>Foundations · The spreadsheet class:</small></span>
+      </a></li>
+      
+      <li><a href="chapter-05.html"
+             class="">
+        <span class="rn">E</span>
+        <span class="rt">Realized Volatility 3<small>Foundations · Average True Range Per</small></span>
+      </a></li>
+      
+      <li><a href="chapter-06.html"
+             class="">
+        <span class="rn">F</span>
+        <span class="rt">Implied Volatility 1<small>Foundations · The VIX as the market&#39;</small></span>
+      </a></li>
+      
+      <li><a href="chapter-07.html"
+             class="">
+        <span class="rn">G</span>
+        <span class="rt">Implied Volatility 2<small>Foundations · Solving for an option&#39;</small></span>
+      </a></li>
+      
+      <li><a href="chapter-08.html"
+             class="">
+        <span class="rn">H</span>
+        <span class="rt">Portfolio Volatility 1<small>Foundations · The concepts of whole-</small></span>
+      </a></li>
+      
+      <li><a href="chapter-09.html"
+             class="">
+        <span class="rn">I</span>
+        <span class="rt">Portfolio Volatility 2<small>Foundations · Calculating a portfoli</small></span>
+      </a></li>
+      
+      <li><a href="chapter-10.html"
+             class="">
+        <span class="rn">J</span>
+        <span class="rt">Becoming a Professional Level Trader<small>Foundations · The IPLT capstone — ho</small></span>
+      </a></li>
+      
+      <li><a href="chapter-11.html"
+             class="">
+        <span class="rn">01</span>
+        <span class="rt">The Framework<small>PTM 2.0 · The framework</small></span>
+      </a></li>
+      
+      <li><a href="chapter-12.html"
+             class="">
+        <span class="rn">02</span>
+        <span class="rt">The Field of Play: Bull &amp; Bear Markets<small>PTM 2.0 · Field of play</small></span>
+      </a></li>
+      
+      <li><a href="chapter-13.html"
+             class="">
+        <span class="rn">03</span>
+        <span class="rt">Gross Domestic Product<small>PTM 2.0 · GDP</small></span>
+      </a></li>
+      
+      <li><a href="chapter-14.html"
+             class="">
+        <span class="rn">04</span>
+        <span class="rt">Leading Indicators 1: Real Interest Rates &amp; the Yield Curve<small>PTM 2.0 · Rates · yield curve</small></span>
+      </a></li>
+      
+      <li><a href="chapter-15.html"
+             class="">
+        <span class="rn">05</span>
+        <span class="rt">Corporate Bonds &amp; Credit Spreads<small>PTM 2.0 · Credit spreads</small></span>
+      </a></li>
+      
+      <li><a href="chapter-16.html"
+             class="">
+        <span class="rn">06</span>
+        <span class="rt">M2 Money Supply: The Accessory Leading Indicator<small>PTM 2.0 · M2 money supply</small></span>
+      </a></li>
+      
+      <li><a href="chapter-17.html"
+             class="">
+        <span class="rn">07</span>
+        <span class="rt">The ISM Manufacturing PMI<small>PTM 2.0 · ISM manufacturing</small></span>
+      </a></li>
+      
+      <li><a href="chapter-18.html"
+             class="">
+        <span class="rn">08</span>
+        <span class="rt">The ISM Non-Manufacturing Report on Business (Services PMI)<small>PTM 2.0 · ISM services</small></span>
+      </a></li>
+      
+      <li><a href="chapter-19.html"
+             class="">
+        <span class="rn">09</span>
+        <span class="rt">Consumer Sentiment<small>PTM 2.0 · UMich sentiment</small></span>
+      </a></li>
+      
+      <li><a href="chapter-20.html"
+             class="">
+        <span class="rn">10</span>
+        <span class="rt">Building Permits: The Housing Leading Indicator<small>PTM 2.0 · Housing · permits</small></span>
+      </a></li>
+      
+      <li><a href="chapter-21.html"
+             class="">
+        <span class="rn">11</span>
+        <span class="rt">NFIB Small Business Optimism Index<small>PTM 2.0 · NFIB small biz</small></span>
+      </a></li>
+      
+      <li><a href="chapter-22.html"
+             class="">
+        <span class="rn">12</span>
+        <span class="rt">Cyclical Commodities as a Leading Indicator<small>PTM 2.0 · Cyclical commodities</small></span>
+      </a></li>
+      
+      <li><a href="chapter-23.html"
+             class="">
+        <span class="rn">13</span>
+        <span class="rt">European Economic Sentiment Indicator (ESI)<small>PTM 2.0 · Europe · ESI</small></span>
+      </a></li>
+      
+      <li><a href="chapter-24.html"
+             class="">
+        <span class="rn">14</span>
+        <span class="rt">China Leading Indicators: Official vs Caixin PMI and Real Rates<small>PTM 2.0 · China · Caixin</small></span>
+      </a></li>
+      
+      <li><a href="chapter-25.html"
+             class="">
+        <span class="rn">15</span>
+        <span class="rt">Recap: Bringing the Leading Indicators Together<small>PTM 2.0 · Recap · coincident</small></span>
+      </a></li>
+      
+      <li><a href="chapter-26.html"
+             class="">
+        <span class="rn">16</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 1a<small>PTM 2.0 · From the macro bias to</small></span>
+      </a></li>
+      
+      <li><a href="chapter-27.html"
+             class="">
+        <span class="rn">17</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 1b<small>PTM 2.0 · Portfolio modelling in</small></span>
+      </a></li>
+      
+      <li><a href="chapter-28.html"
+             class="">
+        <span class="rn">18</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 2<small>PTM 2.0 · Portfolio volatility f</small></span>
+      </a></li>
+      
+      <li><a href="chapter-29.html"
+             class="">
+        <span class="rn">19</span>
+        <span class="rt">Foundations of Long Short Portfolio Management 3<small>PTM 2.0 · Portfolio correlation </small></span>
+      </a></li>
+      
+      <li><a href="chapter-30.html"
+             class="">
+        <span class="rn">20</span>
+        <span class="rt">Foundations of Long Short Portfolio Management 4<small>PTM 2.0 · Beta and beta-neutral </small></span>
+      </a></li>
+      
+      <li><a href="chapter-31.html"
+             class="">
+        <span class="rn">21</span>
+        <span class="rt">Foundations of Long / Short Portfolio Management Recap<small>PTM 2.0 · The capstone of the po</small></span>
+      </a></li>
+      
+      <li><a href="chapter-32.html"
+             class="">
+        <span class="rn">22</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 1<small>PTM 2.0 · The bottom-up, fundame</small></span>
+      </a></li>
+      
+      <li><a href="chapter-33.html"
+             class="">
+        <span class="rn">23</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 2<small>PTM 2.0 · The quant pass in full</small></span>
+      </a></li>
+      
+      <li><a href="chapter-34.html"
+             class="">
+        <span class="rn">24</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 3<small>PTM 2.0 · The quant valuation bl</small></span>
+      </a></li>
+      
+      <li><a href="chapter-35.html"
+             class="">
+        <span class="rn">25</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 4<small>PTM 2.0 · The synthesis of the q</small></span>
+      </a></li>
+      
+      <li><a href="chapter-36.html"
+             class="">
+        <span class="rn">26</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 5<small>PTM 2.0 · The SHORT-side mirror </small></span>
+      </a></li>
+      
+      <li><a href="chapter-37.html"
+             class="">
+        <span class="rn">27</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 6<small>PTM 2.0 · Turnaround Stories vs </small></span>
+      </a></li>
+      
+      <li><a href="chapter-38.html"
+             class="">
+        <span class="rn">28</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 7<small>PTM 2.0 · Data-cleansing a downl</small></span>
+      </a></li>
+      
+      <li><a href="chapter-39.html"
+             class="">
+        <span class="rn">29</span>
+        <span class="rt">Recap of Quantitative Processing<small>PTM 2.0 · The capstone of the tr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-40.html"
+             class="">
+        <span class="rn">30</span>
+        <span class="rt">Qualitative Processing<small>PTM 2.0 · The qualitative half o</small></span>
+      </a></li>
+      
+      <li><a href="chapter-41.html"
+             class="">
+        <span class="rn">31</span>
+        <span class="rt">Trade Idea Generation – Qualitative Processing<small>PTM 2.0 · The deeper qualitative</small></span>
+      </a></li>
+      
+      <li><a href="chapter-42.html"
+             class="">
+        <span class="rn">32</span>
+        <span class="rt">Trade Idea Generation – Identifying Catalysts<small>PTM 2.0 · The final fundamental </small></span>
+      </a></li>
+      
+      <li><a href="chapter-43.html"
+             class="">
+        <span class="rn">33</span>
+        <span class="rt">Trade Idea Generation Template — Part 1<small>PTM 2.0 · How to formalize the w</small></span>
+      </a></li>
+      
+      <li><a href="chapter-44.html"
+             class="">
+        <span class="rn">34</span>
+        <span class="rt">Trade Idea Generation Template — Part 2<small>PTM 2.0 · Finishing the ZEN pric</small></span>
+      </a></li>
+      
+      <li><a href="chapter-45.html"
+             class="">
+        <span class="rn">35</span>
+        <span class="rt">Macro-Driven Trade Ideas<small>PTM 2.0 · Marrying the macro and</small></span>
+      </a></li>
+      
+      <li><a href="chapter-46.html"
+             class="">
+        <span class="rn">36</span>
+        <span class="rt">International Trade Ideas via ADRs<small>PTM 2.0 · Bolt the international</small></span>
+      </a></li>
+      
+      <li><a href="chapter-47.html"
+             class="">
+        <span class="rn">37</span>
+        <span class="rt">Technical Analysis (Timing)<small>PTM 2.0 · Charts don&#39;t generate </small></span>
+      </a></li>
+      
+      <li><a href="chapter-48.html"
+             class="">
+        <span class="rn">38</span>
+        <span class="rt">Price Action (Momentum)<small>PTM 2.0 · The momentum half of t</small></span>
+      </a></li>
+      
+      <li><a href="chapter-49.html"
+             class="">
+        <span class="rn">39</span>
+        <span class="rt">Preventative Risk Management (PRM)<small>PTM 2.0 · Get your head right be</small></span>
+      </a></li>
+      
+      <li><a href="chapter-50.html"
+             class="">
+        <span class="rn">40</span>
+        <span class="rt">Preventative Risk Management — Part 2 (Portfolio Limits)<small>PTM 2.0 · Turning the volatility</small></span>
+      </a></li>
+      
+      <li><a href="chapter-51.html"
+             class="">
+        <span class="rn">41</span>
+        <span class="rt">Eliminating Emotion, Staying Objective<small>PTM 2.0 · Treat your trading acc</small></span>
+      </a></li>
+      
+      <li><a href="chapter-52.html"
+             class="">
+        <span class="rn">42</span>
+        <span class="rt">Track Record &amp; Trading Statistics (Part 1)<small>PTM 2.0 · Building the three-tab</small></span>
+      </a></li>
+      
+      <li><a href="chapter-53.html"
+             class="">
+        <span class="rn">43</span>
+        <span class="rt">Track Record &amp; Trading Statistics (Part 2 — Advanced)<small>PTM 2.0 · The advanced ratios — </small></span>
+      </a></li>
+      
+      <li><a href="chapter-54.html"
+             class="">
+        <span class="rn">44</span>
+        <span class="rt">Getting Organized &amp; Next Steps<small>PTM 2.0 · The closing chapter of</small></span>
+      </a></li>
+      
+      <li><a href="chapter-55.html"
+             class="">
+        <span class="rn">01</span>
+        <span class="rt">Defining the Mandate (Part 1)<small>POTM Options · Why the retail options</small></span>
+      </a></li>
+      
+      <li><a href="chapter-56.html"
+             class="">
+        <span class="rn">02</span>
+        <span class="rt">Defining the Mandate (Part 2)<small>POTM Options · Why most options educa</small></span>
+      </a></li>
+      
+      <li><a href="chapter-57.html"
+             class="">
+        <span class="rn">03</span>
+        <span class="rt">Filtering Options Strategies for Usefulness<small>POTM Options · How Anton Kreil filter</small></span>
+      </a></li>
+      
+      <li><a href="chapter-58.html"
+             class="">
+        <span class="rn">04</span>
+        <span class="rt">Marginal Benefits 1 — The Advantages of Options<small>POTM Options · Why a long call or lon</small></span>
+      </a></li>
+      
+      <li><a href="chapter-59.html"
+             class="">
+        <span class="rn">05</span>
+        <span class="rt">Marginal Benefits 2 — The Disadvantages of Options<small>POTM Options · Why time decay, timing</small></span>
+      </a></li>
+      
+      <li><a href="chapter-60.html"
+             class="">
+        <span class="rn">06</span>
+        <span class="rt">Long Call &amp; Put Options Formalized<small>POTM Options · The two simplest direc</small></span>
+      </a></li>
+      
+      <li><a href="chapter-61.html"
+             class="is-active">
+        <span class="rn">07</span>
+        <span class="rt">Naked Short Puts<small>POTM Options · Selling a put for a cr</small></span>
+      </a></li>
+      
+    </ul>
+    <div class="rail__foot">
+      Distilled from slides + transcript.<br>
+      Every number grounded in the lesson.<br>
+      Not affiliated with ITPM / A. Kreil.
+    </div>
+  </nav>
+  <main class="main">
+    
+<div class="wrap">
+  <header class="hero">
+    <div class="hero__num reveal">POTM Options · Chapter 07</div>
+    <h1 class="reveal d1">Naked Short Puts</h1>
+    <p class="hero__sub reveal d1">Selling a put for a credit — a genuine execution tool to get long a stock at a discount, and the single most dangerous &#39;income&#39; pitch in retail options.</p>
+    <p class="hero__lead reveal d2">The short naked put is the opposite of a long put: you SELL the put, pocket a credit upfront, and take on the obligation to BUY the stock at the strike if it&#39;s ITM at expiry. Used with the honest intention to own the stock lower, it adds value to your execution — used as an &#39;income&#39; machine, it&#39;s how retail accounts blow up.</p>
+    <div class="hero__chips reveal d3">
+      <span class="chip chip--signal"><span class="dot"></span>Only sell naked puts when you genuinely want to own the stock lower — NEVER for income.</span>
+      <span class="chip"><b>13</b>&nbsp;min read</span>
+      <span class="chip"><b>16</b>&nbsp;slides</span>
+    </div>
+  </header>
+
+  
+  <section class="gist reveal">
+    <h2>The gist</h2>
+    <ul><li>A short naked put is the OPPOSITE of a long put: you SELL the put and receive a NET CREDIT (premium upfront), taking on the obligation to BUY the underlying at the strike before expiry if the contract is ITM (assignment).</li><li>Attributes: Directional · Bullish · Simple · 1 transaction · Net Credit · Max Gain LIMITED (the premium) · Max Loss LIMITED (strike − premium, per share).</li><li>The &#39;unlimited loss&#39; label is a MYTH — max loss is DEFINED: the most you lose per option is the strike minus the premium, and that worst case only happens if the stock falls to zero.</li><li>Formulas: Breakeven = strike − premium; Max profit = premium (the credit); Loss per option written = strike − underlying + premium; max profit is made when underlying ≥ strike.</li><li>CORRECT retail use (HIGH usefulness) = an EXECUTION TOOL to get long at a discount when you genuinely intend to own the stock — e.g. sell a put 5% OTM: keep the credit if it stays OTM, or own the stock 5% lower (added execution value) if assigned.</li><li>It also profits from time decay on a flat tape, and from selling into inflated implied volatility during a broad market sell-off (higher credit for the same strike).</li><li>As a hedge for a SHORT stock position it&#39;s mediocre: profit is capped at the premium while the short&#39;s downside is unlimited — a LONG out-of-the-money CALL (unlimited upside) is a far better hedge.</li><li>INCOME-FARMING WARNING: do NOT sell naked puts &#39;for income&#39; — pitched via 1σ/2σ &#39;68% / 95% chance of making money&#39; stats; tiny credits vs massive $ exposure; low ROI (worse in low vol); gap risk / a tail move wipes out all accumulated income and more. &#39;The graveyard of former options traders is littered with the bodies of naked short put sellers.&#39; The market is not an ATM.</li><li>DWDP worked example: spot $71.85, Hist Vol 23.01%, buy target $68; short 3× the $68-strike 29-Mar put @ $0.80 → $240 credit on $20,400 exposure, breakeven $67.20 (300 shares vs 278 if bought outright). An overnight chemical-spill gap to $60 = −$2,160 = −800% on the $240 credit.</li></ul>
+  </section>
+  
+
+  
+  <section class="section" id="s1">
+    <div class="section__k">01 / 15</div>
+    <h3>What a short naked put actually is</h3>
+    
+    <ul class="points"><li>It is the OPPOSITE position to a Long Put (Naked): here you SELL / write the put.</li><li>You are obligated to BUY the stock at a specified strike before a specified time IF the contract is In The Money (ITM) — also called Selling Put Options; you are agreeing to buy the underlying at a fixed price in the future.</li><li>The counterparty is LONG the put — they bought the right to sell YOU the stock. If the underlying goes UP you make a profit; if it goes DOWN the puts you wrote can be exercised and you lose.</li><li>Simple (one transaction) but you are exposed to a lot of potential risk when short an option.</li></ul>
+    
+    <p class="explain">Selling a put flips the long-put trade: you collect the premium today and accept the obligation to buy the shares at the strike if the buyer exercises. Simplicity of a single transaction hides real short-option risk.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-07/00-01-00.jpg" alt="Slide: What a short naked put actually is">
+      <figcaption>Slide · 00:01:00</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s2">
+    <div class="section__k">02 / 15</div>
+    <h3>The &#39;unlimited loss&#39; myth</h3>
+    
+    <ul class="points"><li>The short put is often described as having UNLIMITED loss potential — but that isn&#39;t strictly true.</li><li>The maximum you can lose per option written is the PRICE OF THE UNDERLYING security, and that only happens if the stock falls all the way to ZERO.</li><li>So the maximum loss is LIMITED, not unlimited — bounded by how far (in dollars) the stock can actually fall.</li><li>Despite the risk, it can still be a useful strategy to profit from a short-term price rise in the underlying.</li></ul>
+    
+    <p class="explain">If an educator tells you selling puts has unlimited loss, correct them: the loss is defined and capped by the stock going to zero. It is large, but it is not infinite — the payoff is asymmetric, not unbounded like a naked short call.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-07/00-00-30.jpg" alt="Slide: The &#39;unlimited loss&#39; myth">
+      <figcaption>Slide · 00:00:30</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s3">
+    <div class="section__k">03 / 15</div>
+    <h3>The attributes template</h3>
+    
+    <ul class="points"><li>Directional Bet · Bullish Strategy · Simple · One Transaction.</li><li>Net Credit — an upfront payment is RECEIVED when you put the trade on.</li><li>Max Gain: LIMITED (capped at the premium collected).</li><li>Max Loss: LIMITED (only by how far the stock can fall — i.e. to zero).</li></ul>
+    
+    <p class="explain">The implicit statement of a short put is bullish: &#39;if this stock reaches a certain level, I&#39;d be willing to buy it.&#39; You are paid a credit today for taking that obligation, with capped upside and a large-but-defined downside.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-07/00-03-50.jpg" alt="Slide: The attributes template">
+      <figcaption>Slide · 00:03:50</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s4">
+    <div class="section__k">04 / 15</div>
+    <h3>When to use it: a small up-move or a flat tape</h3>
+    
+    <ul class="points"><li>It&#39;s a BULLISH strategy — use it when you expect the security to rise, but only by a SMALL amount over your chosen horizon (profit is fixed at the premium).</li><li>You can also profit if the stock DOESN&#39;T MOVE AT ALL, because as the seller you benefit from time decay — the option&#39;s value accelerates toward zero as expiry approaches.</li><li>It offers NO real protection against a significant fall, so only use it when you&#39;re very confident the stock won&#39;t drop below your strike.</li><li>Best case for retail: you actually INTEND to own the stock, so an OTM short put becomes a very effective way to enter a new long position.</li></ul>
+    
+    <p class="explain">Because your upside is fixed, the short put shines on flat-to-slightly-up tape where time decay does the work — but it gives no downside cushion, so conviction that the strike holds is essential.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-07/00-05-05.jpg" alt="Slide: When to use it: a small up-move or a flat tape">
+      <figcaption>Slide · 00:05:05</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s5">
+    <div class="section__k">05 / 15</div>
+    <h3>The correct retail use: buy a stock at a discount</h3>
+    
+    <ul class="points"><li>Fundamentally bullish but unsure of your timing? Sell a put with a strike ~5% OTM (5% below market) and receive a credit.</li><li>If the stock falls to the strike and you&#39;re assigned, you get a LONG stock position 5% lower than today — you&#39;ve ADDED 5% of value to your execution (buying now would have cost you that 5%).</li><li>If the put expires OTM (worthless), you simply KEEP the credit — extra profit that can go toward buying the stock anyway, meaning less sideline capital is needed.</li><li>This is why the short naked put is rated HIGH in usefulness for the retail trader: it&#39;s an execution tool, not an income scheme.</li></ul>
+    
+    <p class="explain">Decide in advance how much stock you&#39;d buy and where. The short put lets you name a lower price you&#39;re happy to own at, get paid to wait, and either pocket the credit or own the shares at a genuine discount to today&#39;s market.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-07/00-29-20.jpg" alt="Slide: The correct retail use: buy a stock at a discount">
+      <figcaption>Slide · 00:29:20</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s6">
+    <div class="section__k">06 / 15</div>
+    <h3>Two more edges: sell-off IV, and time decay</h3>
+    
+    <ul class="points"><li>In a broad market sell-off where your thesis is unchanged, selling puts in names you want is doubly attractive: you enter lower AND you sell into INFLATED implied volatility.</li><li>Higher IV across the board means a HIGHER CREDIT for the same strike — you&#39;re paid more to take on the same obligation.</li><li>On a flat tape, time decay still earns you the premium as the option value bleeds to zero into expiry.</li><li>Risk of the good case: if the stock rallies past today&#39;s price by more than the credit, you&#39;ve given up the upside and actually SUBTRACTED value from your execution (you missed owning it).</li></ul>
+    
+    <p class="explain">The best entry is a market-wide sell-off in a name you already wanted: cheaper stock plus richer premium. The trade-off is opportunity cost — a rally leaves you with only the small credit instead of the shares.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-07/00-05-05.jpg" alt="Slide: Two more edges: sell-off IV, and time decay">
+      <figcaption>Slide · 00:05:05</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s7">
+    <div class="section__k">07 / 15</div>
+    <h3>&#39;Selling a put&#39; vs &#39;shorting a naked put&#39; — the hedge case</h3>
+    
+    <ul class="points"><li>The two phrases aren&#39;t strictly identical: you can hold OTHER positions that offset the put&#39;s value change (so it&#39;s not &#39;naked&#39;).</li><li>Example: if you&#39;re SHORT the stock, selling a put can be a short-term hedge — collect premium, and if the stock falls through the strike you cover some/all of your short at a price you were happy to buy back at.</li><li>If the stock squeezes higher, at least the collected premium offsets some of the loss on the short.</li><li>But it&#39;s a WEAK hedge: profit is capped at the premium while the short&#39;s dollar downside is unlimited — it only helps against a SMALL rise.</li></ul>
+    
+    <p class="explain">Against a short stock position the sold put is a limited, situational hedge — useful only if you&#39;re confident the strike is reached and you&#39;re happy to cover there. It cannot protect against a runaway squeeze.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-07/00-03-50.jpg" alt="Slide: &#39;Selling a put&#39; vs &#39;shorting a naked put&#39; — the hedge case">
+      <figcaption>Slide · 00:03:50</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s8">
+    <div class="section__k">08 / 15</div>
+    <h3>A long call is the better hedge</h3>
+    
+    <ul class="points"><li>For genuine protection of a short stock position, buy an at-the-money or slightly OTM CALL — its upside is UNLIMITED.</li><li>If the stock you&#39;re short goes on a &#39;dynamite rally,&#39; the long call&#39;s profit is unlimited, matching the unlimited loss on the short.</li><li>The sold put can never do this: its cap is the premium, so a big squeeze overwhelms it.</li><li>Choose by intention: real hedge against a squeeze → buy a call; happy to cover on a small dip and pick up a credit → write a put.</li></ul>
+    
+    <p class="explain">The rule is intention-driven. If you truly need to be protected against an upside squeeze, the long call&#39;s unlimited upside is the correct hedge; the short put is only a modest cushion for a small move.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-07/00-03-50.jpg" alt="Slide: A long call is the better hedge">
+      <figcaption>Slide · 00:03:50</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s9">
+    <div class="section__k">09 / 15</div>
+    <h3>How intention decides the trade</h3>
+    
+    <ul class="points"><li>If you&#39;re simply bullish and want to own the stock now, it makes NO sense to short ATM or ITM naked puts — just buy the stock.</li><li>It DOES add value if: you&#39;re already long and want to add lower, you want to open a new long at a lower price, or you want to buy fundamentally but doubt your short-term timing.</li><li>Outside those cases (execution value or a modest hedge), the short naked put doesn&#39;t add much to a retail strategy.</li><li>This sets up the red-carpet WARNING against the &#39;income&#39; pitch.</li></ul>
+    
+    <p class="explain">The strategy earns its place only as an execution tool or a limited hedge tied to a real intention to own or cover. Absent that intention, there&#39;s no edge — and the temptation to farm premium &#39;for income&#39; is where retail gets destroyed.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-07/00-25-15.jpg" alt="Slide: How intention decides the trade">
+      <figcaption>Slide · 00:25:15</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s10">
+    <div class="section__k">10 / 15</div>
+    <h3>WARNING: selling naked puts &#39;for income&#39;</h3>
+    
+    <ul class="points"><li>When it goes wrong, retail traders buy the put back at a massive loss OR get assigned a stock they know nothing about, way above the new market price after it&#39;s tumbled through the strike.</li><li>Selling puts (and calls) naked requires a lot of CAPITAL, and ROI / return on notional exposure is extremely low — even lower in low-volatility environments.</li><li>Way-OTM puts have SMALL credits but MASSIVE dollar exposure (far cheaper than at/in-the-money options) — huge risk for tiny gain.</li><li>Better discipline: intend to buy the stock when you short the put, so you &#39;can sleep at night.&#39; Traders take as LITTLE risk as possible for as MUCH gain as possible — never the reverse.</li></ul>
+    
+    <p class="explain">The income pitch inverts good risk-reward: you risk enormous notional exposure to harvest a trickle of premium. Doing it only when you actually want the shares removes the trap and keeps the exposure honest.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-07/00-28-35.jpg" alt="Slide: WARNING: selling naked puts &#39;for income&#39;">
+      <figcaption>Slide · 00:28:35</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s11">
+    <div class="section__k">11 / 15</div>
+    <h3>The coercive 1σ / 2σ pitch</h3>
+    
+    <ul class="points"><li>Educators / former floor traders / market makers / brokers with conflicts of interest push selling OTM or way-OTM naked puts to &#39;generate income&#39; in your account.</li><li>The pitch uses standard-deviation analysis of historical moves: sell puts OUTSIDE the 1σ move (~68% chance of making money) or 2σ move (~95%, i.e. only ~1 in 20 loses).</li><li>Wrapped in a lifestyle sell — the &#39;nomadic trader&#39; by the pool making $250–$500 a day writing puts.</li><li>Reality: &#39;the graveyard of former options traders is littered with the bodies of naked short put sellers.&#39; You can win 20, 30, 40, 50 times in a row — then the one that catches you costs all your profit and more. The stock market is NOT an ATM.</li></ul>
+    
+    <p class="explain">History doesn&#39;t oblige you just because you want income. Selling outside 1σ/2σ wins most of the time, which is exactly what makes it seductive — until the tail event arrives and wipes out every prior gain at once.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-07/00-25-15.jpg" alt="Slide: The coercive 1σ / 2σ pitch">
+      <figcaption>Slide · 00:25:15</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s12">
+    <div class="section__k">12 / 15</div>
+    <h3>DWDP example: the setup</h3>
+    
+    <ul class="points"><li>DowDuPont (DWDP) trading at $71.85 (Last 71.86), Hist Volatility 23.01%; you&#39;re fundamentally bullish and want to own it at $68 (a blue support line).</li><li>Buying now at $71.85 risks $3.85 to the $68 level — a 5.35% drop — while you doubt your 2–4 week timing.</li><li>Date is Feb 16th; on the 29-Mar expiry the $68-strike put shows a wide market (bid 0.56 / ask 1.05); you place an offer to SELL the puts at $0.80.</li><li>You originally wanted $20,000 of DWDP → $20,000 / $71.85 = 278 shares if bought outright.</li></ul>
+    
+    <p class="explain">You&#39;d rather own DWDP $3.85 lower at support than chase it here. Instead of buying 278 shares now, you offer to sell the $68 puts at $0.80 — getting paid to wait for your price.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-07/00-31-00.jpg" alt="Slide: DWDP example: the setup">
+      <figcaption>Slide · 00:31:00</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s13">
+    <div class="section__k">13 / 15</div>
+    <h3>DWDP example: the trade math</h3>
+    
+    <ul class="points"><li>Short 3× the $68-strike 29-Mar put @ $0.80 → credit = $0.80 × 300 shares = $240 (the 100-multiplier forces 300 shares, close to the intended 278).</li><li>You&#39;re obligated to buy 300 shares at $68 if below $68 by Mar 29 → 300 × $68 = $20,400 exposure.</li><li>Breakeven = $68 − $0.80 = $67.20 (strike minus the credit received).</li><li>If assigned at $68, you&#39;ve added value: buying $20,000 at $71.85 would have you down ($68 − $71.85) × 278 = −$1,070 — so you ADDED $1,070 of execution value AND own MORE stock (300 vs 278).</li></ul>
+    
+    <p class="explain">If DWDP dips to your level you own more shares, lower, than buying outright — a $1,070 improvement in execution. The credit and the discount both work in your favor, provided you genuinely wanted the stock.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-07/00-32-15.jpg" alt="Slide: DWDP example: the trade math">
+      <figcaption>Slide · 00:32:15</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s14">
+    <div class="section__k">14 / 15</div>
+    <h3>DWDP example: how it goes wrong (gap risk)</h3>
+    
+    <ul class="points"><li>Upside miss: if DWDP rallies to $75 you forgo $3.15 × 278 = $875.70 of stock profit and keep only the $240 credit — you&#39;d have been better off buying.</li><li>Tail case (income mindset): overnight, DWDP has a chemical spill; a plant is shut a year, group earnings hit ~10%, and the stock OPENS at $60.</li><li>You&#39;ve lost $7.20 per contract = $2,160 for the sake of a $240 credit.</li><li>Percentage loss = (7.20 − 0.80) / 0.80 × 100 = 800%. If assigned, you own a stock you know nothing about, down 10%+ — a bankruptcy scenario for retail.</li></ul>
+    
+    <p class="explain">The same trade that added value with an honest intention becomes a disaster when done for income: an overnight gap through the strike leaves no chance to exit, turning a $240 credit into a $2,160 (−800%) loss.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-07/00-38-05.jpg" alt="Slide: DWDP example: how it goes wrong (gap risk)">
+      <figcaption>Slide · 00:38:05</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s15">
+    <div class="section__k">15 / 15</div>
+    <h3>Company X example: the formalized calculations</h3>
+    
+    <ul class="points"><li>Company X at $50; you expect a slight rise. ATM $50-strike puts trade at $2 → write 1 contract (100 shares) for a $200 credit.</li><li>Stock ≥ $51 at expiry: puts OTM, worthless → keep the $200 credit (max profit).</li><li>Stock stays at $50: puts ATM, worthless → keep the $200 credit.</li><li>Stock at $48 (breakeven = $50 − $2): puts ITM, ~$2 liability = $200, offset by the credit → roughly break even. Below $48 you lose money. You CAN buy the contracts back before expiry to cap losses — but you&#39;re still exposed to GAP RISK (a stock can go $50→$40 close-to-open with no chance to trade out).</li></ul>
+    
+    <p class="explain">Company X formalizes the payoff: max profit is the $200 premium, breakeven is strike minus premium ($48), and losses grow below that. Buying back early limits damage — but an overnight gap can bypass that exit entirely.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-07/00-44-00.jpg" alt="Slide: Company X example: the formalized calculations">
+      <figcaption>Slide · 00:44:00</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+
+  
+  <section class="section">
+    <div class="section__k">Reference</div>
+    <h3>Glossary</h3>
+    <ul class="glossary">
+      
+      <li><span class="term">Short Put (Naked)</span><div class="def">Selling/writing a put with no offsetting position, for a net credit; the seller is obligated to buy the underlying at the strike if the option is ITM at expiry.</div></li>
+      
+      <li><span class="term">Net Credit</span><div class="def">The premium received upfront when you sell the option — the maximum profit of a short put.</div></li>
+      
+      <li><span class="term">Assignment</span><div class="def">Being obligated to fulfill the contract — for a short put, buying the underlying shares at the strike price when the long counterparty exercises.</div></li>
+      
+      <li><span class="term">In The Money (ITM)</span><div class="def">For a put, when the stock is below the strike — the put has intrinsic value and can be exercised against the seller.</div></li>
+      
+      <li><span class="term">Out of The Money (OTM)</span><div class="def">For a put, when the stock is at or above the strike — the put expires worthless and the seller keeps the credit.</div></li>
+      
+      <li><span class="term">Breakeven</span><div class="def">Strike price − premium received. For the DWDP example: $68 − $0.80 = $67.20.</div></li>
+      
+      <li><span class="term">Max profit</span><div class="def">Limited to the premium (credit) collected; achieved when the underlying is greater than or equal to the strike at expiry.</div></li>
+      
+      <li><span class="term">Max loss</span><div class="def">Limited (not unlimited) to strike − premium per share; realized only if the stock falls to zero.</div></li>
+      
+      <li><span class="term">Loss per option written</span><div class="def">Strike price − price of the underlying + premium per option (incurred when the underlying is below strike − premium).</div></li>
+      
+      <li><span class="term">Time decay</span><div class="def">The erosion of an option&#39;s value toward zero as expiry nears; a tailwind for the option seller on a flat tape.</div></li>
+      
+      <li><span class="term">Implied volatility (IV)</span><div class="def">The market&#39;s expected volatility priced into the option; higher IV (e.g. in a sell-off) means richer credits for the same strike.</div></li>
+      
+      <li><span class="term">Standard deviation (1σ / 2σ)</span><div class="def">Statistical bands of historical moves used in the income pitch — ~68% of moves fall within 1σ, ~95% within 2σ; selling puts outside these bands is sold as a high win-rate strategy.</div></li>
+      
+      <li><span class="term">Gap risk</span><div class="def">The risk that a stock jumps between close and open (e.g. $50→$40) on overnight news, with no chance to trade out — the mechanism that blows up naked put sellers.</div></li>
+      
+      <li><span class="term">Return on invested capital (ROI)</span><div class="def">Profit relative to capital committed; for naked puts it&#39;s extremely low (worse in low-volatility environments) versus the large notional exposure.</div></li>
+      
+      <li><span class="term">Retail trader mandate</span><div class="def">Anton&#39;s framing that retail traders should take as little risk as possible for as much gain as possible — NOT sell premium &#39;for income&#39; to pay bills.</div></li>
+      
+    </ul>
+  </section>
+  
+
+  <nav class="pager">
+    
+    <a class="prev" href="chapter-60.html">
+      <small>← 06 Previous</small><span>Long Call &amp; Put Options Formalized</span></a>
+    
+    
+    <a class="next disabled"><small>End of the macro block</small><span>Portfolio construction is next</span></a>
+    
+  </nav>
+</div>
+
+  </main>
+</div>
+</body>
+</html>
