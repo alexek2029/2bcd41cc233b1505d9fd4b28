@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>POTM Options 21 · Volatility Masterclass 2 — Turning IV Into Expected Ranges — The Macro Playbook — The Top-Down Macro Read</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="rail" id="rail">
+    <div class="rail__brand">The Macro Playbook</div>
+    <a href="index.html" style="text-decoration:none;color:inherit">
+      <div class="rail__title">The Top-Down<br>Macro Read</div>
+    </a>
+    <div class="rail__sub">Anton Kreil · ITPL Foundations + PTM 2.0, distilled</div>
+    <button class="rail__toggle" onclick="document.getElementById('rail').classList.toggle('open')">Chapters ▾</button>
+    <ul class="rail__nav">
+      
+      <li><a href="chapter-01.html"
+             class="">
+        <span class="rn">A</span>
+        <span class="rt">Professional Traders vs Retail Traders 101<small>Foundations · What a professional tr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-02.html"
+             class="">
+        <span class="rn">B</span>
+        <span class="rt">Professional Traders vs Retail Traders 102<small>Foundations · Alpha vs absolute retu</small></span>
+      </a></li>
+      
+      <li><a href="chapter-03.html"
+             class="">
+        <span class="rn">C</span>
+        <span class="rt">Realized Volatility 1<small>Foundations · Measuring an instrumen</small></span>
+      </a></li>
+      
+      <li><a href="chapter-04.html"
+             class="">
+        <span class="rn">D</span>
+        <span class="rt">Realized Volatility 2<small>Foundations · The spreadsheet class:</small></span>
+      </a></li>
+      
+      <li><a href="chapter-05.html"
+             class="">
+        <span class="rn">E</span>
+        <span class="rt">Realized Volatility 3<small>Foundations · Average True Range Per</small></span>
+      </a></li>
+      
+      <li><a href="chapter-06.html"
+             class="">
+        <span class="rn">F</span>
+        <span class="rt">Implied Volatility 1<small>Foundations · The VIX as the market&#39;</small></span>
+      </a></li>
+      
+      <li><a href="chapter-07.html"
+             class="">
+        <span class="rn">G</span>
+        <span class="rt">Implied Volatility 2<small>Foundations · Solving for an option&#39;</small></span>
+      </a></li>
+      
+      <li><a href="chapter-08.html"
+             class="">
+        <span class="rn">H</span>
+        <span class="rt">Portfolio Volatility 1<small>Foundations · The concepts of whole-</small></span>
+      </a></li>
+      
+      <li><a href="chapter-09.html"
+             class="">
+        <span class="rn">I</span>
+        <span class="rt">Portfolio Volatility 2<small>Foundations · Calculating a portfoli</small></span>
+      </a></li>
+      
+      <li><a href="chapter-10.html"
+             class="">
+        <span class="rn">J</span>
+        <span class="rt">Becoming a Professional Level Trader<small>Foundations · The IPLT capstone — ho</small></span>
+      </a></li>
+      
+      <li><a href="chapter-11.html"
+             class="">
+        <span class="rn">01</span>
+        <span class="rt">The Framework<small>PTM 2.0 · The framework</small></span>
+      </a></li>
+      
+      <li><a href="chapter-12.html"
+             class="">
+        <span class="rn">02</span>
+        <span class="rt">The Field of Play: Bull &amp; Bear Markets<small>PTM 2.0 · Field of play</small></span>
+      </a></li>
+      
+      <li><a href="chapter-13.html"
+             class="">
+        <span class="rn">03</span>
+        <span class="rt">Gross Domestic Product<small>PTM 2.0 · GDP</small></span>
+      </a></li>
+      
+      <li><a href="chapter-14.html"
+             class="">
+        <span class="rn">04</span>
+        <span class="rt">Leading Indicators 1: Real Interest Rates &amp; the Yield Curve<small>PTM 2.0 · Rates · yield curve</small></span>
+      </a></li>
+      
+      <li><a href="chapter-15.html"
+             class="">
+        <span class="rn">05</span>
+        <span class="rt">Corporate Bonds &amp; Credit Spreads<small>PTM 2.0 · Credit spreads</small></span>
+      </a></li>
+      
+      <li><a href="chapter-16.html"
+             class="">
+        <span class="rn">06</span>
+        <span class="rt">M2 Money Supply: The Accessory Leading Indicator<small>PTM 2.0 · M2 money supply</small></span>
+      </a></li>
+      
+      <li><a href="chapter-17.html"
+             class="">
+        <span class="rn">07</span>
+        <span class="rt">The ISM Manufacturing PMI<small>PTM 2.0 · ISM manufacturing</small></span>
+      </a></li>
+      
+      <li><a href="chapter-18.html"
+             class="">
+        <span class="rn">08</span>
+        <span class="rt">The ISM Non-Manufacturing Report on Business (Services PMI)<small>PTM 2.0 · ISM services</small></span>
+      </a></li>
+      
+      <li><a href="chapter-19.html"
+             class="">
+        <span class="rn">09</span>
+        <span class="rt">Consumer Sentiment<small>PTM 2.0 · UMich sentiment</small></span>
+      </a></li>
+      
+      <li><a href="chapter-20.html"
+             class="">
+        <span class="rn">10</span>
+        <span class="rt">Building Permits: The Housing Leading Indicator<small>PTM 2.0 · Housing · permits</small></span>
+      </a></li>
+      
+      <li><a href="chapter-21.html"
+             class="">
+        <span class="rn">11</span>
+        <span class="rt">NFIB Small Business Optimism Index<small>PTM 2.0 · NFIB small biz</small></span>
+      </a></li>
+      
+      <li><a href="chapter-22.html"
+             class="">
+        <span class="rn">12</span>
+        <span class="rt">Cyclical Commodities as a Leading Indicator<small>PTM 2.0 · Cyclical commodities</small></span>
+      </a></li>
+      
+      <li><a href="chapter-23.html"
+             class="">
+        <span class="rn">13</span>
+        <span class="rt">European Economic Sentiment Indicator (ESI)<small>PTM 2.0 · Europe · ESI</small></span>
+      </a></li>
+      
+      <li><a href="chapter-24.html"
+             class="">
+        <span class="rn">14</span>
+        <span class="rt">China Leading Indicators: Official vs Caixin PMI and Real Rates<small>PTM 2.0 · China · Caixin</small></span>
+      </a></li>
+      
+      <li><a href="chapter-25.html"
+             class="">
+        <span class="rn">15</span>
+        <span class="rt">Recap: Bringing the Leading Indicators Together<small>PTM 2.0 · Recap · coincident</small></span>
+      </a></li>
+      
+      <li><a href="chapter-26.html"
+             class="">
+        <span class="rn">16</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 1a<small>PTM 2.0 · From the macro bias to</small></span>
+      </a></li>
+      
+      <li><a href="chapter-27.html"
+             class="">
+        <span class="rn">17</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 1b<small>PTM 2.0 · Portfolio modelling in</small></span>
+      </a></li>
+      
+      <li><a href="chapter-28.html"
+             class="">
+        <span class="rn">18</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 2<small>PTM 2.0 · Portfolio volatility f</small></span>
+      </a></li>
+      
+      <li><a href="chapter-29.html"
+             class="">
+        <span class="rn">19</span>
+        <span class="rt">Foundations of Long Short Portfolio Management 3<small>PTM 2.0 · Portfolio correlation </small></span>
+      </a></li>
+      
+      <li><a href="chapter-30.html"
+             class="">
+        <span class="rn">20</span>
+        <span class="rt">Foundations of Long Short Portfolio Management 4<small>PTM 2.0 · Beta and beta-neutral </small></span>
+      </a></li>
+      
+      <li><a href="chapter-31.html"
+             class="">
+        <span class="rn">21</span>
+        <span class="rt">Foundations of Long / Short Portfolio Management Recap<small>PTM 2.0 · The capstone of the po</small></span>
+      </a></li>
+      
+      <li><a href="chapter-32.html"
+             class="">
+        <span class="rn">22</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 1<small>PTM 2.0 · The bottom-up, fundame</small></span>
+      </a></li>
+      
+      <li><a href="chapter-33.html"
+             class="">
+        <span class="rn">23</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 2<small>PTM 2.0 · The quant pass in full</small></span>
+      </a></li>
+      
+      <li><a href="chapter-34.html"
+             class="">
+        <span class="rn">24</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 3<small>PTM 2.0 · The quant valuation bl</small></span>
+      </a></li>
+      
+      <li><a href="chapter-35.html"
+             class="">
+        <span class="rn">25</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 4<small>PTM 2.0 · The synthesis of the q</small></span>
+      </a></li>
+      
+      <li><a href="chapter-36.html"
+             class="">
+        <span class="rn">26</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 5<small>PTM 2.0 · The SHORT-side mirror </small></span>
+      </a></li>
+      
+      <li><a href="chapter-37.html"
+             class="">
+        <span class="rn">27</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 6<small>PTM 2.0 · Turnaround Stories vs </small></span>
+      </a></li>
+      
+      <li><a href="chapter-38.html"
+             class="">
+        <span class="rn">28</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 7<small>PTM 2.0 · Data-cleansing a downl</small></span>
+      </a></li>
+      
+      <li><a href="chapter-39.html"
+             class="">
+        <span class="rn">29</span>
+        <span class="rt">Recap of Quantitative Processing<small>PTM 2.0 · The capstone of the tr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-40.html"
+             class="">
+        <span class="rn">30</span>
+        <span class="rt">Qualitative Processing<small>PTM 2.0 · The qualitative half o</small></span>
+      </a></li>
+      
+      <li><a href="chapter-41.html"
+             class="">
+        <span class="rn">31</span>
+        <span class="rt">Trade Idea Generation – Qualitative Processing<small>PTM 2.0 · The deeper qualitative</small></span>
+      </a></li>
+      
+      <li><a href="chapter-42.html"
+             class="">
+        <span class="rn">32</span>
+        <span class="rt">Trade Idea Generation – Identifying Catalysts<small>PTM 2.0 · The final fundamental </small></span>
+      </a></li>
+      
+      <li><a href="chapter-43.html"
+             class="">
+        <span class="rn">33</span>
+        <span class="rt">Trade Idea Generation Template — Part 1<small>PTM 2.0 · How to formalize the w</small></span>
+      </a></li>
+      
+      <li><a href="chapter-44.html"
+             class="">
+        <span class="rn">34</span>
+        <span class="rt">Trade Idea Generation Template — Part 2<small>PTM 2.0 · Finishing the ZEN pric</small></span>
+      </a></li>
+      
+      <li><a href="chapter-45.html"
+             class="">
+        <span class="rn">35</span>
+        <span class="rt">Macro-Driven Trade Ideas<small>PTM 2.0 · Marrying the macro and</small></span>
+      </a></li>
+      
+      <li><a href="chapter-46.html"
+             class="">
+        <span class="rn">36</span>
+        <span class="rt">International Trade Ideas via ADRs<small>PTM 2.0 · Bolt the international</small></span>
+      </a></li>
+      
+      <li><a href="chapter-47.html"
+             class="">
+        <span class="rn">37</span>
+        <span class="rt">Technical Analysis (Timing)<small>PTM 2.0 · Charts don&#39;t generate </small></span>
+      </a></li>
+      
+      <li><a href="chapter-48.html"
+             class="">
+        <span class="rn">38</span>
+        <span class="rt">Price Action (Momentum)<small>PTM 2.0 · The momentum half of t</small></span>
+      </a></li>
+      
+      <li><a href="chapter-49.html"
+             class="">
+        <span class="rn">39</span>
+        <span class="rt">Preventative Risk Management (PRM)<small>PTM 2.0 · Get your head right be</small></span>
+      </a></li>
+      
+      <li><a href="chapter-50.html"
+             class="">
+        <span class="rn">40</span>
+        <span class="rt">Preventative Risk Management — Part 2 (Portfolio Limits)<small>PTM 2.0 · Turning the volatility</small></span>
+      </a></li>
+      
+      <li><a href="chapter-51.html"
+             class="">
+        <span class="rn">41</span>
+        <span class="rt">Eliminating Emotion, Staying Objective<small>PTM 2.0 · Treat your trading acc</small></span>
+      </a></li>
+      
+      <li><a href="chapter-52.html"
+             class="">
+        <span class="rn">42</span>
+        <span class="rt">Track Record &amp; Trading Statistics (Part 1)<small>PTM 2.0 · Building the three-tab</small></span>
+      </a></li>
+      
+      <li><a href="chapter-53.html"
+             class="">
+        <span class="rn">43</span>
+        <span class="rt">Track Record &amp; Trading Statistics (Part 2 — Advanced)<small>PTM 2.0 · The advanced ratios — </small></span>
+      </a></li>
+      
+      <li><a href="chapter-54.html"
+             class="">
+        <span class="rn">44</span>
+        <span class="rt">Getting Organized &amp; Next Steps<small>PTM 2.0 · The closing chapter of</small></span>
+      </a></li>
+      
+      <li><a href="chapter-55.html"
+             class="">
+        <span class="rn">01</span>
+        <span class="rt">Defining the Mandate (Part 1)<small>POTM Options · Why the retail options</small></span>
+      </a></li>
+      
+      <li><a href="chapter-56.html"
+             class="">
+        <span class="rn">02</span>
+        <span class="rt">Defining the Mandate (Part 2)<small>POTM Options · Why most options educa</small></span>
+      </a></li>
+      
+      <li><a href="chapter-57.html"
+             class="">
+        <span class="rn">03</span>
+        <span class="rt">Filtering Options Strategies for Usefulness<small>POTM Options · How Anton Kreil filter</small></span>
+      </a></li>
+      
+      <li><a href="chapter-58.html"
+             class="">
+        <span class="rn">04</span>
+        <span class="rt">Marginal Benefits 1 — The Advantages of Options<small>POTM Options · Why a long call or lon</small></span>
+      </a></li>
+      
+      <li><a href="chapter-59.html"
+             class="">
+        <span class="rn">05</span>
+        <span class="rt">Marginal Benefits 2 — The Disadvantages of Options<small>POTM Options · Why time decay, timing</small></span>
+      </a></li>
+      
+      <li><a href="chapter-60.html"
+             class="">
+        <span class="rn">06</span>
+        <span class="rt">Long Call &amp; Put Options Formalized<small>POTM Options · The two simplest direc</small></span>
+      </a></li>
+      
+      <li><a href="chapter-61.html"
+             class="">
+        <span class="rn">07</span>
+        <span class="rt">Naked Short Puts<small>POTM Options · Selling a put for a cr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-62.html"
+             class="">
+        <span class="rn">08</span>
+        <span class="rt">Naked Short Calls<small>POTM Options · The one strategy Anton</small></span>
+      </a></li>
+      
+      <li><a href="chapter-63.html"
+             class="">
+        <span class="rn">09</span>
+        <span class="rt">The Covered Call<small>POTM Options · Own the stock and sell</small></span>
+      </a></li>
+      
+      <li><a href="chapter-64.html"
+             class="">
+        <span class="rn">10</span>
+        <span class="rt">The Covered Call Collar<small>POTM Options · Extend the covered cal</small></span>
+      </a></li>
+      
+      <li><a href="chapter-65.html"
+             class="">
+        <span class="rn">11</span>
+        <span class="rt">Index Options &amp; Portfolio Hedging<small>POTM Options · Using index options to</small></span>
+      </a></li>
+      
+      <li><a href="chapter-66.html"
+             class="">
+        <span class="rn">12</span>
+        <span class="rt">Options Spreads 1 — The Bull Call Spread<small>POTM Options · Buy a lower-strike cal</small></span>
+      </a></li>
+      
+      <li><a href="chapter-67.html"
+             class="">
+        <span class="rn">13</span>
+        <span class="rt">Options Spreads 2 — The Bear Put Spread<small>POTM Options · The bearish mirror of </small></span>
+      </a></li>
+      
+      <li><a href="chapter-68.html"
+             class="">
+        <span class="rn">14</span>
+        <span class="rt">Market Makers, Volatility &amp; the Greeks<small>POTM Options · How options market mak</small></span>
+      </a></li>
+      
+      <li><a href="chapter-69.html"
+             class="">
+        <span class="rn">15</span>
+        <span class="rt">Recap — What We Have Learnt So Far<small>POTM Options · A stock-take of the op</small></span>
+      </a></li>
+      
+      <li><a href="chapter-70.html"
+             class="">
+        <span class="rn">16</span>
+        <span class="rt">Ratio Spreads 1 — The Short Bull Ratio Spread<small>POTM Options · Buy more cheap OTM cal</small></span>
+      </a></li>
+      
+      <li><a href="chapter-71.html"
+             class="">
+        <span class="rn">17</span>
+        <span class="rt">Ratio Spreads 2 — The Short Bear Ratio Spread<small>POTM Options · The bearish mirror of </small></span>
+      </a></li>
+      
+      <li><a href="chapter-72.html"
+             class="">
+        <span class="rn">18</span>
+        <span class="rt">Ladder Spreads 1 — The Bull Call Ladder<small>POTM Options · A three-legged bullish</small></span>
+      </a></li>
+      
+      <li><a href="chapter-73.html"
+             class="">
+        <span class="rn">19</span>
+        <span class="rt">Ladder Spreads 2 — The Bear Put Ladder<small>POTM Options · The bearish mirror of </small></span>
+      </a></li>
+      
+      <li><a href="chapter-74.html"
+             class="">
+        <span class="rn">20</span>
+        <span class="rt">Volatility Masterclass 1 — Why Volatility Is Risk AND Reward<small>POTM Options · Volatility is the fluc</small></span>
+      </a></li>
+      
+      <li><a href="chapter-75.html"
+             class="is-active">
+        <span class="rn">21</span>
+        <span class="rt">Volatility Masterclass 2 — Turning IV Into Expected Ranges<small>POTM Options · Back implied volatilit</small></span>
+      </a></li>
+      
+    </ul>
+    <div class="rail__foot">
+      Distilled from slides + transcript.<br>
+      Every number grounded in the lesson.<br>
+      Not affiliated with ITPM / A. Kreil.
+    </div>
+  </nav>
+  <main class="main">
+    
+<div class="wrap">
+  <header class="hero">
+    <div class="hero__num reveal">POTM Options · Chapter 21</div>
+    <h1 class="reveal d1">Volatility Masterclass 2 — Turning IV Into Expected Ranges</h1>
+    <p class="hero__sub reveal d1">Back implied volatility out of a real option price with the ITPM calculator, then convert that annualized number into probability-weighted price ranges that structure the trade.</p>
+    <p class="hero__lead reveal d2">Video 1 defined volatility; this is the applied session. You reverse-engineer implied volatility from a live option price using Excel Solver, sanity-check it against the broker and the VIX, and turn the annualized figure into ±1σ / ±2σ price bands you can trade off — proven end-to-end on SPY and XPO Logistics.</p>
+    <div class="hero__chips reveal d3">
+      <span class="chip chip--signal"><span class="dot"></span>Back out IV, convert to ranges, structure for reward/risk.</span>
+      <span class="chip"><b>12</b>&nbsp;min read</span>
+      <span class="chip"><b>50</b>&nbsp;slides</span>
+    </div>
+  </header>
+
+  
+  <section class="gist reveal">
+    <h2>The gist</h2>
+    <ul><li>The ITPM Implied_Volatility_Calculator.xlsm has three tabs — Black-Scholes, Binomial (Yield) and Binomial (Discrete) — and you pick one by the option&#39;s exercise style (American/European) and whether the underlying pays dividends.</li><li>You cannot rearrange a pricing model to solve for volatility directly; instead Excel Solver iteratively changes the vol cell (C10) to minimise Difference² (objective cell C18) until the MODEL price equals the OBSERVED market price.</li><li>Inputs are sourced free: Cboe option chains give bid/ask (mid = observed price), Dividend.com gives dividend yield, the US Treasury yield curve gives a maturity-matched risk-free rate, and the VIX gives a head-check on S&amp;P IV.</li><li>SPY worked example (13–14 Mar 2018, Binomial-Yield tab): spot 276.72, rf 1.64%, div 1.95%, Jul-2018 265 put observed 5.95 (Bid 5.91 / Ask 5.98) → IV ≈ 16.86%, versus a VIX of ≈16.69% — a clean head-check.</li><li>Annualized IV scales to shorter horizons by √time: monthly = annual/√12, weekly = annual/√52, daily = annual/√365 calendar days; ±1σ ≈ 68% of outcomes, ±2σ ≈ 95% (≈2.5% beyond each tail).</li><li>XPO Logistics (11 Mar 2018, Black-Scholes tab): spot 104.27, rf 1.57%, div 0%, Aug-2018 105 call mid 9.60 → ITPM IV 35.07% vs broker 34.97% — a fair-pricing check that says the broker priced it correctly and used the mid.</li><li>For a one-directional (bullish) view you halve the outside-band probability: XPO&#39;s 68% band is 88.34–120.20, so the 32% outside splits to a ~16% chance of finishing above 120.20; a 3:1 target of 143.40 sits beyond +2σ, so the market implies &lt;2.5%.</li><li>When your target is below what the high IV demands, a 105/135 bull call spread (long 105 @ 9.60 / short 135 @ 2.18, net debit 7.42) gives R/R 3.04 versus the outright long 105 call&#39;s 2.125 — a strictly better structure.</li><li>Caveat: real returns aren&#39;t perfectly normal (the vol smile means in-/out-of-the-money options carry slightly higher IV than at-the-money), so every range is approximate — probability-weighted, never gospel.</li></ul>
+  </section>
+  
+
+  
+  <section class="section" id="s1">
+    <div class="section__k">01 / 13</div>
+    <h3>Recap: two ways to a volatility number</h3>
+    
+    <ul class="points"><li>Volatility is the industry-standard annualized standard deviation — a measure of dispersion standardised so it is comparable across time frames.</li><li>Two routes to that number: realized volatility (backward-looking, from historical prices) and implied volatility (forward-looking, backed out of option prices).</li><li>Always hold both sides in mind — volatility is risk AND opportunity: you need prices to move to generate any capital gain.</li></ul>
+    
+    <p class="explain">This second masterclass is the applied session. The last video defined volatility as risk and reward (the coin-toss lesson); here you learn to calculate implied volatility yourself and use it to verify and structure trade ideas.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-21/00-02-15.jpg" alt="Slide: Recap: two ways to a volatility number">
+      <figcaption>Slide · 00:02:15</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s2">
+    <div class="section__k">02 / 13</div>
+    <h3>Three calculators, one idea</h3>
+    
+    <ul class="points"><li>The workbook has three tabs: Implied Vol — Black-Scholes, Implied Vol — Binomial (Yield), and Implied Vol — Binomial (Discrete).</li><li>Which one you use depends on the option&#39;s exercise style (American vs European) and whether the underlying pays dividends.</li><li>Layout is consistent: red inputs top-left, orange cells you type into, yellow market/model price cells, blue notes as a user guide, and web-resource links at the bottom.</li><li>Before inputs are entered the sheet shows errors (#DIV/0!) — that is expected.</li></ul>
+    
+    <p class="explain">All three tabs do the same job: reverse-engineer the volatility the market is assuming, given that every other input is known. That is literally where &#39;implied&#39; volatility gets its name — it is implied from the observed price.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-21/00-02-30.jpg" alt="Slide: Three calculators, one idea">
+      <figcaption>Slide · 00:02:30</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s3">
+    <div class="section__k">03 / 13</div>
+    <h3>Why you need Solver: iterate, don&#39;t rearrange</h3>
+    
+    <ul class="points"><li>A pricing model has known inputs plus one unknown (volatility) equating to an output (the observed option price).</li><li>These models can&#39;t be algebraically rearranged to solve for volatility.</li><li>So you iteratively change the volatility assumption until the calculator&#39;s model price matches the market price — at which point that vol is the implied vol.</li></ul>
+    
+    <p class="explain">The RIGHT panel shows the simplified logic: Known inputs + Unknown vol = Observed option price. The whole exercise is finding the one vol value that makes the model output equal what the market is quoting.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-21/00-03-30.jpg" alt="Slide: Why you need Solver: iterate, don&#39;t rearrange">
+      <figcaption>Slide · 00:03:30</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s4">
+    <div class="section__k">04 / 13</div>
+    <h3>Picking the tab: exercise style + dividends</h3>
+    
+    <ul class="points"><li>Step 1 — find the listing exchange and exercise style: on Cboe.com the ETP specifications say SPY options are American-style.</li><li>Step 2 — check dividends on Dividend.com by ticker: SPY shows a dividend yield of 1.95% with no upcoming discrete payout.</li><li>American + dividend YIELD (no discrete dividend) → use the middle tab, Binomial (Yield).</li><li>If discrete dividends were upcoming (Dividend.com would show the amount and ex-date, as with Foot Locker), you&#39;d use the Binomial (Discrete) tab instead.</li></ul>
+    
+    <p class="explain">The tab choice is mechanical once you know two facts about the option. SPY is American and pays a yield but no known discrete dividend, so the Binomial (Yield) calculator is correct here.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-21/00-08-40.jpg" alt="Slide: Picking the tab: exercise style + dividends">
+      <figcaption>Slide · 00:08:40</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s5">
+    <div class="section__k">05 / 13</div>
+    <h3>Sourcing the free inputs</h3>
+    
+    <ul class="points"><li>Spot price and dividend yield come straight off Dividend.com: SPY 276.72, dividend yield 1.95%.</li><li>The risk-free rate is a short-term US Treasury from the Treasury yield-curve page — the video takes the 1-month at 1.64% as the closest thing to risk-free.</li><li>Match the Treasury maturity to the horizon; the shortest term carries the least theoretical risk.</li></ul>
+    
+    <p class="explain">There is no truly risk-free instrument, so a short-term Treasury is the accepted proxy. Every input here is public and free — no paid data feed required.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-21/00-11-10.jpg" alt="Slide: Sourcing the free inputs">
+      <figcaption>Slide · 00:11:10</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s6">
+    <div class="section__k">06 / 13</div>
+    <h3>The observed price: Cboe chain → mid</h3>
+    
+    <ul class="points"><li>On Cboe set Options Range to &#39;All&#39; and pick the July 18 (07/20/2018) expiry to match a 3–4 month sell-off outlook.</li><li>The hedge is a ~5% out-of-the-money put: strike 265 (the number before the &#39;-E&#39; in the option code) against a ~276–277 spot.</li><li>The SPY Jul-2018 265 put quotes Bid 5.91 / Ask 5.98 → mid ≈ 5.95, which becomes the observed option price.</li><li>Enter -1 for a put (1 for a call) on the binomial tab; expiry 20 Jul 2018; strike 265.</li></ul>
+    
+    <p class="explain">The scenario (from Video 11): a long-only book up ~15% over 7 months, hedged with OTM SPY puts. The mid between bid and ask is the price you feed the calculator as the market observation.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-21/00-14-45.jpg" alt="Slide: The observed price: Cboe chain → mid">
+      <figcaption>Slide · 00:14:45</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s7">
+    <div class="section__k">07 / 13</div>
+    <h3>Running Solver</h3>
+    
+    <ul class="points"><li>Solver lives on the Data tab; enable it via File → Options → Add-ins → Manage Excel Add-ins → check Solver Add-in.</li><li>Objective cell C18 = Difference² between observed and model price; Solver is set to MINIMISE it.</li><li>It does that by changing only C10 (volatility); the difference goes to zero when the model price moves to match the fixed observed price.</li><li>Before solving, model price 2.34 vs observed 5.95 gives Difference² ≈ 13; after Solve it converges.</li></ul>
+    
+    <p class="explain">Solver is the engine that performs the iteration for you. Set the objective, tell it to minimise by changing the vol cell, and click Solve — the model price walks to the observed price.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-21/00-16-15.jpg" alt="Slide: Running Solver">
+      <figcaption>Slide · 00:16:15</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s8">
+    <div class="section__k">08 / 13</div>
+    <h3>SPY solved: IV 16.86% and the VIX head-check</h3>
+    
+    <ul class="points"><li>Solver converges: C10 volatility = 16.86%, Difference² = 0.000, model American put price = 5.95 = observed.</li><li>Greeks fall out: Delta -0.3143, Theta -0.0411, Gamma 0.0136.</li><li>Head-check: the VIX (30-day forward IV on the S&amp;P) is ≈16.69% — very close to 16.86%, validating the number.</li><li>They differ slightly because the VIX blends many strikes and expiries over a 30-day window, while this is a single 265 put.</li></ul>
+    
+    <p class="explain">For an S&amp;P-linked underlying the VIX is a free reasonableness check on your IV. A near-match means your calculation is sound; a large gap would flag an input or method error.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-21/00-19-10.jpg" alt="Slide: SPY solved: IV 16.86% and the VIX head-check">
+      <figcaption>Slide · 00:19:10</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s9">
+    <div class="section__k">09 / 13</div>
+    <h3>From annual IV to price ranges</h3>
+    
+    <ul class="points"><li>The &#39;Implied Volatility Assessment&#39; panel translates annual IV into daily, weekly and monthly equivalents and the option-horizon figure.</li><li>Scale by √time: monthly = annual/√12, weekly = annual/√52, daily = annual/√365 calendar days.</li><li>±1σ ≈ 68% of outcomes; ±2σ ≈ 95% (leaving ≈2.5% beyond each tail); ±3σ ≈ 99.8% (the bell curve reads 34.1/34.1/13.6/13.6/2.1/2.1/0.1/0.1).</li><li>SPY ranges (spot 276.72): Annual → ±1σ 230.08/323.36, ±2σ 183.44/370.00; Monthly 4.87% → 263.26/290.18; Weekly 2.34% → 270.25/283.19; Daily 0.88% → 274.28/279.16; Horizon 5.91% → 260.36/293.08.</li><li>Caveat: returns aren&#39;t perfectly normal (vol smile), so probabilities are approximate.</li></ul>
+    
+    <p class="explain">This is the payoff of the whole exercise — turning one annualized number into concrete price bands with probabilities attached, both for the option&#39;s exact horizon and for reference intervals inside it.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-21/00-25-45.jpg" alt="Slide: From annual IV to price ranges">
+      <figcaption>Slide · 00:25:45</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s10">
+    <div class="section__k">10 / 13</div>
+    <h3>XPO case study: check the broker&#39;s price</h3>
+    
+    <ul class="points"><li>XPO Logistics — a transport/logistics firm riding e-commerce via Amazon last-mile delivery; assume a bullish, fundamentally-driven view. On 11 Mar 2018 the stock is at 104.27.</li><li>Before trading, check the broker prices volatility fairly: the platform quotes the Aug 105 call IV at 34.97%.</li><li>Since it&#39;s a US-listed single-stock option (American, no dividend), find the identical option on Cboe and run the Black-Scholes tab.</li></ul>
+    
+    <p class="explain">You are checking the exact same US-listed option, so numbers shouldn&#39;t materially differ. Skipping this means blindly trusting the platform against calculation errors, software bugs, or even malicious intent.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-21/00-21-20.jpg" alt="Slide: XPO case study: check the broker&#39;s price">
+      <figcaption>Slide · 00:21:20</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s11">
+    <div class="section__k">11 / 13</div>
+    <h3>XPO IV: 35.07% vs broker 34.97%</h3>
+    
+    <ul class="points"><li>Inputs: spot 104.27, strike 105, rf 1.57%, div 0.00%, expiry 8/17/18, observed mid 9.60 → IV 35.07%.</li><li>That is almost identical to the broker&#39;s 34.97%, so the option is priced correctly — and they&#39;re likely using the mid too.</li><li>Greeks: Delta 0.5458, Theta -0.0321, Gamma 0.0164, Vega 0.2727, Rho 0.2061.</li><li>If your IV differed materially: recheck your inputs first, then call the broker to confirm their IV and the price they used.</li></ul>
+    
+    <p class="explain">A ~0.1% gap is the fair-pricing green light. Whether the level of IV is worth paying comes next — that depends on your catalyst research and historical analysis, not the calculator.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-21/00-22-45.jpg" alt="Slide: XPO IV: 35.07% vs broker 34.97%">
+      <figcaption>Slide · 00:22:45</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s12">
+    <div class="section__k">12 / 13</div>
+    <h3>XPO ranges and the probability read</h3>
+    
+    <ul class="points"><li>XPO ranges (spot 104.27): Annual 35.07% → ±1σ 67.70/140.84, ±2σ 31.14/177.40; Monthly 10.12% → 93.71/114.83; Weekly 4.86% → 99.20/109.34; Daily 1.84% → 102.36/106.18; Horizon 15.28% → 88.34/120.20.</li><li>Over the option horizon the market prices a 68% chance of finishing between 88.34 and 120.20 — a 32% chance outside.</li><li>Bullish and long calls, you only care about the upside: halve the 32% → ~16% chance of finishing above 120.20.</li><li>That ~16% is the number to beat: if your catalysts and historical work say the odds are higher, you have an edge and an implicit long-volatility position.</li></ul>
+    
+    <p class="explain">For a one-directional view you split the symmetric outside-band probability in half. The decision reduces to whether YOUR estimate of the upside probability exceeds the market&#39;s implied ~16%.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-21/00-27-20.jpg" alt="Slide: XPO ranges and the probability read">
+      <figcaption>Slide · 00:27:20</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s13">
+    <div class="section__k">13 / 13</div>
+    <h3>Reward/risk: bull call spread beats the outright</h3>
+    
+    <ul class="points"><li>Risking ~9.60/share on the long call, a 3:1 target is 105 + 4×9.60 = 143.40 — beyond +2σ, so the market implies &lt;2.5%.</li><li>If your realistic target is only ~135, cap the volatility exposure with a bull call spread: long 105 call @ 9.60, short 135 call @ 2.18 → net debit 7.42.</li><li>Spread: max downside 7.42×100×5 = 3,710; max upside (135−105−7.42)×100×5 = 11,290 → R/R 3.04.</li><li>Outright long 105 call to a 135 target: downside 9.60×100×5 = 4,800; upside (135−105−9.60)×100×5 = 10,200 → R/R 2.125.</li><li>Run the IV calculator on BOTH legs — their IVs and probability bands should be similar (in/out-of-the-money legs sit slightly above ATM due to the vol smile).</li></ul>
+    
+    <p class="explain">When the target sits below what a high IV demands, structure beats direction: the 105/135 bull call spread turns a 2.125 outright into a 3.04 reward/risk. Implied volatility is the lens for finding the optimal structure — always aiming at the best reward/risk ratio.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-21/00-31-10.jpg" alt="Slide: Reward/risk: bull call spread beats the outright">
+      <figcaption>Slide · 00:31:10</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+
+  
+  <section class="section">
+    <div class="section__k">Reference</div>
+    <h3>Glossary</h3>
+    <ul class="glossary">
+      
+      <li><span class="term">Implied volatility (IV)</span><div class="def">The forward-looking annualized standard deviation backed out of an observed option price, given all other pricing inputs are known.</div></li>
+      
+      <li><span class="term">Realized volatility</span><div class="def">Backward-looking volatility computed from historical prices; used alongside IV to judge whether IV is cheap or rich versus the past.</div></li>
+      
+      <li><span class="term">Excel Solver</span><div class="def">An Excel add-in that iteratively changes a chosen cell (here the vol cell C10) to minimise an objective (Difference², cell C18) until the model price equals the observed price.</div></li>
+      
+      <li><span class="term">Binomial (Yield) tab</span><div class="def">The calculator tab for American-style options on an underlying paying a continuous dividend yield (used for SPY).</div></li>
+      
+      <li><span class="term">Black-Scholes tab</span><div class="def">The calculator tab for European options, or American options paying no dividend (used for XPO).</div></li>
+      
+      <li><span class="term">Observed option price (mid)</span><div class="def">The market price fed to the calculator, taken as the midpoint of the Cboe bid and ask.</div></li>
+      
+      <li><span class="term">Risk-free rate proxy</span><div class="def">A short-term US Treasury yield (maturity-matched) used in place of a truly risk-free instrument.</div></li>
+      
+      <li><span class="term">VIX head-check</span><div class="def">Comparing S&amp;P/SPY IV to the VIX (30-day forward S&amp;P IV) as a free reasonableness test; SPY 16.86% vs VIX ≈16.69%.</div></li>
+      
+      <li><span class="term">Standard-deviation bands</span><div class="def">±1σ ≈ 68%, ±2σ ≈ 95%, ±3σ ≈ 99.8% of outcomes; the ~2.5% beyond each 2σ tail flags very unlikely targets.</div></li>
+      
+      <li><span class="term">√time scaling</span><div class="def">Converting annual IV to shorter horizons: monthly = annual/√12, weekly = annual/√52, daily = annual/√365 calendar days.</div></li>
+      
+      <li><span class="term">One-directional halving</span><div class="def">For a purely bullish (or bearish) view, halve the symmetric outside-band probability to get the chance of finishing beyond just one bound.</div></li>
+      
+      <li><span class="term">Bull call spread</span><div class="def">Long a lower-strike call and short a higher-strike call at the same expiry, reducing net cost and volatility exposure at the price of a capped upside — 105/135 gave R/R 3.04 vs 2.125 outright.</div></li>
+      
+      <li><span class="term">Vol smile</span><div class="def">The empirical fact that in- and out-of-the-money options carry higher IV than at-the-money ones because real returns aren&#39;t perfectly normal, making the probability ranges approximate.</div></li>
+      
+    </ul>
+  </section>
+  
+
+  <nav class="pager">
+    
+    <a class="prev" href="chapter-74.html">
+      <small>← 20 Previous</small><span>Volatility Masterclass 1 — Why Volatility Is Risk AND Reward</span></a>
+    
+    
+    <a class="next disabled"><small>End of the macro block</small><span>Portfolio construction is next</span></a>
+    
+  </nav>
+</div>
+
+  </main>
+</div>
+</body>
+</html>
