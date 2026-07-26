@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>POTM Options 06 · Long Call &amp; Put Options Formalized — The Macro Playbook — The Top-Down Macro Read</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="rail" id="rail">
+    <div class="rail__brand">The Macro Playbook</div>
+    <a href="index.html" style="text-decoration:none;color:inherit">
+      <div class="rail__title">The Top-Down<br>Macro Read</div>
+    </a>
+    <div class="rail__sub">Anton Kreil · ITPL Foundations + PTM 2.0, distilled</div>
+    <button class="rail__toggle" onclick="document.getElementById('rail').classList.toggle('open')">Chapters ▾</button>
+    <ul class="rail__nav">
+      
+      <li><a href="chapter-01.html"
+             class="">
+        <span class="rn">A</span>
+        <span class="rt">Professional Traders vs Retail Traders 101<small>Foundations · What a professional tr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-02.html"
+             class="">
+        <span class="rn">B</span>
+        <span class="rt">Professional Traders vs Retail Traders 102<small>Foundations · Alpha vs absolute retu</small></span>
+      </a></li>
+      
+      <li><a href="chapter-03.html"
+             class="">
+        <span class="rn">C</span>
+        <span class="rt">Realized Volatility 1<small>Foundations · Measuring an instrumen</small></span>
+      </a></li>
+      
+      <li><a href="chapter-04.html"
+             class="">
+        <span class="rn">D</span>
+        <span class="rt">Realized Volatility 2<small>Foundations · The spreadsheet class:</small></span>
+      </a></li>
+      
+      <li><a href="chapter-05.html"
+             class="">
+        <span class="rn">E</span>
+        <span class="rt">Realized Volatility 3<small>Foundations · Average True Range Per</small></span>
+      </a></li>
+      
+      <li><a href="chapter-06.html"
+             class="">
+        <span class="rn">F</span>
+        <span class="rt">Implied Volatility 1<small>Foundations · The VIX as the market&#39;</small></span>
+      </a></li>
+      
+      <li><a href="chapter-07.html"
+             class="">
+        <span class="rn">G</span>
+        <span class="rt">Implied Volatility 2<small>Foundations · Solving for an option&#39;</small></span>
+      </a></li>
+      
+      <li><a href="chapter-08.html"
+             class="">
+        <span class="rn">H</span>
+        <span class="rt">Portfolio Volatility 1<small>Foundations · The concepts of whole-</small></span>
+      </a></li>
+      
+      <li><a href="chapter-09.html"
+             class="">
+        <span class="rn">I</span>
+        <span class="rt">Portfolio Volatility 2<small>Foundations · Calculating a portfoli</small></span>
+      </a></li>
+      
+      <li><a href="chapter-10.html"
+             class="">
+        <span class="rn">J</span>
+        <span class="rt">Becoming a Professional Level Trader<small>Foundations · The IPLT capstone — ho</small></span>
+      </a></li>
+      
+      <li><a href="chapter-11.html"
+             class="">
+        <span class="rn">01</span>
+        <span class="rt">The Framework<small>PTM 2.0 · The framework</small></span>
+      </a></li>
+      
+      <li><a href="chapter-12.html"
+             class="">
+        <span class="rn">02</span>
+        <span class="rt">The Field of Play: Bull &amp; Bear Markets<small>PTM 2.0 · Field of play</small></span>
+      </a></li>
+      
+      <li><a href="chapter-13.html"
+             class="">
+        <span class="rn">03</span>
+        <span class="rt">Gross Domestic Product<small>PTM 2.0 · GDP</small></span>
+      </a></li>
+      
+      <li><a href="chapter-14.html"
+             class="">
+        <span class="rn">04</span>
+        <span class="rt">Leading Indicators 1: Real Interest Rates &amp; the Yield Curve<small>PTM 2.0 · Rates · yield curve</small></span>
+      </a></li>
+      
+      <li><a href="chapter-15.html"
+             class="">
+        <span class="rn">05</span>
+        <span class="rt">Corporate Bonds &amp; Credit Spreads<small>PTM 2.0 · Credit spreads</small></span>
+      </a></li>
+      
+      <li><a href="chapter-16.html"
+             class="">
+        <span class="rn">06</span>
+        <span class="rt">M2 Money Supply: The Accessory Leading Indicator<small>PTM 2.0 · M2 money supply</small></span>
+      </a></li>
+      
+      <li><a href="chapter-17.html"
+             class="">
+        <span class="rn">07</span>
+        <span class="rt">The ISM Manufacturing PMI<small>PTM 2.0 · ISM manufacturing</small></span>
+      </a></li>
+      
+      <li><a href="chapter-18.html"
+             class="">
+        <span class="rn">08</span>
+        <span class="rt">The ISM Non-Manufacturing Report on Business (Services PMI)<small>PTM 2.0 · ISM services</small></span>
+      </a></li>
+      
+      <li><a href="chapter-19.html"
+             class="">
+        <span class="rn">09</span>
+        <span class="rt">Consumer Sentiment<small>PTM 2.0 · UMich sentiment</small></span>
+      </a></li>
+      
+      <li><a href="chapter-20.html"
+             class="">
+        <span class="rn">10</span>
+        <span class="rt">Building Permits: The Housing Leading Indicator<small>PTM 2.0 · Housing · permits</small></span>
+      </a></li>
+      
+      <li><a href="chapter-21.html"
+             class="">
+        <span class="rn">11</span>
+        <span class="rt">NFIB Small Business Optimism Index<small>PTM 2.0 · NFIB small biz</small></span>
+      </a></li>
+      
+      <li><a href="chapter-22.html"
+             class="">
+        <span class="rn">12</span>
+        <span class="rt">Cyclical Commodities as a Leading Indicator<small>PTM 2.0 · Cyclical commodities</small></span>
+      </a></li>
+      
+      <li><a href="chapter-23.html"
+             class="">
+        <span class="rn">13</span>
+        <span class="rt">European Economic Sentiment Indicator (ESI)<small>PTM 2.0 · Europe · ESI</small></span>
+      </a></li>
+      
+      <li><a href="chapter-24.html"
+             class="">
+        <span class="rn">14</span>
+        <span class="rt">China Leading Indicators: Official vs Caixin PMI and Real Rates<small>PTM 2.0 · China · Caixin</small></span>
+      </a></li>
+      
+      <li><a href="chapter-25.html"
+             class="">
+        <span class="rn">15</span>
+        <span class="rt">Recap: Bringing the Leading Indicators Together<small>PTM 2.0 · Recap · coincident</small></span>
+      </a></li>
+      
+      <li><a href="chapter-26.html"
+             class="">
+        <span class="rn">16</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 1a<small>PTM 2.0 · From the macro bias to</small></span>
+      </a></li>
+      
+      <li><a href="chapter-27.html"
+             class="">
+        <span class="rn">17</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 1b<small>PTM 2.0 · Portfolio modelling in</small></span>
+      </a></li>
+      
+      <li><a href="chapter-28.html"
+             class="">
+        <span class="rn">18</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 2<small>PTM 2.0 · Portfolio volatility f</small></span>
+      </a></li>
+      
+      <li><a href="chapter-29.html"
+             class="">
+        <span class="rn">19</span>
+        <span class="rt">Foundations of Long Short Portfolio Management 3<small>PTM 2.0 · Portfolio correlation </small></span>
+      </a></li>
+      
+      <li><a href="chapter-30.html"
+             class="">
+        <span class="rn">20</span>
+        <span class="rt">Foundations of Long Short Portfolio Management 4<small>PTM 2.0 · Beta and beta-neutral </small></span>
+      </a></li>
+      
+      <li><a href="chapter-31.html"
+             class="">
+        <span class="rn">21</span>
+        <span class="rt">Foundations of Long / Short Portfolio Management Recap<small>PTM 2.0 · The capstone of the po</small></span>
+      </a></li>
+      
+      <li><a href="chapter-32.html"
+             class="">
+        <span class="rn">22</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 1<small>PTM 2.0 · The bottom-up, fundame</small></span>
+      </a></li>
+      
+      <li><a href="chapter-33.html"
+             class="">
+        <span class="rn">23</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 2<small>PTM 2.0 · The quant pass in full</small></span>
+      </a></li>
+      
+      <li><a href="chapter-34.html"
+             class="">
+        <span class="rn">24</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 3<small>PTM 2.0 · The quant valuation bl</small></span>
+      </a></li>
+      
+      <li><a href="chapter-35.html"
+             class="">
+        <span class="rn">25</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 4<small>PTM 2.0 · The synthesis of the q</small></span>
+      </a></li>
+      
+      <li><a href="chapter-36.html"
+             class="">
+        <span class="rn">26</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 5<small>PTM 2.0 · The SHORT-side mirror </small></span>
+      </a></li>
+      
+      <li><a href="chapter-37.html"
+             class="">
+        <span class="rn">27</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 6<small>PTM 2.0 · Turnaround Stories vs </small></span>
+      </a></li>
+      
+      <li><a href="chapter-38.html"
+             class="">
+        <span class="rn">28</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 7<small>PTM 2.0 · Data-cleansing a downl</small></span>
+      </a></li>
+      
+      <li><a href="chapter-39.html"
+             class="">
+        <span class="rn">29</span>
+        <span class="rt">Recap of Quantitative Processing<small>PTM 2.0 · The capstone of the tr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-40.html"
+             class="">
+        <span class="rn">30</span>
+        <span class="rt">Qualitative Processing<small>PTM 2.0 · The qualitative half o</small></span>
+      </a></li>
+      
+      <li><a href="chapter-41.html"
+             class="">
+        <span class="rn">31</span>
+        <span class="rt">Trade Idea Generation – Qualitative Processing<small>PTM 2.0 · The deeper qualitative</small></span>
+      </a></li>
+      
+      <li><a href="chapter-42.html"
+             class="">
+        <span class="rn">32</span>
+        <span class="rt">Trade Idea Generation – Identifying Catalysts<small>PTM 2.0 · The final fundamental </small></span>
+      </a></li>
+      
+      <li><a href="chapter-43.html"
+             class="">
+        <span class="rn">33</span>
+        <span class="rt">Trade Idea Generation Template — Part 1<small>PTM 2.0 · How to formalize the w</small></span>
+      </a></li>
+      
+      <li><a href="chapter-44.html"
+             class="">
+        <span class="rn">34</span>
+        <span class="rt">Trade Idea Generation Template — Part 2<small>PTM 2.0 · Finishing the ZEN pric</small></span>
+      </a></li>
+      
+      <li><a href="chapter-45.html"
+             class="">
+        <span class="rn">35</span>
+        <span class="rt">Macro-Driven Trade Ideas<small>PTM 2.0 · Marrying the macro and</small></span>
+      </a></li>
+      
+      <li><a href="chapter-46.html"
+             class="">
+        <span class="rn">36</span>
+        <span class="rt">International Trade Ideas via ADRs<small>PTM 2.0 · Bolt the international</small></span>
+      </a></li>
+      
+      <li><a href="chapter-47.html"
+             class="">
+        <span class="rn">37</span>
+        <span class="rt">Technical Analysis (Timing)<small>PTM 2.0 · Charts don&#39;t generate </small></span>
+      </a></li>
+      
+      <li><a href="chapter-48.html"
+             class="">
+        <span class="rn">38</span>
+        <span class="rt">Price Action (Momentum)<small>PTM 2.0 · The momentum half of t</small></span>
+      </a></li>
+      
+      <li><a href="chapter-49.html"
+             class="">
+        <span class="rn">39</span>
+        <span class="rt">Preventative Risk Management (PRM)<small>PTM 2.0 · Get your head right be</small></span>
+      </a></li>
+      
+      <li><a href="chapter-50.html"
+             class="">
+        <span class="rn">40</span>
+        <span class="rt">Preventative Risk Management — Part 2 (Portfolio Limits)<small>PTM 2.0 · Turning the volatility</small></span>
+      </a></li>
+      
+      <li><a href="chapter-51.html"
+             class="">
+        <span class="rn">41</span>
+        <span class="rt">Eliminating Emotion, Staying Objective<small>PTM 2.0 · Treat your trading acc</small></span>
+      </a></li>
+      
+      <li><a href="chapter-52.html"
+             class="">
+        <span class="rn">42</span>
+        <span class="rt">Track Record &amp; Trading Statistics (Part 1)<small>PTM 2.0 · Building the three-tab</small></span>
+      </a></li>
+      
+      <li><a href="chapter-53.html"
+             class="">
+        <span class="rn">43</span>
+        <span class="rt">Track Record &amp; Trading Statistics (Part 2 — Advanced)<small>PTM 2.0 · The advanced ratios — </small></span>
+      </a></li>
+      
+      <li><a href="chapter-54.html"
+             class="">
+        <span class="rn">44</span>
+        <span class="rt">Getting Organized &amp; Next Steps<small>PTM 2.0 · The closing chapter of</small></span>
+      </a></li>
+      
+      <li><a href="chapter-55.html"
+             class="">
+        <span class="rn">01</span>
+        <span class="rt">Defining the Mandate (Part 1)<small>POTM Options · Why the retail options</small></span>
+      </a></li>
+      
+      <li><a href="chapter-56.html"
+             class="">
+        <span class="rn">02</span>
+        <span class="rt">Defining the Mandate (Part 2)<small>POTM Options · Why most options educa</small></span>
+      </a></li>
+      
+      <li><a href="chapter-57.html"
+             class="">
+        <span class="rn">03</span>
+        <span class="rt">Filtering Options Strategies for Usefulness<small>POTM Options · How Anton Kreil filter</small></span>
+      </a></li>
+      
+      <li><a href="chapter-58.html"
+             class="">
+        <span class="rn">04</span>
+        <span class="rt">Marginal Benefits 1 — The Advantages of Options<small>POTM Options · Why a long call or lon</small></span>
+      </a></li>
+      
+      <li><a href="chapter-59.html"
+             class="">
+        <span class="rn">05</span>
+        <span class="rt">Marginal Benefits 2 — The Disadvantages of Options<small>POTM Options · Why time decay, timing</small></span>
+      </a></li>
+      
+      <li><a href="chapter-60.html"
+             class="is-active">
+        <span class="rn">06</span>
+        <span class="rt">Long Call &amp; Put Options Formalized<small>POTM Options · The two simplest direc</small></span>
+      </a></li>
+      
+    </ul>
+    <div class="rail__foot">
+      Distilled from slides + transcript.<br>
+      Every number grounded in the lesson.<br>
+      Not affiliated with ITPM / A. Kreil.
+    </div>
+  </nav>
+  <main class="main">
+    
+<div class="wrap">
+  <header class="hero">
+    <div class="hero__num reveal">POTM Options · Chapter 06</div>
+    <h1 class="reveal d1">Long Call &amp; Put Options Formalized</h1>
+    <p class="hero__sub reveal d1">The two simplest directional strategies, laid out with a repeatable skeleton: attributes, hockey-stick payoff, exact break-even / profit / max-loss formulas, worked examples, and their hedging uses.</p>
+    <p class="hero__lead reveal d2">Video 6 stops improvising and formalizes the long call and long put using the same fixed template you&#39;ll reuse for every strategy in the series. Each gets a definition, its attributes, three core calculations, a $50 worked example, and its real hedging jobs — so you can always come back and re-derive break-even, max upside, and max downside for the rest of your life.</p>
+    <div class="hero__chips reveal d3">
+      <span class="chip chip--signal"><span class="dot"></span>Buy calls when you&#39;re right about a big up-move in time; buy puts for the mirror. Anchor both to a 1:3 payoff, start at-the-money, and remember puts also protect longs while calls also protect shorts.</span>
+      <span class="chip"><b>12</b>&nbsp;min read</span>
+      <span class="chip"><b>8</b>&nbsp;slides</span>
+    </div>
+  </header>
+
+  
+  <section class="gist reveal">
+    <h2>The gist</h2>
+    <ul><li>A LONG CALL is the right but not the obligation to PURCHASE a stock at the strike price before expiry. Attributes: Directional · Bullish · Simple · 1 transaction · Net Debit · Max Risk Limited (premium) · Max Gain UNLIMITED · Usefulness High.</li><li>Long-call formulas: Break-even = strike + premium; profit per contract = underlying − (strike + premium); max loss = premium (lost when underlying ≤ strike).</li><li>Long-call worked example: Company X at $50, ATM $50 call at $2 = $200 (×100 multiplier). At $52 you break even; at $55 the contract is ~$500 for a ~$300 profit; if the stock falls the call expires worthless and you lose the $200.</li><li>Apply the 1:3 rule: to justify the call over owning stock, your realistic price target must be at least 3× the premium above break-even — i.e. prefer a target of $56+ here; if you only expect $55, own the stock instead.</li><li>A LONG PUT is the right but not the obligation to SELL a stock at the strike before expiry. Attributes: Directional · Bearish · Simple · 1 transaction · Net Debit · Max Risk Limited (premium) · Max Gain LIMITED (a stock can only go to zero) · Usefulness High.</li><li>Long-put formulas: Break-even = strike − premium; profit per contract = strike − underlying − premium; max loss = premium (lost when underlying ≥ strike).</li><li>Long-put worked example (mirror): $50 put at $2 = $200. At $48 you break even; at $45 the put is ~$500 for a ~$300 profit; if the stock is ≥$50 at expiry you lose the $200. Preferable minimum target here is $44.</li><li>The asymmetry: the call&#39;s max gain is UNLIMITED while the put&#39;s is LIMITED (floored by a zero stock price) — yet BOTH keep Usefulness = High, because a big down-move pays as much in dollars as a big up-move.</li><li>Hedging: a PROTECTIVE PUT insures a long stock position across a catalyst date (e.g. earnings, expiry after the report); a long-dated 5–15% OTM put (3/6/9/12 months, ~1.5–2.5% of performance) is the &#39;burn-the-house-down&#39; black-swan hedge; and a 5% OTM 2–4 week LONG CALL is a cheap hedge against a short-squeeze on a short stock position.</li></ul>
+  </section>
+  
+
+  
+  <section class="section" id="s1">
+    <div class="section__k">01 / 13</div>
+    <h3>Why formalize: one skeleton for every strategy</h3>
+    
+    <ul class="points"><li>Videos 3–5 used real long-call and long-put examples to build a basic feel; video 6 now FORMALIZES them.</li><li>The formalization skeleton is fixed and reused for every strategy in the POTM series: quick explanation → attributes → when to use → how to use → break-even / profit / risk calculations → worked example.</li><li>The long call and long put are the first two strategies defined as &#39;useful&#39; in the Useful PDF (download section).</li></ul>
+    
+    <p class="explain">This lesson isn&#39;t new material — it&#39;s structure. Anton pins the long call and long put onto a repeatable template so you can always come back and re-derive each strategy&#39;s mechanics for the rest of your life.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-06/00-02-15.jpg" alt="Slide: Why formalize: one skeleton for every strategy">
+      <figcaption>Slide · 00:02:15</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s2">
+    <div class="section__k">02 / 13</div>
+    <h3>The Long Call, defined</h3>
+    
+    <ul class="points"><li>A long call gives you the RIGHT but not the OBLIGATION to purchase a particular stock at a specified strike price before a specified expiration date.</li><li>It&#39;s about as simple as an options strategy gets: only one transaction, potentially UNLIMITED profit through leverage, while your loss is limited.</li><li>It works best when you expect a SIGNIFICANT rise within the time frame — you have to be right (&#39;in the money&#39;) and profit by a certain date, and the risk-reward must beat simply owning the stock.</li><li>Whether you buy the call over the stock depends on your read of fundamentals and catalysts (volatility) the market may not yet be pricing in.</li></ul>
+    
+    <p class="explain">The call is a leveraged, capped-risk way to be bullish. Its edge over owning the stock only exists when your fundamental/catalyst view isn&#39;t already reflected in the option price.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-06/00-02-15.jpg" alt="Slide: The Long Call, defined">
+      <figcaption>Slide · 00:02:15</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s3">
+    <div class="section__k">03 / 13</div>
+    <h3>Long Call attributes</h3>
+    
+    <ul class="points"><li>Directional Bet · Bullish · Simple · One Transaction · Net Debit (upfront cost).</li><li>Max Risk = Limited (the premium you pay).</li><li>Max Gain = UNLIMITED.</li><li>Usefulness for retail traders = High — top of the Useful PDF alongside long puts.</li></ul>
+    
+    <p class="explain">These bullet attributes are the compact fingerprint of the strategy. The standout is the unlimited upside paired with premium-capped downside — the core appeal of buying calls.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-06/00-04-30.jpg" alt="Slide: Long Call attributes">
+      <figcaption>Slide · 00:04:30</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s4">
+    <div class="section__k">04 / 13</div>
+    <h3>When to use the Long Call</h3>
+    
+    <ul class="points"><li>Primary use: a bullish outlook where you expect the security to rise SIGNIFICANTLY in a relatively short period.</li><li>It still works for a slow rise, but beware time decay — the time value of the call depreciates over time.</li><li>If you only anticipate a small increase, there are probably better alternatives (covered later in the series).</li><li>It&#39;s essentially a leveraged alternative to buying the stock — higher potential ROI — and can also HEDGE a short stock position.</li></ul>
+    
+    <p class="explain">Reach for the long call when you expect a big, timely move. Small, slow moves get eaten by time decay and are better expressed another way.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-06/00-05-30.jpg" alt="Slide: When to use the Long Call">
+      <figcaption>Slide · 00:05:30</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s5">
+    <div class="section__k">05 / 13</div>
+    <h3>How to use it: strike, expiry, and the 1:3 discipline</h3>
+    
+    <ul class="points"><li>Downside is capped at the premium no matter how far the stock falls; you tune risk-reward by choosing the strike.</li><li>The 1:3 rule: your price target must give at least a 3× payoff versus the premium — buy a $1 call only if you realistically forecast the stock rising at least $3 above break-even.</li><li>Match expiry to the catalyst: short-dated for a quick catalyst, longer-dated (more expensive, more time premium) for a slower move.</li><li>The discipline forces you to document the fundamentals, catalysts, and time horizon before committing capital.</li></ul>
+    
+    <p class="explain">The 1:3 payoff rule is the guardrail. It converts a vague bullish hunch into a documented thesis with a specific target, time frame, and reward-to-cost ratio.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-06/00-05-30.jpg" alt="Slide: How to use it: strike, expiry, and the 1:3 discipline">
+      <figcaption>Slide · 00:05:30</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s6">
+    <div class="section__k">06 / 13</div>
+    <h3>Moneyness, time decay, and delta (deferred)</h3>
+    
+    <ul class="points"><li>Beginners should start AT the money or very near the money to learn how owning a call compares to owning the stock.</li><li>OTM contracts are cheaper but have a LOWER probability of finishing in the money — a top reason retail traders lose (chasing cheap leverage 5/10/15% OTM that never finishes ITM: &#39;it&#39;s death&#39;).</li><li>Time value decays and the decay ACCELERATES into expiry.</li><li>Experienced traders compare DELTA values across strikes to pick the strike — but delta is deferred to a later lesson (with Raj Malhotra); don&#39;t worry about it yet.</li></ul>
+    
+    <p class="explain">Cheap isn&#39;t good. The probability of finishing in the money is baked into the price, and beginners should pay for that probability by staying near the money rather than buying lottery-ticket OTM calls.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-06/00-05-30.jpg" alt="Slide: Moneyness, time decay, and delta (deferred)">
+      <figcaption>Slide · 00:05:30</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s7">
+    <div class="section__k">07 / 13</div>
+    <h3>Long Call — the three calculations</h3>
+    
+    <ul class="points"><li>Break-even = strike price + price of the option (underlying = strike + premium).</li><li>Profit is made when underlying &gt; strike + premium; profit per contract = underlying − (strike + premium).</li><li>Maximum loss = the premium paid (net debit), incurred when underlying ≤ strike price.</li><li>Every strategy in the series gets these same three: break-even, max upside, max downside.</li></ul>
+    
+    <p class="explain">Three formulas, memorized once, apply to every long call you ever trade. Break-even sits above the strike by exactly the premium; below the strike you simply lose the premium.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-06/00-04-30.jpg" alt="Slide: Long Call — the three calculations">
+      <figcaption>Slide · 00:04:30</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s8">
+    <div class="section__k">08 / 13</div>
+    <h3>Long Call worked example (Company X at $50)</h3>
+    
+    <ul class="points"><li>Company X trades at $50; ATM $50 calls trade at $2. One contract = 100 shares = $200 outlay.</li><li>At $52 by expiry: contract ≈ what you paid — you BREAK EVEN (52 = strike 50 + premium 2).</li><li>At $55 by expiry: contract ≈ $500, so a ~$300 profit — this is the 1:3 example ($200 risked to make $500).</li><li>If the stock falls: the call expires worthless and you lose the full $200. You can also sell before expiry to recover remaining value.</li><li>Applying 1:3, prefer a target of $56+; if you only expect $55, just own the stock (200 shares at $50 make $500 at $52.50).</li></ul>
+    
+    <p class="explain">The $55 outcome only clears 1:3 at a $56 target — which is exactly why the discipline exists: a $55 expectation doesn&#39;t beat simply owning the shares.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-06/00-04-30.jpg" alt="Slide: Long Call worked example (Company X at $50)">
+      <figcaption>Slide · 00:04:30</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s9">
+    <div class="section__k">09 / 13</div>
+    <h3>The Long Put, defined</h3>
+    
+    <ul class="points"><li>A long put gives you the RIGHT but not the OBLIGATION to SELL a particular stock at a specified strike before a specified expiration.</li><li>Like the call: one transaction, very large profits through leverage, losses limited to the premium.</li><li>UNLIKE the call, upside is theoretically LIMITED — a stock can only go to zero (whereas it can rise to &#39;infinity&#39;).</li><li>Don&#39;t let that put you off: a big down-move pays as much in dollars as a big up-move, so risk-reward is still excellent.</li><li>It&#39;s often easier to buy a put — especially on large/mid-cap names — than to short the stock on margin, and it can give the same $ notional exposure with far less capital. There must still be a marginal benefit versus a stock position.</li></ul>
+    
+    <p class="explain">The put is the bearish mirror of the call, with one twist: its upside is capped at a zero stock price. In practice that cap barely matters — the dollar payoff on a real down-move is still large.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-06/00-28-25.jpg" alt="Slide: The Long Put, defined">
+      <figcaption>Slide · 00:28:25</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s10">
+    <div class="section__k">10 / 13</div>
+    <h3>Long Put attributes</h3>
+    
+    <ul class="points"><li>Directional Bet · Bearish · Simple · One Transaction · Net Debit (upfront cost).</li><li>Max Risk = Limited (the premium).</li><li>Max Gain = LIMITED — but only in theory, because a stock can only fall to zero.</li><li>Usefulness for retail traders = High — equal to the long call despite the capped gain.</li></ul>
+    
+    <p class="explain">The one attribute that differs from the call is Max Gain: LIMITED on paper. Anton keeps Usefulness at High regardless, because real down-moves still make a lot of money.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-06/00-31-40.jpg" alt="Slide: Long Put attributes">
+      <figcaption>Slide · 00:31:40</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s11">
+    <div class="section__k">11 / 13</div>
+    <h3>When and how to use the Long Put</h3>
+    
+    <ul class="points"><li>Best when bearish and expecting a SIGNIFICANT drop in a fairly short space of time — the mirror of the call.</li><li>Usable for slower declines, but a &#39;naked&#39; long put suffers time decay that accelerates into expiry.</li><li>Three decisions: strike, expiry, and whether there&#39;s a marginal benefit over shorting the stock (capital + risk-reward). Beginners start at or just below the money.</li><li>Same 1:3 risk-reward rule of thumb applies as a minimum.</li></ul>
+    
+    <p class="explain">Everything about picking a put mirrors the call — significant, timely down-move; at-the-money to start; 1:3 payoff. The extra consideration is that shorting the stock is often an alternative worth weighing.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-06/00-32-45.jpg" alt="Slide: When and how to use the Long Put">
+      <figcaption>Slide · 00:32:45</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s12">
+    <div class="section__k">12 / 13</div>
+    <h3>Long Put — calculations and worked example</h3>
+    
+    <ul class="points"><li>Break-even = strike price − price of the option; profit per contract = strike − underlying − premium; max loss = premium (when underlying ≥ strike).</li><li>Example: Company X at $50, ATM $50 put at $2 = $200 (×100). At $48 you BREAK EVEN.</li><li>At $45 by expiry: put ≈ $500 for a ~$300 profit — the 1:3 example ($200 risked to make $500).</li><li>If the stock is ≥ $50 at expiry: the put expires worthless and you lose $200. Preferable minimum target here is $44 (a $50 short into $47.50 also makes $500).</li></ul>
+    
+    <p class="explain">The put&#39;s numbers are the exact reflection of the call&#39;s: break-even sits below the strike by the premium, and the same 1:3 test decides whether the put beats simply shorting.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-06/00-32-45.jpg" alt="Slide: Long Put — calculations and worked example">
+      <figcaption>Slide · 00:32:45</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s13">
+    <div class="section__k">13 / 13</div>
+    <h3>Hedging uses: protective puts, black-swan insurance, and call-hedged shorts</h3>
+    
+    <ul class="points"><li>PROTECTIVE PUT: insure a long stock position through a catalyst (e.g. hold a long for the dividend but buy an ATM / ≤5% OTM put with expiry that ENCOMPASSES the catalyst date, like earnings on Feb 8 → choose expiries after Feb 8).</li><li>BURN-THE-HOUSE-DOWN hedge: against unforeseeable black-swan / tail risk, buy long-dated puts (3/6/9/12 months) that are 5–10% (up to 5–15%) OTM, spending ~1.5–2.5% of performance; cheap insurance you hope never pays.</li><li>Beta-check the hedge: if your portfolio doesn&#39;t mirror the index, SPY puts may not protect you — hedge the single names using their beta instead.</li><li>LONG CALL as a short-stock hedge: if you&#39;re up ~15% on a short but fear a squeeze, buy a 5% OTM call with a 2–4 week expiry — cheaper than covering, caps the squeeze, and only costs the premium if the stock keeps falling.</li></ul>
+    
+    <p class="explain">Beyond directional bets, both options are insurance. Puts protect longs (foreseeable catalyst or unforeseeable black-swan); a cheap OTM call caps the squeeze risk on a short you still believe in.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-06/00-31-40.jpg" alt="Slide: Hedging uses: protective puts, black-swan insurance, and call-hedged shorts">
+      <figcaption>Slide · 00:31:40</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+
+  
+  <section class="section">
+    <div class="section__k">Reference</div>
+    <h3>Glossary</h3>
+    <ul class="glossary">
+      
+      <li><span class="term">Long Call</span><div class="def">Buying a call: the right, not the obligation, to purchase a stock at the strike before expiry. Bullish, net debit, risk limited to premium, gain unlimited.</div></li>
+      
+      <li><span class="term">Long Put</span><div class="def">Buying a put: the right, not the obligation, to sell a stock at the strike before expiry. Bearish, net debit, risk limited to premium, gain limited (a stock can only reach zero).</div></li>
+      
+      <li><span class="term">Net Debit</span><div class="def">A strategy with an upfront cost — you pay premium to put it on. Both the long call and long put are net-debit strategies.</div></li>
+      
+      <li><span class="term">Break-even</span><div class="def">The underlying price at which the position neither profits nor loses. Call: strike + premium. Put: strike − premium.</div></li>
+      
+      <li><span class="term">In the Money (ITM)</span><div class="def">The phrase for being correct and profitable: a call ITM when the stock is above the strike, a put ITM when below.</div></li>
+      
+      <li><span class="term">Out of the Money (OTM)</span><div class="def">A strike beyond the current price. Cheaper, but with a lower probability of finishing in the money — a top cause of retail losses.</div></li>
+      
+      <li><span class="term">Moneyness</span><div class="def">Where the strike sits relative to the current price (ITM / ATM / OTM). Beginners should start at or near the money.</div></li>
+      
+      <li><span class="term">Time value / Time decay</span><div class="def">The portion of the premium tied to remaining time, which erodes as expiry nears — and the decay accelerates into expiry.</div></li>
+      
+      <li><span class="term">Delta</span><div class="def">How much an option&#39;s value moves per unit move in the underlying (higher for ITM strikes). Named here but deferred to a later lesson.</div></li>
+      
+      <li><span class="term">1:3 risk-reward</span><div class="def">Discipline requiring the price target to give at least a 3× payoff versus the premium paid — otherwise own/short the stock instead.</div></li>
+      
+      <li><span class="term">Protective Put</span><div class="def">A put bought to insure a long stock position across a catalyst (e.g. earnings); the expiry must encompass the catalyst date.</div></li>
+      
+      <li><span class="term">Burn-the-house-down hedge</span><div class="def">A long-dated (3/6/9/12mo), 5–15% OTM put bought as cheap insurance against a black-swan / tail-risk crash, costing ~1.5–2.5% of performance.</div></li>
+      
+      <li><span class="term">Black swan event</span><div class="def">An unforeseeable market crash — analogous to home fire insurance: low premium, low probability, catastrophic if it hits.</div></li>
+      
+      <li><span class="term">Multiplier</span><div class="def">US listed stock options carry a 100 multiplier, so one contract controls 100 shares (a $2 premium = $200 per contract).</div></li>
+      
+    </ul>
+  </section>
+  
+
+  <nav class="pager">
+    
+    <a class="prev" href="chapter-59.html">
+      <small>← 05 Previous</small><span>Marginal Benefits 2 — The Disadvantages of Options</span></a>
+    
+    
+    <a class="next disabled"><small>End of the macro block</small><span>Portfolio construction is next</span></a>
+    
+  </nav>
+</div>
+
+  </main>
+</div>
+</body>
+</html>
