@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>PFTM Forex 06 · Forex Market Foundation 6 — ATR &amp; Expected Range (Excel) — The Macro Playbook — The Top-Down Macro Read</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="rail" id="rail">
+    <div class="rail__brand">The Macro Playbook</div>
+    <a href="index.html" style="text-decoration:none;color:inherit">
+      <div class="rail__title">The Top-Down<br>Macro Read</div>
+    </a>
+    <div class="rail__sub">Anton Kreil · ITPL Foundations + PTM 2.0, distilled</div>
+    <button class="rail__toggle" onclick="document.getElementById('rail').classList.toggle('open')">Chapters ▾</button>
+    <ul class="rail__nav">
+      
+      <li><a href="chapter-01.html"
+             class="">
+        <span class="rn">A</span>
+        <span class="rt">Professional Traders vs Retail Traders 101<small>Foundations · What a professional tr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-02.html"
+             class="">
+        <span class="rn">B</span>
+        <span class="rt">Professional Traders vs Retail Traders 102<small>Foundations · Alpha vs absolute retu</small></span>
+      </a></li>
+      
+      <li><a href="chapter-03.html"
+             class="">
+        <span class="rn">C</span>
+        <span class="rt">Realized Volatility 1<small>Foundations · Measuring an instrumen</small></span>
+      </a></li>
+      
+      <li><a href="chapter-04.html"
+             class="">
+        <span class="rn">D</span>
+        <span class="rt">Realized Volatility 2<small>Foundations · The spreadsheet class:</small></span>
+      </a></li>
+      
+      <li><a href="chapter-05.html"
+             class="">
+        <span class="rn">E</span>
+        <span class="rt">Realized Volatility 3<small>Foundations · Average True Range Per</small></span>
+      </a></li>
+      
+      <li><a href="chapter-06.html"
+             class="">
+        <span class="rn">F</span>
+        <span class="rt">Implied Volatility 1<small>Foundations · The VIX as the market&#39;</small></span>
+      </a></li>
+      
+      <li><a href="chapter-07.html"
+             class="">
+        <span class="rn">G</span>
+        <span class="rt">Implied Volatility 2<small>Foundations · Solving for an option&#39;</small></span>
+      </a></li>
+      
+      <li><a href="chapter-08.html"
+             class="">
+        <span class="rn">H</span>
+        <span class="rt">Portfolio Volatility 1<small>Foundations · The concepts of whole-</small></span>
+      </a></li>
+      
+      <li><a href="chapter-09.html"
+             class="">
+        <span class="rn">I</span>
+        <span class="rt">Portfolio Volatility 2<small>Foundations · Calculating a portfoli</small></span>
+      </a></li>
+      
+      <li><a href="chapter-10.html"
+             class="">
+        <span class="rn">J</span>
+        <span class="rt">Becoming a Professional Level Trader<small>Foundations · The IPLT capstone — ho</small></span>
+      </a></li>
+      
+      <li><a href="chapter-11.html"
+             class="">
+        <span class="rn">01</span>
+        <span class="rt">The Framework<small>PTM 2.0 · The framework</small></span>
+      </a></li>
+      
+      <li><a href="chapter-12.html"
+             class="">
+        <span class="rn">02</span>
+        <span class="rt">The Field of Play: Bull &amp; Bear Markets<small>PTM 2.0 · Field of play</small></span>
+      </a></li>
+      
+      <li><a href="chapter-13.html"
+             class="">
+        <span class="rn">03</span>
+        <span class="rt">Gross Domestic Product<small>PTM 2.0 · GDP</small></span>
+      </a></li>
+      
+      <li><a href="chapter-14.html"
+             class="">
+        <span class="rn">04</span>
+        <span class="rt">Leading Indicators 1: Real Interest Rates &amp; the Yield Curve<small>PTM 2.0 · Rates · yield curve</small></span>
+      </a></li>
+      
+      <li><a href="chapter-15.html"
+             class="">
+        <span class="rn">05</span>
+        <span class="rt">Corporate Bonds &amp; Credit Spreads<small>PTM 2.0 · Credit spreads</small></span>
+      </a></li>
+      
+      <li><a href="chapter-16.html"
+             class="">
+        <span class="rn">06</span>
+        <span class="rt">M2 Money Supply: The Accessory Leading Indicator<small>PTM 2.0 · M2 money supply</small></span>
+      </a></li>
+      
+      <li><a href="chapter-17.html"
+             class="">
+        <span class="rn">07</span>
+        <span class="rt">The ISM Manufacturing PMI<small>PTM 2.0 · ISM manufacturing</small></span>
+      </a></li>
+      
+      <li><a href="chapter-18.html"
+             class="">
+        <span class="rn">08</span>
+        <span class="rt">The ISM Non-Manufacturing Report on Business (Services PMI)<small>PTM 2.0 · ISM services</small></span>
+      </a></li>
+      
+      <li><a href="chapter-19.html"
+             class="">
+        <span class="rn">09</span>
+        <span class="rt">Consumer Sentiment<small>PTM 2.0 · UMich sentiment</small></span>
+      </a></li>
+      
+      <li><a href="chapter-20.html"
+             class="">
+        <span class="rn">10</span>
+        <span class="rt">Building Permits: The Housing Leading Indicator<small>PTM 2.0 · Housing · permits</small></span>
+      </a></li>
+      
+      <li><a href="chapter-21.html"
+             class="">
+        <span class="rn">11</span>
+        <span class="rt">NFIB Small Business Optimism Index<small>PTM 2.0 · NFIB small biz</small></span>
+      </a></li>
+      
+      <li><a href="chapter-22.html"
+             class="">
+        <span class="rn">12</span>
+        <span class="rt">Cyclical Commodities as a Leading Indicator<small>PTM 2.0 · Cyclical commodities</small></span>
+      </a></li>
+      
+      <li><a href="chapter-23.html"
+             class="">
+        <span class="rn">13</span>
+        <span class="rt">European Economic Sentiment Indicator (ESI)<small>PTM 2.0 · Europe · ESI</small></span>
+      </a></li>
+      
+      <li><a href="chapter-24.html"
+             class="">
+        <span class="rn">14</span>
+        <span class="rt">China Leading Indicators: Official vs Caixin PMI and Real Rates<small>PTM 2.0 · China · Caixin</small></span>
+      </a></li>
+      
+      <li><a href="chapter-25.html"
+             class="">
+        <span class="rn">15</span>
+        <span class="rt">Recap: Bringing the Leading Indicators Together<small>PTM 2.0 · Recap · coincident</small></span>
+      </a></li>
+      
+      <li><a href="chapter-26.html"
+             class="">
+        <span class="rn">16</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 1a<small>PTM 2.0 · From the macro bias to</small></span>
+      </a></li>
+      
+      <li><a href="chapter-27.html"
+             class="">
+        <span class="rn">17</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 1b<small>PTM 2.0 · Portfolio modelling in</small></span>
+      </a></li>
+      
+      <li><a href="chapter-28.html"
+             class="">
+        <span class="rn">18</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 2<small>PTM 2.0 · Portfolio volatility f</small></span>
+      </a></li>
+      
+      <li><a href="chapter-29.html"
+             class="">
+        <span class="rn">19</span>
+        <span class="rt">Foundations of Long Short Portfolio Management 3<small>PTM 2.0 · Portfolio correlation </small></span>
+      </a></li>
+      
+      <li><a href="chapter-30.html"
+             class="">
+        <span class="rn">20</span>
+        <span class="rt">Foundations of Long Short Portfolio Management 4<small>PTM 2.0 · Beta and beta-neutral </small></span>
+      </a></li>
+      
+      <li><a href="chapter-31.html"
+             class="">
+        <span class="rn">21</span>
+        <span class="rt">Foundations of Long / Short Portfolio Management Recap<small>PTM 2.0 · The capstone of the po</small></span>
+      </a></li>
+      
+      <li><a href="chapter-32.html"
+             class="">
+        <span class="rn">22</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 1<small>PTM 2.0 · The bottom-up, fundame</small></span>
+      </a></li>
+      
+      <li><a href="chapter-33.html"
+             class="">
+        <span class="rn">23</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 2<small>PTM 2.0 · The quant pass in full</small></span>
+      </a></li>
+      
+      <li><a href="chapter-34.html"
+             class="">
+        <span class="rn">24</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 3<small>PTM 2.0 · The quant valuation bl</small></span>
+      </a></li>
+      
+      <li><a href="chapter-35.html"
+             class="">
+        <span class="rn">25</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 4<small>PTM 2.0 · The synthesis of the q</small></span>
+      </a></li>
+      
+      <li><a href="chapter-36.html"
+             class="">
+        <span class="rn">26</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 5<small>PTM 2.0 · The SHORT-side mirror </small></span>
+      </a></li>
+      
+      <li><a href="chapter-37.html"
+             class="">
+        <span class="rn">27</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 6<small>PTM 2.0 · Turnaround Stories vs </small></span>
+      </a></li>
+      
+      <li><a href="chapter-38.html"
+             class="">
+        <span class="rn">28</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 7<small>PTM 2.0 · Data-cleansing a downl</small></span>
+      </a></li>
+      
+      <li><a href="chapter-39.html"
+             class="">
+        <span class="rn">29</span>
+        <span class="rt">Recap of Quantitative Processing<small>PTM 2.0 · The capstone of the tr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-40.html"
+             class="">
+        <span class="rn">30</span>
+        <span class="rt">Qualitative Processing<small>PTM 2.0 · The qualitative half o</small></span>
+      </a></li>
+      
+      <li><a href="chapter-41.html"
+             class="">
+        <span class="rn">31</span>
+        <span class="rt">Trade Idea Generation – Qualitative Processing<small>PTM 2.0 · The deeper qualitative</small></span>
+      </a></li>
+      
+      <li><a href="chapter-42.html"
+             class="">
+        <span class="rn">32</span>
+        <span class="rt">Trade Idea Generation – Identifying Catalysts<small>PTM 2.0 · The final fundamental </small></span>
+      </a></li>
+      
+      <li><a href="chapter-43.html"
+             class="">
+        <span class="rn">33</span>
+        <span class="rt">Trade Idea Generation Template — Part 1<small>PTM 2.0 · How to formalize the w</small></span>
+      </a></li>
+      
+      <li><a href="chapter-44.html"
+             class="">
+        <span class="rn">34</span>
+        <span class="rt">Trade Idea Generation Template — Part 2<small>PTM 2.0 · Finishing the ZEN pric</small></span>
+      </a></li>
+      
+      <li><a href="chapter-45.html"
+             class="">
+        <span class="rn">35</span>
+        <span class="rt">Macro-Driven Trade Ideas<small>PTM 2.0 · Marrying the macro and</small></span>
+      </a></li>
+      
+      <li><a href="chapter-46.html"
+             class="">
+        <span class="rn">36</span>
+        <span class="rt">International Trade Ideas via ADRs<small>PTM 2.0 · Bolt the international</small></span>
+      </a></li>
+      
+      <li><a href="chapter-47.html"
+             class="">
+        <span class="rn">37</span>
+        <span class="rt">Technical Analysis (Timing)<small>PTM 2.0 · Charts don&#39;t generate </small></span>
+      </a></li>
+      
+      <li><a href="chapter-48.html"
+             class="">
+        <span class="rn">38</span>
+        <span class="rt">Price Action (Momentum)<small>PTM 2.0 · The momentum half of t</small></span>
+      </a></li>
+      
+      <li><a href="chapter-49.html"
+             class="">
+        <span class="rn">39</span>
+        <span class="rt">Preventative Risk Management (PRM)<small>PTM 2.0 · Get your head right be</small></span>
+      </a></li>
+      
+      <li><a href="chapter-50.html"
+             class="">
+        <span class="rn">40</span>
+        <span class="rt">Preventative Risk Management — Part 2 (Portfolio Limits)<small>PTM 2.0 · Turning the volatility</small></span>
+      </a></li>
+      
+      <li><a href="chapter-51.html"
+             class="">
+        <span class="rn">41</span>
+        <span class="rt">Eliminating Emotion, Staying Objective<small>PTM 2.0 · Treat your trading acc</small></span>
+      </a></li>
+      
+      <li><a href="chapter-52.html"
+             class="">
+        <span class="rn">42</span>
+        <span class="rt">Track Record &amp; Trading Statistics (Part 1)<small>PTM 2.0 · Building the three-tab</small></span>
+      </a></li>
+      
+      <li><a href="chapter-53.html"
+             class="">
+        <span class="rn">43</span>
+        <span class="rt">Track Record &amp; Trading Statistics (Part 2 — Advanced)<small>PTM 2.0 · The advanced ratios — </small></span>
+      </a></li>
+      
+      <li><a href="chapter-54.html"
+             class="">
+        <span class="rn">44</span>
+        <span class="rt">Getting Organized &amp; Next Steps<small>PTM 2.0 · The closing chapter of</small></span>
+      </a></li>
+      
+      <li><a href="chapter-55.html"
+             class="">
+        <span class="rn">01</span>
+        <span class="rt">Defining the Mandate (Part 1)<small>POTM Options · Why the retail options</small></span>
+      </a></li>
+      
+      <li><a href="chapter-56.html"
+             class="">
+        <span class="rn">02</span>
+        <span class="rt">Defining the Mandate (Part 2)<small>POTM Options · Why most options educa</small></span>
+      </a></li>
+      
+      <li><a href="chapter-57.html"
+             class="">
+        <span class="rn">03</span>
+        <span class="rt">Filtering Options Strategies for Usefulness<small>POTM Options · How Anton Kreil filter</small></span>
+      </a></li>
+      
+      <li><a href="chapter-58.html"
+             class="">
+        <span class="rn">04</span>
+        <span class="rt">Marginal Benefits 1 — The Advantages of Options<small>POTM Options · Why a long call or lon</small></span>
+      </a></li>
+      
+      <li><a href="chapter-59.html"
+             class="">
+        <span class="rn">05</span>
+        <span class="rt">Marginal Benefits 2 — The Disadvantages of Options<small>POTM Options · Why time decay, timing</small></span>
+      </a></li>
+      
+      <li><a href="chapter-60.html"
+             class="">
+        <span class="rn">06</span>
+        <span class="rt">Long Call &amp; Put Options Formalized<small>POTM Options · The two simplest direc</small></span>
+      </a></li>
+      
+      <li><a href="chapter-61.html"
+             class="">
+        <span class="rn">07</span>
+        <span class="rt">Naked Short Puts<small>POTM Options · Selling a put for a cr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-62.html"
+             class="">
+        <span class="rn">08</span>
+        <span class="rt">Naked Short Calls<small>POTM Options · The one strategy Anton</small></span>
+      </a></li>
+      
+      <li><a href="chapter-63.html"
+             class="">
+        <span class="rn">09</span>
+        <span class="rt">The Covered Call<small>POTM Options · Own the stock and sell</small></span>
+      </a></li>
+      
+      <li><a href="chapter-64.html"
+             class="">
+        <span class="rn">10</span>
+        <span class="rt">The Covered Call Collar<small>POTM Options · Extend the covered cal</small></span>
+      </a></li>
+      
+      <li><a href="chapter-65.html"
+             class="">
+        <span class="rn">11</span>
+        <span class="rt">Index Options &amp; Portfolio Hedging<small>POTM Options · Using index options to</small></span>
+      </a></li>
+      
+      <li><a href="chapter-66.html"
+             class="">
+        <span class="rn">12</span>
+        <span class="rt">Options Spreads 1 — The Bull Call Spread<small>POTM Options · Buy a lower-strike cal</small></span>
+      </a></li>
+      
+      <li><a href="chapter-67.html"
+             class="">
+        <span class="rn">13</span>
+        <span class="rt">Options Spreads 2 — The Bear Put Spread<small>POTM Options · The bearish mirror of </small></span>
+      </a></li>
+      
+      <li><a href="chapter-68.html"
+             class="">
+        <span class="rn">14</span>
+        <span class="rt">Market Makers, Volatility &amp; the Greeks<small>POTM Options · How options market mak</small></span>
+      </a></li>
+      
+      <li><a href="chapter-69.html"
+             class="">
+        <span class="rn">15</span>
+        <span class="rt">Recap — What We Have Learnt So Far<small>POTM Options · A stock-take of the op</small></span>
+      </a></li>
+      
+      <li><a href="chapter-70.html"
+             class="">
+        <span class="rn">16</span>
+        <span class="rt">Ratio Spreads 1 — The Short Bull Ratio Spread<small>POTM Options · Buy more cheap OTM cal</small></span>
+      </a></li>
+      
+      <li><a href="chapter-71.html"
+             class="">
+        <span class="rn">17</span>
+        <span class="rt">Ratio Spreads 2 — The Short Bear Ratio Spread<small>POTM Options · The bearish mirror of </small></span>
+      </a></li>
+      
+      <li><a href="chapter-72.html"
+             class="">
+        <span class="rn">18</span>
+        <span class="rt">Ladder Spreads 1 — The Bull Call Ladder<small>POTM Options · A three-legged bullish</small></span>
+      </a></li>
+      
+      <li><a href="chapter-73.html"
+             class="">
+        <span class="rn">19</span>
+        <span class="rt">Ladder Spreads 2 — The Bear Put Ladder<small>POTM Options · The bearish mirror of </small></span>
+      </a></li>
+      
+      <li><a href="chapter-74.html"
+             class="">
+        <span class="rn">20</span>
+        <span class="rt">Volatility Masterclass 1 — Why Volatility Is Risk AND Reward<small>POTM Options · Volatility is the fluc</small></span>
+      </a></li>
+      
+      <li><a href="chapter-75.html"
+             class="">
+        <span class="rn">21</span>
+        <span class="rt">Volatility Masterclass 2 — Turning IV Into Expected Ranges<small>POTM Options · Back implied volatilit</small></span>
+      </a></li>
+      
+      <li><a href="chapter-76.html"
+             class="">
+        <span class="rn">22</span>
+        <span class="rt">Long Straddles — The Non-Directional Volatility Bet<small>POTM Options · Buy an ATM call and an</small></span>
+      </a></li>
+      
+      <li><a href="chapter-77.html"
+             class="">
+        <span class="rn">23</span>
+        <span class="rt">Long Strangles — The Wider, Cheaper Straddle<small>POTM Options · The OTM cousin of the </small></span>
+      </a></li>
+      
+      <li><a href="chapter-78.html"
+             class="">
+        <span class="rn">24</span>
+        <span class="rt">Strap Straddle — The Bullish Volatility Bet<small>POTM Options · The first directional </small></span>
+      </a></li>
+      
+      <li><a href="chapter-79.html"
+             class="">
+        <span class="rn">25</span>
+        <span class="rt">Strip Straddle — The Bearish Volatility Bet<small>POTM Options · Buy 1 ATM call and 2 A</small></span>
+      </a></li>
+      
+      <li><a href="chapter-80.html"
+             class="">
+        <span class="rn">26</span>
+        <span class="rt">Strap Strangle — The Bullish OTM Volatility Bet<small>POTM Options · Two out-of-the-money c</small></span>
+      </a></li>
+      
+      <li><a href="chapter-81.html"
+             class="">
+        <span class="rn">27</span>
+        <span class="rt">Strip Strangle — The Bearish OTM Volatility Bet<small>POTM Options · Buy two OTM puts again</small></span>
+      </a></li>
+      
+      <li><a href="chapter-82.html"
+             class="">
+        <span class="rn">28</span>
+        <span class="rt">Recap &amp; Exam Preparation<small>POTM Options · The closing lesson: wh</small></span>
+      </a></li>
+      
+      <li><a href="chapter-83.html"
+             class="">
+        <span class="rn">01</span>
+        <span class="rt">Forex Market Foundation — The Opportunity Set<small>PFTM Forex · How professional trade</small></span>
+      </a></li>
+      
+      <li><a href="chapter-84.html"
+             class="">
+        <span class="rn">02</span>
+        <span class="rt">Forex Market Foundation 2 — Fixed vs Floating Regimes<small>PFTM Forex · How a currency&#39;s excha</small></span>
+      </a></li>
+      
+      <li><a href="chapter-85.html"
+             class="">
+        <span class="rn">03</span>
+        <span class="rt">Forex Market Foundation 3 — Infrastructure<small>PFTM Forex · Who really moves the F</small></span>
+      </a></li>
+      
+      <li><a href="chapter-86.html"
+             class="">
+        <span class="rn">04</span>
+        <span class="rt">Forex Market Foundation 4 — Basic Computational Methods<small>PFTM Forex · The quantitative found</small></span>
+      </a></li>
+      
+      <li><a href="chapter-87.html"
+             class="">
+        <span class="rn">05</span>
+        <span class="rt">Forex Market Foundation 5 — Advanced Computational Methods (Excel)<small>PFTM Forex · Build a full distribut</small></span>
+      </a></li>
+      
+      <li><a href="chapter-88.html"
+             class="is-active">
+        <span class="rn">06</span>
+        <span class="rt">Forex Market Foundation 6 — ATR &amp; Expected Range (Excel)<small>PFTM Forex · Building an average-tr</small></span>
+      </a></li>
+      
+    </ul>
+    <div class="rail__foot">
+      Distilled from slides + transcript.<br>
+      Every number grounded in the lesson.<br>
+      Not affiliated with ITPM / A. Kreil.
+    </div>
+  </nav>
+  <main class="main">
+    
+<div class="wrap">
+  <header class="hero">
+    <div class="hero__num reveal">PFTM Forex · Chapter 06</div>
+    <h1 class="reveal d1">Forex Market Foundation 6 — ATR &amp; Expected Range (Excel)</h1>
+    <p class="hero__sub reveal d1">Building an average-true-range volatility model in Excel to measure how far AUD/USD and EUR/USD travel across daily, weekly and monthly horizons.</p>
+    <p class="hero__lead reveal d2">ATR is the average true daily range (High minus Low, in %) — a crude but reliable read on how far a pair moves. This lesson builds it from scratch in Excel, averages it over multiple horizons, and shows why the real opportunity lives in weekly and monthly time frames.</p>
+    <div class="hero__chips reveal d3">
+      <span class="chip chip--signal"><span class="dot"></span>Measure ATR, then trade the volatility over months, not days.</span>
+      <span class="chip"><b>11</b>&nbsp;min read</span>
+      <span class="chip"><b>22</b>&nbsp;slides</span>
+    </div>
+  </header>
+
+  
+  <section class="gist reveal">
+    <h2>The gist</h2>
+    <ul><li>ATR = average true daily range: High minus Low expressed as a percentage of the opening price — a simpler complement/substitute to the distribution-of-returns method that lands on the same conclusions.</li><li>The build uses two formulas: High-to-low =D2-E2 (high minus low) and Daily ATR =(SUM(G2:G3)/2)/C3 — the mean of the last two high-to-low ranges over the prior day&#39;s open.</li><li>ATR is horizon-dependent, so it is averaged over 1 week / 1 month / 3 months / 1 year / 2 years, converted at 6 trading days per week to 6 / 24 / 72 / 288 / 576 days.</li><li>AUD/USD worked result: Daily ATR about 1.03% (1.0267% over 1 week), Weekly ATR about 2.55% (2.5525% over 3 months), Monthly ATR about 5.02% (5.0241% over 6 months).</li><li>One-year rolling averages Chris cites: daily 0.811%, weekly 1.959%, monthly 3.976% — the numbers get more compelling as the horizon lengthens.</li><li>AUD/USD is more volatile than EUR/USD over every horizon (e.g. 1-year daily 0.80% vs 0.59%), making it a riskier but higher-opportunity pair; four of the five most volatile USD crosses (RUB, ZAR, NOK, AUD) are commodity currencies.</li><li>Expected range: with monthly volatility around 4%, a 3-month horizon implies roughly -12% to +12% of move — and over 6 months that scales to about -24% to +24%.</li><li>Volatility is opportunity: capturing a 12% move on 8x leverage (a $25,000 deposit run at $200,000 exposure) gives a ~96% return on margin from a single position left alone — smart money needs dumb money to exist.</li></ul>
+  </section>
+  
+
+  
+  <section class="section" id="s1">
+    <div class="section__k">01 / 13</div>
+    <h3>What ATR measures and why we care</h3>
+    
+    <ul class="points"><li>ATR = average true (daily) range: the High minus the Low, expressed as a percentage — how far a pair actually travels in a period.</li><li>It bounds the expected move, so you can size positions and set stops and targets around a realistic range rather than a guess.</li><li>It is a complement AND a substitute to the distribution-of-returns method from the prior video — cruder and simpler, but it reaches the same volatility/risk/opportunity conclusions.</li></ul>
+    
+    <p class="explain">The whole point of measuring volatility is to know how far an asset can move so you can judge opportunity and risk objectively. ATR is the quick, hands-on way to get that number, and it cross-checks the more statistical distribution approach.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-06/00-33-25.jpg" alt="Slide: What ATR measures and why we care">
+      <figcaption>Slide · 00:33:25</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s2">
+    <div class="section__k">02 / 13</div>
+    <h3>Setting up the workbook</h3>
+    
+    <ul class="points"><li>Open a blank workbook and create named sheets: Summary, then AUDUSD ATR Daily, AUDUSD ATR Weekly and AUDUSD ATR Monthly.</li><li>Each tab holds one sampling frequency of price data for the same pair.</li><li>The Summary sheet will later collect every horizon table for both pairs so you can compare them side by side.</li></ul>
+    
+    <p class="explain">Structure comes first. Separating daily, weekly and monthly data onto their own tabs keeps the identical ATR formulas cleanly pointed at the right sampling frequency.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-06/00-25-25.jpg" alt="Slide: Setting up the workbook">
+      <figcaption>Slide · 00:25:25</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s3">
+    <div class="section__k">03 / 13</div>
+    <h3>Pulling OHLC data from Investing.com</h3>
+    
+    <ul class="points"><li>Go to investing.com/currencies, open AUD USD, then Historical Data.</li><li>Set the horizon 1 October 2008 to 1 March 2015 and click Apply; switch the timeframe to Daily, Weekly, then Monthly and repeat.</li><li>Select the table from the bottom up, scroll to the top, shift + left-click before Date to grab the column titles, Ctrl+C, then Ctrl+V into cell A1 of the matching tab.</li></ul>
+    
+    <p class="explain">The data lands in columns A-F: Date, Last, Open, High, Low and Change %. The same select-copy-paste routine is repeated for daily, weekly and monthly frequencies over an identical date window.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-06/00-02-00.jpg" alt="Slide: Pulling OHLC data from Investing.com">
+      <figcaption>Slide · 00:02:00</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s4">
+    <div class="section__k">04 / 13</div>
+    <h3>The high-to-low range formula</h3>
+    
+    <ul class="points"><li>In column G (header &#39;High to low&#39;) enter =D2 (the High) minus E2 (the Low) in cell G2.</li><li>Double-click the fill handle (the little black box bottom-right of the cell) to copy the formula down the whole data set to 1 October 2008.</li><li>This raw range is the building block ATR then averages and normalises.</li></ul>
+    
+    <p class="explain">The first column is just the true range for each period: how many points the pair covered between its high and its low. Everything else is built on top of it.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-06/00-06-05.jpg" alt="Slide: The high-to-low range formula">
+      <figcaption>Slide · 00:06:05</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s5">
+    <div class="section__k">05 / 13</div>
+    <h3>The Daily ATR formula</h3>
+    
+    <ul class="points"><li>In column H (header &#39;Daily ATR&#39;) cell H2 = (SUM(G2:G3)/2)/C3.</li><li>It averages the last two high-to-low ranges, then divides by C3, the previous day&#39;s Open, to express the move as a percentage.</li><li>Fill it down; delete the trailing #DIV/0! error at the bottom, which appears because the formula has no prior row to reference before 1 October 2008.</li></ul>
+    
+    <p class="explain">This is the core calculation: a two-period average true range, normalised by price so it reads as a percentage move. On 1 March 2015 AUD/USD it returns 0.0057715, i.e. about 0.58%.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-06/00-07-40.jpg" alt="Slide: The Daily ATR formula">
+      <figcaption>Slide · 00:07:40</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s6">
+    <div class="section__k">06 / 13</div>
+    <h3>Averaging windows: ATR is horizon-dependent</h3>
+    
+    <ul class="points"><li>To the right of the data, average the daily ATR over 1 week, 1 month, 3 months, 1 year and 2 years.</li><li>At 6 trading days per week for currencies, those convert to 6, 24, 72, 288 and 576 trading days.</li><li>Cell K3 = AVERAGE(H2:H7) for one week; the others run H2:H25, H2:H73, H2:H289 and H2:H577 (days + 1 because the data starts on row 2). Format K3:O3 as a percentage.</li></ul>
+    
+    <p class="explain">A single ATR number is meaningless without a horizon. Averaging over several windows shows how volatility has evolved — here it is clearly picking up as you move toward the recent (March 2015) end of the data.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-06/00-10-20.jpg" alt="Slide: Averaging windows: ATR is horizon-dependent">
+      <figcaption>Slide · 00:10:20</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s7">
+    <div class="section__k">07 / 13</div>
+    <h3>Copying the model to weekly and monthly</h3>
+    
+    <ul class="points"><li>Copy columns G and H into the Weekly and Monthly tabs; the formulas auto-adjust to reference each sheet&#39;s own data.</li><li>Copy the J1:O3 horizon block across too, then re-label &#39;Daily ATR&#39; to &#39;Weekly ATR&#39; / &#39;Monthly ATR&#39;.</li><li>Change the windows: weekly uses 3m/6m/1y/2y/3y = 12/26/52/104/156 weeks; monthly uses 6m/1y/2y/3y/5y = 6/12/24/36/60 months, and fix each AVERAGE range (e.g. H2:H13, H2:H27) to match.</li></ul>
+    
+    <p class="explain">The same two formulas power all three frequencies — only the labels, the averaging windows and the row counts change. Weekly and monthly deliberately reach out to longer horizons because that is where the interesting volatility lives.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-06/00-13-10.jpg" alt="Slide: Copying the model to weekly and monthly">
+      <figcaption>Slide · 00:13:10</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s8">
+    <div class="section__k">08 / 13</div>
+    <h3>AUD/USD worked results</h3>
+    
+    <ul class="points"><li>Daily ATR: 1.0267% (1 week), 0.9994% (1 month), 1.0335% (3 months), 0.8113% (1 year), 0.8795% (2 years).</li><li>Weekly ATR: 2.5525% (3 months), 2.4600% (6 months), 1.9588% (1 year), 2.1737% (2 years), 2.0784% (3 years).</li><li>Monthly ATR: 5.0241% (6 months), 3.9758% (1 year), 4.5686% (2 years), 3.9158% (3 years), 4.7145% (5 years).</li></ul>
+    
+    <p class="explain">Read across the horizons and AUD/USD volatility has clearly been picking up recently on a daily, weekly and monthly basis. In absolute terms, opportunities and risk are higher — &#39;PERFECT!&#39; for a trader who can capture it.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-06/00-32-20.jpg" alt="Slide: AUD/USD worked results">
+      <figcaption>Slide · 00:32:20</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s9">
+    <div class="section__k">09 / 13</div>
+    <h3>Comparing AUD/USD vs EUR/USD on the Summary sheet</h3>
+    
+    <ul class="points"><li>Copy each horizon table with Paste-as-Values into the Summary sheet, title the blocks &#39;AUDUSD ATR&#39; and &#39;EURUSD ATR&#39;, format as %, add borders.</li><li>AUD/USD is more volatile than EUR/USD across every horizon (e.g. 1-year daily 0.80% vs 0.59%; 1-year monthly 3.87% vs 3.33%), defining AUD/USD as the riskier — and higher-opportunity — pair.</li><li>Both pairs show volatility rising in recent times, a pattern common across many currencies right now.</li></ul>
+    
+    <p class="explain">Putting both pairs side by side lets you rank them objectively. AUD/USD carries more range per horizon, so more opportunity and more risk than EUR/USD — a relative read that also holds on the distribution method.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-06/00-31-20.jpg" alt="Slide: Comparing AUD/USD vs EUR/USD on the Summary sheet">
+      <figcaption>Slide · 00:31:20</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s10">
+    <div class="section__k">10 / 13</div>
+    <h3>Relative ranking and commodity currencies</h3>
+    
+    <ul class="points"><li>Sorting the tradable USD-cross set by 1-year rolling daily ATR puts AUD/USD 5th; the top four are USD/RUB, USD/ZAR, USD/NOK and USD/SEK.</li><li>Four of the top five are classic commodity currencies — their exports concentrate on one or two commodities, unlike the diversified EUR and GBP export markets.</li><li>One-year rolling averages: daily 0.811%, weekly 1.959% (AUD 5th), monthly 3.976% (AUD 6th) — the numbers grow more compelling as the horizon extends.</li></ul>
+    
+    <p class="explain">AUD/USD sits mid-pack on weekly and monthly volatility, which makes it a good anchor to the average opportunity across the whole forex complex — and a great teaching example because the USD side forces you to learn US macro that transfers to any country.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-06/00-37-00.jpg" alt="Slide: Relative ranking and commodity currencies">
+      <figcaption>Slide · 00:37:00</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s11">
+    <div class="section__k">11 / 13</div>
+    <h3>Expected range: scaling ATR to your horizon</h3>
+    
+    <ul class="points"><li>Daily volatility is extremely low and unpredictable in absolute terms for any forex pair; the edge appears on weekly and monthly time frames.</li><li>With AUD/USD monthly volatility around 4%, a 3-month horizon implies capturing roughly -12% to +12% of range.</li><li>Over 6 months that scales to about -24% to +24% if the pair trends in one fundamental direction — the professional 1-to-3-month-and-longer approach.</li></ul>
+    
+    <p class="explain">This is the payoff of the whole exercise: turn a per-period ATR into an expected range over your holding period. Combined with fundamentals to predict the trend, the longer horizon is where consistent, leverageable returns live.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-06/00-46-40.jpg" alt="Slide: Expected range: scaling ATR to your horizon">
+      <figcaption>Slide · 00:46:40</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s12">
+    <div class="section__k">12 / 13</div>
+    <h3>Turning range into return with leverage</h3>
+    
+    <ul class="points"><li>Set your own gross exposure by depositing more and choosing your leverage — e.g. a $25,000 margin deposit run at 8x for $200,000 exposure.</li><li>A 12% move on $200,000 is a $24,000 gain, i.e. about a 96% return on the $25,000 deposited — from one position taken and left alone.</li><li>You do not need to trade every day: establish the fundamental trend, put the position on, and let it capture the volatility over months.</li></ul>
+    
+    <p class="explain">In currencies the captured range can always be leveraged. Choosing your own exposure lets you sit through the noise and harvest a longer-horizon trend rather than churning trades daily for nothing.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-06/00-33-25.jpg" alt="Slide: Turning range into return with leverage">
+      <figcaption>Slide · 00:33:25</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s13">
+    <div class="section__k">13 / 13</div>
+    <h3>Why this matters: smart money needs dumb money</h3>
+    
+    <ul class="points"><li>Do the volatility analysis for opportunity and risk every time, and be realistic given the evidence.</li><li>If everyone were realistic there would be no retail forex day traders and therefore no dumb money; smart money (professionals, hedge funds) needs dumb money to exist to capture the opportunity.</li><li>Distribution + ATR analysis is a foundational head-check on your own expectations, letting you cut the noise and verify opportunity/risk objectively at any time.</li></ul>
+    
+    <p class="explain">ATR is part of the wider foundation — the opportunity set, currency regimes, market infrastructure and the everyday computational methods. With it grounded, the course moves on to macro fundamentals and idea generation.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-06/00-14-10.jpg" alt="Slide: Why this matters: smart money needs dumb money">
+      <figcaption>Slide · 00:14:10</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+
+  
+  <section class="section">
+    <div class="section__k">Reference</div>
+    <h3>Glossary</h3>
+    <ul class="glossary">
+      
+      <li><span class="term">ATR (Average True Range)</span><div class="def">The average of a period&#39;s High minus Low, here expressed as a percentage of the opening price — a measure of how far a pair typically travels.</div></li>
+      
+      <li><span class="term">High-to-low range</span><div class="def">High minus Low for a single period (column G, =D2-E2); the raw building block that ATR averages and normalises.</div></li>
+      
+      <li><span class="term">Daily ATR formula</span><div class="def">=(SUM(G2:G3)/2)/C3 — the mean of the last two high-to-low ranges divided by the prior period&#39;s Open, giving a percentage.</div></li>
+      
+      <li><span class="term">Averaging window</span><div class="def">The look-back over which ATR is averaged. Currencies use 6 trading days per week, so 1w/1m/3m/1y/2y become 6/24/72/288/576 days.</div></li>
+      
+      <li><span class="term">Expected range</span><div class="def">ATR scaled to a holding period — e.g. ~4% monthly volatility implies roughly -12% to +12% over 3 months.</div></li>
+      
+      <li><span class="term">Commodity currency</span><div class="def">A currency whose exports depend heavily on one or two commodities (AUD, RUB, ZAR, NOK), giving it structurally higher volatility.</div></li>
+      
+      <li><span class="term">Gross exposure</span><div class="def">Total position size relative to margin deposited; setting it deliberately (e.g. $200,000 on a $25,000 deposit) is how you choose your own leverage.</div></li>
+      
+      <li><span class="term">Smart money / dumb money</span><div class="def">Professionals and funds who understand where opportunity lies (smart money) rely on unrealistic retail day traders (dumb money) to capture it.</div></li>
+      
+    </ul>
+  </section>
+  
+
+  <nav class="pager">
+    
+    <a class="prev" href="chapter-87.html">
+      <small>← 05 Previous</small><span>Forex Market Foundation 5 — Advanced Computational Methods (Excel)</span></a>
+    
+    
+    <a class="next disabled"><small>End of the macro block</small><span>Portfolio construction is next</span></a>
+    
+  </nav>
+</div>
+
+  </main>
+</div>
+</body>
+</html>
