@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>PTM 2.0 37 · Technical Analysis (Timing) — The Macro Playbook — The Top-Down Macro Read</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="rail" id="rail">
+    <div class="rail__brand">The Macro Playbook</div>
+    <a href="index.html" style="text-decoration:none;color:inherit">
+      <div class="rail__title">The Top-Down<br>Macro Read</div>
+    </a>
+    <div class="rail__sub">Anton Kreil · ITPL Foundations + PTM 2.0, distilled</div>
+    <button class="rail__toggle" onclick="document.getElementById('rail').classList.toggle('open')">Chapters ▾</button>
+    <ul class="rail__nav">
+      
+      <li><a href="chapter-01.html"
+             class="">
+        <span class="rn">A</span>
+        <span class="rt">Professional Traders vs Retail Traders 101<small>Foundations · What a professional tr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-02.html"
+             class="">
+        <span class="rn">B</span>
+        <span class="rt">Professional Traders vs Retail Traders 102<small>Foundations · Alpha vs absolute retu</small></span>
+      </a></li>
+      
+      <li><a href="chapter-03.html"
+             class="">
+        <span class="rn">C</span>
+        <span class="rt">Realized Volatility 1<small>Foundations · Measuring an instrumen</small></span>
+      </a></li>
+      
+      <li><a href="chapter-04.html"
+             class="">
+        <span class="rn">D</span>
+        <span class="rt">Realized Volatility 2<small>Foundations · The spreadsheet class:</small></span>
+      </a></li>
+      
+      <li><a href="chapter-05.html"
+             class="">
+        <span class="rn">E</span>
+        <span class="rt">Realized Volatility 3<small>Foundations · Average True Range Per</small></span>
+      </a></li>
+      
+      <li><a href="chapter-06.html"
+             class="">
+        <span class="rn">F</span>
+        <span class="rt">Implied Volatility 1<small>Foundations · The VIX as the market&#39;</small></span>
+      </a></li>
+      
+      <li><a href="chapter-07.html"
+             class="">
+        <span class="rn">G</span>
+        <span class="rt">Implied Volatility 2<small>Foundations · Solving for an option&#39;</small></span>
+      </a></li>
+      
+      <li><a href="chapter-08.html"
+             class="">
+        <span class="rn">H</span>
+        <span class="rt">Portfolio Volatility 1<small>Foundations · The concepts of whole-</small></span>
+      </a></li>
+      
+      <li><a href="chapter-09.html"
+             class="">
+        <span class="rn">I</span>
+        <span class="rt">Portfolio Volatility 2<small>Foundations · Calculating a portfoli</small></span>
+      </a></li>
+      
+      <li><a href="chapter-10.html"
+             class="">
+        <span class="rn">J</span>
+        <span class="rt">Becoming a Professional Level Trader<small>Foundations · The IPLT capstone — ho</small></span>
+      </a></li>
+      
+      <li><a href="chapter-11.html"
+             class="">
+        <span class="rn">01</span>
+        <span class="rt">The Framework<small>PTM 2.0 · The framework</small></span>
+      </a></li>
+      
+      <li><a href="chapter-12.html"
+             class="">
+        <span class="rn">02</span>
+        <span class="rt">The Field of Play: Bull &amp; Bear Markets<small>PTM 2.0 · Field of play</small></span>
+      </a></li>
+      
+      <li><a href="chapter-13.html"
+             class="">
+        <span class="rn">03</span>
+        <span class="rt">Gross Domestic Product<small>PTM 2.0 · GDP</small></span>
+      </a></li>
+      
+      <li><a href="chapter-14.html"
+             class="">
+        <span class="rn">04</span>
+        <span class="rt">Leading Indicators 1: Real Interest Rates &amp; the Yield Curve<small>PTM 2.0 · Rates · yield curve</small></span>
+      </a></li>
+      
+      <li><a href="chapter-15.html"
+             class="">
+        <span class="rn">05</span>
+        <span class="rt">Corporate Bonds &amp; Credit Spreads<small>PTM 2.0 · Credit spreads</small></span>
+      </a></li>
+      
+      <li><a href="chapter-16.html"
+             class="">
+        <span class="rn">06</span>
+        <span class="rt">M2 Money Supply: The Accessory Leading Indicator<small>PTM 2.0 · M2 money supply</small></span>
+      </a></li>
+      
+      <li><a href="chapter-17.html"
+             class="">
+        <span class="rn">07</span>
+        <span class="rt">The ISM Manufacturing PMI<small>PTM 2.0 · ISM manufacturing</small></span>
+      </a></li>
+      
+      <li><a href="chapter-18.html"
+             class="">
+        <span class="rn">08</span>
+        <span class="rt">The ISM Non-Manufacturing Report on Business (Services PMI)<small>PTM 2.0 · ISM services</small></span>
+      </a></li>
+      
+      <li><a href="chapter-19.html"
+             class="">
+        <span class="rn">09</span>
+        <span class="rt">Consumer Sentiment<small>PTM 2.0 · UMich sentiment</small></span>
+      </a></li>
+      
+      <li><a href="chapter-20.html"
+             class="">
+        <span class="rn">10</span>
+        <span class="rt">Building Permits: The Housing Leading Indicator<small>PTM 2.0 · Housing · permits</small></span>
+      </a></li>
+      
+      <li><a href="chapter-21.html"
+             class="">
+        <span class="rn">11</span>
+        <span class="rt">NFIB Small Business Optimism Index<small>PTM 2.0 · NFIB small biz</small></span>
+      </a></li>
+      
+      <li><a href="chapter-22.html"
+             class="">
+        <span class="rn">12</span>
+        <span class="rt">Cyclical Commodities as a Leading Indicator<small>PTM 2.0 · Cyclical commodities</small></span>
+      </a></li>
+      
+      <li><a href="chapter-23.html"
+             class="">
+        <span class="rn">13</span>
+        <span class="rt">European Economic Sentiment Indicator (ESI)<small>PTM 2.0 · Europe · ESI</small></span>
+      </a></li>
+      
+      <li><a href="chapter-24.html"
+             class="">
+        <span class="rn">14</span>
+        <span class="rt">China Leading Indicators: Official vs Caixin PMI and Real Rates<small>PTM 2.0 · China · Caixin</small></span>
+      </a></li>
+      
+      <li><a href="chapter-25.html"
+             class="">
+        <span class="rn">15</span>
+        <span class="rt">Recap: Bringing the Leading Indicators Together<small>PTM 2.0 · Recap · coincident</small></span>
+      </a></li>
+      
+      <li><a href="chapter-26.html"
+             class="">
+        <span class="rn">16</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 1a<small>PTM 2.0 · From the macro bias to</small></span>
+      </a></li>
+      
+      <li><a href="chapter-27.html"
+             class="">
+        <span class="rn">17</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 1b<small>PTM 2.0 · Portfolio modelling in</small></span>
+      </a></li>
+      
+      <li><a href="chapter-28.html"
+             class="">
+        <span class="rn">18</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 2<small>PTM 2.0 · Portfolio volatility f</small></span>
+      </a></li>
+      
+      <li><a href="chapter-29.html"
+             class="">
+        <span class="rn">19</span>
+        <span class="rt">Foundations of Long Short Portfolio Management 3<small>PTM 2.0 · Portfolio correlation </small></span>
+      </a></li>
+      
+      <li><a href="chapter-30.html"
+             class="">
+        <span class="rn">20</span>
+        <span class="rt">Foundations of Long Short Portfolio Management 4<small>PTM 2.0 · Beta and beta-neutral </small></span>
+      </a></li>
+      
+      <li><a href="chapter-31.html"
+             class="">
+        <span class="rn">21</span>
+        <span class="rt">Foundations of Long / Short Portfolio Management Recap<small>PTM 2.0 · The capstone of the po</small></span>
+      </a></li>
+      
+      <li><a href="chapter-32.html"
+             class="">
+        <span class="rn">22</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 1<small>PTM 2.0 · The bottom-up, fundame</small></span>
+      </a></li>
+      
+      <li><a href="chapter-33.html"
+             class="">
+        <span class="rn">23</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 2<small>PTM 2.0 · The quant pass in full</small></span>
+      </a></li>
+      
+      <li><a href="chapter-34.html"
+             class="">
+        <span class="rn">24</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 3<small>PTM 2.0 · The quant valuation bl</small></span>
+      </a></li>
+      
+      <li><a href="chapter-35.html"
+             class="">
+        <span class="rn">25</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 4<small>PTM 2.0 · The synthesis of the q</small></span>
+      </a></li>
+      
+      <li><a href="chapter-36.html"
+             class="">
+        <span class="rn">26</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 5<small>PTM 2.0 · The SHORT-side mirror </small></span>
+      </a></li>
+      
+      <li><a href="chapter-37.html"
+             class="">
+        <span class="rn">27</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 6<small>PTM 2.0 · Turnaround Stories vs </small></span>
+      </a></li>
+      
+      <li><a href="chapter-38.html"
+             class="">
+        <span class="rn">28</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 7<small>PTM 2.0 · Data-cleansing a downl</small></span>
+      </a></li>
+      
+      <li><a href="chapter-39.html"
+             class="">
+        <span class="rn">29</span>
+        <span class="rt">Recap of Quantitative Processing<small>PTM 2.0 · The capstone of the tr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-40.html"
+             class="">
+        <span class="rn">30</span>
+        <span class="rt">Qualitative Processing<small>PTM 2.0 · The qualitative half o</small></span>
+      </a></li>
+      
+      <li><a href="chapter-41.html"
+             class="">
+        <span class="rn">31</span>
+        <span class="rt">Trade Idea Generation – Qualitative Processing<small>PTM 2.0 · The deeper qualitative</small></span>
+      </a></li>
+      
+      <li><a href="chapter-42.html"
+             class="">
+        <span class="rn">32</span>
+        <span class="rt">Trade Idea Generation – Identifying Catalysts<small>PTM 2.0 · The final fundamental </small></span>
+      </a></li>
+      
+      <li><a href="chapter-43.html"
+             class="">
+        <span class="rn">33</span>
+        <span class="rt">Trade Idea Generation Template — Part 1<small>PTM 2.0 · How to formalize the w</small></span>
+      </a></li>
+      
+      <li><a href="chapter-44.html"
+             class="">
+        <span class="rn">34</span>
+        <span class="rt">Trade Idea Generation Template — Part 2<small>PTM 2.0 · Finishing the ZEN pric</small></span>
+      </a></li>
+      
+      <li><a href="chapter-45.html"
+             class="">
+        <span class="rn">35</span>
+        <span class="rt">Macro-Driven Trade Ideas<small>PTM 2.0 · Marrying the macro and</small></span>
+      </a></li>
+      
+      <li><a href="chapter-46.html"
+             class="">
+        <span class="rn">36</span>
+        <span class="rt">International Trade Ideas via ADRs<small>PTM 2.0 · Bolt the international</small></span>
+      </a></li>
+      
+      <li><a href="chapter-47.html"
+             class="is-active">
+        <span class="rn">37</span>
+        <span class="rt">Technical Analysis (Timing)<small>PTM 2.0 · Charts don&#39;t generate </small></span>
+      </a></li>
+      
+    </ul>
+    <div class="rail__foot">
+      Distilled from slides + transcript.<br>
+      Every number grounded in the lesson.<br>
+      Not affiliated with ITPM / A. Kreil.
+    </div>
+  </nav>
+  <main class="main">
+    
+<div class="wrap">
+  <header class="hero">
+    <div class="hero__num reveal">PTM 2.0 · Chapter 37</div>
+    <h1 class="reveal d1">Technical Analysis (Timing)</h1>
+    <p class="hero__sub reveal d1">Charts don&#39;t generate ideas — they time the fundamental ideas you already have.</p>
+    <p class="hero__lead reveal d2">Technical analysis is the last, smallest step in the process: less than 10% of the work, used only to time a trade you already believe in fundamentally. Pull up the chart with a bull or bear predisposition already set, run it through a red/amber/green traffic light, and never let a picture of past price change your mind.</p>
+    <div class="hero__chips reveal d3">
+      <span class="chip chip--signal"><span class="dot"></span>Time, don&#39;t decide: fundamentals first (~90%), chart last (&lt;10%).</span>
+      <span class="chip"><b>14</b>&nbsp;min read</span>
+      <span class="chip"><b>33</b>&nbsp;slides</span>
+    </div>
+  </header>
+
+  
+  <section class="gist reveal">
+    <h2>The gist</h2>
+    <ul><li>TA and PA are TIMING only and make up less than 10% of the process; fundamentals make up around 90% — the chart NEVER generates a trade idea.</li><li>Definitions: Technical Analysis = the study of pattern recognition and formations in price; Price Action = the study of price momentum (covered in video 38).</li><li>The horizon is 20-60 days on daily data zoomed out over months: sub-20-day moves are random noise (day-trading is 50/50), and beyond 120 days fundamentals dominate.</li><li>Order of operations: you ALREADY hold a fundamental predisposition + catalysts BEFORE you open the chart — &#39;DO NOT let the Chart of past Price change your mind&#39;.</li><li>The Big Mistakes: deriving an idea from a chart then back-filling fundamentals is lazy; shorting a fundamentally-bullish name or longing a fundamentally-bearish name because the chart looks the other way is a &#39;Sackable offence&#39;.</li><li>The Traffic Light System: RED = timing bad / trend against -&gt; do not trade, watchlist; AMBER = fundamentals starting to play out / trend turning -&gt; consider, half or full; GREEN = timing in favour / continuation or breakout-breakdown -&gt; trade full size. The same chart is green for a long and red for a short.</li><li>Worked patterns: trend up ODFL, trend down TSLA; ranging S/R BILL; reversals Head &amp; Shoulders (XOM), Reverse H&amp;S (ORCL), Cup &amp; Handle, Double Top (PEGA), Double Bottom (AMD); continuations Bullish Flag (XLNX), Bullish Pennant (BLNK), Bearish Flag (CPB), Bearish Pennant (FBHS); Abnormal Volume (SAVE up, KHC down).</li><li>Breakouts are unreliable without a catalyst because order flow is invisible — the seller may just have &#39;gone to lunch&#39; and will reload the same limit.</li><li>The Tesla cautionary tale: dogmatic shorts who ignored the break of the downtrend fought the market from ~$35-40 to ~$580 and blew up — right fundamentals + bad timing = stop out then miss a 400% run.</li><li>If the timing is wrong, sit back and use the Watchlist; if the timing never comes, you have an Investment, not a Trade.</li></ul>
+  </section>
+  
+
+  
+  <section class="section" id="s1">
+    <div class="section__k">01 / 17</div>
+    <h3>Where timing sits in the process</h3>
+    
+    <ul class="points"><li>We are medium-term Long/Short portfolio managers operating in the 20-60 day time horizon — the volatility sweet spot between trading and investing.</li><li>The bulk of the work is the Quantitative and Qualitative fundamental processes; timing (technicals) is the small final step layered on top, with only the basics required.</li><li>Timing tools exist to help us optimise entry into a fundamentally-driven idea with catalysts — they do not replace that work.</li></ul>
+    
+    <p class="explain">The systematic process runs Fundamentals -&gt; Timing -&gt; Trade Structure -&gt; Risk Management. Technical analysis lives inside &#39;Timing&#39;, and Anton flags on the slide itself that only the basics are needed there.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-37/00-05-25.jpg" alt="Slide: Where timing sits in the process">
+      <figcaption>Slide · 00:05:25</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s2">
+    <div class="section__k">02 / 17</div>
+    <h3>Why the horizon matters: noise vs fundamentals</h3>
+    
+    <ul class="points"><li>Below 20 days, price movement in most stocks is essentially random noise — the IPLT series showed day-trading at literal 50/50 odds.</li><li>Beyond 120 days (out to 1, 3, 5 years) fundamentals are the biggest predictor of price.</li><li>We sit in between as medium-term managers, so we read daily data zoomed OUT over many months to judge the bigger-picture timing for the next 20-60 days.</li></ul>
+    
+    <p class="explain">Because short-term price is random and long-term price is fundamental, technical analysis only adds value over the medium term — and even there, only for timing, never for idea generation.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-37/00-05-25.jpg" alt="Slide: Why the horizon matters: noise vs fundamentals">
+      <figcaption>Slide · 00:05:25</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s3">
+    <div class="section__k">03 / 17</div>
+    <h3>TA vs PA — the definitions</h3>
+    
+    <ul class="points"><li>Technical Analysis = the study of pattern recognition and formations in price (this video).</li><li>Price Action = the study of price momentum (the next video, 38).</li><li>Both are timing disciplines; the series splits them into two videos for that reason.</li></ul>
+    
+    <p class="explain">Keep the two straight: this chapter is about chart formations (TA); momentum (PA) follows in video 38.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-37/00-24-45.jpg" alt="Slide: TA vs PA — the definitions">
+      <figcaption>Slide · 00:24:45</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s4">
+    <div class="section__k">04 / 17</div>
+    <h3>Less than 10% of the work</h3>
+    
+    <ul class="points"><li>In a professional trade-idea process, TA and PA together make up less than 10% of the work; fundamentals make up around 90%.</li><li>We don&#39;t run any TA analytics from the chart until the fundamental work is done — until now the series has only eyeballed charts for past price moves when hunting catalysts.</li><li>By the time we reach TA we have a much clearer picture of the fundamentals + past catalysts, so when a position works or fails we generally know exactly why — and it goes in the experience database that compounds over years.</li><li>TA is not useless — it just becomes useless if it is the ONLY thing you use.</li></ul>
+    
+    <p class="explain">The professional attitude: a chart is a photograph of past fundamentals. It is a tool for timing, not a generator of ideas — and knowing why you were right or wrong (which only fundamentals give you) is what makes the process repeatable.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-37/00-24-45.jpg" alt="Slide: Less than 10% of the work">
+      <figcaption>Slide · 00:24:45</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s5">
+    <div class="section__k">05 / 17</div>
+    <h3>The Big Mistakes</h3>
+    
+    <ul class="points"><li>1) Getting a trade idea from a chart, then using fundamentals to justify it after — you haven&#39;t done the work; it&#39;s lazy and you&#39;ll get found out.</li><li>2) Going SHORT a name you are fundamentally BULLISH on because the pattern looks bearish — &#39;Sackable offence&#39;.</li><li>3) Going LONG a name you are fundamentally BEARISH on because the pattern looks bullish — &#39;Sackable offence&#39;.</li><li>No $5bn hedge fund puts on a $250m position &#39;because a line crossed another line&#39;; before you open the chart you already have a bull or bear predisposition — &#39;DO NOT let the Chart of past Price change your mind&#39;.</li></ul>
+    
+    <p class="explain">In the sackable-offence cases it doesn&#39;t even matter whether you make or lose money — doing the opposite of your own fundamental view advertises that you have no conviction and a chaotic, lazy process. Technicals tell you what you probably should NOT do as much as what you should.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-37/00-32-20.jpg" alt="Slide: The Big Mistakes">
+      <figcaption>Slide · 00:32:20</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s6">
+    <div class="section__k">06 / 17</div>
+    <h3>The TA &amp; PA Traffic Light System</h3>
+    
+    <ul class="points"><li>RED — your fundamental idea may be good, but TA/PA says timing is bad (e.g. the trend is against you): DO NOT TRADE, put it on the Watchlist.</li><li>AMBER — the fundamentals look like they&#39;re starting to play out (e.g. the trend is turning and may continue): CONSIDER TRADING — watchlist, half, or full position with good risk management.</li><li>GREEN — TA/PA says timing is in your favour (continuation of trend, or a break-out / break-down): TRADE, commit capital with a full position size.</li><li>Crucially the SAME chart is green for one direction and red for the other: an uptrending stock is green for a long and red for a short.</li></ul>
+    
+    <p class="explain">Run every chart through the traffic light against your existing predisposition. Half positions in amber are themselves risk management — you get a toe in so you don&#39;t miss it, then top up to full size if it turns green.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-37/00-40-40.jpg" alt="Slide: The TA &amp; PA Traffic Light System">
+      <figcaption>Slide · 00:40:40</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s7">
+    <div class="section__k">07 / 17</div>
+    <h3>Candlesticks — keep it basic</h3>
+    
+    <ul class="points"><li>Daily open-high-low-close data: the body is formed by the open and close, the wick by the high and low.</li><li>Standard convention: a black body (open above close) is bearish, a white body (close above open) is bullish — but it depends on your charting software (Anton&#39;s is reversed: bearish = filled/opaque, bullish = transparent).</li><li>Over a 20-60 day horizon on daily data you do NOT need to go deep into dojis, hammers, hanging men, shooting stars, etc. — the list is endless and adds little.</li></ul>
+    
+    <p class="explain">There is a law of diminishing returns to candlestick minutiae for a medium-term manager. Learn the body/wick basics, check how your own software colours candles, and move on.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-37/00-44-30.jpg" alt="Slide: Candlesticks — keep it basic">
+      <figcaption>Slide · 00:44:30</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s8">
+    <div class="section__k">08 / 17</div>
+    <h3>The TA Checklist</h3>
+    
+    <ul class="points"><li>Trending: Upward? / Downward?</li><li>Ranging: Support and Resistance Levels.</li><li>Reversals: Head and Shoulders, Reverse Head and Shoulders, Cup and Handle, Double Top, Double Bottom.</li><li>Continuations: Bullish Flag, Bullish Pennant, Bearish Flag, Bearish Pennant.</li><li>Abnormal Volume: Combined with Fundamental News or Not?</li></ul>
+    
+    <p class="explain">This is the checklist you run at the timing stage. It is not exhaustive — you can add to it — but for a 20-60 day manager the goal is to get the big things right, not to disappear down the endless charting rabbit hole.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-37/00-45-30.jpg" alt="Slide: The TA Checklist">
+      <figcaption>Slide · 00:45:30</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s9">
+    <div class="section__k">09 / 17</div>
+    <h3>Trending stocks — up (ODFL) and down (TSLA)</h3>
+    
+    <ul class="points"><li>An upward-trending stock (ODFL, Old Dominion Freight Line) is a GREEN light for a bullish predisposition and a RED light for a bearish one.</li><li>A downward-trending stock (TSLA in a descending channel) is the mirror image; how you size in is discretionary — full, half, or leaning in a small starter and adding on confirmation.</li><li>A break of the trend flips the lights: an uptrend broken to the downside becomes red for longs / green for shorts, and vice versa.</li></ul>
+    
+    <p class="explain">Trending stocks are the straightforward case: line up the trend with your predisposition, then use discretion on sizing. There is no hard rulebook on execution — it is probabilistic and situational.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-37/00-53-45.jpg" alt="Slide: Trending stocks — up (ODFL) and down (TSLA)">
+      <figcaption>Slide · 00:53:45</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s10">
+    <div class="section__k">10 / 17</div>
+    <h3>Ranging stocks — support &amp; resistance (BILL)</h3>
+    
+    <ul class="points"><li>Bill Holdings (BILL) shows resistance in the high $160s and a big level just above $190, with support around $140 (support 1) and just above $130 (support 2).</li><li>Ranging stocks are tricky because there is no defined medium-term trend, so you must ask whether your fundamentals + catalysts can actually force a break within 20-60 days — usually an AMBER.</li><li>Don&#39;t just &#39;wait for the breakout&#39;: you know nothing about the invisible order flow at those levels.</li></ul>
+    
+    <p class="explain">In a range the market is undecided, so you&#39;re not fighting a trend — but you also lack one. Typically you take a partial position to avoid missing it, then add at support (long) or on a break confirmed by fundamental news.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-37/01-03-55.jpg" alt="Slide: Ranging stocks — support &amp; resistance (BILL)">
+      <figcaption>Slide · 01:03:55</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s11">
+    <div class="section__k">11 / 17</div>
+    <h3>Why breakouts lie without a catalyst</h3>
+    
+    <ul class="points"><li>You cannot know whether a large order at a resistance/support level is tiny, huge, or finished — only the entity or the bank trader working it knows.</li><li>The &#39;gone to lunch&#39; anecdote: a pension fund releases 50,000 of a 2m-share order to the bank; the last piece clears, the stock pops, technicians pile in — then the manager comes back from lunch/bathroom, reloads the same 167.5 limit, and the breakout buyers have to cut by end of day.</li><li>A break is only reliable when it is ACCOMPANIED by real fundamental news or a catalyst that makes those resting orders get pulled or re-set.</li></ul>
+    
+    <p class="explain">This is the core reason a chart alone can&#39;t be trusted: the order flow behind the price is invisible. A breakout with a catalyst is meaningful; a breakout on nothing is just as likely to be a manager stepping away from their desk.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-37/01-03-55.jpg" alt="Slide: Why breakouts lie without a catalyst">
+      <figcaption>Slide · 01:03:55</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s12">
+    <div class="section__k">12 / 17</div>
+    <h3>Reversal patterns — H&amp;S, Reverse H&amp;S, Cup &amp; Handle</h3>
+    
+    <ul class="points"><li>Head &amp; Shoulders (Exxon Mobil, XOM, Aug 2020): left shoulder, head, right shoulder with a neckline drawn as support; a break of the neckline down is red for longs / green for shorts.</li><li>Reverse Head &amp; Shoulders (Oracle, ORCL): the chart flipped — a break of the neckline UP is green for a bullish predisposition, red for a bearish one.</li><li>Cup &amp; Handle: the cup is the rounded price move, the handle is the consolidation above resistance after it breaks — a bullish continuation.</li></ul>
+    
+    <p class="explain">Every pattern runs through the same traffic-light logic against your predisposition. The XOM example is done sitting &#39;in August 2020&#39; — ignore everything to the right, because at the time you wouldn&#39;t have seen it.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-37/01-22-15.jpg" alt="Slide: Reversal patterns — H&amp;S, Reverse H&amp;S, Cup &amp; Handle">
+      <figcaption>Slide · 01:22:15</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s13">
+    <div class="section__k">13 / 17</div>
+    <h3>Reversal patterns — Double Top (PEGA) &amp; Double Bottom (AMD)</h3>
+    
+    <ul class="points"><li>Double Top (Pega Systems, PEGA, Feb): the stock fails twice at a level then breaks down — red for longs (watchlist), green/amber for shorts depending on where you come in.</li><li>Double Bottom (Advanced Micro Devices, AMD, late Nov 2020): a level tested and held twice — at minimum an AMBER for a bull, taking a partial position and adding to full size on the breakout.</li><li>Same ranging-stock principles apply: partial position first, add on confirmation, cut if a break is backed by fundamentals against you.</li></ul>
+    
+    <p class="explain">Double tops and bottoms behave like ranging S/R with a bias. Marry them to fundamentals: a double bottom under a bullish thesis with good catalysts is timing agreeing with fundamentals — an amber that becomes green on the break.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-37/01-36-35.jpg" alt="Slide: Reversal patterns — Double Top (PEGA) &amp; Double Bottom (AMD)">
+      <figcaption>Slide · 01:36:35</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s14">
+    <div class="section__k">14 / 17</div>
+    <h3>Continuation patterns — flags &amp; pennants (XLNX)</h3>
+    
+    <ul class="points"><li>Bullish Flag (Xilinx, XLNX, Sep 2020): a strong up-move (the flagpole) then a slight lower consolidation (the flag) before continuing higher — a &#39;big fat green light&#39; for a bull, red for a bear.</li><li>Bullish Pennant (Blink Charging, BLNK): same as the flag but the consolidation forms a pennant shape — jump on it if bullish, stay away if bearish.</li><li>Bearish Flag (Campbell Soup, CPB) and Bearish Pennant (Fortune Brands Home &amp; Security, FBHS): the exact mirror — strong down-move, consolidation up, then continuation lower; green for shorts, stay away if bullish.</li></ul>
+    
+    <p class="explain">Continuations say the existing trend is likely to resume, so they align cleanly with a matching predisposition. When the pattern and your fundamentals disagree, the answer is simply to wait a few weeks.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-37/01-39-50.jpg" alt="Slide: Continuation patterns — flags &amp; pennants (XLNX)">
+      <figcaption>Slide · 01:39:50</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s15">
+    <div class="section__k">15 / 17</div>
+    <h3>Abnormal Volume (SAVE up, KHC down)</h3>
+    
+    <ul class="points"><li>A large price move on abnormal volume is more significant than the same move on little volume — it signals a big prior seller may be gone and fresh buyers (or sellers) are present.</li><li>Spirit Airlines (SAVE, Nov 2020): a big up-move on a huge volume spike gives comfort you&#39;re not the only one seeing the fundamentals — buy a partial position, add on a further break up.</li><li>Kraft Heinz (KHC, Feb 2019): a big down-move on huge volume, and the stock doesn&#39;t even rally in the following three months — holders kept dumping; a bull here just had bad timing and was probably plain wrong.</li><li>Always ask: is the volume &#39;Combined with Fundamental News or Not?&#39;</li></ul>
+    
+    <p class="explain">Volume tells you a move actually mattered — stock changed hands in size. Weighted by whether real fundamental news accompanied it, abnormal volume is a strong confirmation for the direction of your existing thesis.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-37/01-46-15.jpg" alt="Slide: Abnormal Volume (SAVE up, KHC down)">
+      <figcaption>Slide · 01:46:15</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s16">
+    <div class="section__k">16 / 17</div>
+    <h3>The Tesla cautionary tale</h3>
+    
+    <ul class="points"><li>TSLA was ~$70-75 at end-2018, fell to ~$35-40, then broke its downtrend to the upside; by the 2021 recording it was ~$580.</li><li>Dogmatic bears who ignored the break kept shorting all the way up, got emotionally attached, added more, and eventually blew up — an investment-horizon short they should never have been in.</li><li>Right fundamentals + bad timing without discipline = you stop out on a 10-15% move against you and then miss a ~400% run.</li><li>The disciplined bear who respected the timing simply didn&#39;t short — and stayed objective enough to ask whether the thesis itself was wrong.</li></ul>
+    
+    <p class="explain">This is the whole lesson in one chart. For a 20-60 day manager, being wrong just means moving on; the danger is letting a chart you refuse to respect turn a trade into a career-ending investment.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-37/00-53-45.jpg" alt="Slide: The Tesla cautionary tale">
+      <figcaption>Slide · 00:53:45</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s17">
+    <div class="section__k">17 / 17</div>
+    <h3>What to do if the timing is wrong — the Watchlist</h3>
+    
+    <ul class="points"><li>If you&#39;re convinced of a long or short but the timing looks wrong, sit back and wait — this is why a deep inventory of high-quality ideas matters.</li><li>The Watchlist = every stock you&#39;ve done a FULL fundamental appraisal on and rate a fundamental long/short, but which lacks catalysts or good timing in the 20-60 day window right now.</li><li>Split ACTIONABLE trade-idea templates from NON-ACTIONABLE ones — the non-actionable ones are really &#39;Investment Ideas&#39;.</li><li>Be intellectually honest: if catalysts and timing never arrive, you have an Investment, not a Trade. TA also times EXITS and loss-cuts, not just entries — it adds value to execution and risk management.</li></ul>
+    
+    <p class="explain">The cardinal sin is doing brilliant fundamental work and then ignoring timing, so you stop out on a good idea before it works. Good timing over many trades is a significant edge — small, but never to be underestimated.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/ptm2-37/01-51-35.jpg" alt="Slide: What to do if the timing is wrong — the Watchlist">
+      <figcaption>Slide · 01:51:35</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+
+  
+  <section class="section">
+    <div class="section__k">Reference</div>
+    <h3>Glossary</h3>
+    <ul class="glossary">
+      
+      <li><span class="term">Technical Analysis (TA)</span><div class="def">The study of pattern recognition and formations in price; used only to time a fundamentally-driven idea over the medium term, making up less than 10% of the process.</div></li>
+      
+      <li><span class="term">Price Action (PA)</span><div class="def">The study of price momentum; the other timing discipline, covered in video 38.</div></li>
+      
+      <li><span class="term">Traffic Light System</span><div class="def">The timing decision rule: RED = bad timing / don&#39;t trade (watchlist); AMBER = timing starting to play out / consider a half or full position; GREEN = timing in your favour / trade full size.</div></li>
+      
+      <li><span class="term">Fundamental predisposition</span><div class="def">The bull or bear view you already hold from fundamental work BEFORE opening the chart; the chart is never allowed to change it.</div></li>
+      
+      <li><span class="term">Sackable offence</span><div class="def">Going short a fundamentally-bullish name (or long a fundamentally-bearish name) because the chart looks the other way — proof of no conviction and a lazy process.</div></li>
+      
+      <li><span class="term">Neckline</span><div class="def">The support (or resistance) line drawn across a Head &amp; Shoulders (or Reverse H&amp;S) formation; a break of it confirms the reversal.</div></li>
+      
+      <li><span class="term">Flag / Pennant</span><div class="def">Continuation patterns: a strong trend move (the flagpole) followed by a consolidation shaped like a flag or a pennant, before the trend resumes.</div></li>
+      
+      <li><span class="term">Abnormal Volume</span><div class="def">An unusually large volume spike accompanying a price move; read as significant — especially when combined with fundamental news — because large stock changed hands.</div></li>
+      
+      <li><span class="term">Order flow</span><div class="def">The invisible resting buy/sell orders behind a price level; because you cannot see them, breakouts without a catalyst are unreliable (the &#39;gone to lunch&#39; problem).</div></li>
+      
+      <li><span class="term">Watchlist</span><div class="def">Stocks with a full fundamental long/short appraisal but lacking catalysts or good timing in the 20-60 day window; if timing never comes, the idea is an Investment, not a Trade.</div></li>
+      
+    </ul>
+  </section>
+  
+
+  <nav class="pager">
+    
+    <a class="prev" href="chapter-46.html">
+      <small>← 36 Previous</small><span>International Trade Ideas via ADRs</span></a>
+    
+    
+    <a class="next disabled"><small>End of the macro block</small><span>Portfolio construction is next</span></a>
+    
+  </nav>
+</div>
+
+  </main>
+</div>
+</body>
+</html>
