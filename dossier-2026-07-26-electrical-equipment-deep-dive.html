@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Dossier 02 — Electrical Equipment &amp; Grid Infrastructure: The Long Deep-Dive · 26 July 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EFEEE9; --petrol:#0C3B36; --petrol-deep:#082A26; --brass:#B8802B;
+    --ink:#1E2422; --ink-soft:#4A544F; --line:#D8D5CB;
+    --green:#1E6B4F; --red:#9E3B2F; --amber:#A9761B;
+    --card:#F7F6F2; --mono:'IBM Plex Mono',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+  body{background:var(--paper);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.65}
+  .shell{max-width:960px;margin:0 auto;padding:0 24px 96px}
+  .mast{background:var(--petrol);color:#E9E5D8;margin:0 -24px;padding:56px 24px 44px;border-bottom:4px solid var(--brass)}
+  .mast-inner{max-width:912px;margin:0 auto}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);margin-bottom:14px}
+  h1{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(32px,5.2vw,50px);line-height:1.08;letter-spacing:-.01em}
+  .standfirst{margin-top:18px;font-size:19px;line-height:1.55;color:#CFE0DA;max-width:44em}
+  .mastmeta{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px}
+  .chip{font-family:var(--mono);font-size:12px;padding:6px 12px;border:1px solid rgba(233,229,216,.35);border-radius:3px;letter-spacing:.04em}
+  .chip.b{border-color:var(--brass);color:var(--brass)}
+  section{margin-top:64px}
+  .secnum{font-family:var(--mono);font-size:12px;letter-spacing:.22em;color:var(--brass);text-transform:uppercase;display:block;margin-bottom:8px}
+  h2{font-family:'Fraunces',serif;font-weight:600;font-size:29px;line-height:1.2;margin-bottom:18px}
+  h3{font-family:'Fraunces',serif;font-weight:600;font-size:20px;margin:28px 0 10px}
+  p{margin:12px 0;max-width:46em}
+  p.lede{font-size:18.5px}
+  ul,ol{margin:12px 0 12px 22px;max-width:44em}
+  li{margin:7px 0}
+  strong{font-weight:600}
+  a{color:var(--petrol);text-decoration-color:var(--brass)}
+  hr.sep{border:none;border-top:1px solid var(--line);margin:56px 0 0}
+  .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;padding:2px 7px;border-radius:2px;vertical-align:2px;white-space:nowrap}
+  .tag.engine{background:#DCE7E2;color:var(--petrol)}
+  .tag.anton{background:#EFE3CC;color:#7A5514}
+  .verdict{background:var(--petrol);color:#E9E5D8;padding:32px 34px;border-radius:4px;margin-top:26px}
+  .verdict h3{color:var(--brass);font-size:15px;font-family:var(--mono);font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin:0 0 14px}
+  .verdict p{color:#DCE7E2;max-width:none}
+  .verdict .big{font-family:'Fraunces',serif;font-size:25px;line-height:1.3;color:#fff}
+  table{border-collapse:collapse;width:100%;margin:20px 0;font-size:14px}
+  th{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);text-align:left;padding:9px 10px;border-bottom:2px solid var(--petrol)}
+  td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  td.mono,.mono{font-family:var(--mono);font-size:12.5px}
+  tr.hi td{background:#F3EBDC}
+  tr.cut td{color:#8A857A}
+  tr.cut td .why{color:var(--red);font-family:var(--mono);font-size:11px}
+  .up{color:var(--green);font-weight:600}.dn{color:var(--red);font-weight:600}.fl{color:var(--ink-soft)}
+  .pill{font-family:var(--mono);font-size:11px;padding:2px 8px;border-radius:10px;white-space:nowrap}
+  .pill.on{background:#DFEBE4;color:var(--green)}.pill.off{background:#F0DEDA;color:var(--red)}.pill.neu{background:#E7E5DD;color:var(--ink-soft)}
+  .tablewrap{overflow-x:auto}
+  .bucket{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--green);padding:26px 28px;margin:22px 0;border-radius:2px}
+  .bucket.watch{border-left-color:var(--amber)}
+  .bucket h3{margin:0 0 4px;font-size:21px}
+  .bucket .side{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}
+  .bucket .side.long{color:var(--green)}.bucket .side.wtch{color:var(--amber)}
+  .bucket table{margin:14px 0;font-size:13px}
+  .inval{margin-top:14px;padding:12px 16px;background:#EFE9DB;border-left:3px solid var(--brass);font-size:14.5px}
+  .inval b{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#7A5514}
+  .callout{background:#F3EBDC;border-left:4px solid var(--brass);padding:20px 24px;margin:24px 0;border-radius:2px}
+  .callout .c-k{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7A5514;display:block;margin-bottom:8px}
+  .warn{background:#F2E3DF;border-left-color:var(--red)}
+  .warn .c-k{color:var(--red)}
+  .quote{border-left:3px solid var(--petrol);padding:10px 18px;margin:16px 0;font-style:italic;color:var(--ink-soft);max-width:44em}
+  .quote .who{font-family:var(--mono);font-size:11px;font-style:normal;color:var(--petrol);display:block;margin-top:6px}
+  /* Per-section glossary */
+  .gbox{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--brass);padding:18px 24px 20px;margin:34px 0 0;border-radius:2px}
+  .gbox .g-k{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7A5514;display:block;margin-bottom:6px}
+  .gbox dt{font-family:var(--mono);font-size:12.5px;font-weight:600;color:var(--petrol);margin-top:12px}
+  .gbox dd{margin:3px 0 0;max-width:46em;font-size:14.5px}
+  .cal{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin:20px 0}
+  .cal .ev{background:var(--card);border:1px solid var(--line);padding:16px;border-top:3px solid var(--brass)}
+  .cal .d{font-family:var(--mono);font-size:12px;color:var(--brass);font-weight:600}
+  .cal .t{font-weight:600;margin-top:6px;font-size:15px}
+  .cal .w{font-size:13.5px;color:var(--ink-soft);margin-top:4px}
+  footer{margin-top:80px;padding-top:24px;border-top:2px solid var(--petrol);font-size:13.5px;color:var(--ink-soft)}
+  footer p{max-width:none}
+  .toc{background:var(--card);border:1px solid var(--line);padding:22px 26px;margin-top:34px;border-radius:2px;columns:2;column-gap:40px}
+  .toc a{display:block;padding:4px 0;font-family:var(--mono);font-size:13px;text-decoration:none;border-bottom:1px dotted var(--line)}
+  @media(max-width:640px){.toc{columns:1}}
+  .src{font-size:13px;color:var(--ink-soft)}
+</style>
+</head>
+<body>
+<div class="shell">
+
+<div class="mast"><div class="mast-inner">
+  <div class="kicker">The Macro Playbook · Portfolio Dossier 02</div>
+  <h1>Electrical Equipment &amp; Grid Infrastructure:<br>From Sector Bias to Named Longs</h1>
+  <p class="standfirst">Dossier 01 called this the highest-conviction long bucket. This dossier goes one level deeper, running Anton's full bottom-up funnel over every qualifying name in the sector — valuation outlier, balance-sheet health, catalyst flow, technical timing — until a ranked long shortlist falls out. Each section explains its own jargon at the bottom. Every fact is an engine output; every method step is a corpus citation.</p>
+  <div class="mastmeta">
+    <span class="chip b">26 JUL 2026 · 20:49 BST</span>
+    <span class="chip">DOSSIER 02 · L1 DEEP-DIVE</span>
+    <span class="chip">£20,000 · PAPER</span>
+    <span class="chip">SIDE: LONG</span>
+    <span class="chip">21 NAMES → 6 SURVIVORS</span>
+  </div>
+</div></div>
+
+<div class="toc">
+  <a href="#verdict">00 · The verdict — the shortlist</a>
+  <a href="#why">01 · Why this sector (the top-down hand-off)</a>
+  <a href="#evidence">02 · One level deeper into the ISM</a>
+  <a href="#peers">03 · The peer set — every qualifying name</a>
+  <a href="#valuation">04 · Funnel 1: the valuation outlier screen</a>
+  <a href="#health">05 · Funnel 2: balance-sheet health</a>
+  <a href="#catalysts">06 · Funnel 3: catalyst frequency</a>
+  <a href="#timing">07 · Funnel 4: technical timing</a>
+  <a href="#volatility">08 · Funnel 5: volatility context</a>
+  <a href="#candidates">09 · The six survivors, ranked</a>
+  <a href="#remaining">10 · What must still happen before a trade</a>
+  <a href="#calendar">11 · The bucket's catalyst calendar</a>
+  <a href="#provenance">12 · Provenance &amp; coverage audit</a>
+</div>
+
+<!-- ============ 00 VERDICT ============ -->
+<section id="verdict">
+  <span class="secnum">00 · Executive verdict</span>
+  <h2>Six names survive the funnel; two lead it</h2>
+  <div class="verdict">
+    <h3>The one-paragraph read</h3>
+    <p class="big">Twenty-one names went in. The valuation, health, catalyst and timing gates cut them to six: ETN, HUBB, VRT, ENS, NXT, CARR — with Eaton and Hubbell the highest-probability first entries, Vertiv the higher-octane alternative.</p>
+    <p style="margin-top:16px">The sector evidence got <em>stronger</em> one level down: Electrical Equipment reports growth on <b>every single ISM sub-index</b> — orders, production, employment, backlogs, and prices rising while supplier deliveries slow — the textbook signature of demand outrunning supply <span class="tag engine">ENGINE</span>. The funnel then did its job of separating the theme from the tradeable names: the biggest "bargain" (First Solar at 8.7× forward) and four others fell to Anton's tumbleweed rule — too few catalysts between earnings to move in a 20–60 day window — and two adjacents (Emerson, Johnson Controls) failed the health screen. What remains is a shortlist where every name is mid-cap or larger, healthy, communicative, and priced below or reasonably against the pool median of 24.9× forward earnings. <b>One warning dominates the timing: five of the six report earnings within the next nine days, in the same week as the FOMC.</b> Entries before those prints are event bets, not process — the process says let the prints land, then take the timing engine's entry.</p>
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ============ 01 WHY ============ -->
+<section id="why">
+  <span class="secnum">01 · The top-down hand-off</span>
+  <h2>Why we are digging here, and what "long bias" obliges us to do</h2>
+  <p class="lede">Dossier 01 (26 Jul) set a +10–20% net-long tilt and made <b>L1 — Electrical equipment &amp; grid infrastructure</b> its most engine-corroborated long bucket: ISM #2 growth industry on a 5-month streak, new orders 56.0 outrunning inventories (ratio 1.09), the rates engine explicitly long short-duration industrials, and copper's abnormal +37.8% YoY confirming an electrification build-out independently <span class="tag engine">ENGINE</span>.</p>
+  <p>The method for going one level down is prescribed, not improvised. The ISM gives the <em>predisposition</em> and points at industries; it never gives the trade — "you don't just look at this in the ISM and then decide to put a trade on… that's a rookie error. You've got to go through all of the other processes" <span class="tag anton">ANTON · PTM 2.0 L7 1:31:10</span>. Those processes, in order, are the funnel this dossier runs <span class="tag anton">ANTON · PTM 2.0 L22–27 (quant), L30–32 (qual/catalysts), L37–38 (timing)</span>:</p>
+  <ol>
+    <li><b>Define the peer set</b> — every qualifying name in the industry, mid-cap and up for longs (§03).</li>
+    <li><b>Valuation outlier screen</b> — forward P/E against the peer median, with earnings growth (§04).</li>
+    <li><b>Balance-sheet health</b> — long GOOD fundamentals only (§05).</li>
+    <li><b>Catalyst frequency</b> — does the name generate news between earnings, or is it a tumbleweed? (§06).</li>
+    <li><b>Technical timing</b> — trend, support/resistance, the entry read (§07), with volatility context (§08).</li>
+  </ol>
+  <p>Looking for <em>longs</em> here means the screen wants the <b>double discount</b>: cheaper than peers on forward earnings <em>while</em> growing earnings and carrying a clean balance sheet — quality the market is underpricing, inside an industry the ISM says is accelerating. Expensive names aren't disqualified (momentum is real), but they must earn their multiple through the catalyst and timing gates.</p>
+  <div class="gbox">
+    <span class="g-k">Glossary for this section</span>
+    <dl>
+      <dt>Top-down / bottom-up</dt><dd>Top-down: environment → sector (Dossier 01). Bottom-up: individual company evidence (this dossier). Anton's tree runs GDP → Market → Sector → Stocks — "go where the juice is".</dd>
+      <dt>Predisposition</dt><dd>The directional lean the macro data gives you before you look at any stock — here, long this industry. It biases the search; it never places the trade.</dd>
+      <dt>Peer set</dt><dd>The full list of comparable companies in the same industry. Valuation only means something <em>relative to peers</em> — a P/E is cheap or expensive against the set's median, not in a vacuum.</dd>
+      <dt>Funnel</dt><dd>A sequence of elimination gates. Names must pass every gate; each gate can only remove, never re-admit. 21 in, 6 out is the funnel working.</dd>
+      <dt>Double discount</dt><dd>Our shorthand for the long profile the screen hunts: priced below peers <em>and</em> growing faster than the price implies, with health ruling out the cheap-for-a-reason trap.</dd>
+    </dl>
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ============ 02 ISM DEEPER ============ -->
+<section id="evidence">
+  <span class="secnum">02 · One level deeper into the ISM</span>
+  <h2>The sub-index heatmap: growth on every dial, prices rising, supply straining</h2>
+  <p class="lede">The headline ranking (#2 of 17, ▲3, five straight months) was Dossier 01's evidence. The ISM also publishes which industries report growth on <em>each sub-index</em> — and Electrical Equipment, Appliances &amp; Components appears on the growth side of every one <span class="tag engine">ENGINE · ism_manufacturing --subindex-sectors, June 2026</span>:</p>
+  <div class="tablewrap"><table>
+    <tr><th>Sub-index</th><th>EE&amp;C reports…</th><th>What it means for the thesis</th></tr>
+    <tr><td>New orders</td><td class="up">growth</td><td>Demand still arriving — the forward pipeline</td></tr>
+    <tr><td>Production</td><td class="up">growth</td><td>Factories responding, output rising</td></tr>
+    <tr><td>Employment</td><td class="up">growth</td><td>Hiring into demand — capacity being added</td></tr>
+    <tr class="hi"><td>Order backlog</td><td class="up">growth</td><td><b>Orders arriving faster than they can be filled — revenue visibility</b></td></tr>
+    <tr class="hi"><td>Prices</td><td class="up">rising</td><td><b>Ranked first among all industries reporting higher prices — pricing power</b></td></tr>
+    <tr class="hi"><td>Supplier deliveries</td><td class="up">slowing</td><td><b>Suppliers can't keep pace ("slowing" = growth on this index) — the bottleneck, measured</b></td></tr>
+    <tr><td>Inventories</td><td class="up">growth</td><td>Stock being built to serve demand (with orders∶inventories still 1.09, demand leads)</td></tr>
+    <tr><td>Imports</td><td class="up">growth</td><td>Pulling in foreign supply to fill the gap</td></tr>
+  </table></div>
+  <p>Backlogs building + prices rising + supplier deliveries slowing, simultaneously, is the cleanest deterministic evidence available that this industry currently holds <b>pricing power</b> — the "bottleneck owns the economics" claim from Dossier 01, now measured by the purchasing managers themselves rather than asserted.</p>
+  <p>Anton also says to read the <em>qualitative</em> statements in the report — they're part of why the ISM generates trade ideas <span class="tag anton">ANTON · PTM 2.0 L7 1:16:39</span>. The June respondent from this industry, verbatim:</p>
+  <div class="quote">"Retail electronics sales seem to have stabilized to some extent. The pause in tariff changes has been welcomed the last two months, but it's only a matter of time before more confusion is introduced."
+    <span class="who">— Electrical Equipment, Appliances &amp; Components respondent, ISM Report on Business, June 2026 <span class="tag engine">ENGINE · ism --comments</span></span>
+  </div>
+  <p>Honest read: the industry's own buyers name <b>tariff policy and input costs</b> as the live risks — not demand. That matches the neighbouring respondents citing stretched supplier lead times and elevated input costs. It goes straight onto the invalidation list: this is a volumes-and-pricing-power thesis, and a tariff shock is a margin event the ISM ranking won't show until a month later.</p>
+  <div class="gbox">
+    <span class="g-k">Glossary for this section</span>
+    <dl>
+      <dt>Sub-indices</dt><dd>The ISM headline number is built from component questions — new orders, production, employment, supplier deliveries, inventories. Each is its own diffusion index; new orders is the most forward-looking of them.</dd>
+      <dt>Order backlog</dt><dd>Work contracted but not yet delivered. A growing backlog means future revenue is already booked — the "order-book-visible earnings" our rate regime favours.</dd>
+      <dt>Supplier deliveries (why "slowing" is growth)</dt><dd>This index rises when deliveries get <em>slower</em> — because in a survey of buyers, slow deliveries mean suppliers are swamped. It's the one index where worse service = stronger demand signal.</dd>
+      <dt>Pricing power</dt><dd>The ability to raise prices without losing the sale — visible here as the industry topping the "prices rising" list while orders and backlogs still grow. Protects margins even if input costs rise.</dd>
+      <dt>Respondent comments</dt><dd>Verbatim quotes from surveyed purchasing managers, published with each ISM report — the qualitative layer under the numbers.</dd>
+    </dl>
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ============ 03 PEER SET ============ -->
+<section id="peers">
+  <span class="secnum">03 · The peer set</span>
+  <h2>Every qualifying name — core industry plus the grid adjacents</h2>
+  <p class="lede">The deterministic classification maps two stock-market industries into the ISM's Electrical Equipment bucket: <b>Electrical Equipment &amp; Parts</b> and <b>Solar</b>. At the mid-cap floor and up (longs concentrate mid-cap+ — a $5bn mid-cap "has more potential to double, and double quickly, than a $40bn+ mega cap" <span class="tag anton">ANTON · PTM 2.0 L25 16:55</span>) that gives <b>11 core names — shown in full, nothing curated away</b> <span class="tag engine">ENGINE · fundamentals (SEC EDGAR shares × close), gics map</span>:</p>
+  <div class="tablewrap"><table>
+    <tr><th>Sym</th><th>Company</th><th>Industry</th><th>Tier</th><th>Mkt cap</th><th>What it actually sells</th></tr>
+    <tr><td class="mono">VRT</td><td>Vertiv</td><td>Elec. Equip &amp; Parts</td><td class="mono">mega</td><td class="mono">$122bn</td><td>Data-center power management &amp; cooling — the closest thing to a pure play</td></tr>
+    <tr><td class="mono">BE</td><td>Bloom Energy</td><td>Elec. Equip &amp; Parts</td><td class="mono">mega</td><td class="mono">$70bn</td><td>Fuel-cell on-site power (data-center adjacency)</td></tr>
+    <tr><td class="mono">HUBB</td><td>Hubbell</td><td>Elec. Equip &amp; Parts</td><td class="mono">large</td><td class="mono">$26bn</td><td>Grid components: connectors, enclosures, utility T&amp;D equipment</td></tr>
+    <tr><td class="mono">FSLR</td><td>First Solar</td><td>Solar</td><td class="mono">large</td><td class="mono">$25bn</td><td>Utility-scale solar modules (US-made)</td></tr>
+    <tr><td class="mono">NVT</td><td>nVent Electric</td><td>Elec. Equip &amp; Parts</td><td class="mono">large</td><td class="mono">$25bn</td><td>Electrical enclosures, connection &amp; protection; liquid cooling</td></tr>
+    <tr><td class="mono">NXT</td><td>Nextpower</td><td>Solar</td><td class="mono">large</td><td class="mono">$15bn</td><td>Utility-scale solar trackers</td></tr>
+    <tr><td class="mono">AEIS</td><td>Advanced Energy</td><td>Elec. Equip &amp; Parts</td><td class="mono">mid</td><td class="mono">$12bn</td><td>Precision power conversion (semi-fab &amp; data-center power)</td></tr>
+    <tr><td class="mono">AYI</td><td>Acuity</td><td>Elec. Equip &amp; Parts</td><td class="mono">mid</td><td class="mono">$10bn</td><td>Lighting &amp; intelligent building spaces</td></tr>
+    <tr><td class="mono">POWL</td><td>Powell Industries</td><td>Elec. Equip &amp; Parts</td><td class="mono">mid</td><td class="mono">$8.5bn</td><td><b>Switchgear</b> — the literal bottleneck product</td></tr>
+    <tr><td class="mono">ENS</td><td>EnerSys</td><td>Elec. Equip &amp; Parts</td><td class="mono">mid</td><td class="mono">$7.2bn</td><td>Industrial batteries &amp; stored energy (incl. data-center backup)</td></tr>
+    <tr><td class="mono">ENPH</td><td>Enphase</td><td>Solar</td><td class="mono">mid</td><td class="mono">$5.6bn</td><td>Residential solar microinverters</td></tr>
+  </table></div>
+  <p class="src">Excluded below the mid-cap floor (shown for completeness, not tradeable): HAYW $3.6bn, SEDG $3.2bn, RUN $2.9bn, ATKR $2.3bn, FCEL, EOSE, ENR and 19 micro-caps — 36 classified names in total, 11 qualify.</p>
+  <p>The grid-infrastructure <em>theme</em> is wider than the strict industry bucket: the transformer/electrification giants are classified under Machinery and Building Products. Ten <b>agent-curated adjacents</b> (labelled as such — the deterministic bucket above is the core set) join the pool so the screen sees the whole theme:</p>
+  <p class="mono" style="font-size:13px">GEV GE Vernova $310bn (power generation &amp; grid) · ETN Eaton $161bn (electrical power management — the grid pure-play at scale) · APH Amphenol $205bn (connectors) · TT Trane $108bn (HVAC/cooling) · JCI Johnson Controls $87bn (buildings/cooling) · EMR Emerson $79bn (automation) · CARR Carrier $58bn (HVAC → data-center cooling) · AME Ametek $54bn · ROK Rockwell $54bn (automation) · GNRC Generac $15bn (backup power)</p>
+  <div class="gbox">
+    <span class="g-k">Glossary for this section</span>
+    <dl>
+      <dt>Market-cap tiers (mega/large/mid/small)</dt><dd>Company size by total share value, using Anton's Lesson-3 cut-offs adjusted for official CPI inflation. Longs concentrate mid-cap ($5bn-ish) and up; below that, liquidity worsens and the book doesn't go there.</dd>
+      <dt>Mid-cap floor for longs</dt><dd>Anton's long rule: the sweet spot is quality names small enough to double ($5bn moves faster than $40bn+) but big enough to trade liquidly. Shorts have a separate, higher floor ($20bn+) for squeeze protection.</dd>
+      <dt>T&amp;D / switchgear</dt><dd>Transmission &amp; distribution — the wires, transformers and substations between the power plant and the plug. Switchgear is the equipment that routes and protects high-power electrical flows; every data center needs it.</dd>
+      <dt>Pure play vs adjacent</dt><dd>A pure play earns most of its revenue from the theme (Vertiv ≈ data centers). An adjacent touches it as one line among several (Carrier's cooling arm). Pure plays give more theme exposure per pound — and more theme risk.</dd>
+    </dl>
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ============ 04 VALUATION ============ -->
+<section id="valuation">
+  <span class="secnum">04 · Funnel stage 1</span>
+  <h2>The valuation outlier screen: who's cheap against the pool, and who's growing</h2>
+  <p class="lede">Anton's first quantitative step: rank the peer set on forward P/E and hunt the outliers — cheap names whose forward earnings growth says the discount is undeserved <span class="tag anton">ANTON · PTM 2.0 L23 9:58 &amp; 12:33</span>. The pool's median forward P/E is <b>24.85×</b> <span class="tag engine">ENGINE · valuation, trade_idea_search — 26 Jul</span>:</p>
+  <div class="tablewrap"><table>
+    <tr><th>Sym</th><th>Fwd P/E</th><th>vs median</th><th>Trailing P/E</th><th>EG1*</th><th>EV/EBITDA</th><th>Next earnings</th><th>Screen read</th></tr>
+    <tr class="hi"><td class="mono">ENS</td><td class="mono">14.3</td><td class="up">−42%</td><td class="mono">24.7</td><td class="mono">+73%</td><td class="mono">13.4</td><td class="mono">12 Aug</td><td>Deep-value outlier + strong growth — the classic long profile</td></tr>
+    <tr class="hi"><td class="mono">HUBB</td><td class="mono">21.7</td><td class="up">−13%</td><td class="mono">28.7</td><td class="mono">+32%</td><td class="mono">19.0</td><td class="mono">28 Jul</td><td>Quality at a discount to the pool</td></tr>
+    <tr class="hi"><td class="mono">NXT</td><td class="mono">16.9</td><td class="up">−32%</td><td class="mono">26.1</td><td class="mono">+54%</td><td class="mono">18.9</td><td class="mono">30 Jul</td><td>Cheap + growing; solar-policy beta is the catch</td></tr>
+    <tr><td class="mono">AYI</td><td class="mono">15.2</td><td class="up">−39%</td><td class="mono">21.9</td><td class="mono">+44%</td><td class="mono">13.7</td><td class="mono">30 Sep</td><td>Cheap — but see the catalyst gate</td></tr>
+    <tr><td class="mono">FSLR</td><td class="mono">8.7</td><td class="up">−65%</td><td class="mono">131.7</td><td class="mono">n/m*</td><td class="mono">8.8</td><td class="mono">30 Jul</td><td>Biggest "bargain" on the sheet — policy-driven earnings, see gates</td></tr>
+    <tr><td class="mono">ENPH</td><td class="mono">15.2</td><td class="up">−39%</td><td class="mono">36.3</td><td class="mono">+139%</td><td class="mono">25.2</td><td class="mono">28 Jul</td><td>Cheap on recovery earnings; resi-solar = rate-sensitive demand</td></tr>
+    <tr><td class="mono">GNRC</td><td class="mono">17.9</td><td class="up">−28%</td><td class="mono">63.3</td><td class="mono">+255%</td><td class="mono">24.7</td><td class="mono">29 Jul</td><td>Cheap on rebound earnings</td></tr>
+    <tr><td class="mono">EMR</td><td class="mono">20.6</td><td class="up">−17%</td><td class="mono">34.3</td><td class="mono">+66%</td><td class="mono">16.2</td><td class="mono">4 Aug</td><td>Cheap — but fails the health gate (§05)</td></tr>
+    <tr><td class="mono">CARR</td><td class="mono">21.4</td><td class="up">−14%</td><td class="mono">45.9</td><td class="mono">+114%</td><td class="mono">21.9</td><td class="mono">28 Jul</td><td>Modest discount, strong growth</td></tr>
+    <tr><td class="mono">JCI</td><td class="mono">24.9</td><td class="fl">at median</td><td class="mono">43.8</td><td class="mono">+77%</td><td class="mono">22.3</td><td class="mono">29 Jul</td><td>Inline; fails health gate (§05)</td></tr>
+    <tr><td class="mono">AEIS</td><td class="mono">24.7</td><td class="fl">inline</td><td class="mono">63.3</td><td class="mono">+156%</td><td class="mono">39.1</td><td class="mono">3 Aug</td><td>Inline price, big growth</td></tr>
+    <tr><td class="mono">ETN</td><td class="mono">25.6</td><td class="fl">+3%</td><td class="mono">39.5</td><td class="mono">+54%</td><td class="mono">28.1</td><td class="mono">31 Jul</td><td>Roughly median price for above-median quality &amp; the purest grid franchise</td></tr>
+    <tr><td class="mono">NVT</td><td class="mono">26.4</td><td class="fl">+6%</td><td class="mono">51.6</td><td class="mono">+95%</td><td class="mono">28.2</td><td class="mono">31 Jul</td><td>Slight premium, cooling growth story</td></tr>
+    <tr><td class="mono">AME</td><td class="mono">27.5</td><td class="dn">+11%</td><td class="mono">36.5</td><td class="mono">+33%</td><td class="mono">23.7</td><td class="mono">4 Aug</td><td>Premium compounder</td></tr>
+    <tr><td class="mono">TT</td><td class="mono">28.2</td><td class="dn">+13%</td><td class="mono">36.8</td><td class="mono">+31%</td><td class="mono">26.0</td><td class="mono">30 Jul</td><td>Premium</td></tr>
+    <tr><td class="mono">APH</td><td class="mono">26.1</td><td class="dn">+5%</td><td class="mono">43.9</td><td class="mono">+68%</td><td class="mono">24.7</td><td class="mono">29 Jul</td><td>Slight premium</td></tr>
+    <tr><td class="mono">ROK</td><td class="mono">31.6</td><td class="dn">+27%</td><td class="mono">48.1</td><td class="mono">+52%</td><td class="mono">28.0</td><td class="mono">4 Aug</td><td>Expensive</td></tr>
+    <tr><td class="mono">VRT</td><td class="mono">32.9</td><td class="dn">+32%</td><td class="mono">73.0</td><td class="mono">+122%</td><td class="mono">47.1</td><td class="mono">29 Jul</td><td>Expensive — but the fastest engine in the pool; must earn it at the later gates</td></tr>
+    <tr><td class="mono">POWL</td><td class="mono">33.8</td><td class="dn">+36%</td><td class="mono">45.3</td><td class="mono">+34%</td><td class="mono">34.1</td><td class="mono">3 Aug</td><td>The bottleneck product, fully priced</td></tr>
+    <tr><td class="mono">BE</td><td class="mono">40.7</td><td class="dn">+64%</td><td class="mono">n/a</td><td class="mono">n/a</td><td class="mono">229</td><td class="mono">28 Jul</td><td>Story-priced, thin current earnings — long-duration profile we're avoiding</td></tr>
+    <tr><td class="mono">GEV</td><td class="mono">41.1</td><td class="dn">+65%</td><td class="mono">29.1</td><td class="mono">−29%*</td><td class="mono">66.8</td><td class="mono">21 Oct</td><td>Most expensive large name in the pool</td></tr>
+  </table></div>
+  <p class="src">* EG1 here is engine-derived as forward EPS ÷ trailing EPS − 1 (Anton's EG1 uses forecast vs last <em>reported</em> EPS — same idea, same fields the engine exposes). Where trailing EPS is depressed or negative (FSLR's 131× trailing, GEV's accounting year), the ratio is not meaningful — marked n/m. The screen flags outliers; it never buys them by itself.</p>
+  <p><b>What the screen says.</b> The long profile — cheap against the pool <em>and</em> growing — belongs to <b>ENS, HUBB, NXT</b> (and nominally AYI, FSLR, ENPH, GNRC, pending the later gates). <b>ETN</b> sits at the median: no discount, but that is a median price for the purest large-scale grid franchise in America, with +54% forward growth. <b>VRT and POWL are the momentum wing</b> — expensive because the market already knows what they are; they stay in only if the catalyst and timing gates say the momentum is live. BE and GEV price like the long-duration stories our rate regime shorts, not longs — out.</p>
+  <div class="gbox">
+    <span class="g-k">Glossary for this section</span>
+    <dl>
+      <dt>Forward vs trailing P/E</dt><dd>Trailing uses the last 12 months' reported earnings; forward uses the next 12 months' forecast. A big gap between them (Vertiv: 73× trailing → 33× forward) is the market expecting earnings to roughly double.</dd>
+      <dt>Median (vs average)</dt><dd>The middle value of the pool — half the names above, half below. Used instead of the average so one extreme name can't drag the benchmark.</dd>
+      <dt>EG1 (earnings growth, year 1)</dt><dd>The percentage change from last year's earnings per share to this year's forecast. Anton pairs it with the P/E: cheap + growing is the outlier you want; cheap + shrinking is a value trap.</dd>
+      <dt>EV/EBITDA</dt><dd>Enterprise value (market cap + debt − cash) over cash operating profits. A second valuation lens that can't be flattered by debt or tax quirks — used here to confirm the P/E story.</dd>
+      <dt>Value trap</dt><dd>A stock that looks cheap because the market correctly expects its earnings to fall. The health gate (§05) and growth column exist to filter these out.</dd>
+      <dt>n/m (not meaningful)</dt><dd>A ratio whose inputs make it useless — e.g. dividing by near-zero depressed earnings produces a huge number that says nothing.</dd>
+    </dl>
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ============ 05 HEALTH ============ -->
+<section id="health">
+  <span class="secnum">05 · Funnel stage 2</span>
+  <h2>Balance-sheet health: long good fundamentals only</h2>
+  <p class="lede">Longs ride on GOOD fundamentals; the health card scores each balance sheet on Anton's Lesson-27 ratios — debt-to-equity, interest coverage, current ratio, working capital, returns and cash generation <span class="tag anton">ANTON · PTM 2.0 L27</span> <span class="tag engine">ENGINE · financial_health</span>.</p>
+  <p><b>Result: 17 of 19 scoreable names are "healthy (long-ready)" (+4).</b> This is itself information about the industry: the electrification demand wave is being carried on strong balance sheets — these earnings aren't leveraged mirages. The exceptions, cut here:</p>
+  <div class="tablewrap"><table>
+    <tr><th>Sym</th><th>Health</th><th>Verdict</th><th>Why</th></tr>
+    <tr class="cut"><td class="mono">EMR</td><td class="mono">−1</td><td>mixed</td><td><span class="why">CUT —</span> current ratio and working-capital flags alongside coverage strain</td></tr>
+    <tr class="cut"><td class="mono">JCI</td><td class="mono">+1</td><td>mixed</td><td><span class="why">CUT —</span> working-capital flag; not the profile you lever a long on</td></tr>
+  </table></div>
+  <p>A worked example of what "+4 healthy" means — Hubbell's card: debt-to-equity 0.72 (ok), <b>interest coverage 18.5× (strong</b> — Anton's reference line is 3.33×, the level that maps to a solid credit rating), current ratio 1.58 (ok), working capital/assets 0.13 (ok), ROE 25.8%, net margin 15.2%, FCF yield 2.1% <span class="tag engine">ENGINE</span>. That is a company that can fund its growth without asking the market's permission — exactly what you want to own while the discount rate is rising.</p>
+  <div class="gbox">
+    <span class="g-k">Glossary for this section</span>
+    <dl>
+      <dt>Debt-to-equity (D/E)</dt><dd>Total debt divided by shareholders' equity. Roughly: how much of the company is built on borrowed money. 0.72 = 72p of debt per £1 of equity — moderate.</dd>
+      <dt>Interest coverage</dt><dd>Operating profit ÷ interest bill. 18.5× means profits cover the interest 18 times over. Anton's benchmark: 3.33× is the line associated with investment-grade credit; below ~1.5× a company is working for its lenders.</dd>
+      <dt>Current ratio</dt><dd>Short-term assets ÷ short-term liabilities. Below 1 means the company can't cover the next year's bills from the next year's assets — the insolvency warning line.</dd>
+      <dt>Working capital / total assets</dt><dd>The cash cushion in day-to-day operations, scaled by company size. Persistent negative readings flag operational strain.</dd>
+      <dt>ROE / net margin / FCF yield</dt><dd>Return on equity (profit per £1 of shareholder capital), profit kept per £1 of sales, and free cash generated per £1 of market value — the quality trio: is the business actually good, and does the profit turn into cash?</dd>
+    </dl>
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ============ 06 CATALYSTS ============ -->
+<section id="catalysts">
+  <span class="secnum">06 · Funnel stage 3</span>
+  <h2>Catalyst frequency: the tumbleweed cut</h2>
+  <p class="lede">A 20–60 day trade needs the stock to <em>move</em>, and stocks move on news flow. The engine counts each company's non-earnings SEC 8-K filings per month over five years — Anton's press-release method: a name that goes quiet between quarterly earnings is a "tumbleweed", and both a long and a short sit dead in it <span class="tag anton">ANTON · PTM 2.0 L32 47:55</span> <span class="tag engine">ENGINE · catalyst_frequency, SEC EDGAR 8-K flow</span>.</p>
+  <div class="tablewrap"><table>
+    <tr><th>Sym</th><th>Non-earnings 8-Ks / month (5y)</th><th>Verdict</th></tr>
+    <tr><td class="mono">VRT</td><td class="mono">1.08</td><td><span class="pill on">COMMUNICATIVE</span> richest catalyst stream in the pool</td></tr>
+    <tr><td class="mono">ETN</td><td class="mono">0.90</td><td><span class="pill on">COMMUNICATIVE</span></td></tr>
+    <tr><td class="mono">CARR</td><td class="mono">0.80</td><td><span class="pill on">COMMUNICATIVE</span></td></tr>
+    <tr><td class="mono">ENS</td><td class="mono">0.65</td><td><span class="pill on">COMMUNICATIVE</span></td></tr>
+    <tr><td class="mono">HUBB</td><td class="mono">0.60</td><td><span class="pill on">COMMUNICATIVE</span></td></tr>
+    <tr><td class="mono">NXT</td><td class="mono">0.52</td><td><span class="pill on">COMMUNICATIVE</span> (lightest pass)</td></tr>
+    <tr class="cut"><td class="mono">AEIS</td><td class="mono">0.45</td><td><span class="why">CUT — TUMBLEWEED</span></td></tr>
+    <tr class="cut"><td class="mono">POWL</td><td class="mono">0.37</td><td><span class="why">CUT — TUMBLEWEED</span> (the switchgear story, but it doesn't talk)</td></tr>
+    <tr class="cut"><td class="mono">FSLR</td><td class="mono">0.33</td><td><span class="why">CUT — TUMBLEWEED</span> (the 8.7× "bargain" fails here — and its earnings are policy-driven)</td></tr>
+    <tr class="cut"><td class="mono">ENPH</td><td class="mono">0.32</td><td><span class="why">CUT — TUMBLEWEED</span></td></tr>
+    <tr class="cut"><td class="mono">AYI</td><td class="mono">0.25</td><td><span class="why">CUT — TUMBLEWEED</span> (cheap, healthy… and silent; also no earnings until 30 Sep)</td></tr>
+    <tr class="cut"><td class="mono">GNRC</td><td class="mono">0.25</td><td><span class="why">CUT — TUMBLEWEED</span></td></tr>
+  </table></div>
+  <p><b>This gate did the real work of the funnel</b> — it removed five of the seven "cheap" names, including the sheet's biggest apparent bargain. That is the discipline working as designed: a discount you can't collect within the trade's horizon isn't a discount, it's an opportunity cost. What survives is a shortlist that is cheap-<em>enough</em> and alive: <b>ETN, HUBB, VRT, ENS, NXT, CARR</b>.</p>
+  <div class="gbox">
+    <span class="g-k">Glossary for this section</span>
+    <dl>
+      <dt>Catalyst</dt><dd>An event that forces the market to reprice a stock — earnings, contract wins, guidance changes, product launches. No catalyst, no move; no move, no 20–60 day trade.</dd>
+      <dt>8-K filing</dt><dd>The SEC form US companies must file within days of any material event. Counting non-earnings 8-Ks measures how often a company generates real news between quarters — an objective, unfakeable activity meter.</dd>
+      <dt>Tumbleweed</dt><dd>Anton's term for a stock with almost no news flow between earnings reports. It can be cheap and healthy and still dead money for two months — which is why it's cut regardless of valuation.</dd>
+      <dt>Known vs unknown catalysts</dt><dd>Earnings dates are known — everyone has them diarised, and the price carries the consensus expectation. The between-earnings flow is where a position gets paid without the whole market braced for the event.</dd>
+    </dl>
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ============ 07 TIMING ============ -->
+<section id="timing">
+  <span class="secnum">07 · Funnel stage 4</span>
+  <h2>Technical timing: where each survivor sits on the chart</h2>
+  <p class="lede">Fundamentals pick the name; the chart picks the moment <span class="tag anton">ANTON · PTM 2.0 L37–38 (price-action checklist: RSI, the 20/60/120/250-day moving averages, support/resistance)</span>. The timing engine's read on each survivor, long bias <span class="tag engine">ENGINE · technical_timing — bars as of 17 Jul; refresh before any entry</span>:</p>
+  <div class="tablewrap"><table>
+    <tr><th>Sym</th><th>Trend</th><th>Structure</th><th>Support / Resistance</th><th>Entry read (long bias)</th></tr>
+    <tr><td class="mono">ETN</td><td class="up">uptrend</td><td>higher-highs/higher-lows, price ~1% under fast MA</td><td class="mono">375 / 408 (−6.7% / +2.1%)</td><td>Constructive: trend intact, close to support, small gap to resistance — a break of 408 opens room</td></tr>
+    <tr><td class="mono">HUBB</td><td class="fl">range</td><td>fast MA &gt; slow, price at the fast MA</td><td class="mono">472 / 534 (−3.5% / +9.2%)</td><td>Coiled: tight to support with 9% to the top of the range — favourable asymmetry for a post-earnings entry</td></tr>
+    <tr><td class="mono">VRT</td><td class="up">uptrend</td><td>10% below its fast MA after a pullback</td><td class="mono">275 / 359 (−5.3% / +23.8%)</td><td>Pullback within uptrend — attractive if 275 holds through earnings</td></tr>
+    <tr><td class="mono">ENS</td><td class="up">uptrend</td><td>higher-highs/higher-lows, mid-channel</td><td class="mono">157 / 244 (−25% / +24%)</td><td>Clean trend, wide channel — sized entries, not precision ones</td></tr>
+    <tr><td class="mono">NXT</td><td class="fl">range</td><td>17% below fast MA, holding higher-lows</td><td class="mono">97 / 113 (−5.8% / +9.4%)</td><td>Knocked down but structure intact — needs the 30 Jul print to re-arm the trend</td></tr>
+    <tr><td class="mono">CARR</td><td class="up">uptrend</td><td>higher-highs/higher-lows</td><td class="mono">64.5 / 68.8 (−6.4% / +0.15%)</td><td><b>At resistance to the tick</b> — chase-risk here; wait for the break or the pullback</td></tr>
+  </table></div>
+  <div class="callout warn">
+    <span class="c-k">The timing warning that overrides everything</span>
+    <p style="max-width:none">Five of the six survivors report earnings between <b>28 and 31 July</b>, and the FOMC decides rates on the 29th — the same day Vertiv reports. An entry taken this week is a bet on a known, binary event with the whole market watching — the opposite of collecting the between-earnings catalyst stream the funnel selected for. The process conclusion: <b>let the prints and the Fed land, refresh the timing engine on post-event bars (the warehouse lags ~a week on these names; re-run before entry), and take entries from the levels above.</b> Patience here is not caution; it is the method.</p>
+  </div>
+  <div class="gbox">
+    <span class="g-k">Glossary for this section</span>
+    <dl>
+      <dt>Moving average (MA)</dt><dd>The average price over the last N days, redrawn daily — a smoothed trend line. Anton's checklist uses the 20/60/120/250-day set; price above a rising MA = uptrend evidence. "Fast" = shorter window, "slow" = longer.</dd>
+      <dt>Support / resistance</dt><dd>Price levels where buying (support) or selling (resistance) has repeatedly appeared. Entries near support with room to resistance give a favourable ratio of upside room to stop distance.</dd>
+      <dt>Higher-highs / higher-lows</dt><dd>The definition of an uptrend in price structure: each rally peaks higher and each dip bottoms higher than the last.</dd>
+      <dt>Range</dt><dd>Price oscillating between support and resistance with no trend. Playable (buy low end, sell high end) but different from trend-following.</dd>
+      <dt>Breakout</dt><dd>Price clearing resistance decisively — often the trigger that converts a coiled range into a new trend leg (the HUBB and CARR setups).</dd>
+      <dt>Binary event</dt><dd>A scheduled moment (earnings, FOMC) where the price gaps on the outcome. Holding through one is a coin-flip exposure, not a process edge.</dd>
+    </dl>
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ============ 08 VOLATILITY ============ -->
+<section id="volatility">
+  <span class="secnum">08 · Funnel stage 5</span>
+  <h2>Volatility context: what these names actually move</h2>
+  <p class="lede">Volatility is displayed for framing — how much movement a month of holding actually involves — never screened on: the 15–30% annualised volatility band applies to the <em>whole book</em>, not to any single stock <span class="tag anton">ANTON · ITPL L3–5 (DoR + ATRP), L8–9 (portfolio vol)</span> <span class="tag engine">ENGINE · measure_volatility</span>:</p>
+  <div class="tablewrap"><table>
+    <tr><th>Sym</th><th>Monthly ATRP</th><th>Daily ATRP</th><th>Read</th></tr>
+    <tr><td class="mono">HUBB</td><td class="mono">12.2%</td><td class="mono">2.5%</td><td>The steady one — institutional-grade mover</td></tr>
+    <tr><td class="mono">ETN</td><td class="mono">12.7%</td><td class="mono">2.5%</td><td>Steady; a mega-cap that still travels ~13% in a typical month's range</td></tr>
+    <tr><td class="mono">CARR</td><td class="mono">15.1%</td><td class="mono">3.0%</td><td>Middle of the pool</td></tr>
+    <tr><td class="mono">ENS</td><td class="mono">15.6%</td><td class="mono">3.2%</td><td>Middle of the pool</td></tr>
+    <tr><td class="mono">VRT</td><td class="mono">19.5%</td><td class="mono">4.2%</td><td>Hot — a typical month spans ~a fifth of the price; size accordingly</td></tr>
+    <tr><td class="mono">NXT</td><td class="mono">25.0%</td><td class="mono">5.6%</td><td>Hottest survivor — a quarter of its price is a normal monthly range</td></tr>
+  </table></div>
+  <p>The practical meaning: a £2,000 position in HUBB and a £1,000 position in NXT carry roughly similar monthly movement in pounds. This is how individual names can be "chosen hot" while the book stays inside its 15–30% annual band — sizing does the reconciling, and the portfolio-volatility engine checks the finished book, not the parts.</p>
+  <div class="gbox">
+    <span class="g-k">Glossary for this section</span>
+    <dl>
+      <dt>ATRP (Average True Range %)</dt><dd>The average size of a bar's full trading range (high to low, gap-adjusted), as a percentage of price. Monthly ATRP ≈ how far the stock typically travels in a month. It measures movement, not direction.</dd>
+      <dt>DoR (Distribution of Returns)</dt><dd>The statistical fingerprint of a stock's returns — mean, spread (standard deviation), and how fat the tails are. The course's first lens on any instrument.</dd>
+      <dt>Why we don't screen on volatility</dt><dd>Movement is the raw material of returns — you want lively names. The risk constraint (15–30% annualised) binds the <em>portfolio</em>, where sizing and diversification bring hot names down to a controlled total.</dd>
+      <dt>Sizing</dt><dd>Choosing position value so each idea contributes comparable risk: hotter name, smaller position. The last deterministic step before any order.</dd>
+    </dl>
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ============ 09 CANDIDATES ============ -->
+<section id="candidates">
+  <span class="secnum">09 · The survivors, ranked</span>
+  <h2>Six names, in order of evidence</h2>
+  <p class="lede">Ranking is by weight of corroborating evidence across all five gates — and remember the Dossier-01 discipline: this bucket ultimately contributes <b>one position (possibly two)</b> to the 8–12 name book, because six longs from one theme is one bet six times. The rest of the list is the bench.</p>
+
+  <div class="bucket">
+    <div class="side long">1 · Core candidate</div>
+    <h3>ETN — Eaton: the grid franchise at a median price</h3>
+    <p>The purest large-scale electrical-power-management franchise in the pool, priced at the pool median (25.6× forward, +3%) with +54% forward earnings growth, a +4 health card, a 0.9/month catalyst stream, and an intact uptrend sitting near support. Nothing about it is mispriced-cheap; everything about it is the theme's centre of gravity with the least idiosyncratic risk. <b>The probability-weighted case:</b> if the ISM industry signal is right, Eaton cannot miss it — its order book <em>is</em> the industry.</p>
+    <div class="inval"><b>Invalidated by:</b> 31 Jul earnings guiding orders/backlog down; a break below 375 support; Electrical Equipment exiting the ISM growth list.</div>
+  </div>
+
+  <div class="bucket">
+    <div class="side long">2 · Core candidate</div>
+    <h3>HUBB — Hubbell: quality at a genuine discount</h3>
+    <p>The closest thing to the double discount among large names: 21.7× forward vs the 24.9× pool median (−13%) with +32% growth, the strongest health card examined (18.5× interest coverage, 25.8% ROE), communicative (0.6/mo), and coiled at the bottom of a range with 9% of room overhead. Utility transmission &amp; distribution components are the least glamorous, most contracted corner of the theme — the tortoise expression of the same build-out.</p>
+    <div class="inval"><b>Invalidated by:</b> 28 Jul earnings breaking the range downward (below 472); utility capex commentary softening; the ISM signal fading.</div>
+  </div>
+
+  <div class="bucket">
+    <div class="side long">3 · The growth leg (size it hot)</div>
+    <h3>VRT — Vertiv: the data-center pure play, on a pullback</h3>
+    <p>The most direct expression of AI-capex-meets-electrical-equipment: 32.9× forward is a 32% premium to the pool, but with +122% forward earnings growth, the richest catalyst stream in the pool (1.08/mo), and a 10% pullback within an uptrend offering a defined level (275). This is the name where Dossier 01's Tier-3 logic pays most directly — and the name most exposed if hyperscaler capex guidance wobbles. 19.5% monthly ATRP: half-size by construction. <b>Earnings 29 Jul — FOMC day.</b> No entry before that print resolves.</p>
+    <div class="inval"><b>Invalidated by:</b> capex-guidance cuts at the hyperscaler prints (late Oct) or its own 29 Jul guidance; 275 failing; SOXX/SPY internals flipping to confirmed bearish divergence.</div>
+  </div>
+
+  <div class="bucket">
+    <div class="side long">4 · The value sleeper</div>
+    <h3>ENS — EnerSys: stored energy at 14× forward</h3>
+    <p>The deepest surviving discount: 14.3× forward (−42% vs pool) with +73% growth, healthy, communicative (0.65/mo), in a clean uptrend. Industrial batteries and backup power ride the same electrification wave one derivative removed from the data-center headlines — which is exactly why it's cheap. Latest earnings date of the six (12 Aug) gives it the most tradeable pre-event window.</p>
+    <div class="inval"><b>Invalidated by:</b> 12 Aug print showing margin compression (battery input costs — the ISM respondents' tariff/input-cost warning applies most directly here); trend structure breaking (lower-low under ~157).</div>
+  </div>
+
+  <div class="bucket watch">
+    <div class="side wtch">5 · Speculative — smaller, hotter, policy-exposed</div>
+    <h3>NXT — Nextpower: cheap growth with solar beta</h3>
+    <p>16.9× forward (−32%) with +54% growth and a pass on every gate — but it carries solar-policy risk the rest of the shortlist doesn't, sits 17% below its fast moving average, and moves 25% in a typical month. Playable only after the 30 Jul print re-arms the structure, at reduced size, as the aggressive expression.</p>
+    <div class="inval"><b>Invalidated by:</b> a lower-low under 97; adverse US solar-policy/tariff developments (its respondents' own named risk); the 30 Jul print failing to restore guidance.</div>
+  </div>
+
+  <div class="bucket watch">
+    <div class="side wtch">6 · Right name, wrong price level</div>
+    <h3>CARR — Carrier: the cooling adjacent, pinned at resistance</h3>
+    <p>Reasonable price (21.4× forward, −14%), +114% growth, healthy, communicative — and trading 0.15% from resistance. Chasing a breakout into a 28 Jul earnings print is two timing sins at once. It stays on the bench until price either clears 68.8 decisively post-earnings or offers the pullback toward 64.5.</p>
+    <div class="inval"><b>Invalidated by (as a candidate):</b> earnings rejection at resistance confirming the range top; data-center cooling commentary weakening vs peers (VRT/NVT read-across).</div>
+  </div>
+
+  <p><b>Cut at the gates, for the record</b> (nothing hidden): BE, GEV (long-duration pricing, §04) · EMR, JCI (health, §05) · FSLR, AYI, POWL, ENPH, GNRC, AEIS (tumbleweed, §06) — plus 25 names below the mid-cap floor that never entered. Every cut is reversible by new evidence; tumbleweeds are re-tested as filings accumulate.</p>
+  <div class="gbox">
+    <span class="g-k">Glossary for this section</span>
+    <dl>
+      <dt>Core vs speculative candidate</dt><dd>Core: the strongest multi-gate evidence, first claim on the bucket's single slot. Speculative: passes the gates but carries an extra risk axis (policy, volatility, level) that demands smaller size or a better entry.</dd>
+      <dt>The bench</dt><dd>Qualified names not taken today. They matter: if the chosen name's invalidation fires, the bench is the pre-vetted replacement list.</dd>
+      <dt>Idiosyncratic risk</dt><dd>Risk specific to one company (a bad quarter, a lost contract) rather than the theme. Eaton has the least; Nextpower the most.</dd>
+      <dt>Read-across</dt><dd>Using one company's results to infer another's — Vertiv's data-center commentary moves Carrier and nVent before their own reports.</dd>
+      <dt>Half-size</dt><dd>Deliberately taking a smaller position in a hotter name so its pound-risk matches the book's other positions (see §08 sizing).</dd>
+    </dl>
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ============ 10 REMAINING ============ -->
+<section id="remaining">
+  <span class="secnum">10 · Before any trade</span>
+  <h2>What must still happen — the process is not finished</h2>
+  <p class="lede">This dossier completes the <em>screening</em> level of Anton's process. A screen is not a trade idea. Per the SOP, each name taken forward still requires:</p>
+  <ol>
+    <li><b>Qualitative processing</b> <span class="tag anton">ANTON · L30–31</span> — identify the KPIs the company itself manages to, infer the management operating plan, check ownership/management quality. This is agent work, done per name, and it can kill a candidate the numbers loved.</li>
+    <li><b>The 9-part draft</b> — <span class="mono">trade_idea.py new &lt;SYM&gt; --side long</span> auto-fills the quant blocks; the agent authors outlier reason, qualitative drivers, structure (cash long vs a POTM options expression), and a probability-weighted conviction with named invalidation. <span class="mono">--validate</span> must report COMPLETE.</li>
+    <li><b>Entry, stop, target</b> <span class="tag engine">ENGINE · stop_target</span> — levels from §07's structure, rejected unless reward-to-risk ≥ 1:3.</li>
+    <li><b>Portfolio risk check</b> <span class="tag engine">ENGINE · portfolio_risk_check</span> — the candidate book (this name plus whatever else the 8–12 book holds) against the spec: portfolio volatility inside 15–30%, correlation discipline, exposure limits. <b>One name per bucket</b> unless the check explicitly clears a second.</li>
+    <li><b>Execution gate</b> — paper first, the risk-gate, per-order human approval. Drafting never places an order.</li>
+  </ol>
+  <p>Recommended sequencing given the calendar: run step 1 (qualitative) on <b>ETN and HUBB this weekend</b> — it's earnings-independent work — then let the 28–31 Jul prints and the FOMC land, refresh timing on fresh bars, and draft whichever of the two (or VRT on a survived print) offers the ≥1:3 setup from actual post-event levels.</p>
+  <div class="gbox">
+    <span class="g-k">Glossary for this section</span>
+    <dl>
+      <dt>KPI (key performance indicator)</dt><dd>The handful of numbers a company actually manages itself by (orders, backlog, margin, market share). Anton: identify them, then infer the management operating plan — what management is <em>trying</em> to do next.</dd>
+      <dt>9-part trade idea</dt><dd>The project's standard artifact for a fully-formed idea: thesis, outlier reason, qualitative drivers, catalysts, structure, entry/stop/target, sizing, risks, conviction. Incomplete = not actionable, by rule.</dd>
+      <dt>Stop / target / 1:3</dt><dd>Pre-committed exit prices. The stop caps the loss; the target books the win; the trade must offer ≥3× the risk. Set from chart structure, not round numbers.</dd>
+      <dt>Portfolio risk check</dt><dd>The deterministic gate that evaluates the whole proposed book — volatility band, correlations, exposure and count limits — before any addition is cleared.</dd>
+    </dl>
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ============ 11 CALENDAR ============ -->
+<section id="calendar">
+  <span class="secnum">11 · The bucket's calendar</span>
+  <h2>Nine days that reprice this entire shortlist</h2>
+  <div class="cal">
+    <div class="ev"><div class="d">TUE 28 JUL</div><div class="t">HUBB + CARR earnings</div><div class="w">Hubbell's utility-capex commentary = the whole bucket's demand read. Carrier resolves the resistance question.</div></div>
+    <div class="ev"><div class="d">WED 29 JUL</div><div class="t">VRT earnings + FOMC</div><div class="w">The pool's fastest grower reports on the day the discount rate is set. Maximum information, maximum noise — observe, don't trade it.</div></div>
+    <div class="ev"><div class="d">THU 30 JUL</div><div class="t">NXT earnings (+TT)</div><div class="w">Does the tracker guidance re-arm the broken chart?</div></div>
+    <div class="ev"><div class="d">FRI 31 JUL</div><div class="t">ETN + NVT earnings</div><div class="w">Eaton's orders &amp; backlog = the franchise thesis, tested directly.</div></div>
+    <div class="ev"><div class="d">~MON 3 AUG</div><div class="t">ISM Manufacturing (Jul)</div><div class="w">Does Electrical Equipment hold its #2 rank and 5-month streak? The bucket's monthly health check.</div></div>
+    <div class="ev"><div class="d">WED 12 AUG</div><div class="t">ENS earnings</div><div class="w">The value sleeper reports last — with the sector's prints already known.</div></div>
+  </div>
+  <p class="src">Earnings dates from the valuation engine snapshot (26 Jul); always re-verify the date before positioning around it.</p>
+</section>
+
+<hr class="sep">
+
+<!-- ============ 12 PROVENANCE ============ -->
+<section id="provenance">
+  <span class="secnum">12 · Provenance</span>
+  <h2>Coverage audit, engines &amp; citations</h2>
+  <p><b>Coverage audit (run for this dossier):</b> <span class="mono">verify_coverage</span> reports <b>112/112 corpus-implied data attributes grounded, zero build gaps</b> — every measurable input the course requires for this analysis exists as a tool, and nothing was skipped for want of data <span class="tag engine">ENGINE · verify_coverage, 26 Jul</span>.</p>
+  <h3>Engines used (all readings 26 Jul 2026 unless noted)</h3>
+  <p class="src">ism_manufacturing (--rankings, --subindex-sectors, --comments, --universe: the sector→candidate bridge) · fundamentals/gics (SEC EDGAR market caps, size tiers, industry map) · trade_idea_search (funnel orchestrator: valuation + health + scoring, pool median 24.85×) · valuation (per-name snapshot incl. earnings dates) · financial_health (L27 card) · catalyst_frequency (SEC EDGAR 8-K flow, 5-year window) · technical_timing (bars to 17 Jul — refresh before entry) · measure_volatility (DoR + ATRP) · verify_coverage (the completeness gate). Equity/options advice given under <span class="mono">trade_ready_by_track.equity_options = true</span>.</p>
+  <h3>Corpus citations (Anton Kreil, retrieval-gated ≥ 0.55)</h3>
+  <p class="src">ISM = bias + trade-idea source; never trade it alone — PTM 2.0 L7 1:16:39 / 1:31:10 · Forward-P/E outlier screen + EG1 — PTM 2.0 L23 9:58, 12:33 · Long profile mid-cap+ ("$5bn doubles faster than $40bn+") — PTM 2.0 L25 16:55 · Balance-sheet health card (D/E, 3.33× coverage line, current ratio, WC bands, ROA/ROE, FCF) — PTM 2.0 L27 · KPIs → management operating plan — PTM 2.0 L30 50:00 · Catalyst frequency / tumbleweeds — PTM 2.0 L32 47:55 · Price-action checklist (RSI, 20/60/120/250d MAs) — PTM 2.0 L38 5:35 · DoR + ATRP — ITPL L3–5 · Portfolio-level vol band — ITPL L8–9 · Liquidity by cap tier — POTM V5 30:07.</p>
+  <p class="src">External information policy: as Dossier 01 — no press, no broker research; engines on primary sources (ISM, SEC EDGAR, FRED, exchange data) and the corpus only.</p>
+  <footer>
+    <p><b>Status &amp; disclaimers.</b> Paper portfolio — £20,000 notional, no live orders. This dossier completes the screening level only: no position exists until the qualitative pass, a COMPLETE 9-part draft, a ≥1:3 stop/target, the portfolio risk check and the execution gate all clear. Timing data is as of 17 Jul bars — refresh before any entry. All probabilities are the agent's stated estimates, probability-weighted and never gospel. Generated 2026-07-26 20:49 BST · The Macro Playbook · Portfolio Dossier 02 · canonical copy: <span class="mono">knowledge/portfolio/dossiers/2026-07-26-electrical-equipment-deep-dive.html</span>.</p>
+  </footer>
+</section>
+
+</div>
+</body>
+</html>
