@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>PFTM Forex 05 · Forex Market Foundation 5 — Advanced Computational Methods (Excel) — The Macro Playbook — The Top-Down Macro Read</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="rail" id="rail">
+    <div class="rail__brand">The Macro Playbook</div>
+    <a href="index.html" style="text-decoration:none;color:inherit">
+      <div class="rail__title">The Top-Down<br>Macro Read</div>
+    </a>
+    <div class="rail__sub">Anton Kreil · ITPL Foundations + PTM 2.0, distilled</div>
+    <button class="rail__toggle" onclick="document.getElementById('rail').classList.toggle('open')">Chapters ▾</button>
+    <ul class="rail__nav">
+      
+      <li><a href="chapter-01.html"
+             class="">
+        <span class="rn">A</span>
+        <span class="rt">Professional Traders vs Retail Traders 101<small>Foundations · What a professional tr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-02.html"
+             class="">
+        <span class="rn">B</span>
+        <span class="rt">Professional Traders vs Retail Traders 102<small>Foundations · Alpha vs absolute retu</small></span>
+      </a></li>
+      
+      <li><a href="chapter-03.html"
+             class="">
+        <span class="rn">C</span>
+        <span class="rt">Realized Volatility 1<small>Foundations · Measuring an instrumen</small></span>
+      </a></li>
+      
+      <li><a href="chapter-04.html"
+             class="">
+        <span class="rn">D</span>
+        <span class="rt">Realized Volatility 2<small>Foundations · The spreadsheet class:</small></span>
+      </a></li>
+      
+      <li><a href="chapter-05.html"
+             class="">
+        <span class="rn">E</span>
+        <span class="rt">Realized Volatility 3<small>Foundations · Average True Range Per</small></span>
+      </a></li>
+      
+      <li><a href="chapter-06.html"
+             class="">
+        <span class="rn">F</span>
+        <span class="rt">Implied Volatility 1<small>Foundations · The VIX as the market&#39;</small></span>
+      </a></li>
+      
+      <li><a href="chapter-07.html"
+             class="">
+        <span class="rn">G</span>
+        <span class="rt">Implied Volatility 2<small>Foundations · Solving for an option&#39;</small></span>
+      </a></li>
+      
+      <li><a href="chapter-08.html"
+             class="">
+        <span class="rn">H</span>
+        <span class="rt">Portfolio Volatility 1<small>Foundations · The concepts of whole-</small></span>
+      </a></li>
+      
+      <li><a href="chapter-09.html"
+             class="">
+        <span class="rn">I</span>
+        <span class="rt">Portfolio Volatility 2<small>Foundations · Calculating a portfoli</small></span>
+      </a></li>
+      
+      <li><a href="chapter-10.html"
+             class="">
+        <span class="rn">J</span>
+        <span class="rt">Becoming a Professional Level Trader<small>Foundations · The IPLT capstone — ho</small></span>
+      </a></li>
+      
+      <li><a href="chapter-11.html"
+             class="">
+        <span class="rn">01</span>
+        <span class="rt">The Framework<small>PTM 2.0 · The framework</small></span>
+      </a></li>
+      
+      <li><a href="chapter-12.html"
+             class="">
+        <span class="rn">02</span>
+        <span class="rt">The Field of Play: Bull &amp; Bear Markets<small>PTM 2.0 · Field of play</small></span>
+      </a></li>
+      
+      <li><a href="chapter-13.html"
+             class="">
+        <span class="rn">03</span>
+        <span class="rt">Gross Domestic Product<small>PTM 2.0 · GDP</small></span>
+      </a></li>
+      
+      <li><a href="chapter-14.html"
+             class="">
+        <span class="rn">04</span>
+        <span class="rt">Leading Indicators 1: Real Interest Rates &amp; the Yield Curve<small>PTM 2.0 · Rates · yield curve</small></span>
+      </a></li>
+      
+      <li><a href="chapter-15.html"
+             class="">
+        <span class="rn">05</span>
+        <span class="rt">Corporate Bonds &amp; Credit Spreads<small>PTM 2.0 · Credit spreads</small></span>
+      </a></li>
+      
+      <li><a href="chapter-16.html"
+             class="">
+        <span class="rn">06</span>
+        <span class="rt">M2 Money Supply: The Accessory Leading Indicator<small>PTM 2.0 · M2 money supply</small></span>
+      </a></li>
+      
+      <li><a href="chapter-17.html"
+             class="">
+        <span class="rn">07</span>
+        <span class="rt">The ISM Manufacturing PMI<small>PTM 2.0 · ISM manufacturing</small></span>
+      </a></li>
+      
+      <li><a href="chapter-18.html"
+             class="">
+        <span class="rn">08</span>
+        <span class="rt">The ISM Non-Manufacturing Report on Business (Services PMI)<small>PTM 2.0 · ISM services</small></span>
+      </a></li>
+      
+      <li><a href="chapter-19.html"
+             class="">
+        <span class="rn">09</span>
+        <span class="rt">Consumer Sentiment<small>PTM 2.0 · UMich sentiment</small></span>
+      </a></li>
+      
+      <li><a href="chapter-20.html"
+             class="">
+        <span class="rn">10</span>
+        <span class="rt">Building Permits: The Housing Leading Indicator<small>PTM 2.0 · Housing · permits</small></span>
+      </a></li>
+      
+      <li><a href="chapter-21.html"
+             class="">
+        <span class="rn">11</span>
+        <span class="rt">NFIB Small Business Optimism Index<small>PTM 2.0 · NFIB small biz</small></span>
+      </a></li>
+      
+      <li><a href="chapter-22.html"
+             class="">
+        <span class="rn">12</span>
+        <span class="rt">Cyclical Commodities as a Leading Indicator<small>PTM 2.0 · Cyclical commodities</small></span>
+      </a></li>
+      
+      <li><a href="chapter-23.html"
+             class="">
+        <span class="rn">13</span>
+        <span class="rt">European Economic Sentiment Indicator (ESI)<small>PTM 2.0 · Europe · ESI</small></span>
+      </a></li>
+      
+      <li><a href="chapter-24.html"
+             class="">
+        <span class="rn">14</span>
+        <span class="rt">China Leading Indicators: Official vs Caixin PMI and Real Rates<small>PTM 2.0 · China · Caixin</small></span>
+      </a></li>
+      
+      <li><a href="chapter-25.html"
+             class="">
+        <span class="rn">15</span>
+        <span class="rt">Recap: Bringing the Leading Indicators Together<small>PTM 2.0 · Recap · coincident</small></span>
+      </a></li>
+      
+      <li><a href="chapter-26.html"
+             class="">
+        <span class="rn">16</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 1a<small>PTM 2.0 · From the macro bias to</small></span>
+      </a></li>
+      
+      <li><a href="chapter-27.html"
+             class="">
+        <span class="rn">17</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 1b<small>PTM 2.0 · Portfolio modelling in</small></span>
+      </a></li>
+      
+      <li><a href="chapter-28.html"
+             class="">
+        <span class="rn">18</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 2<small>PTM 2.0 · Portfolio volatility f</small></span>
+      </a></li>
+      
+      <li><a href="chapter-29.html"
+             class="">
+        <span class="rn">19</span>
+        <span class="rt">Foundations of Long Short Portfolio Management 3<small>PTM 2.0 · Portfolio correlation </small></span>
+      </a></li>
+      
+      <li><a href="chapter-30.html"
+             class="">
+        <span class="rn">20</span>
+        <span class="rt">Foundations of Long Short Portfolio Management 4<small>PTM 2.0 · Beta and beta-neutral </small></span>
+      </a></li>
+      
+      <li><a href="chapter-31.html"
+             class="">
+        <span class="rn">21</span>
+        <span class="rt">Foundations of Long / Short Portfolio Management Recap<small>PTM 2.0 · The capstone of the po</small></span>
+      </a></li>
+      
+      <li><a href="chapter-32.html"
+             class="">
+        <span class="rn">22</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 1<small>PTM 2.0 · The bottom-up, fundame</small></span>
+      </a></li>
+      
+      <li><a href="chapter-33.html"
+             class="">
+        <span class="rn">23</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 2<small>PTM 2.0 · The quant pass in full</small></span>
+      </a></li>
+      
+      <li><a href="chapter-34.html"
+             class="">
+        <span class="rn">24</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 3<small>PTM 2.0 · The quant valuation bl</small></span>
+      </a></li>
+      
+      <li><a href="chapter-35.html"
+             class="">
+        <span class="rn">25</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 4<small>PTM 2.0 · The synthesis of the q</small></span>
+      </a></li>
+      
+      <li><a href="chapter-36.html"
+             class="">
+        <span class="rn">26</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 5<small>PTM 2.0 · The SHORT-side mirror </small></span>
+      </a></li>
+      
+      <li><a href="chapter-37.html"
+             class="">
+        <span class="rn">27</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 6<small>PTM 2.0 · Turnaround Stories vs </small></span>
+      </a></li>
+      
+      <li><a href="chapter-38.html"
+             class="">
+        <span class="rn">28</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 7<small>PTM 2.0 · Data-cleansing a downl</small></span>
+      </a></li>
+      
+      <li><a href="chapter-39.html"
+             class="">
+        <span class="rn">29</span>
+        <span class="rt">Recap of Quantitative Processing<small>PTM 2.0 · The capstone of the tr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-40.html"
+             class="">
+        <span class="rn">30</span>
+        <span class="rt">Qualitative Processing<small>PTM 2.0 · The qualitative half o</small></span>
+      </a></li>
+      
+      <li><a href="chapter-41.html"
+             class="">
+        <span class="rn">31</span>
+        <span class="rt">Trade Idea Generation – Qualitative Processing<small>PTM 2.0 · The deeper qualitative</small></span>
+      </a></li>
+      
+      <li><a href="chapter-42.html"
+             class="">
+        <span class="rn">32</span>
+        <span class="rt">Trade Idea Generation – Identifying Catalysts<small>PTM 2.0 · The final fundamental </small></span>
+      </a></li>
+      
+      <li><a href="chapter-43.html"
+             class="">
+        <span class="rn">33</span>
+        <span class="rt">Trade Idea Generation Template — Part 1<small>PTM 2.0 · How to formalize the w</small></span>
+      </a></li>
+      
+      <li><a href="chapter-44.html"
+             class="">
+        <span class="rn">34</span>
+        <span class="rt">Trade Idea Generation Template — Part 2<small>PTM 2.0 · Finishing the ZEN pric</small></span>
+      </a></li>
+      
+      <li><a href="chapter-45.html"
+             class="">
+        <span class="rn">35</span>
+        <span class="rt">Macro-Driven Trade Ideas<small>PTM 2.0 · Marrying the macro and</small></span>
+      </a></li>
+      
+      <li><a href="chapter-46.html"
+             class="">
+        <span class="rn">36</span>
+        <span class="rt">International Trade Ideas via ADRs<small>PTM 2.0 · Bolt the international</small></span>
+      </a></li>
+      
+      <li><a href="chapter-47.html"
+             class="">
+        <span class="rn">37</span>
+        <span class="rt">Technical Analysis (Timing)<small>PTM 2.0 · Charts don&#39;t generate </small></span>
+      </a></li>
+      
+      <li><a href="chapter-48.html"
+             class="">
+        <span class="rn">38</span>
+        <span class="rt">Price Action (Momentum)<small>PTM 2.0 · The momentum half of t</small></span>
+      </a></li>
+      
+      <li><a href="chapter-49.html"
+             class="">
+        <span class="rn">39</span>
+        <span class="rt">Preventative Risk Management (PRM)<small>PTM 2.0 · Get your head right be</small></span>
+      </a></li>
+      
+      <li><a href="chapter-50.html"
+             class="">
+        <span class="rn">40</span>
+        <span class="rt">Preventative Risk Management — Part 2 (Portfolio Limits)<small>PTM 2.0 · Turning the volatility</small></span>
+      </a></li>
+      
+      <li><a href="chapter-51.html"
+             class="">
+        <span class="rn">41</span>
+        <span class="rt">Eliminating Emotion, Staying Objective<small>PTM 2.0 · Treat your trading acc</small></span>
+      </a></li>
+      
+      <li><a href="chapter-52.html"
+             class="">
+        <span class="rn">42</span>
+        <span class="rt">Track Record &amp; Trading Statistics (Part 1)<small>PTM 2.0 · Building the three-tab</small></span>
+      </a></li>
+      
+      <li><a href="chapter-53.html"
+             class="">
+        <span class="rn">43</span>
+        <span class="rt">Track Record &amp; Trading Statistics (Part 2 — Advanced)<small>PTM 2.0 · The advanced ratios — </small></span>
+      </a></li>
+      
+      <li><a href="chapter-54.html"
+             class="">
+        <span class="rn">44</span>
+        <span class="rt">Getting Organized &amp; Next Steps<small>PTM 2.0 · The closing chapter of</small></span>
+      </a></li>
+      
+      <li><a href="chapter-55.html"
+             class="">
+        <span class="rn">01</span>
+        <span class="rt">Defining the Mandate (Part 1)<small>POTM Options · Why the retail options</small></span>
+      </a></li>
+      
+      <li><a href="chapter-56.html"
+             class="">
+        <span class="rn">02</span>
+        <span class="rt">Defining the Mandate (Part 2)<small>POTM Options · Why most options educa</small></span>
+      </a></li>
+      
+      <li><a href="chapter-57.html"
+             class="">
+        <span class="rn">03</span>
+        <span class="rt">Filtering Options Strategies for Usefulness<small>POTM Options · How Anton Kreil filter</small></span>
+      </a></li>
+      
+      <li><a href="chapter-58.html"
+             class="">
+        <span class="rn">04</span>
+        <span class="rt">Marginal Benefits 1 — The Advantages of Options<small>POTM Options · Why a long call or lon</small></span>
+      </a></li>
+      
+      <li><a href="chapter-59.html"
+             class="">
+        <span class="rn">05</span>
+        <span class="rt">Marginal Benefits 2 — The Disadvantages of Options<small>POTM Options · Why time decay, timing</small></span>
+      </a></li>
+      
+      <li><a href="chapter-60.html"
+             class="">
+        <span class="rn">06</span>
+        <span class="rt">Long Call &amp; Put Options Formalized<small>POTM Options · The two simplest direc</small></span>
+      </a></li>
+      
+      <li><a href="chapter-61.html"
+             class="">
+        <span class="rn">07</span>
+        <span class="rt">Naked Short Puts<small>POTM Options · Selling a put for a cr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-62.html"
+             class="">
+        <span class="rn">08</span>
+        <span class="rt">Naked Short Calls<small>POTM Options · The one strategy Anton</small></span>
+      </a></li>
+      
+      <li><a href="chapter-63.html"
+             class="">
+        <span class="rn">09</span>
+        <span class="rt">The Covered Call<small>POTM Options · Own the stock and sell</small></span>
+      </a></li>
+      
+      <li><a href="chapter-64.html"
+             class="">
+        <span class="rn">10</span>
+        <span class="rt">The Covered Call Collar<small>POTM Options · Extend the covered cal</small></span>
+      </a></li>
+      
+      <li><a href="chapter-65.html"
+             class="">
+        <span class="rn">11</span>
+        <span class="rt">Index Options &amp; Portfolio Hedging<small>POTM Options · Using index options to</small></span>
+      </a></li>
+      
+      <li><a href="chapter-66.html"
+             class="">
+        <span class="rn">12</span>
+        <span class="rt">Options Spreads 1 — The Bull Call Spread<small>POTM Options · Buy a lower-strike cal</small></span>
+      </a></li>
+      
+      <li><a href="chapter-67.html"
+             class="">
+        <span class="rn">13</span>
+        <span class="rt">Options Spreads 2 — The Bear Put Spread<small>POTM Options · The bearish mirror of </small></span>
+      </a></li>
+      
+      <li><a href="chapter-68.html"
+             class="">
+        <span class="rn">14</span>
+        <span class="rt">Market Makers, Volatility &amp; the Greeks<small>POTM Options · How options market mak</small></span>
+      </a></li>
+      
+      <li><a href="chapter-69.html"
+             class="">
+        <span class="rn">15</span>
+        <span class="rt">Recap — What We Have Learnt So Far<small>POTM Options · A stock-take of the op</small></span>
+      </a></li>
+      
+      <li><a href="chapter-70.html"
+             class="">
+        <span class="rn">16</span>
+        <span class="rt">Ratio Spreads 1 — The Short Bull Ratio Spread<small>POTM Options · Buy more cheap OTM cal</small></span>
+      </a></li>
+      
+      <li><a href="chapter-71.html"
+             class="">
+        <span class="rn">17</span>
+        <span class="rt">Ratio Spreads 2 — The Short Bear Ratio Spread<small>POTM Options · The bearish mirror of </small></span>
+      </a></li>
+      
+      <li><a href="chapter-72.html"
+             class="">
+        <span class="rn">18</span>
+        <span class="rt">Ladder Spreads 1 — The Bull Call Ladder<small>POTM Options · A three-legged bullish</small></span>
+      </a></li>
+      
+      <li><a href="chapter-73.html"
+             class="">
+        <span class="rn">19</span>
+        <span class="rt">Ladder Spreads 2 — The Bear Put Ladder<small>POTM Options · The bearish mirror of </small></span>
+      </a></li>
+      
+      <li><a href="chapter-74.html"
+             class="">
+        <span class="rn">20</span>
+        <span class="rt">Volatility Masterclass 1 — Why Volatility Is Risk AND Reward<small>POTM Options · Volatility is the fluc</small></span>
+      </a></li>
+      
+      <li><a href="chapter-75.html"
+             class="">
+        <span class="rn">21</span>
+        <span class="rt">Volatility Masterclass 2 — Turning IV Into Expected Ranges<small>POTM Options · Back implied volatilit</small></span>
+      </a></li>
+      
+      <li><a href="chapter-76.html"
+             class="">
+        <span class="rn">22</span>
+        <span class="rt">Long Straddles — The Non-Directional Volatility Bet<small>POTM Options · Buy an ATM call and an</small></span>
+      </a></li>
+      
+      <li><a href="chapter-77.html"
+             class="">
+        <span class="rn">23</span>
+        <span class="rt">Long Strangles — The Wider, Cheaper Straddle<small>POTM Options · The OTM cousin of the </small></span>
+      </a></li>
+      
+      <li><a href="chapter-78.html"
+             class="">
+        <span class="rn">24</span>
+        <span class="rt">Strap Straddle — The Bullish Volatility Bet<small>POTM Options · The first directional </small></span>
+      </a></li>
+      
+      <li><a href="chapter-79.html"
+             class="">
+        <span class="rn">25</span>
+        <span class="rt">Strip Straddle — The Bearish Volatility Bet<small>POTM Options · Buy 1 ATM call and 2 A</small></span>
+      </a></li>
+      
+      <li><a href="chapter-80.html"
+             class="">
+        <span class="rn">26</span>
+        <span class="rt">Strap Strangle — The Bullish OTM Volatility Bet<small>POTM Options · Two out-of-the-money c</small></span>
+      </a></li>
+      
+      <li><a href="chapter-81.html"
+             class="">
+        <span class="rn">27</span>
+        <span class="rt">Strip Strangle — The Bearish OTM Volatility Bet<small>POTM Options · Buy two OTM puts again</small></span>
+      </a></li>
+      
+      <li><a href="chapter-82.html"
+             class="">
+        <span class="rn">28</span>
+        <span class="rt">Recap &amp; Exam Preparation<small>POTM Options · The closing lesson: wh</small></span>
+      </a></li>
+      
+      <li><a href="chapter-83.html"
+             class="">
+        <span class="rn">01</span>
+        <span class="rt">Forex Market Foundation — The Opportunity Set<small>PFTM Forex · How professional trade</small></span>
+      </a></li>
+      
+      <li><a href="chapter-84.html"
+             class="">
+        <span class="rn">02</span>
+        <span class="rt">Forex Market Foundation 2 — Fixed vs Floating Regimes<small>PFTM Forex · How a currency&#39;s excha</small></span>
+      </a></li>
+      
+      <li><a href="chapter-85.html"
+             class="">
+        <span class="rn">03</span>
+        <span class="rt">Forex Market Foundation 3 — Infrastructure<small>PFTM Forex · Who really moves the F</small></span>
+      </a></li>
+      
+      <li><a href="chapter-86.html"
+             class="">
+        <span class="rn">04</span>
+        <span class="rt">Forex Market Foundation 4 — Basic Computational Methods<small>PFTM Forex · The quantitative found</small></span>
+      </a></li>
+      
+      <li><a href="chapter-87.html"
+             class="is-active">
+        <span class="rn">05</span>
+        <span class="rt">Forex Market Foundation 5 — Advanced Computational Methods (Excel)<small>PFTM Forex · Build a full distribut</small></span>
+      </a></li>
+      
+    </ul>
+    <div class="rail__foot">
+      Distilled from slides + transcript.<br>
+      Every number grounded in the lesson.<br>
+      Not affiliated with ITPM / A. Kreil.
+    </div>
+  </nav>
+  <main class="main">
+    
+<div class="wrap">
+  <header class="hero">
+    <div class="hero__num reveal">PFTM Forex · Chapter 05</div>
+    <h1 class="reveal d1">Forex Market Foundation 5 — Advanced Computational Methods (Excel)</h1>
+    <p class="hero__sub reveal d1">Build a full distribution-of-returns model in Excel to measure FX volatility in percent, then rank every tradable pair by opportunity and risk.</p>
+    <p class="hero__lead reveal d2">Volatility measures both opportunity AND risk — and the only honest way to compare it across currencies is in percent, not pips. This lesson builds the professional distribution-of-returns model step by step in Excel, then ranks all 27 tradable pairs to reveal where opportunity actually lies.</p>
+    <div class="hero__chips reveal d3">
+      <span class="chip chip--signal"><span class="dot"></span>Measure FX volatility in percent, build the distribution, then rank every pair.</span>
+      <span class="chip"><b>13</b>&nbsp;min read</span>
+      <span class="chip"><b>57</b>&nbsp;slides</span>
+    </div>
+  </header>
+
+  
+  <section class="gist reveal">
+    <h2>The gist</h2>
+    <ul><li>Measure volatility in PERCENT, never pips — pips compare apples to bananas; percent is the one-for-one base system that makes every pair comparable for equivalent position sizes.</li><li>Two return series drive everything: open-to-open % return =(C4-C5)/C5, and high-to-low % daily range =(High-Low)/Low — one measures day-to-day drift, the other the perfect-day maximum.</li><li>Open-to-open returns form a roughly NORMAL bell curve; high-to-low returns are structurally lopsided (they can never be below 0%), so standard-deviation analysis applies only to open-to-open.</li><li>FX returns have FAT TAILS: for AUD/USD ~80% of days fall inside ±1 std dev (0.87%) vs the normal 68.2% — peakier around the mean AND fatter in the extremes than a perfect normal distribution.</li><li>AUD/USD open-to-open std dev is 0.867% vs EUR/USD 0.629%; average up/down day is ±0.29% (AUD) vs ±0.21% (EUR) — small margins before spread and financing costs.</li><li>On average an AUD/USD high-to-low &#39;perfect day&#39; is 1.165% (max 10.89%) vs EUR/USD 0.823% (max 4.22%) — AUD is nearly twice the magnitude but still tiny.</li><li>Up-days and down-days are ~50/50 (AUD/USD 49.52% up, 49.42% down) — daily direction is a coin toss no technical strategy can change.</li><li>Ranking all 27 tradable pairs by std dev: AUD/JPY highest at 1.198%, down to AUD/NZD lowest at 0.462% — EUR/USD, GBP/USD and GBP/EUR sit near the bottom, which is exactly why 90% of FX day traders lose money.</li><li>The conclusion: daily FX opportunity is objectively tiny, so increase the time horizon (weekly/monthly) to capture real volatility and fundamental trend.</li></ul>
+  </section>
+  
+
+  
+  <section class="section" id="s1">
+    <div class="section__k">01 / 15</div>
+    <h3>Why we do this: a base system for opportunity and risk</h3>
+    
+    <ul class="points"><li>Two anchoring principles: (1) comparing pips is NOT a one-for-one base system, so everything must be converted to percentages; (2) risk and opportunity go hand in hand — volatility measures both.</li><li>When you compare multiple assets in percent, you discover which have the most and least risk/opportunity per unit of currency deployed (i.e. for equivalent position sizes).</li><li>This is the true, professional-trader measure of opportunity and risk — the same method used on bank and hedge-fund desks.</li></ul>
+    
+    <p class="explain">The whole exercise exists to give a comparable base system across the entire spectrum. Percent is the anchor; pips are how brokers want you to think, because they obscure like-for-like comparison.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-05/01-24-35.jpg" alt="Slide: Why we do this: a base system for opportunity and risk">
+      <figcaption>Slide · 01:24:35</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s2">
+    <div class="section__k">02 / 15</div>
+    <h3>Getting the data: Investing.com into Excel</h3>
+    
+    <ul class="points"><li>Daily historical prices come from investing.com/currencies — here AUD/USD from 1st October 2008 onward, daily periods.</li><li>There is no clean export, so you manually click-drag to select the price table (including column titles), copy with Ctrl+C, and paste into cell A1 with Ctrl+V.</li><li>Save the workbook as something sensible (e.g. &#39;FX returns distributions&#39;) and keep saving as you go.</li><li>Covered Examples span four definitions of the tradable set — Ex-Commodity Float Majors (EURUSD, USDJPY, GBPUSD, USDCHF, EURCHF, EURJPY, GBPEUR, GBPJPY, GBPCHF, CHFJPY), Ex-Commodity Float Minors (USDSEK, EURHUF), Commodity Float Majors (AUDUSD, AUDJPY, AUDNZD, AUDCAD, USDCAD) and Commodity Float Minors (USDNOK, USDRUB, USDZAR, EURNOK, EURRUB, GBPZAR).</li></ul>
+    
+    <p class="explain">Every pair analysed is a floating regime; the split is by how concentrated the currency is in one or two commodity prices versus a diverse set of variables — the definitions built up in earlier videos.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-05/01-15-05.jpg" alt="Slide: Getting the data: Investing.com into Excel">
+      <figcaption>Slide · 01:15:05</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s3">
+    <div class="section__k">03 / 15</div>
+    <h3>Calculating the two return series</h3>
+    
+    <ul class="points"><li>Open-to-open % return in column G: =(C4-C5)/C5 — today&#39;s open minus yesterday&#39;s open, divided by yesterday&#39;s open (uses cell references, e.g. C2 vs C3).</li><li>High-to-low % range in column H: (High − Low) / Low of the SAME day — the return of buying the low and selling the high.</li><li>Double-click the cell&#39;s bottom-right black box to copy the formula down to the end of the data; delete the final #DIV/0! cell (no prior day exists before Oct 1st).</li><li>Format both columns as a percentage to three decimal places for readability.</li></ul>
+    
+    <p class="explain">Open-to-open captures day-to-day drift; high-to-low captures the maximum intraday range — the theoretical &#39;perfect day&#39;. These two series feed every statistic that follows.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-05/01-30-30.jpg" alt="Slide: Calculating the two return series">
+      <figcaption>Slide · 01:30:30</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s4">
+    <div class="section__k">04 / 15</div>
+    <h3>Defining the ranges (intervals)</h3>
+    
+    <ul class="points"><li>In column J, build ~20 ranges from −3% to +3%: start at −0.03, then −0.027, and drag down in steps of 0.3% (0.003) up to 0.03.</li><li>Different assets have different volatilities, so the ranges require some discretion — −3% to +3% in 0.3% steps is a good starting point.</li><li>Many small intervals make the histogram easier to interpret — you see occurrences in narrower ranges.</li></ul>
+    
+    <p class="explain">These intervals become the bins that sort every daily return into a range, so the distribution can be seen and its probabilities read off.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-05/01-52-35.jpg" alt="Slide: Defining the ranges (intervals)">
+      <figcaption>Slide · 01:52:35</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s5">
+    <div class="section__k">05 / 15</div>
+    <h3>Building the frequency table with the Data Analysis tool</h3>
+    
+    <ul class="points"><li>Enable the Analysis ToolPak add-in (File &gt; Options &gt; Add-ins &gt; Go), then Data &gt; Data Analysis &gt; Histogram.</li><li>Input range = all open-to-open returns (G2 to end via Ctrl+Shift+Down); Bin range = the intervals (J2:J22); Output range = K1.</li><li>The output shows Bin | Frequency: the first count is how many returns are below the first interval, then counts between successive intervals — e.g. 468 days landing in the 0% bin, 8 days between −3% and −2.7%, 12 days above +3%.</li></ul>
+    
+    <p class="explain">The frequency table is the raw distribution: the number of daily returns that fall inside each range. It is the foundation for the histogram and every probability figure.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-05/00-12-25.jpg" alt="Slide: Building the frequency table with the Data Analysis tool">
+      <figcaption>Slide · 00:12:25</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s6">
+    <div class="section__k">06 / 15</div>
+    <h3>Plotting the histogram (open-to-open)</h3>
+    
+    <ul class="points"><li>Select the Bin and Frequency range (K2:L23), Insert &gt; Column chart, choose the first option to get a histogram.</li><li>Tidy it: delete the Series 1 legend, add the title &#39;open to open returns&#39;, label the y-axis &#39;Frequency&#39; and the x-axis &#39;Returns ranges&#39;.</li><li>The result is a bell-shaped curve — more data near the middle than in the tails.</li></ul>
+    
+    <p class="explain">This rough bell shape is what statisticians call a normal distribution — symmetrical around the mean, the same shape you&#39;d get plotting human heights.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-05/00-14-15.jpg" alt="Slide: Plotting the histogram (open-to-open)">
+      <figcaption>Slide · 00:14:15</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s7">
+    <div class="section__k">07 / 15</div>
+    <h3>Readable text labels on the axis</h3>
+    
+    <ul class="points"><li>In column M, format the cells as Text and manually label each range: &#39;&lt;-3%&#39;, &#39;-3% to -2.7%&#39;, &#39;-2.7% to -2.4%&#39; … up to &#39;&gt;3%&#39;.</li><li>Right-click the chart &gt; Select Data &gt; edit the Horizontal (Category) Axis Labels to point at M2:M23 instead of the bin numbers.</li><li>The histogram now reads in plain percent ranges rather than raw interval numbers.</li></ul>
+    
+    <p class="explain">Tedious but necessary — the labels make the distribution instantly interpretable so you know exactly which range each bar represents.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-05/00-21-00.jpg" alt="Slide: Readable text labels on the axis">
+      <figcaption>Slide · 00:21:00</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s8">
+    <div class="section__k">08 / 15</div>
+    <h3>Descriptive statistics</h3>
+    
+    <ul class="points"><li>Data &gt; Data Analysis &gt; Descriptive Statistics on the open-to-open returns (G2:G1996), output to Q1, check Summary Statistics.</li><li>For AUD/USD open-to-open: Mean 0.003%, Median 0.000%, Mode 0.000%, Standard Deviation 0.876%, Kurtosis 10.49, Skewness −0.28, Range 15.077%, Minimum −7.623%, Maximum 7.453%, Count 1995.</li><li>Kurtosis &gt; 0 means peakier around the mean with fatter tails; negative skew means the negative tail is larger; the Sum is irrelevant (it is not the return of holding the position).</li></ul>
+    
+    <p class="explain">Standard deviation is the key statistic — the measure of dispersion (volatility) used for opportunity and risk. Kurtosis and skew tell you how the real distribution departs from a perfect normal one.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-05/00-24-10.jpg" alt="Slide: Descriptive statistics">
+      <figcaption>Slide · 00:24:10</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s9">
+    <div class="section__k">09 / 15</div>
+    <h3>Probabilities and cumulative probabilities</h3>
+    
+    <ul class="points"><li>Probability of each range = frequency / total count, e.g. =L2/$R$15 — press F4 to lock $R$15 (the count) so it stays fixed as you copy down.</li><li>Cumulative probability = current range probability + previous cumulative, building from −3% up to 100% of the data.</li><li>This lets you say things like: 6.32% chance of a daily return between −0.6% and −0.9%, or 3.81% of the time the asset loses 1.5% or more, or ~5% of the time it gains more than a percent.</li></ul>
+    
+    <p class="explain">Frequencies mean nothing without the total count; probabilities are what everyone understands. They turn the raw table into statements about how often each move actually happens.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-05/00-28-20.jpg" alt="Slide: Probabilities and cumulative probabilities">
+      <figcaption>Slide · 00:28:20</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s10">
+    <div class="section__k">10 / 15</div>
+    <h3>Positive/negative counts and adjusted average returns</h3>
+    
+    <ul class="points"><li>Use SUBTOTAL so the average and count respond to filters: =SUBTOTAL(1, G12:...) for average, =SUBTOTAL(2, G12:...) for count.</li><li>Filter open-to-open &gt; 0 for positives, &lt; 0 for negatives, and paste each result as a value: Av pos ret 0.58% (988 days, 49.52%), Av neg ret −0.57% (986 days, 49.42%), 0 Count 21 (1.05%).</li><li>Probability-adjusted returns = average return × its count-percentage: Adj Av Pos Ret 0.29%, Adj Av Neg Ret −0.28% — the return if you only traded on up (or down) days.</li></ul>
+    
+    <p class="explain">Positive and negative averages are near-mirror images either side of zero — the distribution is symmetric and the daily edge is tiny (~half a percent) even if you call direction perfectly.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-05/00-46-30.jpg" alt="Slide: Positive/negative counts and adjusted average returns">
+      <figcaption>Slide · 00:46:30</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s11">
+    <div class="section__k">11 / 15</div>
+    <h3>Standard-deviation bands vs the normal distribution</h3>
+    
+    <ul class="points"><li>Upper/lower bands = mean ± (1,2,3 × std dev): for AUD/USD roughly ±0.879% (1σ), ±1.75% (2σ), ±2.63% (3σ).</li><li>Filter the returns between each band, count them, and compare with the normal expectation (68.2% / 95.4% / 99.8%).</li><li>Empirically ~80% of AUD/USD days fall within ±1σ vs the normal 68% (peakier), but slightly LESS than normal at ±2σ and ±3σ — the missing middle data reappears in fatter tails.</li><li>For EUR/USD the actual coverage is 74.40% / 94.24% / 98.58% vs normal 68.20% / 95.40% / 99.80%.</li></ul>
+    
+    <p class="explain">FX returns are NOT perfectly normal: more days cluster around the mean than normality predicts, and the extreme tail events are also more frequent. Standard deviation is still the go-to comparable risk measure because a normal curve is fully defined by just mean and std dev.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-05/00-49-15.jpg" alt="Slide: Standard-deviation bands vs the normal distribution">
+      <figcaption>Slide · 00:49:15</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s12">
+    <div class="section__k">12 / 15</div>
+    <h3>High-to-low returns: a lopsided distribution</h3>
+    
+    <ul class="points"><li>High-to-low returns can never be below 0% (you buy the low, sell the high), so the distribution is right-skewed and the normal / std-dev analysis is void.</li><li>Build intervals from 0.2% up in 0.2% steps to 4%, run the histogram (input H12:H2007) and read the frequency/probability table.</li><li>AUD/USD high-to-low: Mean 1.165%, Max 10.89%, Kurtosis 21.15, Skewness 3.44 — for high-to-low you focus on the mean (average perfect day) and the maximum, not standard deviation.</li><li>From the table, moves greater than 4% between high and low occur about 1.65% of the time.</li></ul>
+    
+    <p class="explain">Because a negative daily range is structurally impossible, the bell curve breaks — so this series is judged by its average perfect-day magnitude and its extremes rather than by standard deviation.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-05/01-36-50.jpg" alt="Slide: High-to-low returns: a lopsided distribution">
+      <figcaption>Slide · 01:36:50</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s13">
+    <div class="section__k">13 / 15</div>
+    <h3>AUD/USD vs EUR/USD: same method, different beast</h3>
+    
+    <ul class="points"><li>Open-to-open std dev: AUD/USD 0.867% vs EUR/USD 0.629% — AUD is the more volatile pair.</li><li>Average up/down day: AUD/USD ±0.29% vs EUR/USD ±0.21% (only if you pick the right direction).</li><li>High-to-low average day: AUD/USD 1.165% vs EUR/USD 0.823% — almost twice the magnitude; max range AUD 10.89% vs EUR 4.22%.</li><li>Every risk measure is higher for AUD/USD — greater risk and, hand in hand, greater opportunity than EUR/USD.</li></ul>
+    
+    <p class="explain">Same build, two currencies: AUD/USD moves more because of concentrated exposure to one or two commodities, while EUR/USD has diverse exposure and lower volatility. Both are still coin-toss on direction with tiny daily edges.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-05/01-40-45.jpg" alt="Slide: AUD/USD vs EUR/USD: same method, different beast">
+      <figcaption>Slide · 01:40:45</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s14">
+    <div class="section__k">14 / 15</div>
+    <h3>The &#39;All Tradable&#39; volatility ranking</h3>
+    
+    <ul class="points"><li>Ranking all 27 pairs by open-to-open standard deviation, top to bottom: AUD_JPY 1.198%, USD_ZAR 1.101%, USD_RUB 1.069%, EUR_RUB 0.970%, CHF_JPY 0.906%, AUD_USD 0.887%, GBP_JPY 0.887%, EUR_JPY 0.883%, USD_SEK 0.866%, USD_NOK 0.836%, GBP_ZAR 0.820%, GBP_CHF 0.768%, USD_CHF 0.768%, USD_JPY 0.650%, EUR_CHF 0.642%, EUR_HUF 0.620%, AUD_CAD 0.606%, USD_CAD 0.602%, EUR_USD 0.590%, GBP_USD 0.584%, EUR_NOK 0.534%, GBP_EUR 0.467%, AUD_NZD 0.462%.</li><li>The group averages: Commodity Minors 0.888%, Commodity Majors 0.751%, Ex-Commodity Minors 0.743%, Ex-Commodity Majors 0.714%.</li><li>EUR/USD sits almost at the bottom; GBP/USD and GBP/EUR are even lower — the least volatile pairs are exactly the ones brokers push retail traders toward.</li></ul>
+    
+    <p class="explain">This is the FX opportunity-set volatility screen: it shows objectively where opportunity and risk lie across the whole tradable set — and why day-trading the low-volatility majors is a fool&#39;s game for retail money.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-05/01-52-35.jpg" alt="Slide: The &#39;All Tradable&#39; volatility ranking">
+      <figcaption>Slide · 01:52:35</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s15">
+    <div class="section__k">15 / 15</div>
+    <h3>Conclusion: increase the time horizon</h3>
+    
+    <ul class="points"><li>On an absolute basis, daily FX opportunity is objectively tiny — up and down days are ~50/50, so no five-minute chart or technical overlay changes the numbers.</li><li>On a relative basis, the ranking still guides you: more volatile pairs (commodity currencies) offer more to capture than the diverse majors.</li><li>The takeaway: increase the time horizon to weekly and monthly data to capture larger volatility and fundamental trend — which sets up the ATR method in Video 6.</li></ul>
+    
+    <p class="explain">The data sends a clear message: day-trading highly leveraged currencies is the dumb-money approach the brokers profit from. Real opportunity requires a longer horizon — the next video&#39;s simpler ATR method reaches very similar conclusions.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-05/00-03-00.jpg" alt="Slide: Conclusion: increase the time horizon">
+      <figcaption>Slide · 00:03:00</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+
+  
+  <section class="section">
+    <div class="section__k">Reference</div>
+    <h3>Glossary</h3>
+    <ul class="glossary">
+      
+      <li><span class="term">Open-to-open % return</span><div class="def">Day-over-day drift: (today&#39;s open − yesterday&#39;s open) / yesterday&#39;s open, e.g. =(C4-C5)/C5. Roughly normally distributed.</div></li>
+      
+      <li><span class="term">High-to-low % return</span><div class="def">The intraday &#39;perfect day&#39; range: (High − Low) / Low of the same day. Structurally cannot be below 0%, so it is right-skewed.</div></li>
+      
+      <li><span class="term">Frequency table</span><div class="def">A count (via the Histogram tool) of how many daily returns fall into each interval/bin range.</div></li>
+      
+      <li><span class="term">Probability</span><div class="def">Frequency of a range divided by the total count, e.g. =L2/$R$15 — the historical chance of a return landing in that range.</div></li>
+      
+      <li><span class="term">Cumulative probability</span><div class="def">Running sum of range probabilities from the lowest range up, ending at 100% of the data.</div></li>
+      
+      <li><span class="term">Standard deviation</span><div class="def">The core measure of dispersion / volatility; the go-to comparable risk metric across assets. AUD/USD 0.867% vs EUR/USD 0.629% open-to-open.</div></li>
+      
+      <li><span class="term">Kurtosis</span><div class="def">How peaked the distribution is around the mean and how fat its tails are; &gt; 0 means peakier with fatter tails than a normal distribution.</div></li>
+      
+      <li><span class="term">Skewness</span><div class="def">Asymmetry of the distribution; negative skew means a larger negative tail, positive skew a larger positive tail.</div></li>
+      
+      <li><span class="term">Normal distribution</span><div class="def">A symmetric bell curve fully defined by mean and std dev, covering 68.2% / 95.4% / 99.8% of data within ±1/±2/±3 std dev.</div></li>
+      
+      <li><span class="term">Fat tails</span><div class="def">Real FX returns cluster more tightly around the mean AND have more extreme moves than a normal distribution predicts.</div></li>
+      
+      <li><span class="term">Adjusted average return</span><div class="def">Average positive (or negative) return × the frequency of positive (negative) days — the return earned trading only up (or down) days. AUD/USD ≈ 0.29% / −0.28%.</div></li>
+      
+      <li><span class="term">Tradable set</span><div class="def">The four-way classification of floating pairs: Ex-Commodity Float Majors/Minors and Commodity Float Majors/Minors.</div></li>
+      
+      <li><span class="term">Pips vs percent</span><div class="def">Pips are not a one-for-one base system, so volatility must be compared in percent to compare pairs like-for-like.</div></li>
+      
+    </ul>
+  </section>
+  
+
+  <nav class="pager">
+    
+    <a class="prev" href="chapter-86.html">
+      <small>← 04 Previous</small><span>Forex Market Foundation 4 — Basic Computational Methods</span></a>
+    
+    
+    <a class="next disabled"><small>End of the macro block</small><span>Portfolio construction is next</span></a>
+    
+  </nav>
+</div>
+
+  </main>
+</div>
+</body>
+</html>
