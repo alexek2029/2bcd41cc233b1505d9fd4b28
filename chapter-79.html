@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>POTM Options 15 · Recap — What We Have Learnt So Far — The Macro Playbook — The Top-Down Macro Read</title>
+<title>POTM Options 25 · Strip Straddle — The Bearish Volatility Bet — The Macro Playbook — The Top-Down Macro Read</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -430,7 +430,7 @@
       </a></li>
       
       <li><a href="chapter-69.html"
-             class="is-active">
+             class="">
         <span class="rn">15</span>
         <span class="rt">Recap — What We Have Learnt So Far<small>POTM Options · A stock-take of the op</small></span>
       </a></li>
@@ -490,7 +490,7 @@
       </a></li>
       
       <li><a href="chapter-79.html"
-             class="">
+             class="is-active">
         <span class="rn">25</span>
         <span class="rt">Strip Straddle — The Bearish Volatility Bet<small>POTM Options · Buy 1 ATM call and 2 A</small></span>
       </a></li>
@@ -506,132 +506,180 @@
     
 <div class="wrap">
   <header class="hero">
-    <div class="hero__num reveal">POTM Options · Chapter 15</div>
-    <h1 class="reveal d1">Recap — What We Have Learnt So Far</h1>
-    <p class="hero__sub reveal d1">A stock-take of the options block: the mandate, which strategies passed the usefulness filter, marginal benefit, and how market makers differ from you.</p>
-    <p class="hero__lead reveal d2">Halfway through the options course, Anton pauses to join the dots. Four themes tie it together: define the retail-speculator mandate, filter strategies by usefulness, weigh marginal benefit, and understand why you are a price taker sitting across from a price-making market maker.</p>
+    <div class="hero__num reveal">POTM Options · Chapter 25</div>
+    <h1 class="reveal d1">Strip Straddle — The Bearish Volatility Bet</h1>
+    <p class="hero__sub reveal d1">Buy 1 ATM call and 2 ATM puts at the same strike and expiry to bet on an explosive down-move while keeping upside protection.</p>
+    <p class="hero__lead reveal d2">The strip straddle is the bearish mirror of the strap straddle: a put-heavy long-volatility position that makes more on a fall than on a rally. You buy twice as many at-the-money puts as calls, so the single call acts as a one-to-two hedge on your long puts if you&#39;re wrong.</p>
     <div class="hero__chips reveal d3">
-      <span class="chip chip--signal"><span class="dot"></span>Trade options like a pro: fundamentals first, structure second, and only when volatility pays you.</span>
+      <span class="chip chip--signal"><span class="dot"></span>Go put-heavy when you expect an explosive drop but want upside insurance.</span>
       <span class="chip"><b>8</b>&nbsp;min read</span>
-      <span class="chip"><b>6</b>&nbsp;slides</span>
+      <span class="chip"><b>16</b>&nbsp;slides</span>
     </div>
   </header>
 
   
   <section class="gist reveal">
     <h2>The gist</h2>
-    <ul><li>The mandate: an in-depth program for retail traders globally, using the US listed stock options market as the example subset, over the same 1-3 month time horizon that hedge fund and investment bank prop traders actually work to.</li><li>Options are for STRUCTURING a trade, not generating the idea — you need a fundamental predisposition (bullish/bearish) first; no view means flat, and flat means no options position (unless it is an effective hedge).</li><li>Of ~53 available strategies, 24 are directional; after filtering for simplicity and risk-reward, 14 are classed useful — captured in the Useful PDF and Useful spreadsheet.</li><li>So far the series has covered 7 useful strategies plus short calls from the Useless PDF; the covered call and covered call collar were added back for hedging, and the Long Straddle &amp; Long Strangle previewed for teaching (learned later).</li><li>Marginal benefit = opportunity cost of capital + risk-reward; options carry timing risk that stock does not, so best practice is a minimum 1:3 risk-reward to get paid for it.</li><li>Market makers are price makers (Black-Scholes-type algos, make commission on negative-selection portfolios); speculators are price takers who only need to know why a price is where it is — it all comes down to volatility.</li><li>Edge comes from a mismatch between the market maker&#39;s implied volatility and your expected volatility — and Delta approximates the probability of finishing ITM: .99 deep ITM, ~.50 ATM, 0 far OTM.</li></ul>
+    <ul><li>STRIP STRADDLE = BUY 1X ATM call + BUY 2X ATM puts, same strike and same expiration (2:1 put-heavy; any put-heavy ratio like 3-1, 4-1 also works).</li><li>It is a bearish-skewed long-volatility bet: you make more on a down-move (2 puts) than an up-move (1 call), but you&#39;re long volatility either way.</li><li>Net DEBIT transaction (expensive); max loss is limited to the total premium paid and occurs at the strike; max gain is unlimited via the call, with large downside profit as the stock falls toward $0.</li><li>The single call is a &#39;one-to-two hedge&#39; — upside protection on the long puts in case you&#39;re dead wrong by expiry.</li><li>Breakevens: Upper = Strike + (Total Premium Paid / call-contract shares); Lower = Strike − (Total Premium Paid / put-contract shares). The lower breakeven is closer because it&#39;s divided across 2 puts.</li><li>Anton rates the strip straddle HIGH in usefulness for the retail mandate — directional bias to the downside, minimal risk, unlimited upside — with no walk-back.</li><li>IBKR worked example (19 Mar 2018, spot $71.07, Hist Vol 25.98%, $70 strike, 20 Apr 18 expiry): 1× $70 call @ $3.40 = $340 + 2× $70 puts @ $2.15 = $430 → net debit $770; Upper BE $77.70, Lower BE $66.15.</li><li>Outcomes at expiry from the $770 debit: $60 → +$1,230; $78 → +$30; $50 → +$3,230; $87 → +$930 — makes less than short stock or long puts on a big move, but risks far less than shorting and only a little more than plain long puts.</li></ul>
   </section>
   
 
   
   <section class="section" id="s1">
-    <div class="section__k">01 / 7</div>
-    <h3>Why recap now — four themes to join it all together</h3>
+    <div class="section__k">01 / 10</div>
+    <h3>What the strip straddle is</h3>
     
-    <ul class="points"><li>Options trading can be dry and in-depth; it is easy to get lost or bored, so this is a deliberate pause to solidify the approach before going deeper.</li><li>The recap breaks into four areas: Defining the Mandate, &#34;Usefulness&#34;, Marginal Benefits, and Market Makers versus Retail Traders (Speculators).</li><li>The aim is a comprehensive understanding of where the course is coming from and why it does things in certain ways.</li></ul>
+    <ul class="points"><li>Buy 1X At The Money (ATM) call + buy 2X ATM puts with the same expiration.</li><li>Any put-heavy ratio you prefer works — 3-1, 4-1, or higher.</li><li>It&#39;s a modified long straddle: instead of 1 call and 1 put, you add extra puts to place a bearish directional bias.</li><li>You&#39;re implicitly bearish — you make more money when the stock falls than when it rises.</li></ul>
     
-    <p class="explain">This is a synthesis video, not new material. Anton stops to consolidate the options block so far so nothing gets lost before the course moves into more complex strategies.</p>
+    <p class="explain">Where the plain long straddle says &#39;I have no idea which way this goes,&#39; the strip straddle says &#39;I lean down.&#39; Buying more puts than calls tilts the payoff toward a fall while keeping the volatility exposure of a straddle.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-15/00-00-10.jpg" alt="Slide: Why recap now — four themes to join it all together">
-      <figcaption>Slide · 00:00:10</figcaption>
+      <img loading="lazy" src="assets/slides/potm-25/00-00-20.jpg" alt="Slide: What the strip straddle is">
+      <figcaption>Slide · 00:00:20</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s2">
-    <div class="section__k">02 / 7</div>
-    <h3>Defining the mandate — trade like a pro over 1-3 months</h3>
+    <div class="section__k">02 / 10</div>
+    <h3>Long volatility, bearish tilt</h3>
     
-    <ul class="points"><li>Point 1: provide an in-depth educational program for retail traders globally, on trading options in retail brokerage accounts and for US retirement accounts (IRA and IRA Roth).</li><li>Point 2: use the US listed stock options market as the example subset — the most liquid market in the world with the most data — while the same principles apply to all options markets globally.</li><li>The mandate replicates what the vast majority of hedge fund managers and investment bank prop traders do, over a 1-3 month time horizon (forced longer by a decade of low volatility).</li><li>Assumes a fundamental systematic process is already in place; if not, do the Professional Trading Masterclass (PTM) alongside — the two together are a very powerful toolkit.</li></ul>
+    <ul class="points"><li>Directional bet — bearish, with a volatility bet implicit in the transaction.</li><li>Simple: just two transactions (buy calls, buy twice as many puts).</li><li>Debit transaction — and a large one.</li><li>Max risk is limited to the premium paid; max gain is unlimited via the call.</li><li>As with all long-option strategies, you&#39;re long volatility even if the stock goes UP.</li></ul>
     
-    <p class="explain">Your job as a retail speculator lines up with how real professionals actually trade — a 1-3 month horizon, not 500 trades a day. You make fundamentally driven calls on stocks and use options as one product to structure the trade, instead of cash, futures, CFDs or ETFs.</p>
+    <p class="explain">The structure is deliberately expensive: you&#39;re paying full premium for uncapped downside dollars plus insurance on the upside. Anton marks it HIGH in usefulness because it carries a directional bias, minimal (capped) risk, and an unlimited upside profile.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-15/00-05-20.jpg" alt="Slide: Defining the mandate — trade like a pro over 1-3 months">
-      <figcaption>Slide · 00:05:20</figcaption>
+      <img loading="lazy" src="assets/slides/potm-25/00-03-05.jpg" alt="Slide: Long volatility, bearish tilt">
+      <figcaption>Slide · 00:03:05</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s3">
-    <div class="section__k">03 / 7</div>
-    <h3>Fundamentals first — options structure the trade, not the idea</h3>
+    <div class="section__k">03 / 10</div>
+    <h3>How to use it — explosive down-move view</h3>
     
-    <ul class="points"><li>You must have a fundamental predisposition (bullish or bearish) on the underlying before you even consider an option.</li><li>No view means neutral / non-directional, which means flat — a retail speculator with no directional view has no reason to hold options, unless it is an effective hedge to an existing position.</li><li>Do not look at an options chain and let the price generate the idea — that is upside down; go through the fundamental process first, then choose the structure.</li><li>Options are just one option: weigh them against cash and other instruments given fundamentals, marginal benefit, risk-reward and capital considerations.</li></ul>
+    <ul class="points"><li>Not like a long straddle, where you claim no view on direction and just want to be long volatility.</li><li>For a trader with a fundamental predisposition, the long straddle is pretty useless.</li><li>Here you state that you want to be long volatility AND you believe the volatility will be explosive to the DOWNSIDE.</li><li>The extra put is the conviction; the single call is a one-to-two hedge if you&#39;re wrong.</li></ul>
     
-    <p class="explain">The single biggest discipline of the course: the idea comes from research, then options are one way to express it. Getting the idea from an options screen or a chart line moving up is exactly the wrong order.</p>
+    <p class="explain">You put this on when you expect a dramatic collapse into a catalyst but accept that fundamentals or a squeeze could still push the stock up. You don&#39;t cheapen the trade by writing strikes — you pay for full downside dollars and buy upside insurance.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-15/00-05-20.jpg" alt="Slide: Fundamentals first — options structure the trade, not the idea">
-      <figcaption>Slide · 00:05:20</figcaption>
+      <img loading="lazy" src="assets/slides/potm-25/00-06-10.jpg" alt="Slide: How to use it — explosive down-move view">
+      <figcaption>Slide · 00:06:10</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s4">
-    <div class="section__k">04 / 7</div>
-    <h3>&#34;Usefulness&#34; — which strategies passed the filter</h3>
+    <div class="section__k">04 / 10</div>
+    <h3>The IBKR setup — bearish into earnings</h3>
     
-    <ul class="points"><li>Of ~53 strategies available to retail traders, 24 are directional; filtering further for simplicity and risk-reward narrows to 14 useful positions (the Useful PDF and Useful spreadsheet).</li><li>Low-usefulness strategies were filtered out on risk-reward — the short naked call, the call ratio backspread and the put ratio backspread.</li><li>The short call (naked) and short put were included to further understanding of options and risk-reward.</li><li>Four strategies were added back into the Useful PDF: the covered call and covered call collar (for hedging), and the Long Straddle and Long Strangle (for teaching only — covered later, NOT taught here).</li><li>So far 7 useful strategies have been covered, plus short calls from the Useless PDF — all via practical examples given a fundamental predisposition, taken directly from a live brokerage platform.</li><li>Index options were also covered — a useful way for retail traders to hedge a portfolio of stocks (most have long-only portfolios and pensions).</li></ul>
+    <ul class="points"><li>Interactive Brokers (IBKR) at $71.07 on March 19, 2018.</li><li>Stock rallied from ~$40 in July 2017 to over $70, peaking around $72-$73.</li><li>Fundamentally bearish: you believe the Q1 2018 retail-trader blow-ups are now fully priced into earnings expectations.</li><li>You expect a substantial drop into or on Q1 earnings on April 17, 2018 — about four weeks out.</li></ul>
     
-    <p class="explain">The teaching method eliminates conflict of interest and intellectual snobbery — no payoff diagrams, no Black-Scholes internals. The Useful spreadsheet lets you filter on direction, dollar risk, dollar reward, simplicity, and debit vs credit; the more boxes a strategy ticks, the more marginal benefit it tends to have. The Long Straddle and Long Strangle are flagged as coming next, not learned in this recap.</p>
+    <p class="explain">This is the real trade behind the theory: a stock that has run hard, a specific bearish catalyst (earnings), and a view that the good news is already in the price. The strip straddle expresses the down-lean while covering the risk of a squeeze.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-15/00-22-50.jpg" alt="Slide: &#34;Usefulness&#34; — which strategies passed the filter">
-      <figcaption>Slide · 00:22:50</figcaption>
+      <img loading="lazy" src="assets/slides/potm-25/00-07-20.jpg" alt="Slide: The IBKR setup — bearish into earnings">
+      <figcaption>Slide · 00:07:20</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s5">
-    <div class="section__k">05 / 7</div>
-    <h3>Marginal benefits — get paid for the extra timing risk</h3>
+    <div class="section__k">05 / 10</div>
+    <h3>Choosing the strike and expiry</h3>
     
-    <ul class="points"><li>Marginal benefit = opportunity cost of capital + risk-reward of the trade versus simply being long or short stock.</li><li>Long stock: limited downside (zero) and unlimited upside; short stock: unlimited downside and limited upside (zero) — the benchmark to beat.</li><li>A long call has limited dollar risk and unlimited upside; a bull call spread has limited risk and limited upside; covered call / covered call collar have limited risk and limited upside — each can beat stock in specific situations.</li><li>Options carry timing risk (you must be right by a certain time) that stock does not, so best practice is a minimum risk-reward ratio of 1:3 to justify taking that extra risk.</li></ul>
+    <ul class="points"><li>Option chain top row: Last 71.07, Hist Volatility 25.98%.</li><li>You consider the $70 strike — the nearest at-the-money, since the stock is at $71 and contract increments are $5.</li><li>Expiry chosen as 20 April 2018 to capture the April 17 earnings date.</li><li>You add upside protection because good numbers could squeeze shorts or produce a blow-off top on earnings day.</li></ul>
     
-    <p class="explain">Because an options position adds timing risk on top of directional risk, the payoff has to compensate you. The 1:3 minimum is the rule of thumb the course carries forward into the more complex strategies ahead.</p>
+    <p class="explain">The strike sits just below spot (nearest ATM), and the expiry is picked to straddle the earnings event. The concern that shorts could get squeezed is exactly why you want the call leg as insurance.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-15/00-22-50.jpg" alt="Slide: Marginal benefits — get paid for the extra timing risk">
-      <figcaption>Slide · 00:22:50</figcaption>
+      <img loading="lazy" src="assets/slides/potm-25/00-09-05.jpg" alt="Slide: Choosing the strike and expiry">
+      <figcaption>Slide · 00:09:05</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s6">
-    <div class="section__k">06 / 7</div>
-    <h3>Market makers vs retail traders — price makers vs price takers</h3>
+    <div class="section__k">06 / 10</div>
+    <h3>Versus short stock and long puts</h3>
     
-    <ul class="points"><li>Speculators and market makers have different mandates: market makers are price makers, speculators are price takers.</li><li>Price takers aim to make money given a fundamental predisposition; price makers aim to make money by doing business / making commission, ending up with negative-selection portfolios they then must hedge.</li><li>Market makers use sophisticated pricing models (Black-Scholes-type algos); price takers only need to be aware of WHY a price is where it is — and it all comes down to volatility.</li><li>Edge usually comes from a mismatch between the market maker&#39;s expected (implied) volatility and the speculator&#39;s expected volatility.</li><li>If an option is priced fairly given all public information, the risk-reward may not exist; if it is priced unfairly, it certainly won&#39;t.</li><li>Implied volatility is set high when catalysts could cause big moves and low when there are none — low vol does not mean cheap, high vol does not mean expensive; want to be long options when volatility is on the move (hedging aside).</li></ul>
+    <ul class="points"><li>Short stock: ~$15,000 exposure = $15,000 / $71 = 211 shares. At $60 → +$2,321; at $78 → −$1,477.</li><li>Long puts: 2× $70 puts @ $2.15 = $430 spent; breakeven $67.85. At $60 → +$1,570; above $67.85 → puts expire worthless, lose $430.</li><li>Short stock makes the most on a fall but carries unlimited upside risk if you&#39;re wrong.</li><li>Long puts cap your loss at $430 but give up upside protection entirely.</li></ul>
     
-    <p class="explain">You are not competing with the market maker at pricing — you cannot out-model their algos. Your only edge is a genuine, fundamentally grounded difference of view on volatility and catalysts within the expiry window. Don&#39;t assume you know more than the market maker without a real reason.</p>
+    <p class="explain">These are the two alternatives the strip straddle sits between. Shorting stock is cheap on capital but dangerous to the upside; plain long puts are safe but offer nothing if the stock rips higher. The strip straddle trades a bit more premium for insurance.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-15/00-29-15.jpg" alt="Slide: Market makers vs retail traders — price makers vs price takers">
-      <figcaption>Slide · 00:29:15</figcaption>
+      <img loading="lazy" src="assets/slides/potm-25/00-10-05.jpg" alt="Slide: Versus short stock and long puts">
+      <figcaption>Slide · 00:10:05</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s7">
-    <div class="section__k">07 / 7</div>
-    <h3>The Greeks — Delta as probability of finishing ITM</h3>
+    <div class="section__k">07 / 10</div>
+    <h3>The strip straddle — debit and breakevens</h3>
     
-    <ul class="points"><li>The Greeks matter most to market makers, who use them to hedge their negative-selection portfolios; Delta and Gamma set the size of their underlying stock hedges.</li><li>Gamma is not useful for price takers; Delta is, because it gauges whether your option will finish ITM given the market maker&#39;s volatility (and catalyst) expectations.</li><li>A deep ITM option almost certain to expire ITM (say 99%) has a .99 delta; a far OTM option with virtually no chance has a 0 delta.</li><li>An ATM option has about a 50% probability of being ITM (50-50 the stock goes up or down), so about a .50 delta — a roughly linear relationship between Delta and probability.</li><li>Later the series shows how to back out (via backwardation) the market maker&#39;s implied volatility to judge if an option is priced fairly — Chris Quill covers this.</li></ul>
+    <ul class="points"><li>Leg A: buy 1X $70 call @ $3.40 = $340. Leg B: buy 2X $70 puts @ $2.15 = $430. Total debit = $770.</li><li>Upper Break Even = $70 + ($770 / 100) = $77.70.</li><li>Lower Break Even = $70 − ($770 / 200) = $66.15 — closer to strike because the debit is spread over 2 puts.</li><li>At $60: puts worth (2 × $10 × 100) = $2,000, call worthless → profit ($2,000 − $770) = $1,230.</li><li>At $78: puts worthless, call worth ($8 × 100) = $800 → profit ($800 − $770) = $30.</li></ul>
     
-    <p class="explain">For a retail speculator, Delta doubles as a rough probability of success on the position. That single read — .99 deep ITM, ~.50 ATM, 0 far OTM — is the practical takeaway before the course goes deeper into volatility and Delta later on.</p>
+    <p class="explain">The $770 debit is the entire risk and it&#39;s lost only if the stock finishes exactly at $70. Notice the payoff asymmetry: the same-distance down-move ($60) makes $1,230 while the up-move ($78) barely clears at $30 — the bearish tilt in action.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-15/00-33-55.jpg" alt="Slide: The Greeks — Delta as probability of finishing ITM">
-      <figcaption>Slide · 00:33:55</figcaption>
+      <img loading="lazy" src="assets/slides/potm-25/00-11-55.jpg" alt="Slide: The strip straddle — debit and breakevens">
+      <figcaption>Slide · 00:11:55</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s8">
+    <div class="section__k">08 / 10</div>
+    <h3>Big-move outcomes</h3>
+    
+    <ul class="points"><li>At $50: puts worth (2 × $20 × 100) = $4,000, call worthless → profit ($4,000 − $770) = $3,230.</li><li>At $87: puts worthless, call worth ($17 × 100) = $1,700 → profit ($1,700 − $770) = $930.</li><li>Versus short stock / long puts, the strip straddle makes less on the way DOWN but can still profit on the way UP.</li><li>It risks a lot less than shorting stock, and only a little more than plain long puts — that&#39;s the trade-off.</li></ul>
+    
+    <p class="explain">On truly explosive moves the structure pays either way: a big drop delivers most of the profit ($3,230 at $50), while a violent rally still nets $930 at $87. The cost of that two-sided payoff is that between the breakevens ($66.15–$77.70) you lose money.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-25/00-17-00.jpg" alt="Slide: Big-move outcomes">
+      <figcaption>Slide · 00:17:00</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s9">
+    <div class="section__k">09 / 10</div>
+    <h3>The formal formulas and breakevens</h3>
+    
+    <ul class="points"><li>Upper Break-Even = Strike of Call + (Total Premium Paid / share options in call contracts).</li><li>Lower Break-Even = Strike of Puts − (Total Premium Paid / share options in put contracts).</li><li>Maximum profit is unlimited; profit is made above the upper BE or below the lower BE.</li><li>Maximum loss is limited to the initial investment and occurs when price = strike.</li><li>The strip straddle uses exactly the same formulas as the strap straddle (just put-heavy instead of call-heavy).</li></ul>
+    
+    <p class="explain">Both breakevens use the TOTAL net debit, but each divides by that leg&#39;s total shares — so the put-heavy side sits closer to the strike. Loss is worst at the strike and shrinks in either direction as one leg gains intrinsic value.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-25/00-17-30.jpg" alt="Slide: The formal formulas and breakevens">
+      <figcaption>Slide · 00:17:30</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s10">
+    <div class="section__k">10 / 10</div>
+    <h3>Generic 2:1 example — Company X</h3>
+    
+    <ul class="points"><li>Use it when your outlook is volatile with a bearish inclination — a big move expected, downside more likely than upside.</li><li>Same as a long straddle except you buy MORE puts than calls, same expiration for both.</li><li>Company X at $50, expecting a significant downward move; ratio 2-1.</li><li>Leg A: ATM $50 call @ $2 → 1 contract = $200. Leg B: ATM $50 put @ $2 → 2 contracts = $400.</li><li>Total strip straddle cost = $600.</li></ul>
+    
+    <p class="explain">The clean textbook case: identical $2 premiums, a single call and two puts at the $50 strike for a $600 debit. It profits from a big move in either direction but earns higher profits on a fall — the defining bearish skew of the strip straddle.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-25/00-18-00.jpg" alt="Slide: Generic 2:1 example — Company X">
+      <figcaption>Slide · 00:18:00</figcaption>
     </figure>
     
     
@@ -644,23 +692,21 @@
     <h3>Glossary</h3>
     <ul class="glossary">
       
-      <li><span class="term">Fundamental predisposition</span><div class="def">A research-driven bullish or bearish view on the underlying stock, formed before any options position — no view means flat.</div></li>
+      <li><span class="term">Strip Straddle</span><div class="def">A put-heavy long-volatility strategy: buy 1 ATM call and 2 (or more) ATM puts at the same strike and expiry, giving a bearish directional bias while staying long volatility either way.</div></li>
       
-      <li><span class="term">Mandate</span><div class="def">The retail speculator&#39;s job: fundamentally driven stock calls over a 1-3 month horizon, using options to structure trades — mirroring hedge fund and prop desks, not market makers.</div></li>
+      <li><span class="term">Strap Straddle</span><div class="def">The bullish mirror (chapter 24): buy 2 ATM calls and 1 ATM put. The strip straddle uses the identical breakeven, profit and risk formulas, just tilted to the downside.</div></li>
       
-      <li><span class="term">Marginal benefit</span><div class="def">The advantage of an options structure over simply being long or short stock, defined by opportunity cost of capital plus risk-reward.</div></li>
+      <li><span class="term">One-to-two hedge</span><div class="def">The single call in a 2:1 strip straddle acts as upside protection (&#39;a hedge&#39;) against the two long puts in case the stock rallies instead of falling.</div></li>
       
-      <li><span class="term">Usefulness filter</span><div class="def">The screen narrowing ~53 strategies to 14 useful ones via direction, simplicity, dollar risk/reward and debit/credit — captured in the Useful PDF and spreadsheet.</div></li>
+      <li><span class="term">ATM (At The Money)</span><div class="def">An option whose strike is nearest the current stock price. Here the $70 strike is chosen because the stock is at $71 and increments are $5.</div></li>
       
-      <li><span class="term">Price maker vs price taker</span><div class="def">Market makers make prices (via pricing algos, earning commission on negative-selection books); speculators take prices and only need to know why a price is where it is.</div></li>
+      <li><span class="term">Net Debit</span><div class="def">The total premium paid to open the position ($770 in the IBKR example) — also the maximum possible loss, realized only if the stock finishes exactly at the strike.</div></li>
       
-      <li><span class="term">Negative selection portfolio</span><div class="def">The book of positions a market maker is left with by taking the other side of speculators&#39; trades — positions they don&#39;t want and must hedge, compensated by commission.</div></li>
+      <li><span class="term">Upper / Lower Breakeven</span><div class="def">Prices where the position turns profitable: Upper = Strike + (Total Debit / call shares); Lower = Strike − (Total Debit / put shares). The lower one is closer because the debit is divided across more puts.</div></li>
       
-      <li><span class="term">Volatility mismatch</span><div class="def">The gap between the market maker&#39;s implied volatility and the speculator&#39;s expected volatility — the usual source of any real risk-reward edge.</div></li>
+      <li><span class="term">Blow-off top</span><div class="def">A sharp, often final upward spike (e.g. on a positive earnings surprise or short squeeze) — the upside risk the call leg is bought to protect against.</div></li>
       
-      <li><span class="term">Delta</span><div class="def">Approximates the probability an option finishes in the money: .99 for deep ITM, about .50 for ATM, 0 for far OTM — a roughly linear link to probability.</div></li>
-      
-      <li><span class="term">Timing risk</span><div class="def">The added risk in options that you must be right by a certain expiry — absent in a plain stock position, and why a minimum 1:3 risk-reward is required.</div></li>
+      <li><span class="term">Historical Volatility</span><div class="def">The realized volatility of the underlying&#39;s past returns, shown as 25.98% on IBKR&#39;s chain — a reference for how large a move the market has recently produced.</div></li>
       
     </ul>
   </section>
@@ -668,12 +714,11 @@
 
   <nav class="pager">
     
-    <a class="prev" href="chapter-68.html">
-      <small>← 14 Previous</small><span>Market Makers, Volatility &amp; the Greeks</span></a>
+    <a class="prev" href="chapter-78.html">
+      <small>← 24 Previous</small><span>Strap Straddle — The Bullish Volatility Bet</span></a>
     
     
-    <a class="next" href="chapter-70.html">
-      <small>16 Next →</small><span>Ratio Spreads 1 — The Short Bull Ratio Spread</span></a>
+    <a class="next disabled"><small>End of the macro block</small><span>Portfolio construction is next</span></a>
     
   </nav>
 </div>
