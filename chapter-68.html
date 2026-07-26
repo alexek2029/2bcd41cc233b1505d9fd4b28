@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>POTM Options 14 · Market Makers, Volatility &amp; the Greeks — The Macro Playbook — The Top-Down Macro Read</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="rail" id="rail">
+    <div class="rail__brand">The Macro Playbook</div>
+    <a href="index.html" style="text-decoration:none;color:inherit">
+      <div class="rail__title">The Top-Down<br>Macro Read</div>
+    </a>
+    <div class="rail__sub">Anton Kreil · ITPL Foundations + PTM 2.0, distilled</div>
+    <button class="rail__toggle" onclick="document.getElementById('rail').classList.toggle('open')">Chapters ▾</button>
+    <ul class="rail__nav">
+      
+      <li><a href="chapter-01.html"
+             class="">
+        <span class="rn">A</span>
+        <span class="rt">Professional Traders vs Retail Traders 101<small>Foundations · What a professional tr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-02.html"
+             class="">
+        <span class="rn">B</span>
+        <span class="rt">Professional Traders vs Retail Traders 102<small>Foundations · Alpha vs absolute retu</small></span>
+      </a></li>
+      
+      <li><a href="chapter-03.html"
+             class="">
+        <span class="rn">C</span>
+        <span class="rt">Realized Volatility 1<small>Foundations · Measuring an instrumen</small></span>
+      </a></li>
+      
+      <li><a href="chapter-04.html"
+             class="">
+        <span class="rn">D</span>
+        <span class="rt">Realized Volatility 2<small>Foundations · The spreadsheet class:</small></span>
+      </a></li>
+      
+      <li><a href="chapter-05.html"
+             class="">
+        <span class="rn">E</span>
+        <span class="rt">Realized Volatility 3<small>Foundations · Average True Range Per</small></span>
+      </a></li>
+      
+      <li><a href="chapter-06.html"
+             class="">
+        <span class="rn">F</span>
+        <span class="rt">Implied Volatility 1<small>Foundations · The VIX as the market&#39;</small></span>
+      </a></li>
+      
+      <li><a href="chapter-07.html"
+             class="">
+        <span class="rn">G</span>
+        <span class="rt">Implied Volatility 2<small>Foundations · Solving for an option&#39;</small></span>
+      </a></li>
+      
+      <li><a href="chapter-08.html"
+             class="">
+        <span class="rn">H</span>
+        <span class="rt">Portfolio Volatility 1<small>Foundations · The concepts of whole-</small></span>
+      </a></li>
+      
+      <li><a href="chapter-09.html"
+             class="">
+        <span class="rn">I</span>
+        <span class="rt">Portfolio Volatility 2<small>Foundations · Calculating a portfoli</small></span>
+      </a></li>
+      
+      <li><a href="chapter-10.html"
+             class="">
+        <span class="rn">J</span>
+        <span class="rt">Becoming a Professional Level Trader<small>Foundations · The IPLT capstone — ho</small></span>
+      </a></li>
+      
+      <li><a href="chapter-11.html"
+             class="">
+        <span class="rn">01</span>
+        <span class="rt">The Framework<small>PTM 2.0 · The framework</small></span>
+      </a></li>
+      
+      <li><a href="chapter-12.html"
+             class="">
+        <span class="rn">02</span>
+        <span class="rt">The Field of Play: Bull &amp; Bear Markets<small>PTM 2.0 · Field of play</small></span>
+      </a></li>
+      
+      <li><a href="chapter-13.html"
+             class="">
+        <span class="rn">03</span>
+        <span class="rt">Gross Domestic Product<small>PTM 2.0 · GDP</small></span>
+      </a></li>
+      
+      <li><a href="chapter-14.html"
+             class="">
+        <span class="rn">04</span>
+        <span class="rt">Leading Indicators 1: Real Interest Rates &amp; the Yield Curve<small>PTM 2.0 · Rates · yield curve</small></span>
+      </a></li>
+      
+      <li><a href="chapter-15.html"
+             class="">
+        <span class="rn">05</span>
+        <span class="rt">Corporate Bonds &amp; Credit Spreads<small>PTM 2.0 · Credit spreads</small></span>
+      </a></li>
+      
+      <li><a href="chapter-16.html"
+             class="">
+        <span class="rn">06</span>
+        <span class="rt">M2 Money Supply: The Accessory Leading Indicator<small>PTM 2.0 · M2 money supply</small></span>
+      </a></li>
+      
+      <li><a href="chapter-17.html"
+             class="">
+        <span class="rn">07</span>
+        <span class="rt">The ISM Manufacturing PMI<small>PTM 2.0 · ISM manufacturing</small></span>
+      </a></li>
+      
+      <li><a href="chapter-18.html"
+             class="">
+        <span class="rn">08</span>
+        <span class="rt">The ISM Non-Manufacturing Report on Business (Services PMI)<small>PTM 2.0 · ISM services</small></span>
+      </a></li>
+      
+      <li><a href="chapter-19.html"
+             class="">
+        <span class="rn">09</span>
+        <span class="rt">Consumer Sentiment<small>PTM 2.0 · UMich sentiment</small></span>
+      </a></li>
+      
+      <li><a href="chapter-20.html"
+             class="">
+        <span class="rn">10</span>
+        <span class="rt">Building Permits: The Housing Leading Indicator<small>PTM 2.0 · Housing · permits</small></span>
+      </a></li>
+      
+      <li><a href="chapter-21.html"
+             class="">
+        <span class="rn">11</span>
+        <span class="rt">NFIB Small Business Optimism Index<small>PTM 2.0 · NFIB small biz</small></span>
+      </a></li>
+      
+      <li><a href="chapter-22.html"
+             class="">
+        <span class="rn">12</span>
+        <span class="rt">Cyclical Commodities as a Leading Indicator<small>PTM 2.0 · Cyclical commodities</small></span>
+      </a></li>
+      
+      <li><a href="chapter-23.html"
+             class="">
+        <span class="rn">13</span>
+        <span class="rt">European Economic Sentiment Indicator (ESI)<small>PTM 2.0 · Europe · ESI</small></span>
+      </a></li>
+      
+      <li><a href="chapter-24.html"
+             class="">
+        <span class="rn">14</span>
+        <span class="rt">China Leading Indicators: Official vs Caixin PMI and Real Rates<small>PTM 2.0 · China · Caixin</small></span>
+      </a></li>
+      
+      <li><a href="chapter-25.html"
+             class="">
+        <span class="rn">15</span>
+        <span class="rt">Recap: Bringing the Leading Indicators Together<small>PTM 2.0 · Recap · coincident</small></span>
+      </a></li>
+      
+      <li><a href="chapter-26.html"
+             class="">
+        <span class="rn">16</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 1a<small>PTM 2.0 · From the macro bias to</small></span>
+      </a></li>
+      
+      <li><a href="chapter-27.html"
+             class="">
+        <span class="rn">17</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 1b<small>PTM 2.0 · Portfolio modelling in</small></span>
+      </a></li>
+      
+      <li><a href="chapter-28.html"
+             class="">
+        <span class="rn">18</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 2<small>PTM 2.0 · Portfolio volatility f</small></span>
+      </a></li>
+      
+      <li><a href="chapter-29.html"
+             class="">
+        <span class="rn">19</span>
+        <span class="rt">Foundations of Long Short Portfolio Management 3<small>PTM 2.0 · Portfolio correlation </small></span>
+      </a></li>
+      
+      <li><a href="chapter-30.html"
+             class="">
+        <span class="rn">20</span>
+        <span class="rt">Foundations of Long Short Portfolio Management 4<small>PTM 2.0 · Beta and beta-neutral </small></span>
+      </a></li>
+      
+      <li><a href="chapter-31.html"
+             class="">
+        <span class="rn">21</span>
+        <span class="rt">Foundations of Long / Short Portfolio Management Recap<small>PTM 2.0 · The capstone of the po</small></span>
+      </a></li>
+      
+      <li><a href="chapter-32.html"
+             class="">
+        <span class="rn">22</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 1<small>PTM 2.0 · The bottom-up, fundame</small></span>
+      </a></li>
+      
+      <li><a href="chapter-33.html"
+             class="">
+        <span class="rn">23</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 2<small>PTM 2.0 · The quant pass in full</small></span>
+      </a></li>
+      
+      <li><a href="chapter-34.html"
+             class="">
+        <span class="rn">24</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 3<small>PTM 2.0 · The quant valuation bl</small></span>
+      </a></li>
+      
+      <li><a href="chapter-35.html"
+             class="">
+        <span class="rn">25</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 4<small>PTM 2.0 · The synthesis of the q</small></span>
+      </a></li>
+      
+      <li><a href="chapter-36.html"
+             class="">
+        <span class="rn">26</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 5<small>PTM 2.0 · The SHORT-side mirror </small></span>
+      </a></li>
+      
+      <li><a href="chapter-37.html"
+             class="">
+        <span class="rn">27</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 6<small>PTM 2.0 · Turnaround Stories vs </small></span>
+      </a></li>
+      
+      <li><a href="chapter-38.html"
+             class="">
+        <span class="rn">28</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 7<small>PTM 2.0 · Data-cleansing a downl</small></span>
+      </a></li>
+      
+      <li><a href="chapter-39.html"
+             class="">
+        <span class="rn">29</span>
+        <span class="rt">Recap of Quantitative Processing<small>PTM 2.0 · The capstone of the tr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-40.html"
+             class="">
+        <span class="rn">30</span>
+        <span class="rt">Qualitative Processing<small>PTM 2.0 · The qualitative half o</small></span>
+      </a></li>
+      
+      <li><a href="chapter-41.html"
+             class="">
+        <span class="rn">31</span>
+        <span class="rt">Trade Idea Generation – Qualitative Processing<small>PTM 2.0 · The deeper qualitative</small></span>
+      </a></li>
+      
+      <li><a href="chapter-42.html"
+             class="">
+        <span class="rn">32</span>
+        <span class="rt">Trade Idea Generation – Identifying Catalysts<small>PTM 2.0 · The final fundamental </small></span>
+      </a></li>
+      
+      <li><a href="chapter-43.html"
+             class="">
+        <span class="rn">33</span>
+        <span class="rt">Trade Idea Generation Template — Part 1<small>PTM 2.0 · How to formalize the w</small></span>
+      </a></li>
+      
+      <li><a href="chapter-44.html"
+             class="">
+        <span class="rn">34</span>
+        <span class="rt">Trade Idea Generation Template — Part 2<small>PTM 2.0 · Finishing the ZEN pric</small></span>
+      </a></li>
+      
+      <li><a href="chapter-45.html"
+             class="">
+        <span class="rn">35</span>
+        <span class="rt">Macro-Driven Trade Ideas<small>PTM 2.0 · Marrying the macro and</small></span>
+      </a></li>
+      
+      <li><a href="chapter-46.html"
+             class="">
+        <span class="rn">36</span>
+        <span class="rt">International Trade Ideas via ADRs<small>PTM 2.0 · Bolt the international</small></span>
+      </a></li>
+      
+      <li><a href="chapter-47.html"
+             class="">
+        <span class="rn">37</span>
+        <span class="rt">Technical Analysis (Timing)<small>PTM 2.0 · Charts don&#39;t generate </small></span>
+      </a></li>
+      
+      <li><a href="chapter-48.html"
+             class="">
+        <span class="rn">38</span>
+        <span class="rt">Price Action (Momentum)<small>PTM 2.0 · The momentum half of t</small></span>
+      </a></li>
+      
+      <li><a href="chapter-49.html"
+             class="">
+        <span class="rn">39</span>
+        <span class="rt">Preventative Risk Management (PRM)<small>PTM 2.0 · Get your head right be</small></span>
+      </a></li>
+      
+      <li><a href="chapter-50.html"
+             class="">
+        <span class="rn">40</span>
+        <span class="rt">Preventative Risk Management — Part 2 (Portfolio Limits)<small>PTM 2.0 · Turning the volatility</small></span>
+      </a></li>
+      
+      <li><a href="chapter-51.html"
+             class="">
+        <span class="rn">41</span>
+        <span class="rt">Eliminating Emotion, Staying Objective<small>PTM 2.0 · Treat your trading acc</small></span>
+      </a></li>
+      
+      <li><a href="chapter-52.html"
+             class="">
+        <span class="rn">42</span>
+        <span class="rt">Track Record &amp; Trading Statistics (Part 1)<small>PTM 2.0 · Building the three-tab</small></span>
+      </a></li>
+      
+      <li><a href="chapter-53.html"
+             class="">
+        <span class="rn">43</span>
+        <span class="rt">Track Record &amp; Trading Statistics (Part 2 — Advanced)<small>PTM 2.0 · The advanced ratios — </small></span>
+      </a></li>
+      
+      <li><a href="chapter-54.html"
+             class="">
+        <span class="rn">44</span>
+        <span class="rt">Getting Organized &amp; Next Steps<small>PTM 2.0 · The closing chapter of</small></span>
+      </a></li>
+      
+      <li><a href="chapter-55.html"
+             class="">
+        <span class="rn">01</span>
+        <span class="rt">Defining the Mandate (Part 1)<small>POTM Options · Why the retail options</small></span>
+      </a></li>
+      
+      <li><a href="chapter-56.html"
+             class="">
+        <span class="rn">02</span>
+        <span class="rt">Defining the Mandate (Part 2)<small>POTM Options · Why most options educa</small></span>
+      </a></li>
+      
+      <li><a href="chapter-57.html"
+             class="">
+        <span class="rn">03</span>
+        <span class="rt">Filtering Options Strategies for Usefulness<small>POTM Options · How Anton Kreil filter</small></span>
+      </a></li>
+      
+      <li><a href="chapter-58.html"
+             class="">
+        <span class="rn">04</span>
+        <span class="rt">Marginal Benefits 1 — The Advantages of Options<small>POTM Options · Why a long call or lon</small></span>
+      </a></li>
+      
+      <li><a href="chapter-59.html"
+             class="">
+        <span class="rn">05</span>
+        <span class="rt">Marginal Benefits 2 — The Disadvantages of Options<small>POTM Options · Why time decay, timing</small></span>
+      </a></li>
+      
+      <li><a href="chapter-60.html"
+             class="">
+        <span class="rn">06</span>
+        <span class="rt">Long Call &amp; Put Options Formalized<small>POTM Options · The two simplest direc</small></span>
+      </a></li>
+      
+      <li><a href="chapter-61.html"
+             class="">
+        <span class="rn">07</span>
+        <span class="rt">Naked Short Puts<small>POTM Options · Selling a put for a cr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-62.html"
+             class="">
+        <span class="rn">08</span>
+        <span class="rt">Naked Short Calls<small>POTM Options · The one strategy Anton</small></span>
+      </a></li>
+      
+      <li><a href="chapter-63.html"
+             class="">
+        <span class="rn">09</span>
+        <span class="rt">The Covered Call<small>POTM Options · Own the stock and sell</small></span>
+      </a></li>
+      
+      <li><a href="chapter-64.html"
+             class="">
+        <span class="rn">10</span>
+        <span class="rt">The Covered Call Collar<small>POTM Options · Extend the covered cal</small></span>
+      </a></li>
+      
+      <li><a href="chapter-65.html"
+             class="">
+        <span class="rn">11</span>
+        <span class="rt">Index Options &amp; Portfolio Hedging<small>POTM Options · Using index options to</small></span>
+      </a></li>
+      
+      <li><a href="chapter-66.html"
+             class="">
+        <span class="rn">12</span>
+        <span class="rt">Options Spreads 1 — The Bull Call Spread<small>POTM Options · Buy a lower-strike cal</small></span>
+      </a></li>
+      
+      <li><a href="chapter-67.html"
+             class="">
+        <span class="rn">13</span>
+        <span class="rt">Options Spreads 2 — The Bear Put Spread<small>POTM Options · The bearish mirror of </small></span>
+      </a></li>
+      
+      <li><a href="chapter-68.html"
+             class="is-active">
+        <span class="rn">14</span>
+        <span class="rt">Market Makers, Volatility &amp; the Greeks<small>POTM Options · How options market mak</small></span>
+      </a></li>
+      
+    </ul>
+    <div class="rail__foot">
+      Distilled from slides + transcript.<br>
+      Every number grounded in the lesson.<br>
+      Not affiliated with ITPM / A. Kreil.
+    </div>
+  </nav>
+  <main class="main">
+    
+<div class="wrap">
+  <header class="hero">
+    <div class="hero__num reveal">POTM Options · Chapter 14</div>
+    <h1 class="reveal d1">Market Makers, Volatility &amp; the Greeks</h1>
+    <p class="hero__sub reveal d1">How options market makers price and hedge risk — and how understanding their view lets a fundamentally-positioned trader exploit them.</p>
+    <p class="hero__lead reveal d2">70-80% of options expire worthless and ~80% of retail options traders lose money. The market maker on the other side isn&#39;t betting on direction — he&#39;s betting on realized volatility, selling optionality and delta-hedging. Learn how he thinks and you stop being the one who gets marked in the face.</p>
+    <div class="hero__chips reveal d3">
+      <span class="chip chip--signal"><span class="dot"></span>Trade the fundamentals first; use options only for the marginal benefit — and only when you understand the market maker&#39;s positioning.</span>
+      <span class="chip"><b>12</b>&nbsp;min read</span>
+      <span class="chip"><b>41</b>&nbsp;slides</span>
+    </div>
+  </header>
+
+  
+  <section class="gist reveal">
+    <h2>The gist</h2>
+    <ul><li>70%-80% of options expire worthless and out of the money, and approximately 80% of retail options traders lose money — usually because they punt options as cheap leverage on a low-quality technical or bad fundamental idea, with no catalyst and no read on volatility.</li><li>An options market maker is paid to take risk and provide liquidity; he is NOT betting on the stock&#39;s direction — he bets on the REALIZED volatility of the stock over the life of the option, then delta-hedges by trading the underlying.</li><li>Volatility comes in two flavours: realized (a measure of the stock&#39;s historical movement) and implied (a measure of expected future movement). Implied vol is the ONLY unknown in options pricing — everything else is a known input.</li><li>Black-Scholes has 6 inputs: 5 are non-debatable knowns (Spot Price, Strike Price, Risk-Free Rate, Days to Maturity, Dividends) and 1 is debatable — Implied Volatility. Worked example: spot 127.77, strike 130, risk-free 25 bps, 37 days, expiry 21-Oct-2016, no dividends. At 15% vol the model gives a $1.51 call and $3.71 put; if the observed call is $2.30, back out an implied vol of ~20.06%.</li><li>Delta = how much the premium changes per $1 move in the stock: calls between 0 and 1, puts between 0 and -1, at-the-money ≈ ±0.5. Delta also approximates the probability an option finishes in the money (a linear relationship — a 10-delta call has roughly a 10% chance, not 70%).</li><li>To hedge, a market maker short a call BUYS stock; short a put SELLS stock. Gamma is the rate of change of delta, so as the underlying moves the hedge must be re-balanced daily — big moves force aggressive hedging, which can cause even bigger moves.</li><li>After hedging, the market maker is SHORT gamma / short volatility and &#39;rooting for nothing to happen&#39;; the speculator is LONG gamma / long volatility and wants a big, quick move — &#39;you want to be dead right or dead wrong,&#39; because a little right or a little wrong loses money in options.</li><li>Market makers RAISE implied vol into catalysts (earnings, M&amp;A, litigation, Fed) or rising realized vol; they LOWER it when catalysts pass or realized vol falls — often fooling retail into thinking options are &#39;cheap.&#39; Low does NOT mean cheap and high does NOT mean expensive; it&#39;s usually the opposite.</li><li>Concentrated open interest plus thin average daily volume can create a liquidity gap you can exploit — but only alongside an existing fundamental view. RCL example: Hist Vol 24.66%; $130 calls OI 9,340 (ITM), $135 calls OI 8,677 (OTM), zero OI between; hedging 9,340×100×0.5 = 467,000 shares vs ADV ≈ 1.4M (~35% of ADV). A $135 call ≈ $1.90 vs a $135/$140 bull call spread ≈ $1.20 → risk $1.20 to make $3.80 (~1:3.2 R/R).</li><li>Never scour options chains for trade ideas — that&#39;s lazy and undisciplined. Fundamental analysis drives every idea; options are used only when there is a genuine marginal benefit over being long or short the stock outright.</li></ul>
+  </section>
+  
+
+  
+  <section class="section" id="s1">
+    <div class="section__k">01 / 18</div>
+    <h3>The retail trader mandate: why most lose</h3>
+    
+    <ul class="points"><li>70%-80% of options expire worthless and OTM; approximately 80% of retail options traders lose money.</li><li>Retail generally has no idea how options work and just punts them as leverage on a long/short idea from low-quality technicals or bad fundamentals.</li><li>They trade an option before doing fundamental research, ignore upcoming catalysts, and don&#39;t grasp that they must be right by the time of expiration.</li><li>They claim volatility is &#39;cheap&#39; or &#39;expensive&#39; with no idea how it is calculated, and get pushed around by market makers — especially in small/mid-cap, low-volume stocks.</li></ul>
+    
+    <p class="explain">This is the setup for the whole video: the retail trader routinely loses because he treats options as a lottery ticket for leverage rather than a structuring tool. The market maker, by contrast, is disciplined about volatility — so understanding him is the antidote.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-14/00-01-55.jpg" alt="Slide: The retail trader mandate: why most lose">
+      <figcaption>Slide · 00:01:55</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s2">
+    <div class="section__k">02 / 18</div>
+    <h3>What a profitable retail trader actually does</h3>
+    
+    <ul class="points"><li>Generate good trade ideas first: obtain a fundamental predisposition of long/short direction.</li><li>Then structure the trade effectively, considering catalysts and timing.</li><li>Only take an options position if there is a marginal benefit over just being long or short the stock.</li></ul>
+    
+    <p class="explain">The order is non-negotiable — fundamentals and catalysts come first, the option is chosen last and only if it adds something. This principle bookends the video and returns in every conclusion.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-14/00-02-20.jpg" alt="Slide: What a profitable retail trader actually does">
+      <figcaption>Slide · 00:02:20</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s3">
+    <div class="section__k">03 / 18</div>
+    <h3>What is an options market maker?</h3>
+    
+    <ul class="points"><li>A professional trader paid to take risk and provide liquidity so institutions (pension funds, hedge funds, banks, prop desks) and retail can enter and exit trades.</li><li>A smart market maker can make money even when you make money on the opposite trade — &#39;you both can make money.&#39;</li><li>Risk is NOT one-dimensional for a market maker the way it is for a directional speculator.</li></ul>
+    
+    <p class="explain">The person behind the curtain isn&#39;t the Wizard of Oz or Batman — he&#39;s a liquidity provider whose profit comes from how he trades his deltas and other options, not from you being wrong.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-14/00-03-55.jpg" alt="Slide: What is an options market maker?">
+      <figcaption>Slide · 00:03:55</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s4">
+    <div class="section__k">04 / 18</div>
+    <h3>The market maker&#39;s book: bids and offers everywhere</h3>
+    
+    <ul class="points"><li>Market makers are the firms behind all the two-way prices (bids and offers) across every options chain — here, hundreds of Facebook strikes and maturities.</li><li>Listed options have exchange-set strikes and maturities; over-the-counter options are privately negotiated (banks with large hedge funds/corporates) and irrelevant to retail.</li><li>Speculators like you use options to bet on direction and for leverage, and to limit downside — but often lose because they don&#39;t know what they&#39;re doing.</li></ul>
+    
+    <p class="explain">A live Facebook chain shows the market maker quoting across the entire surface. He runs a long/short portfolio of options across strikes, maturities and even underlyings — a book, not a bet.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-14/00-04-10.jpg" alt="Slide: The market maker&#39;s book: bids and offers everywhere">
+      <figcaption>Slide · 00:04:10</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s5">
+    <div class="section__k">05 / 18</div>
+    <h3>How market makers think: realized volatility, not direction</h3>
+    
+    <ul class="points"><li>Market makers do NOT bet on the direction of the underlying&#39;s move.</li><li>They bet on the realized volatility of the stock over a specified time period (to expiration).</li><li>They trade the underlying to hedge their option positions (delta), and hedge those deltas at the end of every day.</li><li>Their &#39;negative selection portfolio&#39; is a mix of long and short options based on expected future volatility, plus long/short stock depending on the option position.</li></ul>
+    
+    <p class="explain">This is the mental switch: the market maker&#39;s edge is volatility, not fundamentals. Bottom line — he cares about volatility rather than the underlying fundamentals of the stock.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-14/00-05-15.jpg" alt="Slide: How market makers think: realized volatility, not direction">
+      <figcaption>Slide · 00:05:15</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s6">
+    <div class="section__k">06 / 18</div>
+    <h3>What volatility actually is</h3>
+    
+    <ul class="points"><li>Realized volatility measures a stock&#39;s historical movements.</li><li>Implied volatility measures a stock&#39;s expected future movements.</li><li>Implied vol is used to calculate the option premium and is the only unknown in options pricing — all other factors are known.</li><li>Understanding WHY volatility rises and falls is the single most important thing for the retail trader.</li></ul>
+    
+    <p class="explain">You can&#39;t judge whether an option is fairly priced without knowing which of these two you&#39;re looking at. The next section shows exactly where implied vol sits inside the pricing model.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-14/00-06-05.jpg" alt="Slide: What volatility actually is">
+      <figcaption>Slide · 00:06:05</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s7">
+    <div class="section__k">07 / 18</div>
+    <h3>Black-Scholes: 5 knowns and 1 debatable input</h3>
+    
+    <ul class="points"><li>Black-Scholes has 6 inputs. Five are non-debatable knowns: Spot Price, Strike Price, Risk-Free Interest Rate, Days to Maturity, Dividends.</li><li>All market makers and traders agree on those five because they are simply inputs.</li><li>The ONLY input with any disagreement is Implied Volatility — the level market makers constantly monitor as conditions, stock-specific events and their own positioning change.</li><li>Worked example: spot 127.77, strike 130, risk-free 25 bps (two-month LIBOR), 37 days, expiry 21-Oct-2016, no dividends. At 15% vol → call $1.51, put $3.71. If the market shows the call at $2.30, trial-and-error backs out an implied vol of ≈ 20.06%.</li><li>&#39;Backing out&#39; implied vol from the observed price is exactly how you translate a market price into the volatility the market is charging you.</li></ul>
+    
+    <p class="explain">Because five inputs are agreed and one is not, the entire negotiation between market maker and trader is a fight over implied volatility. The worked example shows both directions: plug in vol to get a price, or back a price out to get the implied vol.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-14/00-07-35.jpg" alt="Slide: Black-Scholes: 5 knowns and 1 debatable input">
+      <figcaption>Slide · 00:07:35</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s8">
+    <div class="section__k">08 / 18</div>
+    <h3>Why market makers RAISE implied vol</h3>
+    
+    <ul class="points"><li>There are market-moving catalysts before expiration — earnings, M&amp;A, litigation, drug-trial results, Fed decisions, crash fear, black-swan events.</li><li>Or realized volatility goes up, which pulls implied vol higher.</li><li>Or the market maker is short so many options he is forced to raise implied vols (being financially prudent).</li><li>Best time to own options is around catalyst-driven events: asymmetric payoff if you&#39;re right, and because a catalyst exists your odds of being dead wrong are also higher than normal — so the option is protection.</li></ul>
+    
+    <p class="explain">When the market maker is short optionality, a big move in EITHER direction loses him money because of his hedges — which is precisely why he charges more vol into events.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-14/00-10-30.jpg" alt="Slide: Why market makers RAISE implied vol">
+      <figcaption>Slide · 00:10:30</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s9">
+    <div class="section__k">09 / 18</div>
+    <h3>Why market makers LOWER implied vol — and the trap</h3>
+    
+    <ul class="points"><li>A catalyst passes without incident, or there&#39;s a lack of catalysts before expiration, or realized volatility falls.</li><li>Or the market maker is too long options across his book and is forced to lower implied vols.</li><li>Worst time to own options is when there are no catalysts — time decay kills you.</li><li>Low prices (low implied vol) does NOT mean &#39;cheap&#39; and high prices (high vol) does NOT mean &#39;expensive&#39; — usually it&#39;s the opposite.</li></ul>
+    
+    <p class="explain">Market makers lower vol to fool retail into thinking options are cheap right before those options quietly decay to zero. &#39;Low ≠ cheap, high ≠ expensive&#39; is the line to remember.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-14/00-11-20.jpg" alt="Slide: Why market makers LOWER implied vol — and the trap">
+      <figcaption>Slide · 00:11:20</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s10">
+    <div class="section__k">10 / 18</div>
+    <h3>After the trade: the market maker hedges his delta</h3>
+    
+    <ul class="points"><li>Delta = the theoretical estimate of how much an option&#39;s premium changes given a $1 move in the underlying.</li><li>Delta is between 0 and 1 for a call — if a market maker sells a call, he needs to BUY stock.</li><li>Delta is between 0 and -1 for a put — if a market maker sells a put, he needs to SELL stock.</li><li>Gamma is the rate of change of delta; the delta shifts as the underlying moves, as time to expiry decreases and as volatility changes, so the book must be hedged daily.</li><li>Gamma isn&#39;t important for the retail trader to trade, but understanding it reveals how the market maker is forced to act — and where the opportunity is.</li></ul>
+    
+    <p class="explain">While the speculator sits at home hoping, the market maker&#39;s first move after selling an option is to neutralize the delta by trading stock — and to keep re-hedging as gamma moves the delta around.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-14/00-15-30.jpg" alt="Slide: After the trade: the market maker hedges his delta">
+      <figcaption>Slide · 00:15:30</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s11">
+    <div class="section__k">11 / 18</div>
+    <h3>Delta-hedging example: XYZ at $20</h3>
+    
+    <ul class="points"><li>XYZ trades $20; the Oct-20 strike calls trade $1.00 with a 50 delta. You buy 200 of them.</li><li>The market maker (now short 200 calls) buys 200 × 100 × 0.50 = 10,000 shares to be delta-hedged.</li><li>If the stock rallies to 21 the delta rises and he has more stock to buy; if it falls to 19 the delta falls and he has stock to sell — that re-hedging is gamma.</li><li>His best case is that NOTHING happens: he keeps the call premium and loses nothing on the hedge. He is &#39;short volatility&#39;; a big move either way is bad for him.</li></ul>
+    
+    <p class="explain">The market maker roots for the stock to stay still. The speculator, long the call, is long volatility and wants a big, quick move — ideally up, but a big move down still beats owning stock outright because the loss is capped at the premium.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-14/00-18-10.jpg" alt="Slide: Delta-hedging example: XYZ at $20">
+      <figcaption>Slide · 00:18:10</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s12">
+    <div class="section__k">12 / 18</div>
+    <h3>Second example: adding puts increases the market maker&#39;s risk</h3>
+    
+    <ul class="points"><li>Now a different speculator buys 400 of the Oct-19 strike puts at a 25 delta.</li><li>To hedge, the market maker SELLS 400 × 100 × 0.25 = 10,000 shares — offloading all the stock he was holding.</li><li>He is now short 200 Oct-20 calls AND short 400 Oct-19 puts, with no stock hedge on.</li><li>This INCREASES his risk: having no stock is irrelevant — the stock was just a hedge; he is now short far more optionality, and a big move either way could exceed the premium he collected. Best case is the stock settling between $19 and $20.</li></ul>
+    
+    <p class="explain">The lesson: risk lives in the optionality, not the stock hedge. More options sold means more short volatility, so the market maker most wants the stock to go nowhere before maturity.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-14/00-20-40.jpg" alt="Slide: Second example: adding puts increases the market maker&#39;s risk">
+      <figcaption>Slide · 00:20:40</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s13">
+    <div class="section__k">13 / 18</div>
+    <h3>Open interest, liquidity gaps, and how it benefits you</h3>
+    
+    <ul class="points"><li>Market makers bet on realized volatility, not direction, and constantly hedge: short a call → buy stock as it rallies; short a put → sell stock as it falls.</li><li>Open interest — the total number of contracts currently open (traded but not yet closed, exercised or assigned) — is publicly available for every strike and maturity.</li><li>Unlike shares (fixed supply), an option trade can CREATE a new contract: buy-to-open/sell-to-open adds to OI; buy-to-close/sell-to-close reduces it; a matched open-vs-close leaves OI unchanged.</li><li>Concentrated open interest can force market-maker hedging and create liquidity gaps you can exploit.</li></ul>
+    
+    <p class="explain">Because you can see where open interest is piled up, you can infer where the market maker will be forced to buy or sell stock — the raw material for a liquidity-gap trade.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-14/00-21-05.jpg" alt="Slide: Open interest, liquidity gaps, and how it benefits you">
+      <figcaption>Slide · 00:21:05</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s14">
+    <div class="section__k">14 / 18</div>
+    <h3>RCL case study: reading the open interest</h3>
+    
+    <ul class="points"><li>Royal Caribbean (RCL) near all-time highs, Hist Volatility 24.66%, after a sharp ~$10 sell-off.</li><li>March-16th $130 calls are ITM with open interest of 9,340; $135 calls are OTM with open interest of 8,677; there is zero open interest on the strikes in between.</li><li>Concentrated OI on two strikes with nothing between them is the signature of a potential liquidity gap.</li><li>The stock has never traded at $135 — a big clue that speculators bought cheaply-priced calls in the sell-off (so market makers are most likely short those calls).</li></ul>
+    
+    <p class="explain">The chain tells a story: heavy call buying by speculators into the sell-off left market makers short calls, with two dense open-interest strikes and a vacuum between them.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-14/00-24-00.jpg" alt="Slide: RCL case study: reading the open interest">
+      <figcaption>Slide · 00:24:00</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s15">
+    <div class="section__k">15 / 18</div>
+    <h3>RCL: quantifying the forced hedging</h3>
+    
+    <ul class="points"><li>$130 calls are ITM with OI 9,340 → if market makers are all short, they had to buy 9,340 × 100 × 0.5 = 467,000 shares as the calls went through $130 (assuming ~0.5 ATM delta), with more to buy as it rises.</li><li>RCL average daily volume ≈ 1,400,000 shares — so ~467,000 is about 35% of ADV; market makers are clearly a large part of the flow.</li><li>If the stock rallies to $135 (0.5 delta assumption), they must buy up to 8,677 × 100 × 0.5 = 433,850 more shares.</li><li>By contrast a stock like Facebook trades ~30M shares/day, so 467,000 shares would have no effect — the effect only exists because RCL&#39;s ADV is thin.</li></ul>
+    
+    <p class="explain">The math shows why the gap matters: forced market-maker buying equal to a third of daily volume can turn a push through $135 into a violent squeeze toward $140.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-14/00-26-10.jpg" alt="Slide: RCL: quantifying the forced hedging">
+      <figcaption>Slide · 00:26:10</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s16">
+    <div class="section__k">16 / 18</div>
+    <h3>RCL: sizing the trade — only with a fundamental view</h3>
+    
+    <ul class="points"><li>IF you are already fundamentally long RCL and see this technical setup, a catalyst pushing through $135 could quickly gap the stock to $140.</li><li>Volatility is probably priced high relative to the past (Chris Quill covers how to calculate it in the next &#39;break&#39; video).</li><li>Instead of buying stock you could buy the $135 call for $1.90, or the $135/$140 bull call spread for ($1.90 − $0.70) = $1.20 — risking $1.20 to make $3.80, ~1:3.2 risk/reward.</li><li>Do NOT scour options chains to find trade ideas — you&#39;d only look here because you already want a long position and are checking for marginal benefit; with no marginal benefit, just buy the stock.</li></ul>
+    
+    <p class="explain">The trade is real but strictly conditional: the fundamental predisposition comes first, the options structure is chosen only for the marginal benefit it adds over owning the shares.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-14/00-26-20.jpg" alt="Slide: RCL: sizing the trade — only with a fundamental view">
+      <figcaption>Slide · 00:26:20</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s17">
+    <div class="section__k">17 / 18</div>
+    <h3>Delta formalized: reading probabilities off the delta</h3>
+    
+    <ul class="points"><li>Delta is how much an option&#39;s value should change per $1 rise in the underlying: calls 0 to 1, puts 0 to -1, ATM ≈ ±0.5.</li><li>The more in-the-money a call, the higher its delta (a 15 strike call with the stock at $30 has ~1.00 delta); the more out-of-the-money, the lower.</li><li>Delta approximately equals the probability the option finishes in the money — a deep-ITM option ≈ 0.99, a far-OTM option ≈ 0, an ATM option ≈ 0.50 (a coin flip).</li><li>The relationship is linear — don&#39;t call a 10-delta call a &#39;70% chance&#39; of finishing ITM.</li></ul>
+    
+    <p class="explain">Delta does double duty: it&#39;s both the hedge ratio the market maker needs and a quick, if imperfect, probability the trade lands in the money.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-14/00-28-10.jpg" alt="Slide: Delta formalized: reading probabilities off the delta">
+      <figcaption>Slide · 00:28:10</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s18">
+    <div class="section__k">18 / 18</div>
+    <h3>Conclusions</h3>
+    
+    <ul class="points"><li>As long as an option is fairly priced given its implied vol, the trade may be worth doing in options rather than stock — but the PTM fundamental analysis still drives every idea.</li><li>Get ideas from research, then MAYBE use options to implement the view, never the reverse — and only if there&#39;s marginal benefit.</li><li>Don&#39;t assume you know more than the market maker on catalysts; there&#39;s usually a reason the market isn&#39;t pricing in what you see.</li><li>Market makers bet on realized volatility, not direction, and can mark options up or down into events to manage their book — so go in assuming you could lose the whole premium and be comfortable with that.</li><li>Big moves cause bigger moves because market makers must hedge aggressively; knowing their positioning can create liquidity gaps you can exploit. Don&#39;t be afraid to be greedy — they have no problem ripping you off, so take no prisoners.</li></ul>
+    
+    <p class="explain">The closing loop returns to the opening principle: fundamentals and catalysts first, volatility discipline always, options only for genuine marginal benefit — and never trade at the mercy of the market maker&#39;s marks.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-14/00-32-20.jpg" alt="Slide: Conclusions">
+      <figcaption>Slide · 00:32:20</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+
+  
+  <section class="section">
+    <div class="section__k">Reference</div>
+    <h3>Glossary</h3>
+    <ul class="glossary">
+      
+      <li><span class="term">Options Market Maker</span><div class="def">A professional trader paid to take risk and provide two-way liquidity across an options chain; profits from volatility (realized vs implied) and delta-hedging, not from directional bets.</div></li>
+      
+      <li><span class="term">Realized Volatility</span><div class="def">A measure of a stock&#39;s actual historical price movement over a period.</div></li>
+      
+      <li><span class="term">Implied Volatility</span><div class="def">The market&#39;s expectation of future movement embedded in an option&#39;s price; the only unknown/debatable Black-Scholes input, used to compute the premium.</div></li>
+      
+      <li><span class="term">Black-Scholes inputs</span><div class="def">The 6 inputs to the option pricing model: Spot Price, Strike Price, Risk-Free Rate, Days to Maturity, Dividends (all known) and Implied Volatility (the only debatable one).</div></li>
+      
+      <li><span class="term">Delta</span><div class="def">The theoretical change in an option&#39;s premium per $1 move in the underlying: 0 to 1 for calls, 0 to -1 for puts, about ±0.5 at the money. Also approximates the probability of finishing in the money.</div></li>
+      
+      <li><span class="term">Gamma</span><div class="def">The rate of change of delta as the underlying moves (also with time and volatility); forces the market maker to re-hedge continually.</div></li>
+      
+      <li><span class="term">Delta hedging</span><div class="def">Neutralizing an option&#39;s directional exposure by trading the underlying — buy stock when short a call, sell stock when short a put — and re-balancing as delta shifts.</div></li>
+      
+      <li><span class="term">Short volatility / short gamma</span><div class="def">The market maker&#39;s post-hedge state after selling options: he profits if the stock stays still and loses on a big move in either direction (&#39;rooting for nothing to happen&#39;).</div></li>
+      
+      <li><span class="term">Long volatility / long gamma</span><div class="def">The speculator&#39;s state when long options: he profits from a big, quick move in either direction — &#39;dead right or dead wrong.&#39;</div></li>
+      
+      <li><span class="term">Open Interest (OI)</span><div class="def">The total number of option contracts currently open (traded but not yet closed, exercised or assigned); a new contract can be created when a trade is placed.</div></li>
+      
+      <li><span class="term">Liquidity gap</span><div class="def">A situation where concentrated open interest and thin average daily volume force market-maker hedging that can amplify a move — exploitable only with a pre-existing fundamental view.</div></li>
+      
+      <li><span class="term">Marginal benefit</span><div class="def">The additional edge an options structure offers over simply being long or short the stock; the only justification for trading options rather than shares.</div></li>
+      
+      <li><span class="term">Bull call spread</span><div class="def">Buying a call and selling a higher-strike call (e.g. RCL $135/$140 for $1.20) to cap cost and define a favorable risk/reward, here ~1:3.2.</div></li>
+      
+    </ul>
+  </section>
+  
+
+  <nav class="pager">
+    
+    <a class="prev" href="chapter-67.html">
+      <small>← 13 Previous</small><span>Options Spreads 2 — The Bear Put Spread</span></a>
+    
+    
+    <a class="next disabled"><small>End of the macro block</small><span>Portfolio construction is next</span></a>
+    
+  </nav>
+</div>
+
+  </main>
+</div>
+</body>
+</html>
