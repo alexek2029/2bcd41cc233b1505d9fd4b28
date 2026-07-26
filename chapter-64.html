@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>POTM Options 10 · The Covered Call Collar — The Macro Playbook — The Top-Down Macro Read</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="rail" id="rail">
+    <div class="rail__brand">The Macro Playbook</div>
+    <a href="index.html" style="text-decoration:none;color:inherit">
+      <div class="rail__title">The Top-Down<br>Macro Read</div>
+    </a>
+    <div class="rail__sub">Anton Kreil · ITPL Foundations + PTM 2.0, distilled</div>
+    <button class="rail__toggle" onclick="document.getElementById('rail').classList.toggle('open')">Chapters ▾</button>
+    <ul class="rail__nav">
+      
+      <li><a href="chapter-01.html"
+             class="">
+        <span class="rn">A</span>
+        <span class="rt">Professional Traders vs Retail Traders 101<small>Foundations · What a professional tr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-02.html"
+             class="">
+        <span class="rn">B</span>
+        <span class="rt">Professional Traders vs Retail Traders 102<small>Foundations · Alpha vs absolute retu</small></span>
+      </a></li>
+      
+      <li><a href="chapter-03.html"
+             class="">
+        <span class="rn">C</span>
+        <span class="rt">Realized Volatility 1<small>Foundations · Measuring an instrumen</small></span>
+      </a></li>
+      
+      <li><a href="chapter-04.html"
+             class="">
+        <span class="rn">D</span>
+        <span class="rt">Realized Volatility 2<small>Foundations · The spreadsheet class:</small></span>
+      </a></li>
+      
+      <li><a href="chapter-05.html"
+             class="">
+        <span class="rn">E</span>
+        <span class="rt">Realized Volatility 3<small>Foundations · Average True Range Per</small></span>
+      </a></li>
+      
+      <li><a href="chapter-06.html"
+             class="">
+        <span class="rn">F</span>
+        <span class="rt">Implied Volatility 1<small>Foundations · The VIX as the market&#39;</small></span>
+      </a></li>
+      
+      <li><a href="chapter-07.html"
+             class="">
+        <span class="rn">G</span>
+        <span class="rt">Implied Volatility 2<small>Foundations · Solving for an option&#39;</small></span>
+      </a></li>
+      
+      <li><a href="chapter-08.html"
+             class="">
+        <span class="rn">H</span>
+        <span class="rt">Portfolio Volatility 1<small>Foundations · The concepts of whole-</small></span>
+      </a></li>
+      
+      <li><a href="chapter-09.html"
+             class="">
+        <span class="rn">I</span>
+        <span class="rt">Portfolio Volatility 2<small>Foundations · Calculating a portfoli</small></span>
+      </a></li>
+      
+      <li><a href="chapter-10.html"
+             class="">
+        <span class="rn">J</span>
+        <span class="rt">Becoming a Professional Level Trader<small>Foundations · The IPLT capstone — ho</small></span>
+      </a></li>
+      
+      <li><a href="chapter-11.html"
+             class="">
+        <span class="rn">01</span>
+        <span class="rt">The Framework<small>PTM 2.0 · The framework</small></span>
+      </a></li>
+      
+      <li><a href="chapter-12.html"
+             class="">
+        <span class="rn">02</span>
+        <span class="rt">The Field of Play: Bull &amp; Bear Markets<small>PTM 2.0 · Field of play</small></span>
+      </a></li>
+      
+      <li><a href="chapter-13.html"
+             class="">
+        <span class="rn">03</span>
+        <span class="rt">Gross Domestic Product<small>PTM 2.0 · GDP</small></span>
+      </a></li>
+      
+      <li><a href="chapter-14.html"
+             class="">
+        <span class="rn">04</span>
+        <span class="rt">Leading Indicators 1: Real Interest Rates &amp; the Yield Curve<small>PTM 2.0 · Rates · yield curve</small></span>
+      </a></li>
+      
+      <li><a href="chapter-15.html"
+             class="">
+        <span class="rn">05</span>
+        <span class="rt">Corporate Bonds &amp; Credit Spreads<small>PTM 2.0 · Credit spreads</small></span>
+      </a></li>
+      
+      <li><a href="chapter-16.html"
+             class="">
+        <span class="rn">06</span>
+        <span class="rt">M2 Money Supply: The Accessory Leading Indicator<small>PTM 2.0 · M2 money supply</small></span>
+      </a></li>
+      
+      <li><a href="chapter-17.html"
+             class="">
+        <span class="rn">07</span>
+        <span class="rt">The ISM Manufacturing PMI<small>PTM 2.0 · ISM manufacturing</small></span>
+      </a></li>
+      
+      <li><a href="chapter-18.html"
+             class="">
+        <span class="rn">08</span>
+        <span class="rt">The ISM Non-Manufacturing Report on Business (Services PMI)<small>PTM 2.0 · ISM services</small></span>
+      </a></li>
+      
+      <li><a href="chapter-19.html"
+             class="">
+        <span class="rn">09</span>
+        <span class="rt">Consumer Sentiment<small>PTM 2.0 · UMich sentiment</small></span>
+      </a></li>
+      
+      <li><a href="chapter-20.html"
+             class="">
+        <span class="rn">10</span>
+        <span class="rt">Building Permits: The Housing Leading Indicator<small>PTM 2.0 · Housing · permits</small></span>
+      </a></li>
+      
+      <li><a href="chapter-21.html"
+             class="">
+        <span class="rn">11</span>
+        <span class="rt">NFIB Small Business Optimism Index<small>PTM 2.0 · NFIB small biz</small></span>
+      </a></li>
+      
+      <li><a href="chapter-22.html"
+             class="">
+        <span class="rn">12</span>
+        <span class="rt">Cyclical Commodities as a Leading Indicator<small>PTM 2.0 · Cyclical commodities</small></span>
+      </a></li>
+      
+      <li><a href="chapter-23.html"
+             class="">
+        <span class="rn">13</span>
+        <span class="rt">European Economic Sentiment Indicator (ESI)<small>PTM 2.0 · Europe · ESI</small></span>
+      </a></li>
+      
+      <li><a href="chapter-24.html"
+             class="">
+        <span class="rn">14</span>
+        <span class="rt">China Leading Indicators: Official vs Caixin PMI and Real Rates<small>PTM 2.0 · China · Caixin</small></span>
+      </a></li>
+      
+      <li><a href="chapter-25.html"
+             class="">
+        <span class="rn">15</span>
+        <span class="rt">Recap: Bringing the Leading Indicators Together<small>PTM 2.0 · Recap · coincident</small></span>
+      </a></li>
+      
+      <li><a href="chapter-26.html"
+             class="">
+        <span class="rn">16</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 1a<small>PTM 2.0 · From the macro bias to</small></span>
+      </a></li>
+      
+      <li><a href="chapter-27.html"
+             class="">
+        <span class="rn">17</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 1b<small>PTM 2.0 · Portfolio modelling in</small></span>
+      </a></li>
+      
+      <li><a href="chapter-28.html"
+             class="">
+        <span class="rn">18</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 2<small>PTM 2.0 · Portfolio volatility f</small></span>
+      </a></li>
+      
+      <li><a href="chapter-29.html"
+             class="">
+        <span class="rn">19</span>
+        <span class="rt">Foundations of Long Short Portfolio Management 3<small>PTM 2.0 · Portfolio correlation </small></span>
+      </a></li>
+      
+      <li><a href="chapter-30.html"
+             class="">
+        <span class="rn">20</span>
+        <span class="rt">Foundations of Long Short Portfolio Management 4<small>PTM 2.0 · Beta and beta-neutral </small></span>
+      </a></li>
+      
+      <li><a href="chapter-31.html"
+             class="">
+        <span class="rn">21</span>
+        <span class="rt">Foundations of Long / Short Portfolio Management Recap<small>PTM 2.0 · The capstone of the po</small></span>
+      </a></li>
+      
+      <li><a href="chapter-32.html"
+             class="">
+        <span class="rn">22</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 1<small>PTM 2.0 · The bottom-up, fundame</small></span>
+      </a></li>
+      
+      <li><a href="chapter-33.html"
+             class="">
+        <span class="rn">23</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 2<small>PTM 2.0 · The quant pass in full</small></span>
+      </a></li>
+      
+      <li><a href="chapter-34.html"
+             class="">
+        <span class="rn">24</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 3<small>PTM 2.0 · The quant valuation bl</small></span>
+      </a></li>
+      
+      <li><a href="chapter-35.html"
+             class="">
+        <span class="rn">25</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 4<small>PTM 2.0 · The synthesis of the q</small></span>
+      </a></li>
+      
+      <li><a href="chapter-36.html"
+             class="">
+        <span class="rn">26</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 5<small>PTM 2.0 · The SHORT-side mirror </small></span>
+      </a></li>
+      
+      <li><a href="chapter-37.html"
+             class="">
+        <span class="rn">27</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 6<small>PTM 2.0 · Turnaround Stories vs </small></span>
+      </a></li>
+      
+      <li><a href="chapter-38.html"
+             class="">
+        <span class="rn">28</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 7<small>PTM 2.0 · Data-cleansing a downl</small></span>
+      </a></li>
+      
+      <li><a href="chapter-39.html"
+             class="">
+        <span class="rn">29</span>
+        <span class="rt">Recap of Quantitative Processing<small>PTM 2.0 · The capstone of the tr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-40.html"
+             class="">
+        <span class="rn">30</span>
+        <span class="rt">Qualitative Processing<small>PTM 2.0 · The qualitative half o</small></span>
+      </a></li>
+      
+      <li><a href="chapter-41.html"
+             class="">
+        <span class="rn">31</span>
+        <span class="rt">Trade Idea Generation – Qualitative Processing<small>PTM 2.0 · The deeper qualitative</small></span>
+      </a></li>
+      
+      <li><a href="chapter-42.html"
+             class="">
+        <span class="rn">32</span>
+        <span class="rt">Trade Idea Generation – Identifying Catalysts<small>PTM 2.0 · The final fundamental </small></span>
+      </a></li>
+      
+      <li><a href="chapter-43.html"
+             class="">
+        <span class="rn">33</span>
+        <span class="rt">Trade Idea Generation Template — Part 1<small>PTM 2.0 · How to formalize the w</small></span>
+      </a></li>
+      
+      <li><a href="chapter-44.html"
+             class="">
+        <span class="rn">34</span>
+        <span class="rt">Trade Idea Generation Template — Part 2<small>PTM 2.0 · Finishing the ZEN pric</small></span>
+      </a></li>
+      
+      <li><a href="chapter-45.html"
+             class="">
+        <span class="rn">35</span>
+        <span class="rt">Macro-Driven Trade Ideas<small>PTM 2.0 · Marrying the macro and</small></span>
+      </a></li>
+      
+      <li><a href="chapter-46.html"
+             class="">
+        <span class="rn">36</span>
+        <span class="rt">International Trade Ideas via ADRs<small>PTM 2.0 · Bolt the international</small></span>
+      </a></li>
+      
+      <li><a href="chapter-47.html"
+             class="">
+        <span class="rn">37</span>
+        <span class="rt">Technical Analysis (Timing)<small>PTM 2.0 · Charts don&#39;t generate </small></span>
+      </a></li>
+      
+      <li><a href="chapter-48.html"
+             class="">
+        <span class="rn">38</span>
+        <span class="rt">Price Action (Momentum)<small>PTM 2.0 · The momentum half of t</small></span>
+      </a></li>
+      
+      <li><a href="chapter-49.html"
+             class="">
+        <span class="rn">39</span>
+        <span class="rt">Preventative Risk Management (PRM)<small>PTM 2.0 · Get your head right be</small></span>
+      </a></li>
+      
+      <li><a href="chapter-50.html"
+             class="">
+        <span class="rn">40</span>
+        <span class="rt">Preventative Risk Management — Part 2 (Portfolio Limits)<small>PTM 2.0 · Turning the volatility</small></span>
+      </a></li>
+      
+      <li><a href="chapter-51.html"
+             class="">
+        <span class="rn">41</span>
+        <span class="rt">Eliminating Emotion, Staying Objective<small>PTM 2.0 · Treat your trading acc</small></span>
+      </a></li>
+      
+      <li><a href="chapter-52.html"
+             class="">
+        <span class="rn">42</span>
+        <span class="rt">Track Record &amp; Trading Statistics (Part 1)<small>PTM 2.0 · Building the three-tab</small></span>
+      </a></li>
+      
+      <li><a href="chapter-53.html"
+             class="">
+        <span class="rn">43</span>
+        <span class="rt">Track Record &amp; Trading Statistics (Part 2 — Advanced)<small>PTM 2.0 · The advanced ratios — </small></span>
+      </a></li>
+      
+      <li><a href="chapter-54.html"
+             class="">
+        <span class="rn">44</span>
+        <span class="rt">Getting Organized &amp; Next Steps<small>PTM 2.0 · The closing chapter of</small></span>
+      </a></li>
+      
+      <li><a href="chapter-55.html"
+             class="">
+        <span class="rn">01</span>
+        <span class="rt">Defining the Mandate (Part 1)<small>POTM Options · Why the retail options</small></span>
+      </a></li>
+      
+      <li><a href="chapter-56.html"
+             class="">
+        <span class="rn">02</span>
+        <span class="rt">Defining the Mandate (Part 2)<small>POTM Options · Why most options educa</small></span>
+      </a></li>
+      
+      <li><a href="chapter-57.html"
+             class="">
+        <span class="rn">03</span>
+        <span class="rt">Filtering Options Strategies for Usefulness<small>POTM Options · How Anton Kreil filter</small></span>
+      </a></li>
+      
+      <li><a href="chapter-58.html"
+             class="">
+        <span class="rn">04</span>
+        <span class="rt">Marginal Benefits 1 — The Advantages of Options<small>POTM Options · Why a long call or lon</small></span>
+      </a></li>
+      
+      <li><a href="chapter-59.html"
+             class="">
+        <span class="rn">05</span>
+        <span class="rt">Marginal Benefits 2 — The Disadvantages of Options<small>POTM Options · Why time decay, timing</small></span>
+      </a></li>
+      
+      <li><a href="chapter-60.html"
+             class="">
+        <span class="rn">06</span>
+        <span class="rt">Long Call &amp; Put Options Formalized<small>POTM Options · The two simplest direc</small></span>
+      </a></li>
+      
+      <li><a href="chapter-61.html"
+             class="">
+        <span class="rn">07</span>
+        <span class="rt">Naked Short Puts<small>POTM Options · Selling a put for a cr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-62.html"
+             class="">
+        <span class="rn">08</span>
+        <span class="rt">Naked Short Calls<small>POTM Options · The one strategy Anton</small></span>
+      </a></li>
+      
+      <li><a href="chapter-63.html"
+             class="">
+        <span class="rn">09</span>
+        <span class="rt">The Covered Call<small>POTM Options · Own the stock and sell</small></span>
+      </a></li>
+      
+      <li><a href="chapter-64.html"
+             class="is-active">
+        <span class="rn">10</span>
+        <span class="rt">The Covered Call Collar<small>POTM Options · Extend the covered cal</small></span>
+      </a></li>
+      
+    </ul>
+    <div class="rail__foot">
+      Distilled from slides + transcript.<br>
+      Every number grounded in the lesson.<br>
+      Not affiliated with ITPM / A. Kreil.
+    </div>
+  </nav>
+  <main class="main">
+    
+<div class="wrap">
+  <header class="hero">
+    <div class="hero__num reveal">POTM Options · Chapter 10</div>
+    <h1 class="reveal d1">The Covered Call Collar</h1>
+    <p class="hero__sub reveal d1">Extend the covered call by buying an OTM put, so you still bank a net credit but add a hard floor to your downside.</p>
+    <p class="hero__lead reveal d2">The covered call collar keeps everything the covered call gives you and adds a defined downside floor: you write an OTM call for premium and spend part of that premium on an OTM put. Structure it so the call credit exceeds the put cost and you get paid to hold a superior hedge, which is why its usefulness is HIGH versus the covered call&#39;s MEDIUM.</p>
+    <div class="hero__chips reveal d3">
+      <span class="chip chip--signal"><span class="dot"></span>Write an OTM call, buy a cheaper OTM put, keep the net credit.</span>
+      <span class="chip"><b>13</b>&nbsp;min read</span>
+      <span class="chip"><b>32</b>&nbsp;slides</span>
+    </div>
+  </header>
+
+  
+  <section class="gist reveal">
+    <h2>The gist</h2>
+    <ul><li>Structure: Long Stock + write OTM Call (Leg A) + buy OTM Put (Leg B), same expiry, sized to cover the stock owned.</li><li>The NET-CREDIT rule: structure it so the call credit exceeds the put cost, so the strategy pays a net credit; paying a debit defeats the purpose of the hedge.</li><li>Attributes: Non-Directional, Neutral, 2 transactions, Net Credit, Max Risk = Limited (floored at the put strike), Max Gain = Limited (capped at the call strike), Usefulness = HIGH.</li><li>Breakeven = Starting Point + Net Premium (SUBTRACT if it is a credit).</li><li>Max profit/share = (call-strike - Starting Point) + (call price - put price), made at the call strike.</li><li>Max loss/share = (Starting Point - put strike) - (call price - put price), made at the put strike; below the put strike every 1c fall is offset 1c by the put.</li><li>JNJ example: 300 sh avg $135.34, sell 3x $134 call @ $1.12, buy 3x $129 put @ $0.73 = net credit $0.39 ($117); breakeven $132.61; max-profit total $669; new execution $134.11.</li><li>Downside test: a -$7 FDA-failure crash to $127 floors the collar at -4.68% (put strike $129) versus -8.71% for a plain covered call.</li><li>Company X example: $50 stock, sell $52 call @ $1.00 + buy $47 put @ $0.50 = net credit $0.50, max profit $250.</li></ul>
+  </section>
+  
+
+  
+  <section class="section" id="s1">
+    <div class="section__k">01 / 16</div>
+    <h3>One step beyond the covered call</h3>
+    
+    <ul class="points"><li>Continues the retail-trader hedging series; video 9 covered the covered call, this takes it one step further.</li><li>Same process as every strategy video: quick explanation, when to use, how to use, breakeven / profit / risk calculations, then a formalized example.</li><li>Built directly on the video-9 example as an alternative to the plain covered call.</li></ul>
+    
+    <p class="explain">The covered call collar is a direct extension of the covered call. You keep the same neutral setup and add a bought put for downside protection, and the chapter reuses the same worked example so you can compare the two side by side.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-10/00-00-25.jpg" alt="Slide: One step beyond the covered call">
+      <figcaption>Slide · 00:00:25</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s2">
+    <div class="section__k">02 / 16</div>
+    <h3>Quick explanation</h3>
+    
+    <ul class="points"><li>Applied when you already hold a long stock position and do not expect the price to move much.</li><li>Profits from a stable stock price in the same way as the covered call.</li><li>Adds protection against a fall because it involves buying puts as well as writing calls.</li></ul>
+    
+    <p class="explain">Same applications, benefits and drawbacks as the covered call, except you also get downside protection on your long stock if the stock actually goes down.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-10/00-01-15.jpg" alt="Slide: Quick explanation">
+      <figcaption>Slide · 00:01:15</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s3">
+    <div class="section__k">03 / 16</div>
+    <h3>Same neutral bet, with a floor</h3>
+    
+    <ul class="points"><li>You are long stock and expect the price to remain neutral, with no material rise or fall.</li><li>It sacrifices some covered-call profitability to hedge against the stock falling by a decent amount.</li><li>Especially useful for long stock held in a pension, where you want the downside covered.</li></ul>
+    
+    <p class="explain">The collar gives up a little of the covered call&#39;s upside in exchange for a meaningful downside hedge. For a long stock position in a pension it ensures the maximum loss is capped for the entire time to expiration, and you still receive a net credit.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-10/00-05-00.jpg" alt="Slide: Same neutral bet, with a floor">
+      <figcaption>Slide · 00:05:00</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s4">
+    <div class="section__k">04 / 16</div>
+    <h3>The formalized attributes</h3>
+    
+    <ul class="points"><li>Non-Directional, Neutral, 2 transactions, Net Credit.</li><li>Maximum Risk = Limited; Maximum Gain = Limited (the long put is only limited because the stock can only fall to zero).</li><li>Usefulness = HIGH for the retail trader, versus MEDIUM for the covered call.</li></ul>
+    
+    <p class="explain">It is a fairly simple two-leg strategy with an upfront credit received. Both max risk and max gain are limited; the put&#39;s value is bounded only because a stock can fall no further than zero.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-10/00-05-50.jpg" alt="Slide: The formalized attributes">
+      <figcaption>Slide · 00:05:50</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s5">
+    <div class="section__k">05 / 16</div>
+    <h3>Why usefulness is HIGH, not MEDIUM</h3>
+    
+    <ul class="points"><li>As a long stock holder you give up some of the net credit you would get from just writing the call.</li><li>But if the stock falls through the put strike, the P&amp;L gain on the long put is meaningful enough to be a substantially better hedge.</li><li>Not receiving a net credit defeats the purpose and erases the collar&#39;s major advantage over the plain covered call.</li></ul>
+    
+    <p class="explain">The marginal benefit is being paid a credit AND owning a put that gives real downside protection. Once you erase that credit by paying a debit, that major advantage over the covered call disappears; getting paid and getting a superior hedge is the whole motivation.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-10/00-12-05.jpg" alt="Slide: Why usefulness is HIGH, not MEDIUM">
+      <figcaption>Slide · 00:12:05</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s6">
+    <div class="section__k">06 / 16</div>
+    <h3>The four uses, plus a put</h3>
+    
+    <ul class="points"><li>Mirrors the covered call&#39;s four uses: hedge a long position with positive P&amp;L and collect premium; hedge a long position with negative P&amp;L and collect premium; hedge a dividend-paying stock going ex-dividend soon and collect premium; and get a better execution price on an intended long position.</li><li>To each of the four, add on a long OTM put for downside protection.</li><li>A more complete hedge than the simple covered call.</li></ul>
+    
+    <p class="explain">The four uses are identical to the covered call; the collar simply bolts a long OTM put onto each one so the downside of the long stock is protected as well.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-10/00-05-00.jpg" alt="Slide: The four uses, plus a put">
+      <figcaption>Slide · 00:05:00</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s7">
+    <div class="section__k">07 / 16</div>
+    <h3>How to put it on</h3>
+    
+    <ul class="points"><li>Two transactions: write enough calls to cover the long stock owned, and buy the same number of puts.</li><li>Use the same expiration for both, typically the nearest expiry (or longer if you expect stability for longer).</li><li>Write OTM calls at a strike only slightly higher than the current price; buy OTM puts, spending less on them than you receive for the calls so the trade is a net credit.</li><li>Do not write strikes so high that you take in too little premium to cover the puts and end up paying a debit.</li></ul>
+    
+    <p class="explain">The biggest decision is which strikes to use. You write the call because you think the stock will neither rise nor fall, and you spend part of that credit on a put to guard against an unforeseen drop, ensuring a net credit remains.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-10/00-10-00.jpg" alt="Slide: How to put it on">
+      <figcaption>Slide · 00:10:00</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s8">
+    <div class="section__k">08 / 16</div>
+    <h3>The JNJ setup</h3>
+    
+    <ul class="points"><li>You bought JNJ at $140; it is now $133.15, down $6.85 on the trade.</li><li>You now want to own 300 shares, buying an extra 200 at $133, for an average price of $135.34 across the 300.</li><li>Analyzing on Feb 19th, looking at the 2nd of March expiry, dividend of $0.84 coming Feb 26th.</li></ul>
+    
+    <p class="explain">The example scales the video-9 position up to 300 shares at a $135.34 average, then establishes a collar to protect it and bank premium ahead of the dividend.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-10/00-15-00.jpg" alt="Slide: The JNJ setup">
+      <figcaption>Slide · 00:15:00</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s9">
+    <div class="section__k">09 / 16</div>
+    <h3>Reading the options chain</h3>
+    
+    <ul class="points"><li>Calls sit on the left of the chain, puts on the right.</li><li>Sell 3x $134 strike 2nd-of-March calls at $1.12 (you get lifted on your offer).</li><li>Buy 3x $129 strike 2nd-of-March puts at $0.73 (you lift the market maker&#39;s offer).</li></ul>
+    
+    <p class="explain">Both legs use the same 2nd-of-March expiry, sized 3 contracts to cover the 300 shares. The call is sold slightly OTM above the price and the put is bought OTM below it.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-10/00-16-20.jpg" alt="Slide: Reading the options chain">
+      <figcaption>Slide · 00:16:20</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s10">
+    <div class="section__k">10 / 16</div>
+    <h3>The net credit and breakeven</h3>
+    
+    <ul class="points"><li>Net credit = $1.12 - $0.73 = $0.39 per contract; with the 100-share multiplier that is $0.39 x 300 = $117.</li><li>Breakeven = Starting Point $133 - $0.39 credit = $132.61.</li><li>You lift the market maker&#39;s offer on the put rather than bidding for it.</li></ul>
+    
+    <p class="explain">Because the call premium exceeds the put cost, the collar takes in a $0.39 net credit ($117), and the credit pulls the breakeven below the starting point to $132.61.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-10/00-16-45.jpg" alt="Slide: The net credit and breakeven">
+      <figcaption>Slide · 00:16:45</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s11">
+    <div class="section__k">11 / 16</div>
+    <h3>Max profit scenario</h3>
+    
+    <ul class="points"><li>If JNJ closes at $134 ex-dividend on March 2nd, both the call and the put expire worthless and P&amp;L is maximized.</li><li>Stock: ($134 - $133) x 300 = $368; dividend: $0.84 x 300 = $184; options credit: $117; total = $669.</li><li>Execution improves by $0.84 + $0.39 = $1.23, cutting the $135.34 average to a new theoretical execution of $134.11 — turning a losing position into a winner.</li></ul>
+    
+    <p class="explain">At the $134 call strike the collar makes its maximum, combining stock gain, the collected dividend and the options credit for $669, and the added $1.23 of value lowers the effective cost basis to $134.11.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-10/00-21-40.jpg" alt="Slide: Max profit scenario">
+      <figcaption>Slide · 00:21:40</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s12">
+    <div class="section__k">12 / 16</div>
+    <h3>The downside test: an FDA failure</h3>
+    
+    <ul class="points"><li>A phase-three cardiovascular drug worth $7/share fails at the FDA; JNJ gaps $7 lower to $127 in the pre-market.</li><li>Plain covered call: 100 sh from $140, only the $0.80 credit as cushion; down $12.20/share = -8.71%, and it keeps growing if the stock falls further.</li><li>Collar: the $129 puts are in the money by $2; loss is floored at the put strike, so max loss is $6.34 off the $135.34 average = -4.68%.</li><li>Below $129 every 1c further fall in the stock is offset 1c by the put, so losses go no further.</li></ul>
+    
+    <p class="explain">This is the whole point of the collar. On a real shock the plain covered call keeps bleeding past -8.71%, but the collar&#39;s put pins the maximum loss at the $129 strike (-4.68%) no matter how far the stock falls.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-10/00-12-05.jpg" alt="Slide: The downside test: an FDA failure">
+      <figcaption>Slide · 00:12:05</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s13">
+    <div class="section__k">13 / 16</div>
+    <h3>Breakeven and profit formulas</h3>
+    
+    <ul class="points"><li>Breakeven = Starting Point + Net Premium; if it is a credit the premium is negative, so you SUBTRACT it (a lower breakeven is preferable).</li><li>Split into Leg A (write the call) and Leg B (buy the put).</li><li>Max profit is made when the stock equals the Leg A call strike; profit is also made when the stock is &gt;= Starting Point but &lt; the call strike.</li><li>Profit per share = (underlying price - Starting Point) + (Leg A call price - Leg B put price), which can be a debit or a credit.</li></ul>
+    
+    <p class="explain">The credit lowers the breakeven below the reference price. The profit calculation adds two legs together: the stock&#39;s move plus the net options premium, maximized once the stock reaches the written call strike.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-10/00-28-05.jpg" alt="Slide: Breakeven and profit formulas">
+      <figcaption>Slide · 00:28:05</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s14">
+    <div class="section__k">14 / 16</div>
+    <h3>Max loss and the opportunity-cost caveat</h3>
+    
+    <ul class="points"><li>Maximum loss occurs when the underlying equals the Leg B put strike (e.g. $129); both calls and puts expire worthless and you keep the credit.</li><li>Max loss per share = (Starting Point - Leg B put strike) - (Leg A call price - Leg B put price).</li><li>Protection is not full — you choose an OTM put strike, which sets the level where your maximum loss is pinned.</li><li>Opportunity cost: if the stock rallies above the Leg A call strike the calls can be assigned and you may be forced to sell at that strike, so it is a profit but less than just holding the stock; not ideal if a big up-move is expected (you can always close the short call).</li></ul>
+    
+    <p class="explain">The put strike sets a hard floor on the loss, but a slightly-OTM put means the floor sits a little below your cost. The trade-off on the upside is assignment risk: a big rally through the call strike caps your gain, so the collar is not for stocks you expect to jump.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-10/00-31-10.jpg" alt="Slide: Max loss and the opportunity-cost caveat">
+      <figcaption>Slide · 00:31:10</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s15">
+    <div class="section__k">15 / 16</div>
+    <h3>Company X reference example</h3>
+    
+    <ul class="points"><li>Stock at $50; sell the $52 call at $1.00 and buy the $47 put at $0.50.</li><li>Net credit = $1.00 - $0.50 = $0.50.</li><li>Maximum profit = $250, made at the $52 call strike.</li></ul>
+    
+    <p class="explain">The generic template: an OTM call written above the price and a cheaper OTM put bought below it produces a $0.50 net credit and a $250 max profit at the call strike.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-10/00-35-25.jpg" alt="Slide: Company X reference example">
+      <figcaption>Slide · 00:35:25</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s16">
+    <div class="section__k">16 / 16</div>
+    <h3>Where the max profit and loss sit</h3>
+    
+    <ul class="points"><li>Maximum gain is reached when the stock rises to at or slightly below the written call strike, then you hope for a rally once calls and puts have expired worthless.</li><li>Maximum loss is barriered at the bought put strike for the whole life of the trade.</li><li>Net conclusion: HIGH usefulness versus the covered call&#39;s MEDIUM, because you still receive a credit and gain real downside protection.</li></ul>
+    
+    <p class="explain">The strategy pays best on a neutral-to-slightly-up move into the call strike, while the bought put caps the downside throughout, which is exactly why it ranks above the plain covered call for the retail mandate. Next video: index hedging and portfolio hedges.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-10/00-35-50.jpg" alt="Slide: Where the max profit and loss sit">
+      <figcaption>Slide · 00:35:50</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+
+  
+  <section class="section">
+    <div class="section__k">Reference</div>
+    <h3>Glossary</h3>
+    <ul class="glossary">
+      
+      <li><span class="term">Covered call collar</span><div class="def">Long stock plus a written OTM call (Leg A) and a bought OTM put (Leg B) at the same expiry, structured for a net credit; a neutral, non-directional strategy that caps both gain and loss.</div></li>
+      
+      <li><span class="term">Leg A</span><div class="def">The written (short) OTM call option; generates the premium credit and caps the upside at its strike.</div></li>
+      
+      <li><span class="term">Leg B</span><div class="def">The bought (long) OTM put option; costs premium but sets a hard floor on the downside at its strike.</div></li>
+      
+      <li><span class="term">Net credit</span><div class="def">The premium collected on the call minus the premium paid for the put; the collar must be structured so this is positive, otherwise the hedge&#39;s main advantage over the covered call is lost.</div></li>
+      
+      <li><span class="term">Breakeven</span><div class="def">Starting Point + Net Premium; because a collar is a credit, the premium is subtracted, giving a breakeven below the starting point (e.g. $132.61).</div></li>
+      
+      <li><span class="term">Starting point</span><div class="def">The reference/execution price used to calculate breakeven, profit and loss (e.g. $133 in the JNJ example).</div></li>
+      
+      <li><span class="term">Maximum profit</span><div class="def">Made when the stock reaches the written call strike: (call-strike - Starting Point) + (call price - put price) per share.</div></li>
+      
+      <li><span class="term">Maximum loss</span><div class="def">Made when the stock reaches the bought put strike: (Starting Point - put strike) - (call price - put price) per share; below the strike every 1c fall is offset 1c by the put.</div></li>
+      
+      <li><span class="term">Opportunity cost</span><div class="def">The risk that a rally above the written call strike gets your stock assigned, so you make less than if you had simply held the stock; you can always close the short call to avoid it.</div></li>
+      
+      <li><span class="term">Usefulness ranking</span><div class="def">Anton&#39;s retail-mandate ranking; the covered call collar is HIGH (credit plus a genuine downside floor), the plain covered call is MEDIUM.</div></li>
+      
+    </ul>
+  </section>
+  
+
+  <nav class="pager">
+    
+    <a class="prev" href="chapter-63.html">
+      <small>← 09 Previous</small><span>The Covered Call</span></a>
+    
+    
+    <a class="next disabled"><small>End of the macro block</small><span>Portfolio construction is next</span></a>
+    
+  </nav>
+</div>
+
+  </main>
+</div>
+</body>
+</html>
