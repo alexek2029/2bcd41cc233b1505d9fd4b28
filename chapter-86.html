@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>PFTM Forex 04 · Forex Market Foundation 4 — Basic Computational Methods — The Macro Playbook — The Top-Down Macro Read</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="layout">
+  <nav class="rail" id="rail">
+    <div class="rail__brand">The Macro Playbook</div>
+    <a href="index.html" style="text-decoration:none;color:inherit">
+      <div class="rail__title">The Top-Down<br>Macro Read</div>
+    </a>
+    <div class="rail__sub">Anton Kreil · ITPL Foundations + PTM 2.0, distilled</div>
+    <button class="rail__toggle" onclick="document.getElementById('rail').classList.toggle('open')">Chapters ▾</button>
+    <ul class="rail__nav">
+      
+      <li><a href="chapter-01.html"
+             class="">
+        <span class="rn">A</span>
+        <span class="rt">Professional Traders vs Retail Traders 101<small>Foundations · What a professional tr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-02.html"
+             class="">
+        <span class="rn">B</span>
+        <span class="rt">Professional Traders vs Retail Traders 102<small>Foundations · Alpha vs absolute retu</small></span>
+      </a></li>
+      
+      <li><a href="chapter-03.html"
+             class="">
+        <span class="rn">C</span>
+        <span class="rt">Realized Volatility 1<small>Foundations · Measuring an instrumen</small></span>
+      </a></li>
+      
+      <li><a href="chapter-04.html"
+             class="">
+        <span class="rn">D</span>
+        <span class="rt">Realized Volatility 2<small>Foundations · The spreadsheet class:</small></span>
+      </a></li>
+      
+      <li><a href="chapter-05.html"
+             class="">
+        <span class="rn">E</span>
+        <span class="rt">Realized Volatility 3<small>Foundations · Average True Range Per</small></span>
+      </a></li>
+      
+      <li><a href="chapter-06.html"
+             class="">
+        <span class="rn">F</span>
+        <span class="rt">Implied Volatility 1<small>Foundations · The VIX as the market&#39;</small></span>
+      </a></li>
+      
+      <li><a href="chapter-07.html"
+             class="">
+        <span class="rn">G</span>
+        <span class="rt">Implied Volatility 2<small>Foundations · Solving for an option&#39;</small></span>
+      </a></li>
+      
+      <li><a href="chapter-08.html"
+             class="">
+        <span class="rn">H</span>
+        <span class="rt">Portfolio Volatility 1<small>Foundations · The concepts of whole-</small></span>
+      </a></li>
+      
+      <li><a href="chapter-09.html"
+             class="">
+        <span class="rn">I</span>
+        <span class="rt">Portfolio Volatility 2<small>Foundations · Calculating a portfoli</small></span>
+      </a></li>
+      
+      <li><a href="chapter-10.html"
+             class="">
+        <span class="rn">J</span>
+        <span class="rt">Becoming a Professional Level Trader<small>Foundations · The IPLT capstone — ho</small></span>
+      </a></li>
+      
+      <li><a href="chapter-11.html"
+             class="">
+        <span class="rn">01</span>
+        <span class="rt">The Framework<small>PTM 2.0 · The framework</small></span>
+      </a></li>
+      
+      <li><a href="chapter-12.html"
+             class="">
+        <span class="rn">02</span>
+        <span class="rt">The Field of Play: Bull &amp; Bear Markets<small>PTM 2.0 · Field of play</small></span>
+      </a></li>
+      
+      <li><a href="chapter-13.html"
+             class="">
+        <span class="rn">03</span>
+        <span class="rt">Gross Domestic Product<small>PTM 2.0 · GDP</small></span>
+      </a></li>
+      
+      <li><a href="chapter-14.html"
+             class="">
+        <span class="rn">04</span>
+        <span class="rt">Leading Indicators 1: Real Interest Rates &amp; the Yield Curve<small>PTM 2.0 · Rates · yield curve</small></span>
+      </a></li>
+      
+      <li><a href="chapter-15.html"
+             class="">
+        <span class="rn">05</span>
+        <span class="rt">Corporate Bonds &amp; Credit Spreads<small>PTM 2.0 · Credit spreads</small></span>
+      </a></li>
+      
+      <li><a href="chapter-16.html"
+             class="">
+        <span class="rn">06</span>
+        <span class="rt">M2 Money Supply: The Accessory Leading Indicator<small>PTM 2.0 · M2 money supply</small></span>
+      </a></li>
+      
+      <li><a href="chapter-17.html"
+             class="">
+        <span class="rn">07</span>
+        <span class="rt">The ISM Manufacturing PMI<small>PTM 2.0 · ISM manufacturing</small></span>
+      </a></li>
+      
+      <li><a href="chapter-18.html"
+             class="">
+        <span class="rn">08</span>
+        <span class="rt">The ISM Non-Manufacturing Report on Business (Services PMI)<small>PTM 2.0 · ISM services</small></span>
+      </a></li>
+      
+      <li><a href="chapter-19.html"
+             class="">
+        <span class="rn">09</span>
+        <span class="rt">Consumer Sentiment<small>PTM 2.0 · UMich sentiment</small></span>
+      </a></li>
+      
+      <li><a href="chapter-20.html"
+             class="">
+        <span class="rn">10</span>
+        <span class="rt">Building Permits: The Housing Leading Indicator<small>PTM 2.0 · Housing · permits</small></span>
+      </a></li>
+      
+      <li><a href="chapter-21.html"
+             class="">
+        <span class="rn">11</span>
+        <span class="rt">NFIB Small Business Optimism Index<small>PTM 2.0 · NFIB small biz</small></span>
+      </a></li>
+      
+      <li><a href="chapter-22.html"
+             class="">
+        <span class="rn">12</span>
+        <span class="rt">Cyclical Commodities as a Leading Indicator<small>PTM 2.0 · Cyclical commodities</small></span>
+      </a></li>
+      
+      <li><a href="chapter-23.html"
+             class="">
+        <span class="rn">13</span>
+        <span class="rt">European Economic Sentiment Indicator (ESI)<small>PTM 2.0 · Europe · ESI</small></span>
+      </a></li>
+      
+      <li><a href="chapter-24.html"
+             class="">
+        <span class="rn">14</span>
+        <span class="rt">China Leading Indicators: Official vs Caixin PMI and Real Rates<small>PTM 2.0 · China · Caixin</small></span>
+      </a></li>
+      
+      <li><a href="chapter-25.html"
+             class="">
+        <span class="rn">15</span>
+        <span class="rt">Recap: Bringing the Leading Indicators Together<small>PTM 2.0 · Recap · coincident</small></span>
+      </a></li>
+      
+      <li><a href="chapter-26.html"
+             class="">
+        <span class="rn">16</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 1a<small>PTM 2.0 · From the macro bias to</small></span>
+      </a></li>
+      
+      <li><a href="chapter-27.html"
+             class="">
+        <span class="rn">17</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 1b<small>PTM 2.0 · Portfolio modelling in</small></span>
+      </a></li>
+      
+      <li><a href="chapter-28.html"
+             class="">
+        <span class="rn">18</span>
+        <span class="rt">Foundations of Long/Short Portfolio Management 2<small>PTM 2.0 · Portfolio volatility f</small></span>
+      </a></li>
+      
+      <li><a href="chapter-29.html"
+             class="">
+        <span class="rn">19</span>
+        <span class="rt">Foundations of Long Short Portfolio Management 3<small>PTM 2.0 · Portfolio correlation </small></span>
+      </a></li>
+      
+      <li><a href="chapter-30.html"
+             class="">
+        <span class="rn">20</span>
+        <span class="rt">Foundations of Long Short Portfolio Management 4<small>PTM 2.0 · Beta and beta-neutral </small></span>
+      </a></li>
+      
+      <li><a href="chapter-31.html"
+             class="">
+        <span class="rn">21</span>
+        <span class="rt">Foundations of Long / Short Portfolio Management Recap<small>PTM 2.0 · The capstone of the po</small></span>
+      </a></li>
+      
+      <li><a href="chapter-32.html"
+             class="">
+        <span class="rn">22</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 1<small>PTM 2.0 · The bottom-up, fundame</small></span>
+      </a></li>
+      
+      <li><a href="chapter-33.html"
+             class="">
+        <span class="rn">23</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 2<small>PTM 2.0 · The quant pass in full</small></span>
+      </a></li>
+      
+      <li><a href="chapter-34.html"
+             class="">
+        <span class="rn">24</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 3<small>PTM 2.0 · The quant valuation bl</small></span>
+      </a></li>
+      
+      <li><a href="chapter-35.html"
+             class="">
+        <span class="rn">25</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 4<small>PTM 2.0 · The synthesis of the q</small></span>
+      </a></li>
+      
+      <li><a href="chapter-36.html"
+             class="">
+        <span class="rn">26</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 5<small>PTM 2.0 · The SHORT-side mirror </small></span>
+      </a></li>
+      
+      <li><a href="chapter-37.html"
+             class="">
+        <span class="rn">27</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 6<small>PTM 2.0 · Turnaround Stories vs </small></span>
+      </a></li>
+      
+      <li><a href="chapter-38.html"
+             class="">
+        <span class="rn">28</span>
+        <span class="rt">Trade Idea Generation – Quantitative Processing 7<small>PTM 2.0 · Data-cleansing a downl</small></span>
+      </a></li>
+      
+      <li><a href="chapter-39.html"
+             class="">
+        <span class="rn">29</span>
+        <span class="rt">Recap of Quantitative Processing<small>PTM 2.0 · The capstone of the tr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-40.html"
+             class="">
+        <span class="rn">30</span>
+        <span class="rt">Qualitative Processing<small>PTM 2.0 · The qualitative half o</small></span>
+      </a></li>
+      
+      <li><a href="chapter-41.html"
+             class="">
+        <span class="rn">31</span>
+        <span class="rt">Trade Idea Generation – Qualitative Processing<small>PTM 2.0 · The deeper qualitative</small></span>
+      </a></li>
+      
+      <li><a href="chapter-42.html"
+             class="">
+        <span class="rn">32</span>
+        <span class="rt">Trade Idea Generation – Identifying Catalysts<small>PTM 2.0 · The final fundamental </small></span>
+      </a></li>
+      
+      <li><a href="chapter-43.html"
+             class="">
+        <span class="rn">33</span>
+        <span class="rt">Trade Idea Generation Template — Part 1<small>PTM 2.0 · How to formalize the w</small></span>
+      </a></li>
+      
+      <li><a href="chapter-44.html"
+             class="">
+        <span class="rn">34</span>
+        <span class="rt">Trade Idea Generation Template — Part 2<small>PTM 2.0 · Finishing the ZEN pric</small></span>
+      </a></li>
+      
+      <li><a href="chapter-45.html"
+             class="">
+        <span class="rn">35</span>
+        <span class="rt">Macro-Driven Trade Ideas<small>PTM 2.0 · Marrying the macro and</small></span>
+      </a></li>
+      
+      <li><a href="chapter-46.html"
+             class="">
+        <span class="rn">36</span>
+        <span class="rt">International Trade Ideas via ADRs<small>PTM 2.0 · Bolt the international</small></span>
+      </a></li>
+      
+      <li><a href="chapter-47.html"
+             class="">
+        <span class="rn">37</span>
+        <span class="rt">Technical Analysis (Timing)<small>PTM 2.0 · Charts don&#39;t generate </small></span>
+      </a></li>
+      
+      <li><a href="chapter-48.html"
+             class="">
+        <span class="rn">38</span>
+        <span class="rt">Price Action (Momentum)<small>PTM 2.0 · The momentum half of t</small></span>
+      </a></li>
+      
+      <li><a href="chapter-49.html"
+             class="">
+        <span class="rn">39</span>
+        <span class="rt">Preventative Risk Management (PRM)<small>PTM 2.0 · Get your head right be</small></span>
+      </a></li>
+      
+      <li><a href="chapter-50.html"
+             class="">
+        <span class="rn">40</span>
+        <span class="rt">Preventative Risk Management — Part 2 (Portfolio Limits)<small>PTM 2.0 · Turning the volatility</small></span>
+      </a></li>
+      
+      <li><a href="chapter-51.html"
+             class="">
+        <span class="rn">41</span>
+        <span class="rt">Eliminating Emotion, Staying Objective<small>PTM 2.0 · Treat your trading acc</small></span>
+      </a></li>
+      
+      <li><a href="chapter-52.html"
+             class="">
+        <span class="rn">42</span>
+        <span class="rt">Track Record &amp; Trading Statistics (Part 1)<small>PTM 2.0 · Building the three-tab</small></span>
+      </a></li>
+      
+      <li><a href="chapter-53.html"
+             class="">
+        <span class="rn">43</span>
+        <span class="rt">Track Record &amp; Trading Statistics (Part 2 — Advanced)<small>PTM 2.0 · The advanced ratios — </small></span>
+      </a></li>
+      
+      <li><a href="chapter-54.html"
+             class="">
+        <span class="rn">44</span>
+        <span class="rt">Getting Organized &amp; Next Steps<small>PTM 2.0 · The closing chapter of</small></span>
+      </a></li>
+      
+      <li><a href="chapter-55.html"
+             class="">
+        <span class="rn">01</span>
+        <span class="rt">Defining the Mandate (Part 1)<small>POTM Options · Why the retail options</small></span>
+      </a></li>
+      
+      <li><a href="chapter-56.html"
+             class="">
+        <span class="rn">02</span>
+        <span class="rt">Defining the Mandate (Part 2)<small>POTM Options · Why most options educa</small></span>
+      </a></li>
+      
+      <li><a href="chapter-57.html"
+             class="">
+        <span class="rn">03</span>
+        <span class="rt">Filtering Options Strategies for Usefulness<small>POTM Options · How Anton Kreil filter</small></span>
+      </a></li>
+      
+      <li><a href="chapter-58.html"
+             class="">
+        <span class="rn">04</span>
+        <span class="rt">Marginal Benefits 1 — The Advantages of Options<small>POTM Options · Why a long call or lon</small></span>
+      </a></li>
+      
+      <li><a href="chapter-59.html"
+             class="">
+        <span class="rn">05</span>
+        <span class="rt">Marginal Benefits 2 — The Disadvantages of Options<small>POTM Options · Why time decay, timing</small></span>
+      </a></li>
+      
+      <li><a href="chapter-60.html"
+             class="">
+        <span class="rn">06</span>
+        <span class="rt">Long Call &amp; Put Options Formalized<small>POTM Options · The two simplest direc</small></span>
+      </a></li>
+      
+      <li><a href="chapter-61.html"
+             class="">
+        <span class="rn">07</span>
+        <span class="rt">Naked Short Puts<small>POTM Options · Selling a put for a cr</small></span>
+      </a></li>
+      
+      <li><a href="chapter-62.html"
+             class="">
+        <span class="rn">08</span>
+        <span class="rt">Naked Short Calls<small>POTM Options · The one strategy Anton</small></span>
+      </a></li>
+      
+      <li><a href="chapter-63.html"
+             class="">
+        <span class="rn">09</span>
+        <span class="rt">The Covered Call<small>POTM Options · Own the stock and sell</small></span>
+      </a></li>
+      
+      <li><a href="chapter-64.html"
+             class="">
+        <span class="rn">10</span>
+        <span class="rt">The Covered Call Collar<small>POTM Options · Extend the covered cal</small></span>
+      </a></li>
+      
+      <li><a href="chapter-65.html"
+             class="">
+        <span class="rn">11</span>
+        <span class="rt">Index Options &amp; Portfolio Hedging<small>POTM Options · Using index options to</small></span>
+      </a></li>
+      
+      <li><a href="chapter-66.html"
+             class="">
+        <span class="rn">12</span>
+        <span class="rt">Options Spreads 1 — The Bull Call Spread<small>POTM Options · Buy a lower-strike cal</small></span>
+      </a></li>
+      
+      <li><a href="chapter-67.html"
+             class="">
+        <span class="rn">13</span>
+        <span class="rt">Options Spreads 2 — The Bear Put Spread<small>POTM Options · The bearish mirror of </small></span>
+      </a></li>
+      
+      <li><a href="chapter-68.html"
+             class="">
+        <span class="rn">14</span>
+        <span class="rt">Market Makers, Volatility &amp; the Greeks<small>POTM Options · How options market mak</small></span>
+      </a></li>
+      
+      <li><a href="chapter-69.html"
+             class="">
+        <span class="rn">15</span>
+        <span class="rt">Recap — What We Have Learnt So Far<small>POTM Options · A stock-take of the op</small></span>
+      </a></li>
+      
+      <li><a href="chapter-70.html"
+             class="">
+        <span class="rn">16</span>
+        <span class="rt">Ratio Spreads 1 — The Short Bull Ratio Spread<small>POTM Options · Buy more cheap OTM cal</small></span>
+      </a></li>
+      
+      <li><a href="chapter-71.html"
+             class="">
+        <span class="rn">17</span>
+        <span class="rt">Ratio Spreads 2 — The Short Bear Ratio Spread<small>POTM Options · The bearish mirror of </small></span>
+      </a></li>
+      
+      <li><a href="chapter-72.html"
+             class="">
+        <span class="rn">18</span>
+        <span class="rt">Ladder Spreads 1 — The Bull Call Ladder<small>POTM Options · A three-legged bullish</small></span>
+      </a></li>
+      
+      <li><a href="chapter-73.html"
+             class="">
+        <span class="rn">19</span>
+        <span class="rt">Ladder Spreads 2 — The Bear Put Ladder<small>POTM Options · The bearish mirror of </small></span>
+      </a></li>
+      
+      <li><a href="chapter-74.html"
+             class="">
+        <span class="rn">20</span>
+        <span class="rt">Volatility Masterclass 1 — Why Volatility Is Risk AND Reward<small>POTM Options · Volatility is the fluc</small></span>
+      </a></li>
+      
+      <li><a href="chapter-75.html"
+             class="">
+        <span class="rn">21</span>
+        <span class="rt">Volatility Masterclass 2 — Turning IV Into Expected Ranges<small>POTM Options · Back implied volatilit</small></span>
+      </a></li>
+      
+      <li><a href="chapter-76.html"
+             class="">
+        <span class="rn">22</span>
+        <span class="rt">Long Straddles — The Non-Directional Volatility Bet<small>POTM Options · Buy an ATM call and an</small></span>
+      </a></li>
+      
+      <li><a href="chapter-77.html"
+             class="">
+        <span class="rn">23</span>
+        <span class="rt">Long Strangles — The Wider, Cheaper Straddle<small>POTM Options · The OTM cousin of the </small></span>
+      </a></li>
+      
+      <li><a href="chapter-78.html"
+             class="">
+        <span class="rn">24</span>
+        <span class="rt">Strap Straddle — The Bullish Volatility Bet<small>POTM Options · The first directional </small></span>
+      </a></li>
+      
+      <li><a href="chapter-79.html"
+             class="">
+        <span class="rn">25</span>
+        <span class="rt">Strip Straddle — The Bearish Volatility Bet<small>POTM Options · Buy 1 ATM call and 2 A</small></span>
+      </a></li>
+      
+      <li><a href="chapter-80.html"
+             class="">
+        <span class="rn">26</span>
+        <span class="rt">Strap Strangle — The Bullish OTM Volatility Bet<small>POTM Options · Two out-of-the-money c</small></span>
+      </a></li>
+      
+      <li><a href="chapter-81.html"
+             class="">
+        <span class="rn">27</span>
+        <span class="rt">Strip Strangle — The Bearish OTM Volatility Bet<small>POTM Options · Buy two OTM puts again</small></span>
+      </a></li>
+      
+      <li><a href="chapter-82.html"
+             class="">
+        <span class="rn">28</span>
+        <span class="rt">Recap &amp; Exam Preparation<small>POTM Options · The closing lesson: wh</small></span>
+      </a></li>
+      
+      <li><a href="chapter-83.html"
+             class="">
+        <span class="rn">01</span>
+        <span class="rt">Forex Market Foundation — The Opportunity Set<small>PFTM Forex · How professional trade</small></span>
+      </a></li>
+      
+      <li><a href="chapter-84.html"
+             class="">
+        <span class="rn">02</span>
+        <span class="rt">Forex Market Foundation 2 — Fixed vs Floating Regimes<small>PFTM Forex · How a currency&#39;s excha</small></span>
+      </a></li>
+      
+      <li><a href="chapter-85.html"
+             class="">
+        <span class="rn">03</span>
+        <span class="rt">Forex Market Foundation 3 — Infrastructure<small>PFTM Forex · Who really moves the F</small></span>
+      </a></li>
+      
+      <li><a href="chapter-86.html"
+             class="is-active">
+        <span class="rn">04</span>
+        <span class="rt">Forex Market Foundation 4 — Basic Computational Methods<small>PFTM Forex · The quantitative found</small></span>
+      </a></li>
+      
+    </ul>
+    <div class="rail__foot">
+      Distilled from slides + transcript.<br>
+      Every number grounded in the lesson.<br>
+      Not affiliated with ITPM / A. Kreil.
+    </div>
+  </nav>
+  <main class="main">
+    
+<div class="wrap">
+  <header class="hero">
+    <div class="hero__num reveal">PFTM Forex · Chapter 04</div>
+    <h1 class="reveal d1">Forex Market Foundation 4 — Basic Computational Methods</h1>
+    <p class="hero__sub reveal d1">The quantitative foundation of forex: quoting, pips, sizing, margin, P&amp;L and carry — and why pros compute everything in percentages, not pips.</p>
+    <p class="hero__lead reveal d2">Retail traders think a few sums plus charts make a trader. They don&#39;t. This chapter builds the mathematical rigour — cross rates, pips vs basis points, trading sizes, margin/leverage/exposure, P&amp;L and carry/rollover — that hedge funds and prop desks take for granted, and shows how the pip-obsessed retail machine masks the true moves in forex.</p>
+    <div class="hero__chips reveal d3">
+      <span class="chip chip--signal"><span class="dot"></span>Compute everything in percentages and basis points, size to gross exposure, and always check the carry.</span>
+      <span class="chip"><b>13</b>&nbsp;min read</span>
+      <span class="chip"><b>57</b>&nbsp;slides</span>
+    </div>
+  </header>
+
+  
+  <section class="gist reveal">
+    <h2>The gist</h2>
+    <ul><li>Left-to-right convention: a quote is how much one unit of the LEFT (base) currency buys of the RIGHT (quote) currency — USD/JPY 119.786 means 1 USD buys 119.786 JPY. Cross rate AUD/JPY = USD/JPY × AUD/USD = 93.547.</li><li>Pips are the unit size: majors quote to 4 decimals (1 pip = 0.0001); JPY and INR pairs quote to 3 decimals (1 pip = 0.001). EUR/USD 1.1174→1.1274 = 100 pips.</li><li>Pips MASK the true move. EUR/USD +100 pips = (1.1274−1.1174)/1.1174 = 0.895% (89.5 bp) but USD/INR −100 pips = 0.144% (14.4 bp) — same pips, very different returns. Pros compare on a level playing field: 1% = 100 basis points.</li><li>Trading sizes: 1 Lot = 100,000, 1 Mini Lot = 10,000, 1 Micro Lot = 1,000, 1 Nano Lot = 100 currency pairs. Trading size is the base (left) currency; exposure and P&amp;L are expressed in the quote (right) currency.</li><li>Pip Value = 1 Pip × Trading Size (in quote currency). GBP/USD 1 Lot = 0.0001 × 100,000 = $10/pip; 1 Mini Lot = $1/pip.</li><li>1% margin requirement = 100× leverage: put up GBP1,000 to control GBP100,000. Leverage does NOT create opportunity — a 60-pip daily-vol pair moves 60 pips whether or not you borrow; borrowing only increases the volatility of your P&amp;L. Volatility, not leverage, is opportunity.</li><li>P&amp;L = Base × (exit − entry), in quote currency: EUR/USD 1 Lot 1.10356→1.12479 = 100,000 × 0.02123 = $2,123 (= €1,887 at 1.12479). USD/JPY 169 pips = 1.40% = $1,400.</li><li>Carry/rollover: you go long a high-yielder (asset, receive deposit rate) and short a low-yielder (liability, pay lending rate). Worked table (deposit 1%/7%, lending 4%/12%) → Long A/Short B = −11%/yr negative carry; Short A/Long B = +3%/yr positive carry. Per 1 Lot daily rollover ≈ −31.89 (long A/B) vs +8.70 (short A/B).</li><li>Real risk is GROSS EXPOSURE, not how much you can borrow. Fund the account well, choose your own exposure, and if the currency pair&#39;s volatility over the horizon exceeds your margin-call percentage you can be wiped out.</li></ul>
+  </section>
+  
+
+  
+  <section class="section" id="s1">
+    <div class="section__k">01 / 21</div>
+    <h3>Why the numbers matter — mathematical rigour, not a few sums</h3>
+    
+    <ul class="points"><li>Forex is entirely numbers-based; opportunity and risk are ultimately read off volatility, so you need a computational foundation to measure them.</li><li>Hedge funds, pension funds and bank prop desks take a fundamentally driven approach and demand this rigour — it is table stakes for a career in the industry.</li><li>Retail traders think a little of this plus technical analysis plus one monthly number (e.g. non-farm payrolls) is a strategy. It isn&#39;t: 90% of retail traders lose 90% of their money within 90 days.</li><li>These methods are called &#39;basic&#39; only because the pros go much further; getting them right gives you confidence and stops panic mistakes when trades inevitably go wrong.</li></ul>
+    
+    <p class="explain">The chapter frames computation as a foundation, not a trading system. Knowing how to work out a P&amp;L or a cross rate is necessary but nowhere near sufficient — it is what a professional calls upon to help make decisions, not the decision itself.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-04/00-05-10.jpg" alt="Slide: Why the numbers matter — mathematical rigour, not a few sums">
+      <figcaption>Slide · 00:05:10</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s2">
+    <div class="section__k">02 / 21</div>
+    <h3>Left-to-right convention: base and quote currency</h3>
+    
+    <ul class="points"><li>Everything is expressed left to right: how much the currency on the LEFT is worth. USD/JPY 119.786 = &#39;1 US Dollar buys 119.786 Japanese Yen&#39;.</li><li>The currency on the left is the BASE currency; the currency on the right is the QUOTE currency.</li><li>Long a pair = you want it to appreciate (go up); short a pair = you want it to depreciate (go down).</li><li>AUD/USD 0.78095 = &#39;1 Australian Dollar buys 0.78095 USD&#39;.</li></ul>
+    
+    <p class="explain">This convention governs every quote, exposure and P&amp;L calculation that follows, so it is worth cementing until it becomes second nature — the base is always the left, the quote always the right.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-04/00-05-10.jpg" alt="Slide: Left-to-right convention: base and quote currency">
+      <figcaption>Slide · 00:05:10</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s3">
+    <div class="section__k">03 / 21</div>
+    <h3>Cross rates: deriving one pair from two dollar crosses</h3>
+    
+    <ul class="points"><li>AUD/JPY = USD/JPY × AUD/USD = 93.547 — &#39;1 Australian Dollar buys 93.547 Japanese Yen&#39;. When the common currency (USD) is numerator in one and denominator in the other, you MULTIPLY.</li><li>The reciprocal flips the pair: JPY/AUD = 1 ÷ AUD/JPY = 0.010714.</li><li>When the common currency is the DENOMINATOR in both (e.g. USD/SGD and EUR/SGD), you DIVIDE: EUR/USD = EUR/SGD ÷ USD/SGD = 1.088732; reverse USD/EUR = 1 ÷ that = 0.9185.</li><li>The tradable-crosses spreadsheet (from video 2) is a full cross-rate matrix; the homework is to build your own and derive the formulas yourself rather than being spoon-fed.</li></ul>
+    
+    <p class="explain">Cross rates also matter for optimal trade construction: if something is bullish for AUD and bearish for JPY, buying AUD/JPY concentrates the same capital on both views at once, rather than splitting it across a long USD/JPY and a long AUD/USD that partly cancel on the dollar.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-04/00-09-40.jpg" alt="Slide: Cross rates: deriving one pair from two dollar crosses">
+      <figcaption>Slide · 00:09:40</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s4">
+    <div class="section__k">04 / 21</div>
+    <h3>Charts are just a picture of the numbers</h3>
+    
+    <ul class="points"><li>Long USD/JPY: the pair rises from ~101 up through the 110s and peaks ~122 — a long benefits as the pair appreciates.</li><li>Short AUD/USD: the pair falls from ~0.94 down to ~0.77 — a short benefits as the pair depreciates.</li><li>AUD/JPY (the cross): choppy/range-bound, up to ~102, down to ~90, recovering to ~93 — mechanically derived from USD/JPY × AUD/USD.</li><li>Charts and spreadsheets link together: working out the cross rate in a spreadsheet and viewing the chart show the same reality from two angles.</li></ul>
+    
+    <p class="explain">The candlestick charts are a pictorial display of the exact rates just computed — seeing the long, the short and the derived cross side by side reinforces how exchange rates and cross rates connect.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-04/00-17-40.jpg" alt="Slide: Charts are just a picture of the numbers">
+      <figcaption>Slide · 00:17:40</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s5">
+    <div class="section__k">05 / 21</div>
+    <h3>Pips: the unit size of a currency pair</h3>
+    
+    <ul class="points"><li>Currency pairs are expressed in unit sizes called &#39;pips&#39;. Every tradable pair is quoted to 4 decimal places EXCEPT JPY and INR pairs, which are quoted to 3.</li><li>For majors (4dp), 1 pip = 0.0001. Buy EUR/USD at 1.1174, sell at 1.1274 → 1.1274 − 1.1174 = 0.0100 = 100 pips.</li><li>For JPY and INR crosses (3dp), 1 pip = 0.001, so 100 pips = 0.100. Short EUR/INR at 69.267, buy back at 69.167 → 0.100 = 100 pips.</li><li>Your retail platform shows everything left-to-right and in pip unit sizes — but pips are not a base for comparing pairs.</li></ul>
+    
+    <p class="explain">Pips are the platform&#39;s native measurement and you must understand them, but they are only a unit of price movement — not a comparable measure of return across different pairs.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-04/00-21-30.jpg" alt="Slide: Pips: the unit size of a currency pair">
+      <figcaption>Slide · 00:21:30</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s6">
+    <div class="section__k">06 / 21</div>
+    <h3>Percentages and basis points: how pips mask the true move</h3>
+    
+    <ul class="points"><li>Retail brokers push everything in pips because it masquerades the true moves in forex — it isn&#39;t a transferable, comparable metric like a percentage.</li><li>EUR/USD +100 pips (1.1174→1.1274) = (1.1274 − 1.1174)/1.1174 × 100 = 0.895% = 89.5 basis points.</li><li>USD/INR −100 pips (69.267→69.167) = (69.267 − 69.167)/69.267 × 100 = 0.144% = 14.4 basis points. Same 100 pips, a much bigger EUR/USD move.</li><li>So 1 pip in EUR/USD ≈ 0.00895 ≈ 1 basis point; 1 pip in USD/INR ≈ 0.0014436 ≈ 1.44 basis points. A basis point = 1/100th of 1% (1% = 100 bp).</li><li>&#39;The Rupee fell 100 pips&#39; sounds far more impressive than &#39;the Rupee fell one one-hundredth of a percent&#39; — that framing serves the broker&#39;s conflict of interest, not you.</li></ul>
+    
+    <p class="explain">This is the chapter&#39;s core message: opportunity and risk must be assessed in base metrics — percentages and basis points — because only they put every pair on a level playing field. Professional traders and hedge fund managers never assess volatility in pips.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-04/00-24-40.jpg" alt="Slide: Percentages and basis points: how pips mask the true move">
+      <figcaption>Slide · 00:24:40</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s7">
+    <div class="section__k">07 / 21</div>
+    <h3>Trading sizes: lots, mini, micro, nano</h3>
+    
+    <ul class="points"><li>Sizes vary by platform and instrument (spot, future, CFD, spread bet) but are universally broken into standard units.</li><li>1 Lot = 100,000; 1 Mini Lot = 10,000; 1 Micro Lot = 1,000; 1 Nano Lot = 100 currency pairs.</li><li>Nano lots are common in the UK, Europe and Asia, less so in the US; a broker&#39;s own &#39;contract size&#39; may vary, so verify it.</li><li>Retail traders mostly deal in mini, micro and nano lots — full lots are really for institutional traders at banks and hedge funds.</li></ul>
+    
+    <p class="explain">These are the standard language of size across the industry. Getting them right is not pedantry: mistaking a mini lot for a lot means 10× the intended exposure, a dangerous error in a fast, losing market.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-04/00-32-20.jpg" alt="Slide: Trading sizes: lots, mini, micro, nano">
+      <figcaption>Slide · 00:32:20</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s8">
+    <div class="section__k">08 / 21</div>
+    <h3>Working out contract size from the broker&#39;s pip value</h3>
+    
+    <ul class="points"><li>The easiest way to find contract size is the pip value next to the quote, e.g. &#39;EUR/USD (per 0.0001)&#39;: 1 ÷ 0.0001 = 10,000 EUR = 1 Mini Lot.</li><li>Bid/ask 1.10355 – 1.10365 is a 1-pip spread; buying 1 contract buys EUR and sells USD at 1.10365. EUR10,000 × 1.10365 = $11,036.50.</li><li>Nano-lot example: &#39;USD/JPY (per 0.01)&#39;: 1 ÷ 0.01 = 100 USD = 1 Nano Lot; USD100 × 119.975 = JPY 11,997.50.</li><li>Trading size is always the amount of the LEFT (base) currency bought/sold; exposure and P&amp;L are always expressed in the RIGHT (quote) currency.</li></ul>
+    
+    <p class="explain">Miscalculating the pip value is how a trader intending EUR50,000 (5 mini lots) can accidentally trade EUR500,000 (5 lots) — 10× exposure. In a fast, losing market you may not even notice before it goes badly against you.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-04/00-37-05.jpg" alt="Slide: Working out contract size from the broker&#39;s pip value">
+      <figcaption>Slide · 00:37:05</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s9">
+    <div class="section__k">09 / 21</div>
+    <h3>Margin, leverage, exposure — and why forex is over-lent</h3>
+    
+    <ul class="points"><li>Brokers lend far more against forex than indices, stocks, commodities, ETFs or rates products, because major FX pairs have LOWER volatility and HIGHER liquidity over any period — so it is less risky to lend, and they maximise spread, financing and OTC gain.</li><li>Thought experiment: an asset quoted 1.2277 – 1.2278 (1-pip spread) that trades only twice a day, forever — you cannot make money from it no matter how much capital you throw at it, because it doesn&#39;t move.</li><li>Lower opportunity and risk per unit of capital deployed is exactly what makes forex the asset class brokers push you to over-leverage.</li></ul>
+    
+    <p class="explain">The over-lending is not generosity — it is a direct consequence of forex&#39;s low volatility and high liquidity, which is precisely why the broker can afford the risk and profit most when you trade big and often.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-04/00-44-05.jpg" alt="Slide: Margin, leverage, exposure — and why forex is over-lent">
+      <figcaption>Slide · 00:44:05</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s10">
+    <div class="section__k">10 / 21</div>
+    <h3>Leverage doesn&#39;t create volatility — it only levers your P&amp;L</h3>
+    
+    <ul class="points"><li>If a pair&#39;s daily historical volatility is 60 pips, borrowing to trade it does NOT make it move more — the exchange rate is set by the market.</li><li>Leverage &#39;leverages volatility that doesn&#39;t exist to give the illusion that it does&#39;. It increases the volatility of your P&amp;L, not of the asset.</li><li>Historically forex moves less than every other asset class over all time periods; high borrowing changes none of that.</li><li>Anyone who tells you otherwise is &#39;either a liar or an idiot&#39; and most probably has a conflict of interest.</li></ul>
+    
+    <p class="explain">This is the anchor of common sense the chapter keeps returning to: a low margin requirement does not create opportunity. Only the asset&#39;s own volatility does — and forex has the least of it.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-04/00-49-50.jpg" alt="Slide: Leverage doesn&#39;t create volatility — it only levers your P&amp;L">
+      <figcaption>Slide · 00:49:50</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s11">
+    <div class="section__k">11 / 21</div>
+    <h3>Initial margin, variation margin and the margin call</h3>
+    
+    <ul class="points"><li>US/Canada margin requirements can be ~2% (and vary widely); Europe/Asia-Pac typically 1%. At 1%, GBP1,000 initial margin borrows GBP100,000 to trade 1 lot of GBP/USD — you are 100× leveraged.</li><li>GBP/USD up 1% → +GBP1,000 = +100% on initial margin; down 1% → −GBP1,000 = −100%, wiped out.</li><li>Variation margin = the difference between your initial margin and current P&amp;L; a profit credits your account, a loss debits it.</li><li>When variation margin exceeds initial margin you get a margin call — deposit more or the broker closes you out automatically.</li><li>Note the tell: brokers set margin requirements as PERCENTAGES (1% for liquid/less volatile up to 5% for less liquid/more volatile), managing their own risk in percentage terms while pushing you to think in pips.</li></ul>
+    
+    <p class="explain">The broker measures its own risk and opportunity in percentages — the same base metric it discourages you from using. If pips were the important measure, they would set lending limits in pips; they don&#39;t, because thousands of clients who can&#39;t calculate risk correctly is a perfect situation for them.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-04/00-50-05.jpg" alt="Slide: Initial margin, variation margin and the margin call">
+      <figcaption>Slide · 00:50:05</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s12">
+    <div class="section__k">12 / 21</div>
+    <h3>Gross exposure is your real risk — choose it yourself</h3>
+    
+    <ul class="points"><li>What matters is gross exposure and the volatility of what you hold — just like stocks: 1,000 Apple shares at $125 = $125,000 exposure; −1% = −$1,250.</li><li>Same for FX: buy 5 Mini Lots of EUR/USD at 1.10365 = BUY EUR50,000 / SELL $55,178.</li><li>A 1% margin requirement means you COULD post just EUR500 — but you don&#39;t have to. Put EUR25,000 in and you have chosen 2× exposure (a 50% self-imposed margin requirement).</li><li>It is in the broker&#39;s interest that you get stopped out often (more trades, more commission). Fund the account well, pick your own exposure, and you may choose NEVER to be stopped out.</li><li>Risk isn&#39;t how much you can borrow; risk is the gross exposure you carry.</li></ul>
+    
+    <p class="explain">The professional move is to invert the broker&#39;s incentive: decide your own gross exposure and put real capital behind it, so that a normal move in the pair can&#39;t wipe you out — the opposite of the small-account, max-leverage retail default.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-04/00-58-55.jpg" alt="Slide: Gross exposure is your real risk — choose it yourself">
+      <figcaption>Slide · 00:58:55</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s13">
+    <div class="section__k">13 / 21</div>
+    <h3>P&amp;L method 1 — base and cents</h3>
+    
+    <ul class="points"><li>Buy 1 Lot EUR/USD at 1.10356 = BUY EUR100,000 / SELL $110,356.</li><li>Move to 1.12479 → profit = 100,000 (base) × (1.12479 − 1.10356) = $2,123.</li><li>P&amp;L is always expressed in the RIGHT (quote) currency.</li><li>If the account is denominated in the base (EUR), convert at the current rate: $2,123 ÷ 1.12479 = EUR1,887.</li></ul>
+    
+    <p class="explain">The most direct method: base amount times the price change, always landing in the quote currency, then converted back to the account currency if needed.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-04/01-03-30.jpg" alt="Slide: P&amp;L method 1 — base and cents">
+      <figcaption>Slide · 01:03:30</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s14">
+    <div class="section__k">14 / 21</div>
+    <h3>P&amp;L method 2 — pips and pip value</h3>
+    
+    <ul class="points"><li>Pip Value = 1 Pip × Trading Size, in the quote currency. Fix the broker&#39;s pip value and multiply across sizes.</li><li>GBP/USD at 1 pip = 0.0001: Lot = 0.0001 × 100,000 = $10; Mini = $1; Micro = $0.10; Nano = $0.01 per pip.</li><li>GBP/USD worked P&amp;L: buy 1 Lot at 1.52518, sell at 1.54622 → (difference) ÷ 0.0001 = 210 pips × $10 = $2,100 (= GBP1,358 at 1.54622).</li><li>USD/JPY (1 pip = 0.01): 1 Lot pip value = 0.01 × 100,000 = JPY1,000. Buy at 119.975, sell at 121.663 → (121.663 − 119.975)/0.01 = 168 → 169 pips × JPY1,000 = JPY169,000 = $1,389.</li></ul>
+    
+    <p class="explain">Anchor to the broker&#39;s own pip value and multiply it across the size table — the method applies on virtually any platform, always giving the pip value in the quote currency.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-04/01-09-05.jpg" alt="Slide: P&amp;L method 2 — pips and pip value">
+      <figcaption>Slide · 01:09:05</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s15">
+    <div class="section__k">15 / 21</div>
+    <h3>P&amp;L method 3 — percentages and basis points</h3>
+    
+    <ul class="points"><li>You don&#39;t even need the pip value — just the move in percentage terms. USD/JPY 119.975→121.663 = 169 pips.</li><li>{1.690 (169 pips) ÷ 119.975} × 100 = 1.40%; or $100,000 × 0.014 = $1,400 — essentially the same as the $1,389 from the pip method.</li><li>All three methods reach the same answer, but percentages let you compare this opportunity and risk against every other pair.</li><li>Get in the habit of double-checking everything in percentages and basis points — a big pip count is often not a big return, especially when day trading.</li></ul>
+    
+    <p class="explain">Whichever method you prefer, always verify in percentages and basis points — it gives a true appreciation of the move and is the language volatility (and every cross-pair comparison) is measured in.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-04/01-12-25.jpg" alt="Slide: P&amp;L method 3 — percentages and basis points">
+      <figcaption>Slide · 01:12:25</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s16">
+    <div class="section__k">16 / 21</div>
+    <h3>Carry and rollover — the mechanics</h3>
+    
+    <ul class="points"><li>Every FX position is automatically long one currency financed by shorting another — you cannot buy a currency without first selling one.</li><li>The carry trade: borrow (short) a low-yielding currency and lend (go long) a high-yielding one. You pay the lending rate on the short (liability) and receive the deposit rate on the long (asset).</li><li>You receive LESS on a long than you pay on a short of the same currency, because the deposit rate is below the lending rate — the same spread a high-street bank charges between savings and loans.</li><li>Objective: short the currency whose country rate is LOWER (liability) than the currency you go long (asset).</li></ul>
+    
+    <p class="explain">Carry falls straight out of the fact that a currency position is a simultaneous borrow-and-lend. Each side has an interest rate; the difference between what you receive and what you pay is the carry.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-04/01-15-25.jpg" alt="Slide: Carry and rollover — the mechanics">
+      <figcaption>Slide · 01:15:25</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s17">
+    <div class="section__k">17 / 21</div>
+    <h3>Positive vs negative carry, and the rollover table</h3>
+    
+    <ul class="points"><li>Positive carry = a credit (you receive more than you pay); negative carry = a debit (you pay more than you receive). The daily credit/debit is called ROLLOVER.</li><li>Worked table (365 days, rate 0.94512): Currency A deposit 1% / lending 4%; Currency B deposit 7% / lending 12%.</li><li>Long A / Short B differential = 1% − 12% = −11% per year (negative carry). Long B / Short A = +3% per year (positive carry).</li><li>Per 1 Lot (100,000): Long A/B pays −11,000/yr = −31.89 per day; Short A/B receives +3,000/yr = +8.70 per day. Mini/micro/nano scale down 10×/100×/1000×.</li></ul>
+    
+    <p class="explain">The annual differential and its daily rollover flip sign depending on which way you take the pair. Being long the wrong side means paying out every single day whether or not the pair moves.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-04/01-22-25.jpg" alt="Slide: Positive vs negative carry, and the rollover table">
+      <figcaption>Slide · 01:22:25</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s18">
+    <div class="section__k">18 / 21</div>
+    <h3>Carry meets leverage — the danger multiplies</h3>
+    
+    <ul class="points"><li>Brokers must publish daily rollover rates (platform, website, or emailed PDF) — they are indicative of base rates / interbank offer rates in the countries concerned.</li><li>The base table assumes no leverage. Levering the same position scales the daily rollover with exposure: with $10,000 margin, Short A/B ranges from +173.93/day at 0.5% margin (20× leverage, $2m exposure) down to +0.97/day at 90% margin.</li><li>With $30,000 margin, 0.5% margin req = 200× leverage = $6m exposure = 100 lots; Long A/B bleeds −1,913.22/day, Short A/B earns +521.79/day.</li><li>Warning: if 1 contract is at or above 5× leverage (20% margin requirement), the pair&#39;s volatility can wipe you out — the safe zone is heavier margin (self-imposed exposure in the 10–30% range).</li></ul>
+    
+    <p class="explain">The same principle as margin/volatility applies to carry: leverage a positive carry deliberately, never leverage a negative one by accident. A levered negative carry eats your margin daily even if the pair never moves.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-04/01-34-15.jpg" alt="Slide: Carry meets leverage — the danger multiplies">
+      <figcaption>Slide · 01:34:15</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s19">
+    <div class="section__k">19 / 21</div>
+    <h3>The amateur mistakes carry exposes</h3>
+    
+    <ul class="points"><li>More leverage doesn&#39;t mean more volatility in the asset — utilised margin is fixed by the broker; leverage only inflates P&amp;L volatility. A low margin requirement does not create opportunity.</li><li>Many retail traders don&#39;t even know positive/negative carry exists. They can call the direction of a pair correctly for weeks yet make nothing, because the negative carry pays out as much per day as the move earns.</li><li>They sit staring at the screen wondering why they aren&#39;t making money; then the pair turns, the small account gets a margin call, and they are wiped out.</li><li>Under-funding the account and taking all available leverage is &#39;blatant greed&#39; — and exactly the dumb-money behaviour brokers and educators prefer.</li></ul>
+    
+    <p class="explain">Carry is where the whole chapter&#39;s warnings converge: this is a large part of why 90% of retail traders lose 90% of their money in 90 days — negative carry, high leverage, and a direction called wrong.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-04/01-42-20.jpg" alt="Slide: The amateur mistakes carry exposes">
+      <figcaption>Slide · 01:42:20</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s20">
+    <div class="section__k">20 / 21</div>
+    <h3>Interest-rate expectations, EMH and hot money</h3>
+    
+    <ul class="points"><li>Brokers and educators dislike traders who go medium-to-long term in small-to-medium size for positive carry; they prefer day trading in and out (before interest), in the biggest size, to harvest volume, spread, financing turn and OTC gain.</li><li>Efficient Markets Hypothesis says all interest-rate information is already discounted into cross prices — implying no positive-carry opportunity — which is &#39;actually nonsense&#39;, as positive-carry trades are among the most popular at institutional level.</li><li>It is CHANGES (shocks) in interest-rate expectations that create hot-money speculative flows: money flows toward positive carry when differentials are expected to widen, and out of negative carry when they narrow.</li><li>So it is not the static snapshot of rates but the expected direction and speed of the differential that drives the big medium-to-longer-term opportunities — a theme returned to in trade-idea generation later.</li></ul>
+    
+    <p class="explain">The static carry mechanics are the foundation; the real driver of volatility and opportunity is the expectation of how interest-rate differentials will change, which is where speculative capital actually moves.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-04/01-46-00.jpg" alt="Slide: Interest-rate expectations, EMH and hot money">
+      <figcaption>Slide · 01:46:00</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s21">
+    <div class="section__k">21 / 21</div>
+    <h3>Recap: seven basic computational methods</h3>
+    
+    <ul class="points"><li>Left-to-Right Convention · Pips · Percentages &amp; Basis Points · Trading Sizes · Margin, Leverage &amp; Exposure · Profit and Loss · Carry and Rollover.</li><li>These link back to opportunity set and regimes (videos 1–2) because measuring volatility requires this rigour, and to infrastructure (video 3) because the pros compute far beyond what retail does.</li><li>They are called &#39;basic&#39; only relative to the professionals who go much further — the mathematical rigour is itself what separates pros from retail in a competitive product AND labour market.</li><li>Video 5 moves on to ADVANCED computational methods — heavier spreadsheet work, but a rinse-and-repeat process that applies across forex and multiple asset classes.</li></ul>
+    
+    <p class="explain">The seven methods are the deterministic toolkit a professional calls upon; mastering them is the price of entry, not the strategy itself. Next comes the volatility work these foundations were built to support.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/pftm-04/01-51-45.jpg" alt="Slide: Recap: seven basic computational methods">
+      <figcaption>Slide · 01:51:45</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+
+  
+  <section class="section">
+    <div class="section__k">Reference</div>
+    <h3>Glossary</h3>
+    <ul class="glossary">
+      
+      <li><span class="term">Base currency</span><div class="def">The currency on the LEFT of a pair; the quote tells you how much of the quote currency one unit of the base buys. In USD/JPY, USD is the base.</div></li>
+      
+      <li><span class="term">Quote currency</span><div class="def">The currency on the RIGHT of a pair; exposure and P&amp;L are always expressed in it. In USD/JPY, JPY is the quote.</div></li>
+      
+      <li><span class="term">Cross rate</span><div class="def">A pair derived from two dollar crosses. When the common currency is numerator/denominator across the two you multiply (AUD/JPY = USD/JPY × AUD/USD = 93.547); when it&#39;s the denominator in both you divide.</div></li>
+      
+      <li><span class="term">Pip</span><div class="def">The unit size of a currency pair: 0.0001 for majors (4 decimals), 0.001 for JPY and INR pairs (3 decimals). 100 pips in EUR/USD = 0.0100.</div></li>
+      
+      <li><span class="term">Basis point (bip)</span><div class="def">1/100th of one percent; 1% = 100 basis points. The base metric pros use to compare pairs, because pips mask true percentage moves.</div></li>
+      
+      <li><span class="term">Lot sizes</span><div class="def">1 Lot = 100,000, 1 Mini Lot = 10,000, 1 Micro Lot = 1,000, 1 Nano Lot = 100 currency pairs (of the base currency).</div></li>
+      
+      <li><span class="term">Pip value</span><div class="def">1 Pip × Trading Size, expressed in the quote currency. GBP/USD 1 Lot = 0.0001 × 100,000 = $10 per pip.</div></li>
+      
+      <li><span class="term">Margin requirement</span><div class="def">The percentage of exposure a broker requires as collateral. 1% = 100× leverage. Brokers set it by volatility/liquidity, typically 1% (liquid) to 5% (less liquid).</div></li>
+      
+      <li><span class="term">Leverage</span><div class="def">1 ÷ margin requirement. It magnifies the volatility of your P&amp;L, not of the asset — a pair moves the same whether or not you borrow.</div></li>
+      
+      <li><span class="term">Gross exposure</span><div class="def">The full notional value of your positions (base amount × rate) — your real risk. What matters, not how much the broker will lend you.</div></li>
+      
+      <li><span class="term">Initial / variation margin &amp; margin call</span><div class="def">Initial margin is the collateral posted; variation margin is the running difference vs current P&amp;L; a margin call is the demand for more funds (or auto-close) when losses exceed initial margin.</div></li>
+      
+      <li><span class="term">Carry</span><div class="def">The net interest on a position: you receive the deposit rate on the long (asset) and pay the lending rate on the short (liability). A credit is positive carry, a debit is negative carry.</div></li>
+      
+      <li><span class="term">Rollover</span><div class="def">The daily credit or debit of carry to your account, published by the broker. E.g. 1 Lot Long A/B pays −31.89/day; Short A/B receives +8.70/day.</div></li>
+      
+      <li><span class="term">Efficient Markets Hypothesis (EMH)</span><div class="def">The theory that all rate information is already discounted into cross prices, implying no positive-carry edge — dismissed in the lesson, since it is expected CHANGES in differentials that drive hot-money flows.</div></li>
+      
+    </ul>
+  </section>
+  
+
+  <nav class="pager">
+    
+    <a class="prev" href="chapter-85.html">
+      <small>← 03 Previous</small><span>Forex Market Foundation 3 — Infrastructure</span></a>
+    
+    
+    <a class="next disabled"><small>End of the macro block</small><span>Portfolio construction is next</span></a>
+    
+  </nav>
+</div>
+
+  </main>
+</div>
+</body>
+</html>
