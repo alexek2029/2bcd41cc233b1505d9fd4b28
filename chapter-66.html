@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>PTM 2.0 07 · The ISM Manufacturing PMI — The Macro Playbook — The Top-Down Macro Read</title>
+<title>POTM Options 12 · Options Spreads 1 — The Bull Call Spread — The Macro Playbook — The Top-Down Macro Read</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -118,7 +118,7 @@
       </a></li>
       
       <li><a href="chapter-17.html"
-             class="is-active">
+             class="">
         <span class="rn">07</span>
         <span class="rt">The ISM Manufacturing PMI<small>PTM 2.0 · ISM manufacturing</small></span>
       </a></li>
@@ -412,7 +412,7 @@
       </a></li>
       
       <li><a href="chapter-66.html"
-             class="">
+             class="is-active">
         <span class="rn">12</span>
         <span class="rt">Options Spreads 1 — The Bull Call Spread<small>POTM Options · Buy a lower-strike cal</small></span>
       </a></li>
@@ -428,196 +428,212 @@
     
 <div class="wrap">
   <header class="hero">
-    <div class="hero__num reveal">PTM 2.0 · Chapter 07</div>
-    <h1 class="reveal d1">The ISM Manufacturing PMI</h1>
-    <p class="hero__sub reveal d1">Reading the business-survey diffusion index against the 50 line to predict GDP and the S&amp;P 500</p>
-    <p class="hero__lead reveal d2">The ISM Manufacturing PMI is a monthly survey diffusion index where above 50 signals expansion and below 50 contraction, letting you predict US GDP and S&amp;P 500 direction 60-80% of the time.</p>
+    <div class="hero__num reveal">POTM Options · Chapter 12</div>
+    <h1 class="reveal d1">Options Spreads 1 — The Bull Call Spread</h1>
+    <p class="hero__sub reveal d1">Buy a lower-strike call and sell a higher-strike call of the same expiry to build a cheaper, risk-defined, directionally bullish bet with a capped upside.</p>
+    <p class="hero__lead reveal d2">The bull call spread is one of the most useful strategies for retail traders: two transactions, a known limited risk, and a lower breakeven than a plain long call. You trade away unlimited upside above your short strike in exchange for cheaper cost, better risk/reward, and freed-up capital.</p>
     <div class="hero__chips reveal d3">
-      <span class="chip chip--signal"><span class="dot"></span>ISM &gt;50 expansion, &lt;50 contraction; predicts GDP and S&amp;P direction</span>
-      <span class="chip"><b>9</b>&nbsp;min read</span>
-      <span class="chip"><b>15</b>&nbsp;slides</span>
+      <span class="chip chip--signal"><span class="dot"></span>Buy the lower call, sell the higher call, same expiry — cap the upside where you think the stock is capped.</span>
+      <span class="chip"><b>11</b>&nbsp;min read</span>
+      <span class="chip"><b>14</b>&nbsp;slides</span>
     </div>
   </header>
 
   
   <section class="gist reveal">
     <h2>The gist</h2>
-    <ul><li>Surveys are the one leading indicator the Fed cannot manipulate and cannot be traded directly, but they reveal which way the macro wind is blowing.</li><li>The ISM Manufacturing Report on Business is released on the first business day of each month, compiled from the ~300 largest US manufacturers.</li><li>The PMI is a diffusion index: 50 = no change, above 50 = expansion, below 50 = contraction. Formula: (% increase) + one-half x (% no change).</li><li>Five sub-indices are equally weighted 20% each into the PMI: New Orders, Production, Employment, Deliveries, Inventories. New Orders is the most sensitive; Employment is the slowest.</li><li>Since 1947 the ISM predicts GDP direction ~80% of the time with a 6-12 month lag, and it leads the S&amp;P 500 annual % change by up to ~12 months.</li><li>Signal framework: ISM &gt;50 = LONG (1-1), &lt;50 = SHORT (0-0), declining from peak = NEUTRAL (0-1), troughing = neutral-to-long (rebound).</li></ul>
+    <ul><li>A vertical spread = two options of the same type and same expiry at different strikes, one bought and one sold, to reduce cost and risk.</li><li>Bull call spread = buy a lower-strike call + sell a higher-strike call, same expiry → a net DEBIT. Directional · Bullish · 2 transactions.</li><li>Use it when you expect the stock to rise to a specific level but NO HIGHER — the short (higher) strike is where you think the stock is capped.</li><li>Formulas: Max Risk = net debit; Max Gain = strike width − net debit; Breakeven = long strike + net debit.</li><li>Writing the higher call offsets part of the cost of the bought call and cuts time-decay drag, giving a lower breakeven and better risk/reward — at the cost of a CAPPED upside at the short strike.</li><li>It ranks HIGH in usefulness: simple, known limited risk, capital-efficient — frees capital to fund other trades (an opportunity-cost-of-capital benefit).</li><li>Secondary use: a capped long-call hedge against an unlimited-downside short-stock position.</li><li>FL worked example (16 Feb 2018, spot $49.17): the 52.5/70 spread @ $3.85 net debit risks $1,155 to make $4,095 → R/R 3.54, breakeven $56.35 — beating both long stock and the single 50 call.</li></ul>
   </section>
   
 
   
   <section class="section" id="s1">
-    <div class="section__k">01 / 11</div>
-    <h3>Recap: money-market indicators so far</h3>
+    <div class="section__k">01 / 12</div>
+    <h3>What a vertical spread is</h3>
     
-    <ul class="points"><li>Leading indicators covered so far: Real Interest Rates, the Yield Curve, Corporate Credit Spreads, and M2 Money Supply growth (accessory).</li><li>These are all Money Market indicators.</li><li>The professional market uses them to allocate capital across asset classes; the Fed monitors them daily and &#39;manipulates&#39; them as levers to meet its inflation and GDP-growth mandate.</li><li>Downstream, businesses and consumers make decisions based on the relative price of money and risk across asset classes.</li></ul>
+    <ul class="points"><li>A vertical spread combines two options of the SAME type (both calls or both puts), SAME expiry, but DIFFERENT strikes.</li><li>One leg is bought and the other is sold (written) — the sold leg offsets part of the cost of the bought leg.</li><li>The net effect reduces both cost and risk versus a single-option position.</li><li>This lesson formalizes the bull call spread; the next revisits and formalizes the bear put spread introduced earlier at the index level.</li></ul>
     
-    
+    <p class="explain">Spreads are the transition from single-leg option bets to structured, risk-defined positions. The vertical (same expiry, different strikes) is the foundational building block, learned here at the stock level rather than the index level.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/ptm2-07/00-00-35.jpg" alt="Slide: Recap: money-market indicators so far">
-      <figcaption>Slide · 00:00:35</figcaption>
+      <img loading="lazy" src="assets/slides/potm-12/00-00-15.jpg" alt="Slide: What a vertical spread is">
+      <figcaption>Slide · 00:00:15</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s2">
-    <div class="section__k">02 / 11</div>
-    <h3>Surveys: the indicator the Fed can&#39;t manipulate</h3>
+    <div class="section__k">02 / 12</div>
+    <h3>The bull call spread defined</h3>
     
-    <ul class="points"><li>Unlike real rates, the yield curve, credit spreads and M2, business surveys cannot be directly manipulated by the Fed.</li><li>Surveys are also not tradable instruments.</li><li>They give great insight into the economy and, used with money-market indicators, are a vital part of a trader&#39;s systematic process for reading where money is flowing.</li><li>They can also be used as a leading indicator / predictor of Federal Reserve activity. REMEMBER: the Fed is watching too.</li></ul>
+    <ul class="points"><li>Buy a lower-strike call AND sell a higher-strike call, both with the same expiry.</li><li>Parameters: Directional · Bullish · Simple · only 2 transactions · a DEBIT trade.</li><li>It is one of the most useful strategies for retail traders — relatively simple, and risk is limited to the premium paid.</li><li>It is a cheaper alternative to a plain long call because writing the higher call offsets some of the cost of buying the lower call.</li></ul>
     
-    <p class="explain">You express survey-driven views through tradable instruments like equities, since the survey itself cannot be traded.</p>
+    <p class="explain">The bull call spread is primarily used when your outlook is bullish and you expect the stock to rise to a certain range — but no higher than a certain level — inside the contract&#39;s time frame.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/ptm2-07/00-04-50.jpg" alt="Slide: Surveys: the indicator the Fed can&#39;t manipulate">
-      <figcaption>Slide · 00:04:50</figcaption>
+      <img loading="lazy" src="assets/slides/potm-12/00-03-05.jpg" alt="Slide: The bull call spread defined">
+      <figcaption>Slide · 00:03:05</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s3">
-    <div class="section__k">03 / 11</div>
-    <h3>The ISM Manufacturing Report on Business</h3>
+    <div class="section__k">03 / 12</div>
+    <h3>When to use it — and the trade-off</h3>
     
-    <ul class="points"><li>The Institute of Supply Management (ISM) releases its Manufacturing Report on Business / PMI on the first business day of each month (ismworld.org).</li><li>The ISM Non-Manufacturing (Services) Report on Business is released monthly too and is covered in the next lesson.</li><li>An economy has two private-sector entities, Businesses and Consumers; Government is the public sector.</li><li>Within businesses, Manufacturing makes up 20% of the US economy and Services makes up 80%.</li></ul>
+    <ul class="points"><li>Use it when you&#39;re bullish and expect a rise to a specific level, but NOT a dramatic move — because the profit is capped.</li><li>There is a net DEBIT: the long (lower-strike) call is nearer the money and therefore more expensive than the higher-strike call you write.</li><li>You pay a debit for the lower call and receive a credit for writing the higher call — net effect is still a debit, but the cost is reduced.</li><li>The trade-off: your dollar upside is capped, so you must be confident the stock won&#39;t rally beyond the strike you sell by expiration.</li></ul>
     
-    
+    <p class="explain">The written higher call is what makes this cheaper than a long call, but it is also what caps the profit. Confidence in the ceiling (the short strike) is the whole thesis.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/ptm2-07/00-11-50.jpg" alt="Slide: The ISM Manufacturing Report on Business">
-      <figcaption>Slide · 00:11:50</figcaption>
+      <img loading="lazy" src="assets/slides/potm-12/00-03-50.jpg" alt="Slide: When to use it — and the trade-off">
+      <figcaption>Slide · 00:03:50</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s4">
-    <div class="section__k">04 / 11</div>
-    <h3>Composition and weighting</h3>
+    <div class="section__k">04 / 12</div>
+    <h3>The formulas</h3>
     
-    <ul class="points"><li>Five equally weighted sub-indices make up the PMI: New Orders 20%, Production 20%, Employment 20%, Deliveries 20%, Inventories 20% = PMI 100%.</li><li>ISM Business Survey Committee members receive a monthly questionnaire asking them to identify month-over-month changes for each sub-index.</li><li>The survey covers the ~300 largest US manufacturing companies across five equally weighted areas.</li><li>It is significant because it reflects physical (real) goods bought and sold, and its data goes back to 1947 (Services only to 2008), giving it higher statistical significance.</li></ul>
+    <ul class="points"><li>Max Risk = net debit paid (all you can lose if both legs expire worthless).</li><li>Max Gain = strike width − net debit (achieved if the stock finishes at or above the short strike).</li><li>Breakeven = long strike + net debit.</li><li>The lower breakeven versus a plain long call is a direct result of the credit received on the written call.</li></ul>
     
-    
+    <p class="explain">Because you know Max Risk, Max Gain and Breakeven at the moment of entry, this is a fully risk-defined trade — you know exactly what you stand to lose and make before you put it on.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/ptm2-07/00-14-25.jpg" alt="Slide: Composition and weighting">
-      <figcaption>Slide · 00:14:25</figcaption>
+      <img loading="lazy" src="assets/slides/potm-12/00-00-35.jpg" alt="Slide: The formulas">
+      <figcaption>Slide · 00:00:35</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s5">
-    <div class="section__k">05 / 11</div>
-    <h3>Survey design: what&#39;s in the diffusion index</h3>
+    <div class="section__k">05 / 12</div>
+    <h3>Why it ranks HIGH in usefulness</h3>
     
-    <ul class="points"><li>Included in the diffusion index: New Orders, Production, Employment, Supplier Deliveries, Inventories.</li><li>Not included: Customer Inventories, Prices, Order Backlog, Exports &amp; Imports.</li><li>New Orders = level of new orders from customers; Production = rate/direction of change in production; Employment = increase/decrease in employment.</li><li>Supplier Deliveries = whether deliveries are faster or slower; Inventories = increases/decreases in inventory levels.</li></ul>
+    <ul class="points"><li>Simple to deploy, only two transactions, and a directional bet — which is what the retail mandate always wants.</li><li>Known, limited risk: you cannot lose more than the net debit even if the stock craters to zero.</li><li>Capital-efficient — it needs less capital than long stock or a long call, freeing capital to fund other positions.</li><li>That freed capital is an opportunity-cost-of-capital benefit on top of the defined risk.</li></ul>
     
-    
+    <p class="explain">Anton ranks the bull call spread high in usefulness precisely because it packages a directional view into a simple, cheap, risk-defined structure that also frees up capital for other ideas.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/ptm2-07/00-19-50.jpg" alt="Slide: Survey design: what&#39;s in the diffusion index">
-      <figcaption>Slide · 00:19:50</figcaption>
+      <img loading="lazy" src="assets/slides/potm-12/00-00-35.jpg" alt="Slide: Why it ranks HIGH in usefulness">
+      <figcaption>Slide · 00:00:35</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s6">
-    <div class="section__k">06 / 11</div>
-    <h3>PMI all-time: mean-reverting around 50</h3>
+    <div class="section__k">06 / 12</div>
+    <h3>Making money two ways — and the capped upside</h3>
     
-    <ul class="points"><li>The PMI oscillates cyclically around the ~50 expansion/contraction line from 1948 to 2020.</li><li>Early peak ~77 (1950-51); deep troughs ~30 (mid-1970s), ~29 (1980), and ~33-35 in the 2008-09 GFC.</li><li>COVID-2020 collapsed to ~41-42 then rebounded to ~60.</li><li>The linear trendline is essentially flat (~52-53), confirming the PMI is mean-reverting around 50.</li></ul>
+    <ul class="points"><li>You profit on the long call as the stock rises, AND you collect time decay on the short call you&#39;ve written.</li><li>Ideal outcome: the stock rises to around the short strike by expiry — that&#39;s where maximum profit sits.</li><li>If the stock goes ABOVE the short strike, the written call moves into a loss, but this costs nothing net — the long call keeps gaining at the same rate.</li><li>If the stock doesn&#39;t rise at all, both legs expire worthless and you lose only the net debit.</li></ul>
     
-    <p class="explain">Historical peaks sit around 60, troughs around 40-45, with the GFC an outlier bottoming near 32.5-35.</p>
+    <p class="explain">The two profit engines (long-call appreciation plus short-call decay) are why the spread earns a marginal benefit over stock, but they also lock the ceiling: once past the short strike, further stock gains no longer help you.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/ptm2-07/00-24-45.jpg" alt="Slide: PMI all-time: mean-reverting around 50">
-      <figcaption>Slide · 00:24:45</figcaption>
+      <img loading="lazy" src="assets/slides/potm-12/00-03-50.jpg" alt="Slide: Making money two ways — and the capped upside">
+      <figcaption>Slide · 00:03:50</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s7">
-    <div class="section__k">07 / 11</div>
-    <h3>How to follow the composite ISM (signal framework)</h3>
+    <div class="section__k">07 / 12</div>
+    <h3>Strike selection is the key decision</h3>
     
-    <ul class="points"><li>When you look at the ISM you are actually looking at the Business Cycle.</li><li>Above 50: economy expanding, S&amp;P returns likely positive - predict the 1-1 situation (S&amp;P rises, GDP rises).</li><li>Below 50: economy contracting, S&amp;P returns likely negative if the Fed does not act - predict the 0-0 situation (S&amp;P falls, GDP falls).</li><li>Declining from peak: rate of growth slowing - predict the 0-1 situation (S&amp;P falls, GDP positive but slowing).</li><li>At a trough: rate of contraction slowing/turning - predict a strong 1-1 rebound.</li><li>This leaves us right somewhere between 60% and 80% of the time on the US economy and S&amp;P direction.</li></ul>
+    <ul class="points"><li>The biggest decision is choosing the strike of the call you SELL — it defines your ceiling.</li><li>Maximum profit is made only if the stock reaches the short strike by expiry; going further earns nothing.</li><li>Sell the strike where you believe the stock is capped and won&#39;t go higher.</li><li>For a moderate expected rise, buy an at-the-money call; for an explosive move, consider buying ~3–5% out-of-the-money and selling a higher strike near where you expect it to settle.</li></ul>
     
-    <p class="explain">The mapping to portfolio bias: 1-1 = LONG, 0-0 = SHORT, 0-1 = NEUTRAL, trough = neutral-to-long. We predict direction, never the exact level, and never use the ISM alone.</p>
+    <p class="explain">The short strike is a direct expression of your fundamental view of the ceiling. Get it right and you capture the full strike-width-minus-debit payoff; set it too low and you cap yourself short of the move.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/ptm2-07/00-38-00.jpg" alt="Slide: How to follow the composite ISM (signal framework)">
-      <figcaption>Slide · 00:38:00</figcaption>
+      <img loading="lazy" src="assets/slides/potm-12/00-03-50.jpg" alt="Slide: Strike selection is the key decision">
+      <figcaption>Slide · 00:03:50</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s8">
-    <div class="section__k">08 / 11</div>
-    <h3>The sub-indices: New Orders leads, Employment lags</h3>
+    <div class="section__k">08 / 12</div>
+    <h3>The secondary use — hedging a short stock position</h3>
     
-    <ul class="points"><li>New Orders is the most sensitive part of the report and the most indicative of growth or contraction; it tracks the headline tightly but at higher amplitude.</li><li>Production will be positive (negative) if New Orders are expanding (contracting).</li><li>Employment is slow-moving, following New Orders and Production - new hires lag months of expansion in orders and production.</li><li>Faster (slower) Supplier Deliveries signal supplier optimism (pessimism) and potential supply-chain problems.</li><li>Inventory increases (decreases) reflect management&#39;s optimism (pessimism) about future economic conditions.</li></ul>
+    <ul class="points"><li>A bull call spread can hedge a short-stock position whose downside is theoretically unlimited (stock can go to infinity).</li><li>Buying an at- or slightly out-of-the-money call and selling a higher-strike call reduces the cost of that long-call hedge.</li><li>If the short squeezes aggressively, the hedge pays out and offsets the loss on the short stock.</li><li>The gain from the hedge gives you fresh capital ammunition to short more into a technical squeeze if the fundamentals haven&#39;t changed.</li></ul>
     
-    <p class="explain">The 1998-2020 charts show New Orders and Production running above the headline at peaks and below at troughs, while Employment runs below the headline and turns up later.</p>
+    <p class="explain">Because a short&#39;s downside is theoretically infinite, a cheap, capped bull call spread is an effective, capital-light insurance layer that can add significant value to a portfolio over time.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/ptm2-07/00-47-35.jpg" alt="Slide: The sub-indices: New Orders leads, Employment lags">
-      <figcaption>Slide · 00:47:35</figcaption>
+      <img loading="lazy" src="assets/slides/potm-12/00-03-50.jpg" alt="Slide: The secondary use — hedging a short stock position">
+      <figcaption>Slide · 00:03:50</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s9">
-    <div class="section__k">09 / 11</div>
-    <h3>Worked example: ISM August 2019</h3>
+    <div class="section__k">09 / 12</div>
+    <h3>The disadvantages</h3>
     
-    <ul class="points"><li>The headline slid from a 60.8 peak (Aug-18) down through 50 into contraction from Aug-19 (48.8, its first sub-50 print).</li><li>This is consistent with the Fed cutting rates in July, September and October 2019 in response to the US slowdown.</li><li>COVID then collapsed the headline to 41.7 in Apr-20 (-8.0 MoM) before a rebound to 60.5 by Dec-20.</li><li>The August 2019 ISM report showed headline PMI at 49.1, with New Orders (47.2), Production (49.5) and Employment (47.4) all flipping into contraction; the overall economy was still Growing but Slower.</li></ul>
+    <ul class="points"><li>Double the commissions — you both write a contract and buy a contract instead of a single transaction.</li><li>Profits are capped: if the stock rises beyond the short strike, you make no further gains.</li><li>Versus a long call or long stock, you give up the theoretically much higher ROI of an uncapped upside (a stock can go to infinity).</li><li>These are minor and are outweighed in the reward analysis whenever the risk/reward beats owning the call or the stock outright.</li></ul>
     
-    <p class="explain">The 2019 slowdown was corroborated by an inverting yield curve (short end above the belly by Aug-19) - showing indicators confirm one another.</p>
+    <p class="explain">The downsides are real but small: extra commission and a ceiling on profit. When the risk/reward is better than the alternatives, they are more than offset.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/ptm2-07/00-58-45.jpg" alt="Slide: Worked example: ISM August 2019">
-      <figcaption>Slide · 00:58:45</figcaption>
+      <img loading="lazy" src="assets/slides/potm-12/00-00-35.jpg" alt="Slide: The disadvantages">
+      <figcaption>Slide · 00:00:35</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s10">
-    <div class="section__k">10 / 11</div>
-    <h3>Quantitative and qualitative assessment (heatmaps and industries)</h3>
+    <div class="section__k">10 / 12</div>
+    <h3>FL example — the setup</h3>
     
-    <ul class="points"><li>Build a heat-mapped table of the headline PMI and every sub-index month-by-month (green = expansion, red = contraction) to see the roll below 50.</li><li>The ISM report also lists which of the 18 manufacturing industries reported growth vs contraction, in ranked order.</li><li>Qualitative colour: use the contracting-industry list to find weak single-stock shorts (e.g. Transportation Equipment / Greenbrier vs a rising SPY in 2019).</li><li>Read the verbatim respondent comments (the &#39;Industry Comments&#39; tab) behind the numbers for context.</li></ul>
+    <ul class="points"><li>Foot Locker (FL): on 16 Feb 2018 you believe it&#39;s a prime takeover target within the next 7 months.</li><li>Fundamental view: bullish, a directional bet, but no way it gets taken over above $70 per share.</li><li>Spot price $49.17; you want $15,000 of exposure to the idea.</li><li>Long stock would be $15,000 / $49.17 = 305 shares (US 50% margin ≈ $7,500; international CFD ~20% ≈ $3,000 — but you&#39;re really risking the full $15,000).</li></ul>
     
-    <p class="explain">Combine the quantitative heatmaps with the qualitative industry rankings and respondent quotes to turn the macro signal into single-stock trade ideas.</p>
+    <p class="explain">The thesis is a bounded bullish view: something happens, but the ceiling is $70. That bounded ceiling is exactly the situation a bull call spread is built for — cap the upside where you think the stock is capped.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/ptm2-07/01-13-30.jpg" alt="Slide: Quantitative and qualitative assessment (heatmaps and industries)">
-      <figcaption>Slide · 01:13:30</figcaption>
+      <img loading="lazy" src="assets/slides/potm-12/00-16-15.jpg" alt="Slide: FL example — the setup">
+      <figcaption>Slide · 00:16:15</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s11">
-    <div class="section__k">11 / 11</div>
-    <h3>Further work and summary</h3>
+    <div class="section__k">11 / 12</div>
+    <h3>FL example — the option chain</h3>
     
-    <ul class="points"><li>Not-included series still worth studying: Customer Inventories, Prices, Backlog of Orders, New Export Orders, Imports.</li><li>The lesson covers what&#39;s included in the composite; the rest requires self-education - do your own work, don&#39;t copy-trade.</li><li>The ISM helps predict (leading): bond-market liquidity and money flows, stock-market direction/liquidity/volatility, and Fed policy (pre-emptive).</li><li>It also relates to (lagging): Inflation, corporate earnings outlook, and Economic Growth (GDP).</li></ul>
+    <ul class="points"><li>Expiry 17 Aug 2018 → 179 days to expiry from 16 Feb; Hist Volatility 55.72%.</li><li>Chain quotes: 50 call ~$6, 52.50 call $4.85, 70 call $1.</li><li>Alternative A — buy 3× the 50 strike calls for $6 each; breakeven = $50 + $6 = $56; 300 × $50 = $15,000 notional if in the money.</li><li>Alternative B — buy the 52.50 calls for $4.85 and sell the 70 calls for $1 → net debit $3.85; breakeven = $52.50 + $3.85 = $56.35.</li></ul>
     
-    
+    <p class="explain">The chain gives the raw prices for the three routes to the same $15,000 idea. Note the spread&#39;s breakeven ($56.35) is barely higher than the single call&#39;s ($56) yet its cost and risk are far lower.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/ptm2-07/01-42-15.jpg" alt="Slide: Further work and summary">
-      <figcaption>Slide · 01:42:15</figcaption>
+      <img loading="lazy" src="assets/slides/potm-12/00-19-55.jpg" alt="Slide: FL example — the option chain">
+      <figcaption>Slide · 00:19:55</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s12">
+    <div class="section__k">12 / 12</div>
+    <h3>FL example — the risk/reward showdown</h3>
+    
+    <ul class="points"><li>Long stock: risk $15,000 to make ($70 − $49.17) = $20.83 × 305 = $6,353.15.</li><li>Single 50 call: risk 300 × $6 = $1,800 to make ($70 − $50 − $6) = $14 × 300 = $4,200 → R/R $14/$6 = 2.33; breakeven $56.</li><li>52.5/70 bull call spread @ $3.85: risk 300 × $3.85 = $1,155 to make ($70 − $52.50 − $3.85) = $13.65 × 300 = $4,095 → R/R $13.65/$3.85 = 3.54; breakeven $56.35.</li><li>The spread wins: best R/R (3.54×) AND lowest max downside ($1,155) — dead right you make 3.54× your money, dead wrong you lose only the $1,155 net debit.</li></ul>
+    
+    <p class="explain">Side by side, the spread delivers the clear marginal benefit: 3.54× R/R versus 2.33× for the single call, with the smallest capital at risk of all three routes. That is why the bull call spread is a high-usefulness structure for a bounded bullish view.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-12/00-21-40.jpg" alt="Slide: FL example — the risk/reward showdown">
+      <figcaption>Slide · 00:21:40</figcaption>
     </figure>
     
     
@@ -630,19 +646,27 @@
     <h3>Glossary</h3>
     <ul class="glossary">
       
-      <li><span class="term">ISM Manufacturing PMI</span><div class="def">The headline Purchasing Managers Index from the Institute of Supply Management&#39;s Manufacturing Report on Business, released the first business day of each month from a survey of the ~300 largest US manufacturers.</div></li>
+      <li><span class="term">Vertical spread</span><div class="def">Two options of the same type and same expiry at different strikes, one bought and one sold, to reduce cost and risk.</div></li>
       
-      <li><span class="term">Diffusion index</span><div class="def">An index measuring how dispersed a change is across a sample. Respondents answer increased / decreased / no change; index = (% increase) + one-half x (% no change). 50 = no change, above 50 = expansion, below 50 = contraction. Example: 20% better, 70% same, 10% worse = 20% + (0.5 x 70%) = 55%.</div></li>
+      <li><span class="term">Bull call spread</span><div class="def">Buy a lower-strike call and sell a higher-strike call of the same expiry — a directional, bullish, net-debit position with capped upside.</div></li>
       
-      <li><span class="term">The 50 line</span><div class="def">The expansion/contraction threshold. A reading of 50 means no change vs the prior month; above 50 is expansion, below 50 is contraction.</div></li>
+      <li><span class="term">Net debit</span><div class="def">The net premium paid: the cost of the bought (lower-strike) call minus the credit received for the written (higher-strike) call. It is also the maximum risk.</div></li>
       
-      <li><span class="term">Sub-indices</span><div class="def">The five equally weighted (20% each) components of the PMI: New Orders, Production, Employment, Supplier Deliveries, Inventories.</div></li>
+      <li><span class="term">Max Risk</span><div class="def">For a bull call spread, equal to the net debit paid — all that can be lost if both legs expire worthless.</div></li>
       
-      <li><span class="term">New Orders</span><div class="def">The most sensitive sub-index and the most indicative of growth or contraction; tends to lead and exaggerate the headline PMI&#39;s turns.</div></li>
+      <li><span class="term">Max Gain</span><div class="def">Strike width minus net debit — the profit if the stock finishes at or above the short strike at expiry.</div></li>
       
-      <li><span class="term">1-1 / 0-0 / 0-1 states</span><div class="def">Quadnomial (S&amp;P, GDP) outcomes: 1-1 both rise (ISM &gt;50, go LONG); 0-0 both fall (ISM &lt;50, go SHORT); 0-1 S&amp;P falls while GDP still positive but slowing (ISM declining from peak, go NEUTRAL).</div></li>
+      <li><span class="term">Breakeven</span><div class="def">Long strike + net debit; the underlying price at which the spread neither makes nor loses money at expiry.</div></li>
       
-      <li><span class="term">Report on Business (RoB)</span><div class="def">The full monthly ISM manufacturing survey report, whose headline number is the PMI.</div></li>
+      <li><span class="term">Strike width</span><div class="def">The distance between the long and short strikes (e.g. $70 − $52.50 = $17.50), which sets the spread&#39;s maximum payoff span.</div></li>
+      
+      <li><span class="term">Writing a call</span><div class="def">Selling a call option to collect premium; here the higher-strike call whose premium offsets cost and caps the upside.</div></li>
+      
+      <li><span class="term">Time decay</span><div class="def">The erosion of an option&#39;s value as expiry approaches; the written call earns this decay, working in the spread&#39;s favour.</div></li>
+      
+      <li><span class="term">R/R ratio</span><div class="def">Risk/reward ratio — reward per unit of risk; the FL spread&#39;s 3.54 beats the single call&#39;s 2.33.</div></li>
+      
+      <li><span class="term">Short-stock hedge</span><div class="def">A secondary use of the bull call spread — a cheap, capped long-call hedge protecting an unlimited-downside short position against a squeeze.</div></li>
       
     </ul>
   </section>
@@ -650,12 +674,11 @@
 
   <nav class="pager">
     
-    <a class="prev" href="chapter-16.html">
-      <small>← 06 Previous</small><span>M2 Money Supply: The Accessory Leading Indicator</span></a>
+    <a class="prev" href="chapter-65.html">
+      <small>← 11 Previous</small><span>Index Options &amp; Portfolio Hedging</span></a>
     
     
-    <a class="next" href="chapter-18.html">
-      <small>08 Next →</small><span>The ISM Non-Manufacturing Report on Business (Services PMI)</span></a>
+    <a class="next disabled"><small>End of the macro block</small><span>Portfolio construction is next</span></a>
     
   </nav>
 </div>
