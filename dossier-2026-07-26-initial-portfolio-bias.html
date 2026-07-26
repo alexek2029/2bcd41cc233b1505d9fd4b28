@@ -112,6 +112,12 @@
   .cal .t{font-weight:600;margin-top:6px;font-size:15px}
   .cal .w{font-size:13.5px;color:var(--ink-soft);margin-top:4px}
 
+  /* Glossary */
+  .gloss{margin:10px 0 26px}
+  .gloss dt{font-family:var(--mono);font-size:13.5px;font-weight:600;color:var(--petrol);margin-top:16px;letter-spacing:.02em}
+  .gloss dd{margin:4px 0 0;max-width:46em;font-size:15px;color:var(--ink)}
+  .gloss dd em{color:var(--ink-soft)}
+
   footer{margin-top:80px;padding-top:24px;border-top:2px solid var(--petrol);font-size:13.5px;color:var(--ink-soft)}
   footer p{max-width:none}
   .toc{background:var(--card);border:1px solid var(--line);padding:22px 26px;margin-top:34px;border-radius:2px;columns:2;column-gap:40px}
@@ -128,7 +134,7 @@
   <h1>Initial Portfolio Bias:<br>The Top-Down Sector Map</h1>
   <p class="standfirst">A forward-looking, fully justified sector bias for the first £20,000 paper book — built Anton's way: environment first, sectors second, stocks later. Every claim below is tagged to its source: a deterministic engine reading or a cited course rule. Nothing else drives a bias.</p>
   <div class="mastmeta">
-    <span class="chip b">26 JULY 2026</span>
+    <span class="chip b">26 JUL 2026 · 20:32 BST</span>
     <span class="chip">£20,000 · PAPER</span>
     <span class="chip">HORIZON 20–60 DAYS</span>
     <span class="chip">NET TILT +10–20% LONG</span>
@@ -149,6 +155,7 @@
   <a href="#calendar">09 · Forward catalyst calendar</a>
   <a href="#invalidation">10 · The invalidation dashboard</a>
   <a href="#provenance">11 · Provenance &amp; sources</a>
+  <a href="#glossary">12 · Plain-English glossary</a>
 </div>
 
 <!-- ============================== 00 VERDICT ============================== -->
@@ -532,9 +539,144 @@
   <p class="src">Absolute-return L/S mandate — ITPL L8 33:30, L10 13:15 · Environment-driven net bias — PTM 2.0 L2 14:00 · Tilt bands ±10/20/30% — PTM 2.0 L40 (PRM) 1:34:44 · GDP→Market→Sector→Stocks ("go where the juice is") — PTM 2.0 L16 19:45 · GICS hierarchy — PTM 2.0 L16 25:30–31:20 · ISM = portfolio bias + trade-idea source — PTM 2.0 L7 1:16:39 · "Never trade the ISM alone" — PTM 2.0 L7 1:31:10 · GDP leads equities ~2 quarters — PTM 2.0 L3 18:40/39:05 · Real vs nominal rates — PTM 2.0 L4 40:17 · Diversification by correlation, not count — ITPL-09 19:19, PTM 2.0 L21 27:57 · GDX options structures — POTM V26 6:10 · Short guardrails ($20bn+) — PTM 2.0 L26.</p>
   <h3>External information policy</h3>
   <p class="src">No press articles, broker research or street forecasts were used anywhere in this dossier. Under the grounding contract, outside knowledge is never a driver: external data enters the system only as (a) objective published statistics pulled by deterministic engines from primary sources (FRED, ISM, SEC EDGAR, exchange data), or (b) the market_intake engine's news overlay, which supplies colour on a measured indicator move and nothing more. Where a thesis needs data no engine yet provides, that is recorded as a build gap and a tool is built against a primary source — it is not filled from the web. <em>"You have to do your own work, generate your own trade ideas."</em> <span class="tag anton">ANTON · PTM 2.0 L7 1:43:44</span></p>
+</section>
+
+<hr class="sep">
+
+<!-- ============================== 12 GLOSSARY ============================== -->
+<section id="glossary">
+  <span class="secnum">12 · Glossary</span>
+  <h2>Plain-English glossary</h2>
+  <p class="lede">Every piece of jargon in this dossier, explained for a smart reader who doesn't live in a dealing room. Terms are grouped the way the dossier uses them.</p>
+
+  <h3>Duration, multiples &amp; the discount rate — the core idea of this book</h3>
+  <dl class="gloss">
+    <dt>Duration (of a stock)</dt>
+    <dd>How far in the future the bulk of a company's profits sit. A machinery maker paid on this year's order book earns its money <em>now</em> — short duration. A growth story whose big profits are promised in 2032 is <em>long duration</em>. The word is borrowed from bonds, where it measures the same thing: how long you wait to get paid.</dd>
+    <dt>Discount rate</dt>
+    <dd>The interest rate used to translate future money into today's money. £100 arriving in 10 years is worth much less today if you could instead earn 2.4% <em>above inflation</em> risk-free — which is exactly what the real 10-year Treasury yield offers right now. The real yield is the market's base discount rate for everything.</dd>
+    <dt>Short-duration cyclical earnings (our longs)</dt>
+    <dd>Profits that arrive <em>soon</em> (visible order books, this year's cash flow) from businesses tied to the economic cycle — electrical equipment, metals, banks, freight, energy. Two reasons we want them now: (1) when the discount rate rises, near-term profits lose almost no present value, so these stocks are insulated from the rate move; (2) the leading indicators say the cycle is expanding, which is precisely when these businesses' earnings grow. Both tailwinds, one bucket.</dd>
+    <dt>Multiple (P/E ratio)</dt>
+    <dd>The price you pay per £1 of a company's annual earnings. A stock on a 40× multiple costs £40 per £1 of current profit — you're paying up today for growth promised later. "High-multiple" and "long-duration" usually describe the same stocks.</dd>
+    <dt>"Short long-duration multiples" (our shorts)</dt>
+    <dd>Betting <em>against</em> expensive stocks whose value depends on distant future profits. When the real yield rises, those distant profits are discounted more heavily, so the fair multiple mathematically shrinks — the share price can fall even if the business performs fine. This is the mirror image of the longs above: one rate move, two trades.</dd>
+    <dt>De-rating / multiple compression</dt>
+    <dd>A share price falling because the <em>multiple</em> shrinks, not because earnings fell. The main way rising rates hurt expensive stocks.</dd>
+    <dt>Bond proxy</dt>
+    <dd>A stable, dividend-paying stock (classically a regulated utility) that investors own as a bond substitute. When actual bond yields rise, the dividend looks less special and the stock de-rates — which is the S3 short.</dd>
+  </dl>
+
+  <h3>Running the book</h3>
+  <dl class="gloss">
+    <dt>Long / short</dt>
+    <dd>Long = own it, profit if it rises. Short = borrow and sell it, profit if it falls (buy it back cheaper later).</dd>
+    <dt>Long/Short absolute-return book</dt>
+    <dd>A portfolio holding both longs and shorts, aiming to make money whether the market rises or falls — judged on its own return, not on beating an index.</dd>
+    <dt>Net tilt / net exposure</dt>
+    <dd>Longs minus shorts, as a share of the book. +15% net long means the long side is modestly bigger — we lean long without depending on the market rising. <em>Gross</em> exposure is longs plus shorts: how much capital is deployed in total.</dd>
+    <dt>Bucket</dt>
+    <dd>One independent idea/theme. We take one stock per bucket so that no two positions are secretly the same bet — diversification comes from ideas that don't move together, not from owning more tickers.</dd>
+    <dt>Correlation</dt>
+    <dd>How much two positions move together. Ten highly correlated stocks are one big bet in disguise; that's why the buckets matter more than the count.</dd>
+    <dt>Conviction (probability-weighted)</dt>
+    <dd>How strongly we hold a view — scaled to the number of <em>independent</em> signals agreeing, never certainty. Every view here has a stated probability and a stated way to be proven wrong.</dd>
+    <dt>Invalidation</dt>
+    <dd>The specific, pre-agreed evidence that would prove an idea wrong — written down <em>before</em> entering, so we exit on evidence instead of rationalising losses.</dd>
+    <dt>Watchlist / trigger</dt>
+    <dd>An idea we like but won't touch until a defined condition fires (e.g. gold miners wait for real-yield momentum to turn negative).</dd>
+    <dt>Reward-to-risk (1:3)</dt>
+    <dd>Position targets must offer at least £3 of gain per £1 risked to the stop-loss.</dd>
+    <dt>Paper portfolio</dt>
+    <dd>Simulated money, real process. No live orders; the discipline is the point.</dd>
+  </dl>
+
+  <h3>Rates &amp; inflation</h3>
+  <dl class="gloss">
+    <dt>Nominal vs real yield</dt>
+    <dd>Nominal = the stated interest rate. Real = the rate <em>after</em> expected inflation (measured from inflation-protected Treasuries, TIPS). Real is what matters for valuing assets — it's the true reward for waiting.</dd>
+    <dt>Breakeven (10y)</dt>
+    <dd>The market's implied inflation expectation: nominal yield minus real yield (4.71% − 2.43% ≈ 2.26%). Ours being flat while yields rise tells us the move is a <em>real-rate</em> move, not an inflation scare.</dd>
+    <dt>2s10s curve</dt>
+    <dd>The 10-year Treasury yield minus the 2-year. Positive and steepening usually signals growth expectations; an <em>inverted</em> curve (negative) has historically preceded recessions. Ours: +36bp, positive.</dd>
+    <dt>Bear steepener</dt>
+    <dd>The curve steepening because <em>long</em> yields are rising (falling bond prices = "bear" for bonds). Good for bank margins, bad for long-duration stocks — both are in this book.</dd>
+    <dt>Basis point (bp)</dt>
+    <dd>One hundredth of a percent. +25bp = +0.25%.</dd>
+    <dt>FOMC</dt>
+    <dd>The Federal Reserve committee that sets US interest rates. Its meetings (next: 29 July) can reprice the entire rates picture in an afternoon.</dd>
+    <dt>CPI / PPI</dt>
+    <dd>Consumer vs producer (factory-gate) inflation. PPI tends to lead CPI — a hot PPI (10.1%) means pipeline pressure that may keep rates rising.</dd>
+    <dt>M2 / net liquidity</dt>
+    <dd>M2 = the broad money supply. Net liquidity = the Fed's balance sheet minus the Treasury's cash account (TGA) minus money parked back at the Fed (reverse repo) — a measure of cash actually available to markets. Both rising = fuel for asset prices.</dd>
+  </dl>
+
+  <h3>Credit — the early-warning system</h3>
+  <dl class="gloss">
+    <dt>Credit spread / HY OAS</dt>
+    <dd>The extra yield "high-yield" (junk-rated) borrowers must pay over Treasuries. Widening spreads = the market pricing more default risk = stress. Ours is tight (calm) at the 15th percentile.</dd>
+    <dt>CCC−B decompression</dt>
+    <dd>The gap between the <em>riskiest</em> junk (CCC-rated) and moderately risky junk (B-rated). When this gap blows out while headline spreads stay calm — exactly today's picture, 99th percentile — the market is quietly repricing its weakest borrowers first. "The junk moves first" is the classic early crack.</dd>
+  </dl>
+
+  <h3>Volatility &amp; market internals</h3>
+  <dl class="gloss">
+    <dt>VIX</dt>
+    <dd>The market's expected volatility for the S&amp;P 500 over the next month, implied by option prices — the "fear gauge". Our traffic-light monitor sits on top of it: CALM means build/hold the book.</dd>
+    <dt>VIX3M/VIX</dt>
+    <dd>Three-month vs one-month expected volatility. Normally 3-month is higher; when the near month rises relative to it, markets are bracing for near-term trouble — currently one of our two bearish internal divergences.</dd>
+    <dt>MOVE</dt>
+    <dd>The bond market's version of the VIX. Bond volatility often leads equity volatility; ours is calm (69.6).</dd>
+    <dt>Relative-strength ratio (e.g. SOXX/SPY)</dt>
+    <dd>A sector ETF's price divided by the market's. Rising = the sector is leading; flat/falling = leadership stalling. A <em>bearish divergence</em> is when the market makes highs but the ratio doesn't confirm them.</dd>
+    <dt>Breadth (% above 200-day average)</dt>
+    <dd>The share of all stocks trading above their long-term trend line. Healthy markets rise on broad participation (ours: 66%), not a handful of giants.</dd>
+    <dt>McClellan oscillator</dt>
+    <dd>A momentum gauge built from daily advancing-vs-declining stock counts; near zero (ours: −4) means neither buying nor selling pressure dominates.</dd>
+  </dl>
+
+  <h3>The macro signals</h3>
+  <dl class="gloss">
+    <dt>Leading vs coincident indicators</dt>
+    <dd>Leading indicators (ISM surveys, permits, sentiment, the curve) move ~6 months <em>before</em> the economy; they set the view. Coincident indicators (payrolls, claims, industrial production) describe <em>now</em>; we use them only to confirm, never to initiate.</dd>
+    <dt>ISM PMI (manufacturing / services)</dt>
+    <dd>Monthly surveys of purchasing managers — the people who see orders first. Above 50 = expansion, below = contraction. The sub-indices matter (new orders lead everything), and the 18-industry rankings tell us <em>which</em> industries are growing — that's where the sector ideas come from.</dd>
+    <dt>Orders-to-inventories ratio</dt>
+    <dd>New orders divided by inventories. Above 1 (ours: 1.09) means demand is outrunning stock — production has to catch up. A forward signal inside a forward signal.</dd>
+    <dt>Growth breadth (ISM)</dt>
+    <dd>How many of the 18 surveyed industries report growth vs contraction (14/3 this month, from 16/0). Narrowing breadth = the expansion resting on fewer legs — a crack worth watching even while the headline is strong.</dd>
+    <dt>Building permits</dt>
+    <dd>Government approvals to start building homes — spending committed before the economy feels it. Leads GDP by 8–16 months; the housing chain shorts (S1) key off it.</dd>
+    <dt>UMCSI</dt>
+    <dd>University of Michigan Consumer Sentiment Index — how households feel. The consumer is ~two-thirds of the US economy; ours is at a 5-year low (44.8), the loudest bearish signal on the board.</dd>
+    <dt>NFIB</dt>
+    <dd>The small-business optimism survey — small firms employ roughly half of America. Decent zone, forward components improving.</dd>
+    <dt>Caixin vs official PMI (China)</dt>
+    <dd>Two Chinese manufacturing surveys: the state's official one (big state firms) and Caixin's private one (smaller exporters). We watch both; when they agree on expansion (now), the read is more trustworthy.</dd>
+    <dt>ESI (Europe)</dt>
+    <dd>The EU's Economic Sentiment Indicator, 100 = long-run average. At 95 and falling, Europe is the soft spot in the global backdrop.</dd>
+    <dt>Percentile (5-year)</dt>
+    <dd>Where today's value sits against the last five years of readings. 96th percentile = higher than 96% of all readings in that window — i.e. near the extreme.</dd>
+    <dt>Z-score</dt>
+    <dd>How far a reading is from its own average, measured in standard deviations. Beyond about ±1.5 we call it abnormal — copper's +1.48 is right at that line.</dd>
+    <dt>Confluence</dt>
+    <dd>The count of independent signals pointing the same way (15 risk-on / 3 risk-off / 2 neutral). Conviction scales with confluence — one signal is an anecdote, fifteen is an environment.</dd>
+  </dl>
+
+  <h3>Instruments &amp; themes</h3>
+  <dl class="gloss">
+    <dt>IPP / unregulated generator</dt>
+    <dd>An independent power producer that sells electricity at market prices — it captures scarcity pricing when demand surges. A <em>regulated</em> utility's returns are capped by a regulator, so it behaves like a bond instead (see bond proxy).</dd>
+    <dt>Hyperscaler</dt>
+    <dd>The handful of giant cloud/AI platforms whose capital spending funds the data-center build-out. Their quarterly investment guidance is the single variable feeding several of our buckets at once.</dd>
+    <dt>GDX</dt>
+    <dd>The main gold-miners ETF — and the instrument Anton uses for his own worked options examples, which is why the gold watchlist has ready-made defined-risk structures.</dd>
+    <dt>Options spread / strangle (defined-risk structures)</dt>
+    <dd>Option combinations where the maximum loss is fixed and known at entry — a way to express a view without betting the full directional amount. Taught in POTM; available whenever a watchlist trigger fires.</dd>
+  </dl>
 
   <footer>
-    <p><b>Status &amp; disclaimers.</b> Paper portfolio — £20,000 notional, no live orders; drafting an idea never places a trade, and execution sits behind a separate risk-gate with per-order human approval. Equity/options advice is given under <span class="mono">trade_ready_by_track.equity_options = true</span> (ITPL + PTM 2.0 + POTM fully ingested); FX remains locked pending PFTM. This dossier is the sector-level pass of Anton's process only — no stock has been selected, sized or timed; every name must still survive valuation-outlier, financial-health, catalyst, timing and portfolio-risk checks. All probabilities are the agent's stated estimates, probability-weighted and never gospel. Generated 26 July 2026 · The Macro Playbook · Portfolio Dossier 01.</p>
+    <p><b>Status &amp; disclaimers.</b> Paper portfolio — £20,000 notional, no live orders; drafting an idea never places a trade, and execution sits behind a separate risk-gate with per-order human approval. Equity/options advice is given under <span class="mono">trade_ready_by_track.equity_options = true</span> (ITPL + PTM 2.0 + POTM fully ingested); FX remains locked pending PFTM. This dossier is the sector-level pass of Anton's process only — no stock has been selected, sized or timed; every name must still survive valuation-outlier, financial-health, catalyst, timing and portfolio-risk checks. All probabilities are the agent's stated estimates, probability-weighted and never gospel. Generated 2026-07-26 20:32 BST · The Macro Playbook · Portfolio Dossier 01 · canonical copy: <span class="mono">knowledge/portfolio/dossiers/2026-07-26-initial-portfolio-bias.html</span>.</p>
   </footer>
 </section>
 
