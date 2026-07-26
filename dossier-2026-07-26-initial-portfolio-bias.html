@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Dossier 01 — Initial Portfolio Bias · 26 July 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EFEEE9; --petrol:#0C3B36; --petrol-deep:#082A26; --brass:#B8802B;
+    --ink:#1E2422; --ink-soft:#4A544F; --line:#D8D5CB;
+    --green:#1E6B4F; --red:#9E3B2F; --amber:#A9761B;
+    --card:#F7F6F2; --mono:'IBM Plex Mono',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+  body{background:var(--paper);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.65}
+  .shell{max-width:960px;margin:0 auto;padding:0 24px 96px}
+
+  /* Masthead */
+  .mast{background:var(--petrol);color:#E9E5D8;margin:0 -24px;padding:56px 24px 44px;border-bottom:4px solid var(--brass)}
+  .mast-inner{max-width:912px;margin:0 auto}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);margin-bottom:14px}
+  h1{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(34px,5.5vw,54px);line-height:1.08;letter-spacing:-.01em}
+  .standfirst{margin-top:18px;font-size:19px;line-height:1.55;color:#CFE0DA;max-width:44em}
+  .mastmeta{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px}
+  .chip{font-family:var(--mono);font-size:12px;padding:6px 12px;border:1px solid rgba(233,229,216,.35);border-radius:3px;letter-spacing:.04em}
+  .chip.b{border-color:var(--brass);color:var(--brass)}
+
+  /* Sections */
+  section{margin-top:64px}
+  .secnum{font-family:var(--mono);font-size:12px;letter-spacing:.22em;color:var(--brass);text-transform:uppercase;display:block;margin-bottom:8px}
+  h2{font-family:'Fraunces',serif;font-weight:600;font-size:30px;line-height:1.2;margin-bottom:18px}
+  h3{font-family:'Fraunces',serif;font-weight:600;font-size:21px;margin:28px 0 10px}
+  p{margin:12px 0;max-width:46em}
+  p.lede{font-size:18.5px}
+  ul,ol{margin:12px 0 12px 22px;max-width:44em}
+  li{margin:7px 0}
+  strong{font-weight:600}
+  a{color:var(--petrol);text-decoration-color:var(--brass)}
+  hr.sep{border:none;border-top:1px solid var(--line);margin:56px 0 0}
+
+  /* Provenance tags */
+  .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;padding:2px 7px;border-radius:2px;vertical-align:2px;white-space:nowrap}
+  .tag.engine{background:#DCE7E2;color:var(--petrol)}
+  .tag.anton{background:#EFE3CC;color:#7A5514}
+
+  /* Verdict box */
+  .verdict{background:var(--petrol);color:#E9E5D8;padding:32px 34px;border-radius:4px;margin-top:26px}
+  .verdict h3{color:var(--brass);font-size:15px;font-family:var(--mono);font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin:0 0 14px}
+  .verdict p{color:#DCE7E2;max-width:none}
+  .verdict .big{font-family:'Fraunces',serif;font-size:26px;line-height:1.3;color:#fff}
+  .tiltbar{margin:22px 0 8px;background:rgba(255,255,255,.08);border-radius:3px;height:38px;position:relative;font-family:var(--mono);font-size:11px}
+  .tiltbar .zone{position:absolute;top:0;bottom:0;border-left:1px solid rgba(255,255,255,.25)}
+  .tiltbar .fill{position:absolute;top:5px;bottom:5px;left:50%;width:17.5%;background:var(--brass);border-radius:2px}
+  .tiltbar .lab{position:absolute;top:44px;transform:translateX(-50%);color:#9FB8B0;white-space:nowrap}
+
+  /* Scoreboard */
+  .score{display:flex;gap:14px;margin:24px 0;flex-wrap:wrap}
+  .scorecell{flex:1;min-width:140px;background:var(--card);border:1px solid var(--line);border-top:3px solid var(--petrol);padding:18px;text-align:center}
+  .scorecell .n{font-family:'Fraunces',serif;font-size:40px;font-weight:700;line-height:1}
+  .scorecell .l{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:8px}
+  .scorecell.on .n{color:var(--green)} .scorecell.off .n{color:var(--red)} .scorecell.neu .n{color:var(--ink-soft)}
+
+  /* Tables */
+  table{border-collapse:collapse;width:100%;margin:20px 0;font-size:14.5px}
+  th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);text-align:left;padding:10px 12px;border-bottom:2px solid var(--petrol)}
+  td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  td.mono, .mono{font-family:var(--mono);font-size:13px}
+  tr.hi td{background:#F3EBDC}
+  .up{color:var(--green);font-weight:600}.dn{color:var(--red);font-weight:600}.fl{color:var(--ink-soft)}
+  .pill{font-family:var(--mono);font-size:11px;padding:2px 8px;border-radius:10px;white-space:nowrap}
+  .pill.on{background:#DFEBE4;color:var(--green)}.pill.off{background:#F0DEDA;color:var(--red)}.pill.neu{background:#E7E5DD;color:var(--ink-soft)}
+  .tablewrap{overflow-x:auto}
+
+  /* Bucket cards */
+  .bucket{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--green);padding:26px 28px;margin:22px 0;border-radius:2px}
+  .bucket.short{border-left-color:var(--red)}
+  .bucket.watch{border-left-color:var(--amber)}
+  .bucket h3{margin:0 0 4px;font-size:22px}
+  .bucket .side{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}
+  .bucket .side.long{color:var(--green)}.bucket .side.shrt{color:var(--red)}.bucket .side.wtch{color:var(--amber)}
+  .bucket table{margin:14px 0;font-size:13.5px}
+  .inval{margin-top:14px;padding:12px 16px;background:#EFE9DB;border-left:3px solid var(--brass);font-size:14.5px}
+  .inval b{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#7A5514}
+
+  /* AI stack diagram */
+  .stack{margin:26px 0}
+  .tier{display:flex;align-items:stretch;gap:0;margin:6px 0}
+  .tier .t-lab{flex:0 0 190px;background:var(--petrol);color:#E9E5D8;font-family:var(--mono);font-size:12px;padding:14px 14px;display:flex;align-items:center;border-radius:2px 0 0 2px}
+  .tier .t-body{flex:1;background:var(--card);border:1px solid var(--line);border-left:none;padding:12px 16px;font-size:14.5px;border-radius:0 2px 2px 0}
+  .tier .t-verdict{flex:0 0 118px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;letter-spacing:.1em;border:1px solid var(--line);border-left:none;border-radius:0 2px 2px 0}
+  .tier .t-verdict.long{background:#DFEBE4;color:var(--green)}
+  .tier .t-verdict.short{background:#F0DEDA;color:var(--red)}
+  .tier .t-verdict.neut{background:#E7E5DD;color:var(--ink-soft)}
+  @media(max-width:680px){.tier{flex-direction:column}.tier .t-lab{flex:none;border-radius:2px 2px 0 0}.tier .t-verdict{flex:none;padding:8px}}
+
+  /* Callout */
+  .callout{background:#F3EBDC;border-left:4px solid var(--brass);padding:20px 24px;margin:24px 0;border-radius:2px}
+  .callout .c-k{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7A5514;display:block;margin-bottom:8px}
+  .warn{background:#F2E3DF;border-left-color:var(--red)}
+  .warn .c-k{color:var(--red)}
+
+  /* Calendar */
+  .cal{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin:20px 0}
+  .cal .ev{background:var(--card);border:1px solid var(--line);padding:16px;border-top:3px solid var(--brass)}
+  .cal .d{font-family:var(--mono);font-size:12px;color:var(--brass);font-weight:600}
+  .cal .t{font-weight:600;margin-top:6px;font-size:15px}
+  .cal .w{font-size:13.5px;color:var(--ink-soft);margin-top:4px}
+
+  footer{margin-top:80px;padding-top:24px;border-top:2px solid var(--petrol);font-size:13.5px;color:var(--ink-soft)}
+  footer p{max-width:none}
+  .toc{background:var(--card);border:1px solid var(--line);padding:22px 26px;margin-top:34px;border-radius:2px;columns:2;column-gap:40px}
+  .toc a{display:block;padding:4px 0;font-family:var(--mono);font-size:13px;text-decoration:none;border-bottom:1px dotted var(--line)}
+  @media(max-width:640px){.toc{columns:1}}
+  .src{font-size:13px;color:var(--ink-soft)}
+</style>
+</head>
+<body>
+<div class="shell">
+
+<div class="mast"><div class="mast-inner">
+  <div class="kicker">The Macro Playbook · Portfolio Dossier 01</div>
+  <h1>Initial Portfolio Bias:<br>The Top-Down Sector Map</h1>
+  <p class="standfirst">A forward-looking, fully justified sector bias for the first £20,000 paper book — built Anton's way: environment first, sectors second, stocks later. Every claim below is tagged to its source: a deterministic engine reading or a cited course rule. Nothing else drives a bias.</p>
+  <div class="mastmeta">
+    <span class="chip b">26 JULY 2026</span>
+    <span class="chip">£20,000 · PAPER</span>
+    <span class="chip">HORIZON 20–60 DAYS</span>
+    <span class="chip">NET TILT +10–20% LONG</span>
+    <span class="chip">US EQUITIES ONLY</span>
+  </div>
+</div></div>
+
+<div class="toc">
+  <a href="#verdict">00 · The verdict</a>
+  <a href="#method">01 · Mandate &amp; method</a>
+  <a href="#environment">02 · The environment — every signal</a>
+  <a href="#forward">03 · The forward read (~6-month lead)</a>
+  <a href="#tilt">04 · The tilt decision</a>
+  <a href="#longs">05 · Sector longs — six buckets</a>
+  <a href="#shorts">06 · Sector shorts — four buckets</a>
+  <a href="#ai">07 · Deep dive: the AI vertical</a>
+  <a href="#gold">08 · Deep dive: gold miners</a>
+  <a href="#calendar">09 · Forward catalyst calendar</a>
+  <a href="#invalidation">10 · The invalidation dashboard</a>
+  <a href="#provenance">11 · Provenance &amp; sources</a>
+</div>
+
+<!-- ============================== 00 VERDICT ============================== -->
+<section id="verdict">
+  <span class="secnum">00 · Executive verdict</span>
+  <h2>Long the real economy, short the long-duration multiple</h2>
+  <div class="verdict">
+    <h3>The one-paragraph read</h3>
+    <p class="big">The leading indicators say expansion; the discount rate says be careful how you own it. We go modestly net long — and we get paid on composition, not direction.</p>
+    <p style="margin-top:16px">Fifteen of twenty deterministic signals vote risk-on <span class="tag engine">ENGINE</span> — GDP is accelerating, both ISM surveys are expanding with new orders leading, money supply and Fed net liquidity are rising, China is expanding, copper is up an abnormal +37.8% YoY, and the VIX regime is CALM. But three forward-looking cracks keep the tilt moderate rather than maximal: the 10-year <b>real yield sits at its 96th five-year percentile and is still rising</b>; <b>CCC−B junk-credit decompression is at its 99th percentile</b> ("the junk moves first"); and ISM growth breadth just narrowed on both surveys. The result: a <b>+10–20% net-long tilt</b> — inside Anton's "weak-to-quite-strong" bias band — expressed as long short-duration cyclical earnings (electrical equipment, metals, energy, financials, freight) against short long-duration multiples (housing-linked durables, bond proxies, unprofitable growth).</p>
+    <div class="tiltbar" aria-label="Net tilt gauge: +10 to +20 percent long, within Anton's ±30% limits">
+      <span class="zone" style="left:8.3%"></span><span class="zone" style="left:33.3%"></span><span class="zone" style="left:50%"></span><span class="zone" style="left:66.6%"></span><span class="zone" style="left:91.6%"></span>
+      <span class="fill"></span>
+      <span class="lab" style="left:8.3%">−30%</span><span class="lab" style="left:33.3%">−10%</span><span class="lab" style="left:50%">0</span><span class="lab" style="left:66.6%">+10%</span><span class="lab" style="left:91.6%">+30%</span>
+    </div>
+    <p style="margin-top:34px;font-size:13.5px;color:#9FB8B0">Tilt bands: ±10% = weak bias, &gt;20% = quite strong, ±30% = the outer limit where L/S benefits erode — PTM 2.0 L40 (PRM), 01:34:44. <span class="tag anton">ANTON</span></p>
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ============================== 01 METHOD ============================== -->
+<section id="method">
+  <span class="secnum">01 · Mandate &amp; method</span>
+  <h2>How this dossier was built</h2>
+  <p class="lede">This book is run as a <strong>Long/Short portfolio for absolute return</strong> — the aim is to make money whether the market rises or falls and to maximise the risk-adjusted return, not to beat a benchmark <span class="tag anton">ANTON · L8 33:30, L10 13:15</span>. The net bias is never a fixed stance; it is a <strong>tilt that follows the environment</strong>: strong → net long, weak → net short, flat → market-neutral <span class="tag anton">ANTON · PTM 2.0 L2 14:00</span>.</p>
+  <p>The construction sequence is Anton's top-down decision tree — <em>"go where the juice is"</em>: <b>GDP → Market → Sector → Stocks</b> <span class="tag anton">ANTON · PTM 2.0 L16 19:45</span>, with sectors organised on the GICS hierarchy (11 sectors → 24 industry groups → 69 industries) <span class="tag anton">ANTON · PTM 2.0 L16 25:30–31:20</span>. The ISM reports serve double duty: the headline gives the <b>predisposition — the portfolio bias</b> — and the 18-industry detail generates <b>potential trade ideas</b> <span class="tag anton">ANTON · PTM 2.0 L7 1:16:39</span>. And explicitly: you never put a trade on from the ISM alone — it must survive the rest of the process <span class="tag anton">ANTON · PTM 2.0 L7 1:31:10</span>. This dossier is that first, sector-level pass. Stock selection, valuation outliers, catalysts, timing and sizing come next, name by name.</p>
+  <p>Two provenance tags appear throughout, so every sentence can be audited:</p>
+  <ul>
+    <li><span class="tag engine">ENGINE</span> — a deterministic tool reading (FRED, ISM, yfinance, market-state, VIX monitor…). Facts computed by code, never by hand.</li>
+    <li><span class="tag anton">ANTON</span> — a rule cited to the ingested Kreil corpus (lesson + timestamp), retrieval-gated at ≥0.55 similarity.</li>
+  </ul>
+  <p>Where the corpus is silent and the engines don't measure something, this dossier says so and reasons in the open — it does not import outside research. News enters the system only as colour on a measured indicator move, via the intake engine, and is never the driver of a bias. <em>"You have to do your own work, generate your own trade ideas"</em> <span class="tag anton">ANTON · PTM 2.0 L7 1:43:44</span>.</p>
+  <p>Diversification in the eventual 8–12 name book comes from <b>low correlation between ideas, not from the count of positions</b> — adding correlated names past a point adds nothing <span class="tag anton">ANTON · ITPL-09 19:19; PTM 2.0 L21 27:57</span>. That is why this dossier is organised into ten independent <em>buckets</em>: one name per bucket keeps the correlation matrix honest.</p>
+</section>
+
+<hr class="sep">
+
+<!-- ============================== 02 ENVIRONMENT ============================== -->
+<section id="environment">
+  <span class="secnum">02 · The environment</span>
+  <h2>Every signal, its level, and its direction of travel</h2>
+  <p class="lede">Twenty deterministic signals vote on the current state. The scoreboard: <span class="tag engine">ENGINE · confluence tally, 26 Jul 2026</span></p>
+
+  <div class="score">
+    <div class="scorecell on"><div class="n">15</div><div class="l">Risk-on</div></div>
+    <div class="scorecell off"><div class="n">3</div><div class="l">Risk-off</div></div>
+    <div class="scorecell neu"><div class="n">2</div><div class="l">Neutral</div></div>
+  </div>
+
+  <p>But the vote is a snapshot of <em>levels</em>. Leading indicators lead by roughly six months, so what matters for a forward-looking book is each signal's <em>trajectory</em> — level, five-year percentile, 13-week trend, and the 4-week / 26-week change. The full table: <span class="tag engine">ENGINE · trajectory context</span></p>
+
+  <h3>Growth &amp; surveys</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Signal</th><th>Now</th><th>5y %ile</th><th>13w trend</th><th>Δ4w</th><th>Δ26w</th><th>Vote</th></tr>
+    <tr><td>US Real GDP YoY (Q1-26)</td><td class="mono">+2.68%</td><td class="mono">—</td><td class="up">accelerating</td><td class="mono">vs +1.99% prior</td><td class="mono">—</td><td><span class="pill on">ON</span></td></tr>
+    <tr><td>ISM Manufacturing PMI</td><td class="mono">53.3</td><td class="mono">51</td><td class="up">rising · 6 mo</td><td class="mono">+0.9</td><td class="mono">+4.1</td><td><span class="pill on">ON</span></td></tr>
+    <tr><td>&nbsp;&nbsp;↳ New orders / Production</td><td class="mono">56.0 / 52.2</td><td colspan="4">orders lead production — pipeline still filling; orders∶inventories 1.09</td><td><span class="pill on">ON</span></td></tr>
+    <tr class="hi"><td>&nbsp;&nbsp;↳ Growth breadth</td><td class="mono">14 / 3</td><td colspan="4">was 16 grow / 0 contract last month — <b>narrowing</b>. First crack in an otherwise strong survey.</td><td><span class="pill neu">WATCH</span></td></tr>
+    <tr><td>ISM Services NMI</td><td class="mono">54.0</td><td class="mono">37</td><td class="fl">flat</td><td class="mono">−2.1</td><td class="mono">+4.6</td><td><span class="pill on">ON</span></td></tr>
+    <tr><td>&nbsp;&nbsp;↳ Activity / Backlog</td><td class="mono">55.4 / 54.9</td><td colspan="4">backlog rising — services demand still outrunning supply</td><td><span class="pill on">ON</span></td></tr>
+    <tr><td>NFIB small business</td><td class="mono">97.3</td><td class="mono">37</td><td class="up">rising</td><td class="mono">+2.9</td><td class="mono">−1.9</td><td><span class="pill on">ON</span></td></tr>
+    <tr><td>Building permits YoY</td><td class="mono">−1.8%</td><td class="mono">37</td><td class="up">rising</td><td class="mono">−1.4</td><td class="mono">−2.8</td><td><span class="pill neu">NEUTRAL</span></td></tr>
+    <tr class="hi"><td>Consumer sentiment (UMCSI)</td><td class="mono">44.8</td><td class="mono"><b>0</b></td><td class="dn">falling</td><td class="mono">−5.0</td><td class="mono">−6.2</td><td><span class="pill off">OFF</span></td></tr>
+    <tr><td>Coincident nowcast (confirm layer)</td><td class="mono">3↑ / 1↓</td><td colspan="4">payrolls +0.3% YoY (+57k), claims −14.6% YoY, unemployment 4.2% — confirms expansion, does not vote</td><td><span class="pill neu">—</span></td></tr>
+  </table></div>
+
+  <h3>Rates, liquidity &amp; credit</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Signal</th><th>Now</th><th>5y %ile</th><th>13w trend</th><th>Δ4w</th><th>Δ26w</th><th>Vote</th></tr>
+    <tr><td>2s10s curve</td><td class="mono">+36bp</td><td class="mono">32</td><td class="dn">falling</td><td class="mono">+5bp</td><td class="mono">−28bp</td><td><span class="pill on">ON</span></td></tr>
+    <tr class="hi"><td>10y real yield</td><td class="mono">2.43%</td><td class="mono"><b>96</b></td><td class="up">rising</td><td class="mono">+25bp</td><td class="mono">+51bp</td><td><span class="pill on">ON*</span></td></tr>
+    <tr><td>10y nominal / breakeven</td><td class="mono">4.71% / 2.26%</td><td colspan="4">bear steepener: +17bp on the 10y this pass; breakevens contained — the move is REAL rates, not inflation expectations</td><td><span class="pill on">ON</span></td></tr>
+    <tr><td>HY OAS</td><td class="mono">277bp</td><td class="mono">15</td><td class="fl">tight</td><td class="mono">−6bp</td><td class="mono">+9bp</td><td><span class="pill on">ON</span></td></tr>
+    <tr class="hi"><td>CCC−B decompression</td><td class="mono">697bp</td><td class="mono"><b>99</b></td><td class="dn">widening</td><td class="mono">+28bp</td><td class="mono">+133bp</td><td><span class="pill neu">NEUTRAL†</span></td></tr>
+    <tr><td>Fed net liquidity (BS−TGA−RRP)</td><td class="mono">$5.92tn</td><td class="mono">82</td><td class="up">rising</td><td class="mono">+$105bn/wk</td><td class="mono">+$210bn</td><td><span class="pill on">ON</span></td></tr>
+    <tr><td>M2 growth</td><td class="mono">expanding</td><td class="mono">93</td><td class="up">rising</td><td class="mono">+0.75</td><td class="mono">+0.86</td><td><span class="pill on">ON</span></td></tr>
+    <tr><td>MOVE (bond vol)</td><td class="mono">69.6</td><td class="mono">35</td><td class="fl">calm</td><td class="mono">+0.2</td><td class="mono">+8.1</td><td><span class="pill on">ON</span></td></tr>
+  </table></div>
+  <p class="src">* The rates <em>regime</em> votes risk-on (growth-led), but the real-yield <em>level and momentum</em> drive the factor tilt — see §03. &nbsp;† Credit internals: headline HY is tight but the CCC−B leg is at extremes, so the engine scores credit internals neutral rather than on. On 25 July the intake layer flagged HY OAS +9bp in one day (z = 2.7) with no news attached <span class="tag engine">ENGINE · market_intake</span>.</p>
+
+  <h3>Risk appetite &amp; global</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Signal</th><th>Now</th><th>5y %ile</th><th>13w trend</th><th>Δ4w</th><th>Δ26w</th><th>Vote</th></tr>
+    <tr><td>VIX (traffic light: CALM)</td><td class="mono">18.6</td><td class="mono">57</td><td class="dn">falling</td><td class="mono">+0.2</td><td class="mono">+2.5</td><td><span class="pill on">ON</span></td></tr>
+    <tr><td>Field of Play breadth</td><td class="mono">12 / 14 bull</td><td colspan="4">S&amp;P 500 +21.5% above its bear level (6,097); bears: HSI, HSCEI. Backdrop only — we trade US.</td><td><span class="pill on">ON</span></td></tr>
+    <tr><td>Cyclical commodities composite</td><td class="mono">+17.7% YoY</td><td class="mono">84</td><td class="fl">mixed</td><td class="mono">+5.6</td><td class="mono">+10.6</td><td><span class="pill on">ON</span></td></tr>
+    <tr class="hi"><td>&nbsp;&nbsp;↳ Copper</td><td class="mono">+37.8% YoY</td><td colspan="4"><b>abnormal move (z = +1.48)</b> — the standout single commodity print; oil +19.9%, lumber +5.1%, iron ore +7.9%</td><td><span class="pill on">ON</span></td></tr>
+    <tr><td>Market internals — ratios</td><td class="mono">2 of 6 bearish</td><td colspan="4">VIX3M/VIX and Cyclicals/Defensives diverge bearishly; Discretionary/Staples diverges bullishly; SOXX/SPY neutral</td><td><span class="pill off">OFF</span></td></tr>
+    <tr><td>Market internals — breadth</td><td class="mono">66% &gt; 200dma</td><td colspan="4">64% &gt; 50dma; McClellan −4 — flat-to-constructive</td><td><span class="pill on">ON</span></td></tr>
+    <tr><td>China (Caixin PMI)</td><td class="mono">51.7</td><td class="mono">86</td><td class="up">rising</td><td class="mono">−0.1</td><td class="mono">+1.6</td><td><span class="pill on">ON</span></td></tr>
+    <tr><td>Europe (ESI)</td><td class="mono">95.0</td><td class="mono">26</td><td class="dn">falling · 4 mo</td><td class="mono">+1.3</td><td class="mono">−1.8</td><td><span class="pill off">OFF</span></td></tr>
+    <tr><td>US dollar (broad)</td><td class="mono">120.5</td><td colspan="4">grinding higher — mild headwind for commodities &amp; multinationals’ earnings</td><td><span class="pill neu">—</span></td></tr>
+  </table></div>
+
+  <div class="callout warn">
+    <span class="c-k">The three cracks that shape everything below</span>
+    <p style="max-width:none"><b>1 · The real 10-year at 2.43% — 96th percentile and rising (+51bp in six months).</b> This is the discount rate on every long-duration cash flow in the market. Nominal vs real matters — the real rate is what stands the test of time in the framework <span class="tag anton">ANTON · PTM 2.0 L4 40:17</span>. <b>2 · CCC−B decompression at the 99th percentile.</b> The weakest credit is being repriced <em>first</em>, underneath a calm headline HY spread — the classic late-cycle sequencing. <b>3 · ISM growth breadth narrowing on both surveys</b> (16/0→14/3 manufacturing; 17/2→14/4 services) in an otherwise expanding report. None of these flips the expansion call today; together they cap how hard we lean into it. <span class="tag engine">ENGINE</span></p>
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ============================== 03 FORWARD READ ============================== -->
+<section id="forward">
+  <span class="secnum">03 · The forward read</span>
+  <h2>What the next ~6 months look like from here</h2>
+  <p class="lede">The leading set leads GDP — and equities discount GDP with a roughly two-quarter lead, the taught structure behind the whole top-down method (peak correlation with the S&amp;P 500 at a ~6-month lead) <span class="tag anton">ANTON · PTM 2.0 L3 18:40, 39:05</span> <span class="tag engine">ENGINE · macro_gdp</span>. Weighing every signal's direction of travel, not just its level:</p>
+
+  <p><b>The central case (we estimate ~60%): expansion continues into Q4-26/Q1-27, but gets choppier and narrower.</b> The evidence for continuation is broad and independent: new orders at 56 with a positive orders-to-inventories ratio (1.09) says the manufacturing pipeline is still filling; services backlogs are rising; M2 (93rd percentile) and Fed net liquidity (82nd percentile, +$105bn on the week) are both <em>expanding</em> — the liquidity impulse leads risk assets; China's credit-sensitive Caixin survey is at an 86th-percentile reading and rising; and copper — the most GDP-sensitive price on the board — is up an abnormal +37.8% YoY. Payrolls and claims confirm the present. That is not a picture that typically rolls into recession within two quarters. <span class="tag engine">ENGINE</span></p>
+
+  <p><b>The risk case (~30%): a rate-led compression of multiples that hits the index without hitting the economy.</b> The real 10y has risen 51bp in six months into the 96th percentile while breakevens sit still — a pure discount-rate move. If it continues (supply pressure, a hawkish hold on 29 July, or the 10.1% YoY PPI pipeline forcing term-premium higher), the equity damage concentrates in long-duration growth — precisely the crowded end of the AI trade — while short-duration cyclical earnings are comparatively insulated. The CCC−B extreme and the one-day HY widening flagged by the intake layer are consistent with markets beginning to price this. Note this scenario <em>redistributes</em> returns rather than destroying them: it is why our longs are cash-flow-now sectors and our shorts are multiple-dependent ones — the book is designed to make money in both the central and the risk case.</p>
+
+  <p><b>The left tail (~10%): the consumer crack spreads.</b> Sentiment at 44.8 is literally the 0th five-year percentile — below the historical trough zone — and the consumer is two-thirds of the economy <span class="tag anton">ANTON · UMCSI framework, PTM 2.0 leading-indicator block</span>. Today it is contradicted by the hard data (retail trade growing in the ISM services ranking, accommodation &amp; food on a 10-month growth streak, claims falling). Two honest readings coexist: it is either the single best forward warning on the board, or — at a 0th-percentile extreme — a contrarian trough with the expectations sub-index already bouncing (+6.6 on the month). The falling 13-week trend keeps its vote OFF; the bounce in expectations is what we watch for the turn. Sentiment troughs are where you watch for the turn, not where you initiate shorts against a confirming real economy.</p>
+
+  <div class="callout">
+    <span class="c-k">Momentum across the whole board</span>
+    <p style="max-width:none">Of 17 signals with a measurable 13-week trend: <b>10 rising, 7 falling</b> <span class="tag engine">ENGINE · momentum tally</span>. The expansion is intact but no longer uniformly accelerating — a mid-expansion mix, not an early-cycle one. It argues for being long, selectively, with shorts that carry their own thesis rather than mere index hedges.</p>
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ============================== 04 TILT ============================== -->
+<section id="tilt">
+  <span class="secnum">04 · The tilt decision</span>
+  <h2>Net long, +10–20% — and why not more, and why not less</h2>
+  <p class="lede">Anton's bands: a 10% tilt is a fairly weak bias, above 20% is quite strong, and beyond ±30% the benefits of long/short construction erode <span class="tag anton">ANTON · PTM 2.0 L40 1:34:44</span>. We set the initial book inside <b>+10–20%</b>.</p>
+  <table>
+    <tr><th>Why not neutral / short</th><th>Why not maximum long</th></tr>
+    <tr>
+      <td>15/20 risk-on confluence · GDP accelerating (2.68% vs 1.99%) · both ISMs expanding, orders leading · M2 93rd pct &amp; net liquidity 82nd pct, both rising · VIX regime CALM ("full portfolio manager — build/hold") · China expanding · copper abnormal · coincident layer confirms · positive, steepening curve</td>
+      <td>Real 10y at 96th pct, +25bp in 4 weeks · CCC−B at 99th pct — junk repricing first · ISM breadth narrowing on both surveys · consumer at 0th pct · PPI pipeline at 10.1% YoY · Europe soft, 4-month ESI downtrend · 2 of 6 risk-appetite internals bearish · FOMC in 3 days</td>
+    </tr>
+  </table>
+  <p>In practice, for the £20,000 paper book: roughly <b>6 long buckets vs 4 short buckets</b>, one name each once stock selection is done, sized so gross is meaningfully deployed but net lands at +10–20%. Position-level sizing, stops (≥1:3 reward-to-risk) and the portfolio-volatility check (15–30% annualised, portfolio level) are the next stage of the process, run by the engines, not by eye. <span class="tag anton">ANTON · risk framework</span> <span class="tag engine">ENGINE · portfolio_risk_check</span></p>
+</section>
+
+<hr class="sep">
+
+<!-- ============================== 05 LONGS ============================== -->
+<section id="longs">
+  <span class="secnum">05 · Sector longs</span>
+  <h2>Six independent long buckets</h2>
+  <p class="lede">Each bucket states its forward thesis, the corroborating evidence, and — because nothing here is gospel — the specific development that would kill it. Conviction is ranked: the more independent signals corroborate, the higher it sits.</p>
+
+  <div class="bucket">
+    <div class="side long">Long · Conviction: highest on the board</div>
+    <h3>L1 — Electrical equipment &amp; grid infrastructure (Industrials)</h3>
+    <p><b>Forward thesis.</b> The most objective sector signal on the board: the ISM panel — actual purchasing managers reporting actual orders — ranks Electrical Equipment, Appliances &amp; Components the <b>#2 growth industry in American manufacturing, up 3 places, on a 5-month growth streak</b>, inside a survey where new orders (56.0) are outrunning both production (52.2) and inventories (ratio 1.09). Something is pulling hard on electrical gear, and the copper tape (+37.8% YoY, abnormal) independently confirms an electrification build-out is landing in the real economy. These are short-duration, order-book-visible earnings — exactly what the rising-real-yield regime pays for. The AI/data-center demand mapping is the agent's reasoning (§07); the evidence that the demand is real is already deterministic.</p>
+    <table>
+      <tr><th>Evidence</th><th>Reading</th></tr>
+      <tr><td>ISM mfg industry rank <span class="tag engine">ENGINE</span></td><td class="mono">Electrical Equipment, Appliances &amp; Components — #2 of 17, ▲3, 5-month growth streak</td></tr>
+      <tr><td>Survey pipeline <span class="tag engine">ENGINE</span></td><td class="mono">New orders 56.0; orders∶inventories 1.09 — demand outrunning stock</td></tr>
+      <tr><td>Rates factor tilt <span class="tag engine">ENGINE</span></td><td class="mono">"long short-duration value (energy, financials, industrials)"</td></tr>
+      <tr><td>Method <span class="tag anton">ANTON</span></td><td class="mono">ISM industry detail → trade ideas (L7 1:16:39); GDP→Sector tree (L16 19:45)</td></tr>
+    </table>
+    <div class="inval"><b>Invalidated by:</b> hyperscaler capex guidance cuts at the Q3 prints; Electrical Equipment dropping out of the ISM growth list; a demand-shock recession signal (ISM &lt; 50 with orders collapsing).</div>
+  </div>
+
+  <div class="bucket">
+    <div class="side long">Long · Conviction: high</div>
+    <h3>L2 — Copper &amp; industrial metals complex (Materials)</h3>
+    <p><b>Forward thesis.</b> The metal feeding both the grid build-out and the China restock is printing the single most abnormal price signal on the board. Data-center and grid electrification is copper-intensive, and the demand is contracted years ahead (see L1). With Caixin manufacturing expanding and the global cyclical impulse positive, the forward earnings revisions belong to the producers.</p>
+    <table>
+      <tr><th>Evidence</th><th>Reading</th></tr>
+      <tr><td>Commodity engine <span class="tag engine">ENGINE</span></td><td class="mono">Copper +37.8% YoY, z = +1.48 (abnormal); composite +17.7% YoY, 84th pct</td></tr>
+      <tr><td>ISM mfg rank <span class="tag engine">ENGINE</span></td><td class="mono">Primary Metals #4 (▲3, 6-mo streak); Fabricated Metals #6 (▲9)</td></tr>
+      <tr><td>Global demand <span class="tag engine">ENGINE</span></td><td class="mono">Caixin 51.7 rising, 86th pct; ISM services "Mining" #2 (▲5)</td></tr>
+      <tr><td>Discipline <span class="tag engine">ENGINE</span></td><td class="mono">Engine caveat: confirm demand-led, not supply-shock — China + orders data currently say demand</td></tr>
+    </table>
+    <div class="inval"><b>Invalidated by:</b> copper YoY rolling below trend with China PMIs &lt; 50 (demand break); a hard USD surge (broad index already grinding up — the watch item); evidence the move was supply-disruption, not demand.</div>
+  </div>
+
+  <div class="bucket">
+    <div class="side long">Long · Conviction: high</div>
+    <h3>L3 — Financials: banks &amp; insurers</h3>
+    <p><b>Forward thesis.</b> A positive and bear-steepening curve (borrow short, lend long) is the direct margin input for banks, and 4.7% nominal 10-years re-arm insurers' investment income. The ISM services ranking shows Finance &amp; Insurance on an 8-month growth streak and jumping 9 rank places — the survey is seeing it in real time. Credit costs are the swing factor; headline HY at the 15th percentile says they are not biting yet, and the CCC−B extreme (see shorts) is a low-quality-borrower story, not a bank-balance-sheet story — so far.</p>
+    <table>
+      <tr><th>Evidence</th><th>Reading</th></tr>
+      <tr><td>Curve <span class="tag engine">ENGINE</span></td><td class="mono">2s10s +36bp, bear steepener; 10y 4.71%</td></tr>
+      <tr><td>ISM services rank <span class="tag engine">ENGINE</span></td><td class="mono">Finance &amp; Insurance #5, ▲9, 8-month streak</td></tr>
+      <tr><td>Rates tilt <span class="tag engine">ENGINE</span></td><td class="mono">"long … financials" — explicit engine output</td></tr>
+      <tr><td>Credit <span class="tag engine">ENGINE</span></td><td class="mono">HY OAS 277bp (15th pct) — benign for now; watch the intake flag</td></tr>
+    </table>
+    <div class="inval"><b>Invalidated by:</b> HY OAS breaking decisively wider (the 25-Jul +9bp/z2.7 day becoming a trend, &gt;350bp); the curve re-flattening through zero; claims/payrolls turning (credit-cost pre-cursor).</div>
+  </div>
+
+  <div class="bucket">
+    <div class="side long">Long · Conviction: medium-high</div>
+    <h3>L4 — Energy</h3>
+    <p><b>Forward thesis.</b> The rates engine's own factor tilt names energy first among short-duration value. Oil is +19.9% YoY with the cyclical composite rising; PPI at 10.1% YoY says the inflation pipeline is hot, and energy is historically the sector whose earnings <em>rise</em> with the price level rather than being discounted by it. AI adds a quiet second leg: gas-fired and dispatchable generation demand for data-center power (see §07). Positioning: producers and midstream cash flow, not refining margin bets.</p>
+    <table>
+      <tr><th>Evidence</th><th>Reading</th></tr>
+      <tr><td>Rates tilt <span class="tag engine">ENGINE</span></td><td class="mono">"long short-duration value (energy, …)"</td></tr>
+      <tr><td>Commodity engine <span class="tag engine">ENGINE</span></td><td class="mono">Oil +19.9% YoY (z = 0.24, trend easing — not overextended)</td></tr>
+      <tr><td>Inflation pipeline <span class="tag engine">ENGINE</span></td><td class="mono">PPI +10.1% YoY vs CPI +3.7% — producer prices leading</td></tr>
+      <tr><td>ISM services <span class="tag engine">ENGINE</span></td><td class="mono">"Mining" (incl. oil &amp; gas extraction) #2 of the 18 service industries</td></tr>
+    </table>
+    <div class="inval"><b>Invalidated by:</b> oil YoY going negative with the composite rolling (demand break); a global-growth downgrade (China &lt; 50 + ESI &lt; 90 together); breakevens collapsing (disinflation shock).</div>
+  </div>
+
+  <div class="bucket">
+    <div class="side long">Long · Conviction: medium</div>
+    <h3>L5 — Transportation &amp; warehousing (freight cycle)</h3>
+    <p><b>Forward thesis.</b> The goods economy is re-accelerating (ISM mfg 6-month uptrend, orders 56) and the freight complex is the classic second-derivative play on it: volumes follow orders with a short lag. The ISM services ranking has Transportation &amp; Warehousing jumping 9 places to #4 with a 4-month streak, and Transportation Equipment holds a 6-month growth streak on the manufacturing side. Freight is also the cleanest <em>non-AI-correlated</em> cyclical long on the board — it diversifies the book's theme risk (L1/L2 both touch AI).</p>
+    <table>
+      <tr><th>Evidence</th><th>Reading</th></tr>
+      <tr><td>ISM services rank <span class="tag engine">ENGINE</span></td><td class="mono">Transportation &amp; Warehousing #4, ▲9, 4-month streak</td></tr>
+      <tr><td>ISM mfg <span class="tag engine">ENGINE</span></td><td class="mono">Transportation Equipment #10, ▲2, 6-month streak; orders 56 feed volumes next</td></tr>
+      <tr><td>Confirmation <span class="tag engine">ENGINE</span></td><td class="mono">Coincident layer expanding (3↑/1↓) — the freight base isn't rolling</td></tr>
+    </table>
+    <div class="inval"><b>Invalidated by:</b> ISM new orders back below 50; the services T&amp;W rank sliding two consecutive months; consumer goods demand cracking (watch the UMCSI turn direction).</div>
+  </div>
+
+  <div class="bucket">
+    <div class="side long">Long · Conviction: medium (expression-dependent)</div>
+    <h3>L6 — Semiconductors: the value end of the stack</h3>
+    <p><b>Forward thesis.</b> The semi <em>cycle</em> is real — Computer &amp; Electronic Products has grown 8 straight months in the ISM — while our internals show semi <em>leadership</em> has stalled: the SOXX/SPY ratio reads Neutral, no longer leading the tape <span class="tag engine">ENGINE</span>. That combination — volumes expanding, relative price flat — is what a rotation <em>within</em> the sector looks like: away from the multiple, toward the units. The forward opportunity is the tier that ships volume into the same capex with cyclical-not-story pricing: memory/storage and networking. Full vertical map in §07.</p>
+    <table>
+      <tr><th>Evidence</th><th>Reading</th></tr>
+      <tr><td>ISM mfg rank <span class="tag engine">ENGINE</span></td><td class="mono">Computer &amp; Electronic Products #7, ▲2, 8-month growth streak</td></tr>
+      <tr><td>Internals <span class="tag engine">ENGINE</span></td><td class="mono">SOXX/SPY ratio: Neutral — the ratio has reset, not broken</td></tr>
+      <tr><td>Rates tilt <span class="tag engine">ENGINE</span></td><td class="mono">Real yield 96th pct punishes the multiple, not the unit volume</td></tr>
+    </table>
+    <div class="inval"><b>Invalidated by:</b> hyperscaler capex cuts (same trigger as L1); memory pricing rolling over; SOXX/SPY flipping to a confirmed bearish divergence.</div>
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ============================== 06 SHORTS ============================== -->
+<section id="shorts">
+  <span class="secnum">06 · Sector shorts</span>
+  <h2>Four independent short buckets</h2>
+  <p class="lede">Every short carries its own falling-earnings or falling-multiple thesis — none is a passive hedge. Shorts will be restricted to large, liquid names ($20bn+ market cap) per the short guardrails when we go to stock selection <span class="tag anton">ANTON · L26 short rules</span>.</p>
+
+  <div class="bucket short">
+    <div class="side shrt">Short · Conviction: highest of the shorts</div>
+    <h3>S1 — Housing-linked durables: furniture, building products, wood</h3>
+    <p><b>Forward thesis.</b> The one place the ISM is outright contracting is the housing chain: all three contracting manufacturing industries — Paper, <b>Furniture</b> (crossed over from growth this month), <b>Wood Products</b> — sit on it, and Construction has slid 8 rank places on the services side. Permits are −1.8% YoY and −2.6% MoM at bare trend level, and the sector's customer is facing a 96th-percentile real mortgage-adjacent discount rate that is still rising. The demand headwind is set for the 20–60 day window; the survey says margin pressure is already landing.</p>
+    <table>
+      <tr><th>Evidence</th><th>Reading</th></tr>
+      <tr><td>ISM mfg contraction list <span class="tag engine">ENGINE</span></td><td class="mono">Paper #1, Furniture #2 (fresh crosser), Wood #3 — the entire contraction side is this chain</td></tr>
+      <tr><td>Housing engine <span class="tag engine">ENGINE</span></td><td class="mono">Permits 1.374M: −1.8% YoY, −2.6% MoM; 12-mo avg −2.4%</td></tr>
+      <tr><td>ISM services <span class="tag engine">ENGINE</span></td><td class="mono">Construction ▼8 ranks, 6-month streak fading</td></tr>
+      <tr><td>Rates <span class="tag engine">ENGINE</span></td><td class="mono">Real 10y 2.43%, rising — the direct affordability input</td></tr>
+    </table>
+    <div class="inval"><b>Invalidated by:</b> permits printing two positive MoM months (the 1-month "rising" tick extending); real yields rolling over hard; Furniture/Wood re-crossing into the ISM growth list.</div>
+  </div>
+
+  <div class="bucket short">
+    <div class="side shrt">Short · Conviction: high (timing-sensitive)</div>
+    <h3>S2 — Long-duration, high-multiple growth (incl. richest AI pure plays)</h3>
+    <p><b>Forward thesis.</b> The rates engine's explicit short leg: a 96th-percentile real yield still rising compresses the multiple on any cash flow promised far in the future — that is arithmetic, not opinion. The market's own risk-appetite plumbing is already consistent with it: the Cyclicals/Defensives and VIX3M/VIX internals show bearish divergence, and the CCC−B credit extreme (99th percentile, widening) says the market is repricing the weakest, longest-duration claims first <span class="tag engine">ENGINE</span>. The unprofitable-growth cohort — the equity cousins of CCC credit — is the higher-conviction leg here, ahead of the mega-cap compounders. <b>Timing discipline:</b> shorts are initiated into strength, never into a hole — entry timing is the technical-timing engine's job at stock selection.</p>
+    <table>
+      <tr><th>Evidence</th><th>Reading</th></tr>
+      <tr><td>Rates tilt <span class="tag engine">ENGINE</span></td><td class="mono">"short high-multiple / long-duration growth" — verbatim engine output</td></tr>
+      <tr><td>Real yield trajectory <span class="tag engine">ENGINE</span></td><td class="mono">2.43%, 96th pct, +25bp/4w, +51bp/26w — the move is real-rate, not breakeven</td></tr>
+      <tr><td>Credit analogue <span class="tag engine">ENGINE</span></td><td class="mono">CCC−B 697bp, 99th pct, widening — the lowest-quality funding is repricing first</td></tr>
+    </table>
+    <div class="inval"><b>Invalidated by:</b> real yields reversing &gt;25bp lower (dovish 29-Jul FOMC is the near catalyst); CCC−B compressing back; the confluence tally strengthening past 17/20 (a melt-up regime punishes shorts indiscriminately).</div>
+  </div>
+
+  <div class="bucket short">
+    <div class="side shrt">Short · Conviction: medium-high</div>
+    <h3>S3 — Bond-proxy regulated utilities</h3>
+    <p><b>Forward thesis.</b> Regulated utilities are priced off the long bond, and the long bond is bear-steepening (10y +17bp on the pass, real 10y at extremes). The ISM services panel has Utilities ranked near the bottom and slipping (▼2) — a 65-month growth streak with no momentum. Crucially, this is the <em>other half</em> of the power trade: the AI-demand winners are unregulated generators and grid-equipment makers (L1), not rate-capped bond proxies whose allowed returns lag their rising cost of capital. Long the bottleneck, short the bond proxy — one theme, both sides.</p>
+    <table>
+      <tr><th>Evidence</th><th>Reading</th></tr>
+      <tr><td>Rates <span class="tag engine">ENGINE</span></td><td class="mono">10y 4.71% (+17bp), real 2.43% (96th pct rising) — direct de-rating input</td></tr>
+      <tr><td>ISM services rank <span class="tag engine">ENGINE</span></td><td class="mono">Utilities #13 of 14 growing, ▼2 — bottom of the pile</td></tr>
+      <tr><td>Pair logic</td><td class="mono">Same theme as L1 with opposite duration — improves book correlation</td></tr>
+    </table>
+    <div class="inval"><b>Invalidated by:</b> a dovish pivot pulling the 10y &lt; 4.3%; concrete AI-datacenter rate-base awards to regulated names (re-rating catalyst); defensive rotation on a growth scare (utilities catch the safety bid).</div>
+  </div>
+
+  <div class="bucket short">
+    <div class="side shrt">Short · Conviction: medium</div>
+    <h3>S4 — Staffing &amp; corporate support services</h3>
+    <p><b>Forward thesis.</b> The white-collar hiring cycle is rolling over quietly: this month's ISM services crossers into contraction include <b>Management of Companies &amp; Support Services</b> and <b>Educational Services</b>, while payrolls have slowed to +57k/month (+0.3% YoY). Staffing firms are the highest-beta expression of corporate hiring intent — revenue falls before the economy does, because temp and contingent labour is cut first.</p>
+    <table>
+      <tr><th>Evidence</th><th>Reading</th></tr>
+      <tr><td>ISM services crossers <span class="tag engine">ENGINE</span></td><td class="mono">Mgmt of Companies &amp; Support Svcs + Educational Svcs → contraction (from growth)</td></tr>
+      <tr><td>Labour flow <span class="tag engine">ENGINE</span></td><td class="mono">Payrolls +57k, +0.3% YoY — decelerating; unemployment stable 4.2% (stock, not flow)</td></tr>
+      <tr><td>Survey employment <span class="tag engine">ENGINE</span></td><td class="mono">ISM mfg employment 49.7 (sub-50); services employment 51.2 (barely growing)</td></tr>
+    </table>
+    <div class="inval"><b>Invalidated by:</b> payrolls re-accelerating &gt;150k for two months; the support-services industry re-crossing to growth; claims falling to new cycle lows (hiring restart).</div>
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ============================== 07 AI VERTICAL ============================== -->
+<section id="ai">
+  <span class="secnum">07 · Deep dive</span>
+  <h2>The AI vertical: where the value filters down</h2>
+  <p class="lede">The question posed: with the purest plays priced for perfection, where in the vertical does the money funnel next? The hypothesis is yours; the method is Anton's (theme → sector → stock, <em>confirmed by objective data</em>); the tier mapping is the agent's reasoning, stated in the open. The answer, in one line: <b>value migrates from the layer with infinite multiple to the layer with finite supply.</b></p>
+
+  <h3>What the objective data already shows</h3>
+  <p>We don't need the financial press to test this thesis — the deterministic engines are already measuring it, in three independent places. <b>One:</b> the ISM manufacturing panel ranks <b>Electrical Equipment, Appliances &amp; Components #2 of all US manufacturing industries</b> (▲3, 5-month growth streak) and <b>Computer &amp; Electronic Products #7</b> (8-month streak) — purchasing managers reporting real orders, in a survey where new orders (56.0) outrun production (52.2) and inventories (ratio 1.09). An electrification-scale investment cycle is landing in the order books of the equipment layer. <b>Two:</b> copper — the raw material of that build-out — is +37.8% YoY, the only abnormal print in the commodity basket (z = +1.48). <b>Three:</b> the SOXX/SPY internal reads <b>Neutral</b>: semiconductor <em>volumes</em> are expanding (per the ISM) while semiconductor <em>relative price leadership</em> has stalled <span class="tag engine">ENGINE · all three</span>. Expanding units plus flat relative price at the top of the stack, while the layers beneath climb the ISM rankings, is precisely the signature of value filtering down the vertical. The rates engine supplies the accelerant: a 96th-percentile real yield punishes the infinite-duration multiple and leaves order-book earnings alone.</p>
+
+  <div class="stack">
+    <div class="tier"><div class="t-lab">TIER 0 · Models &amp; apps</div><div class="t-body">Foundation labs, AI software. Infinite-duration cash flows, competition just proved a single release can reprice the layer. Multiple risk lives here.</div><div class="t-verdict short">AVOID / S2</div></div>
+    <div class="tier"><div class="t-lab">TIER 1 · GPU pure plays</div><div class="t-body">The crowded consensus. Volumes real (ISM confirms the industry growing), but the price is a long-duration multiple in a 96th-percentile real-yield world. Short into strength only (S2 discipline).</div><div class="t-verdict short">S2 (timed)</div></div>
+    <div class="tier"><div class="t-lab">TIER 2 · Commodity silicon</div><div class="t-body">Memory / storage / networking — ships volume into the same build-out at cyclical multiples. ISM Computer &amp; Electronic Products: 8-month growth streak. The "value end" of the trade.</div><div class="t-verdict long">LONG · L6</div></div>
+    <div class="tier"><div class="t-lab">TIER 3 · Electrical equipment</div><div class="t-body">Transformers, switchgear, power management, cooling. ISM #2 growth industry, ▲3, 5-month streak, orders outrunning inventories. <b>The bottleneck layer — most engine-corroborated conviction in the book.</b></div><div class="t-verdict long">LONG · L1</div></div>
+    <div class="tier"><div class="t-lab">TIER 4 · Raw material</div><div class="t-body">Copper and the metals feed. +37.8% YoY, abnormal z-score, China rising. The build-out's commodity bill.</div><div class="t-verdict long">LONG · L2</div></div>
+    <div class="tier"><div class="t-lab">TIER 5 · Power itself</div><div class="t-body">Unregulated generators win the scarcity pricing; regulated bond-proxies wear the discount rate. The tier splits: IPP demand story vs S3 short. Gas-fired dispatch links to L4 energy.</div><div class="t-verdict neut">SPLIT · L4/S3</div></div>
+  </div>
+
+  <p><b>The forward logic, justified.</b> Every dollar of Tier-0/1 investment becomes <em>revenue</em> at Tiers 2–4 regardless of which model or chip vendor wins the race — the spend flows down the vertical mechanically. That makes the lower tiers a <em>lower-variance claim on the same theme</em>: they monetise the build-out, not the outcome of the model race — and the ISM rankings show that flow is already arriving in their order books. In the risk case (§03 — rate-led multiple compression), Tiers 3–4 hold their earnings while Tiers 0–1 de-rate; in the central case both work, but the tiers whose supply is finite keep the pricing power. The vertical therefore supplies both sides of the book — long the finite-supply layers (L1, L2, L6), short the infinite-multiple layers on strength (S2) — an intra-theme pair whose internal correlation is a feature, not a bug.</p>
+  <div class="inval" style="max-width:none"><b>Theme-level invalidation:</b> hyperscaler capex guidance cuts (watch Q3 earnings season, late Oct) — that single variable feeds Tiers 2, 3 and 4 at once; the book must never hold all three legs at full size simultaneously. The correlation engine will police this at stock selection.</div>
+</section>
+
+<hr class="sep">
+
+<!-- ============================== 08 GOLD ============================== -->
+<section id="gold">
+  <span class="secnum">08 · Deep dive</span>
+  <h2>Gold miners: right idea, wrong trigger — for now</h2>
+  <div class="bucket watch">
+    <div class="side wtch">Watchlist · Not a macro long today</div>
+    <h3>The honest verdict</h3>
+    <p><b>The corpus check first.</b> Retrieval against the ingested course tops out at 0.545 similarity for a gold-vs-macro rule — below the 0.55 grounding gate — so there is <em>no Anton-cited rule</em> linking gold to the macro cycle, and this dossier will not invent one. What the cited framework does supply is the discount-rate lens: real rates, not nominal, are what matter and "stand the test of time" in the framework <span class="tag anton">ANTON · PTM 2.0 L4 40:17</span>.</p>
+    <p><b>What our measured data says.</b> Gold's macro case is, mechanically, a falling-real-yield case: a zero-yield asset competes with the real risk-free return. Our tape says that case has not begun — the real 10y is at 2.43%, the <b>96th five-year percentile, +25bp in four weeks, +51bp in six months, still rising</b> <span class="tag engine">ENGINE</span>. A 2.4% real risk-free return is direct competition for a zero-yield asset. Note also that the commodity engine deliberately excludes gold from its cyclical basket — it is a monetary asset, not a growth commodity — so this month's copper strength says nothing in gold's favour. "Undersold" is a valuation claim about specific mining equities, not a macro signal; if real, it will show up as a valuation outlier against the miner peer set when we run the bottom-up screens — that is where the instinct gets tested, with the engine, on the numbers.</p>
+    <p><b>The disciplined position.</b> Watchlist, with a defined trigger, not a position: buying miners today is a bet that the discount-rate trend <em>reverses</em>, and our measured momentum says that reversal hasn't started. When the trigger fires, the structure toolkit is already unlocked: Anton's own worked options example is GDX <span class="tag anton">ANTON · POTM V26 6:10</span> — spreads and strangles allow a defined-risk entry without paying for the full directional view. And the bottom-up route stays open at stock selection: if the miners really are undersold, the valuation engine will show it against the peer set.</p>
+    <div class="inval"><b>Entry trigger (flips this to a long):</b> real 10y momentum turning negative (monitored every daemon pass) — a &gt;25bp retreat from the high, most plausibly catalysed by the FOMC path (29 Jul, then 16 Sep with presser). Secondary confirmation: USD broad index rolling over. Both are on the invalidation dashboard, §10.</div>
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ============================== 09 CALENDAR ============================== -->
+<section id="calendar">
+  <span class="secnum">09 · Forward catalysts</span>
+  <h2>The next six weeks of known unknowns</h2>
+  <p class="lede">Forward-looking means knowing when the picture can change. The dated events: <span class="tag engine">ENGINE · fomc tool + release conventions</span></p>
+  <div class="cal">
+    <div class="ev"><div class="d">WED 29 JUL · 3 DAYS</div><div class="t">FOMC decision</div><div class="w">No presser. The real-yield trajectory — the book's central variable — reprices here first. Hawkish hold extends S2/S3; dovish surprise arms the gold trigger.</div></div>
+    <div class="ev"><div class="d">~THU 30 JUL</div><div class="t">Q2 GDP advance estimate</div><div class="w">Tests the 2.68%-and-accelerating read the long tilt leans on.</div></div>
+    <div class="ev"><div class="d">~MON 3 AUG</div><div class="t">ISM Manufacturing (Jul)</div><div class="w">The breadth question: does 14/3 re-widen or keep narrowing? Electrical Equipment's rank = L1's monthly health check.</div></div>
+    <div class="ev"><div class="d">~WED 5 AUG</div><div class="t">ISM Services (Jul)</div><div class="w">Finance &amp; Insurance streak (L3), T&amp;W rank (L5), support-services contraction (S4).</div></div>
+    <div class="ev"><div class="d">~FRI 7 AUG</div><div class="t">Payrolls (Jul)</div><div class="w">+57k is the S4 thesis; &gt;150k twice invalidates it. Claims weekly in between.</div></div>
+    <div class="ev"><div class="d">~MID-AUG</div><div class="t">CPI / PPI (Jul)</div><div class="w">PPI 10.1% → CPI pass-through decides whether real yields keep climbing.</div></div>
+    <div class="ev"><div class="d">SEP 16 · PRESSER</div><div class="t">FOMC + projections</div><div class="w">The full repricing event for the rates complex; the gold trigger's most likely catalyst.</div></div>
+    <div class="ev"><div class="d">LATE OCT</div><div class="t">Hyperscaler Q3 earnings</div><div class="w">Capex guidance = the single variable feeding L1, L2, L6 and S2 at once. The AI theme's judgment day.</div></div>
+  </div>
+  <p class="src">ISM releases follow the first/third-business-day convention; exact dates approximate. FOMC dates from the deterministic calendar tool.</p>
+</section>
+
+<hr class="sep">
+
+<!-- ============================== 10 INVALIDATION ============================== -->
+<section id="invalidation">
+  <span class="secnum">10 · Invalidation dashboard</span>
+  <h2>What flips each call — monitored every daemon pass</h2>
+  <p class="lede">Nothing in this dossier is gospel; every read is probability-weighted and pre-commits to the evidence that would change it. The background engines re-compute these continuously and alert on transitions.</p>
+  <div class="tablewrap"><table>
+    <tr><th>Call</th><th>Flips if…</th><th>Watched by</th></tr>
+    <tr><td class="mono">NET TILT +10–20%</td><td>VIX monitor confirms exit from CALM; confluence drops below ~12/20; ISM breadth narrows again (Aug 3/5)</td><td class="mono">vix_monitor · confluence tally · ism engines</td></tr>
+    <tr><td class="mono">EXPANSION BASE CASE</td><td>ISM &lt; 50 with orders &lt; 48; coincident nowcast flips contracting; GDP decelerates two prints</td><td class="mono">ism · coincident · macro_gdp</td></tr>
+    <tr><td class="mono">RATE-PRESSURE FACTOR TILT (S2/S3 + composition of longs)</td><td>Real 10y retreats &gt;25bp from 2.43%; regime engine drops "real yields surging" from its tilt line</td><td class="mono">macro_rates (daily)</td></tr>
+    <tr><td class="mono">CREDIT BENIGN</td><td>HY OAS &gt; ~350bp or repeated z&gt;2 daily widenings; CCC−B extreme spreads to single-B/BB</td><td class="mono">macro_rates credit leg · market_intake</td></tr>
+    <tr><td class="mono">AI VERTICAL (L1/L2/L6/S2)</td><td>Hyperscaler capex guidance cut; Electrical Equipment exits ISM growth list; SOXX/SPY confirmed bearish divergence</td><td class="mono">ism --rankings · market_internals · Q3 earnings (manual)</td></tr>
+    <tr><td class="mono">HOUSING SHORT (S1)</td><td>Permits print two positive MoM; Furniture/Wood re-cross to growth; real yields roll over</td><td class="mono">building_permits · ism --rankings</td></tr>
+    <tr><td class="mono">GOLD WATCHLIST → LONG</td><td>Real 10y momentum negative / &gt;25bp off the high; USD broad rolling over</td><td class="mono">macro_rates · market_intake (daily)</td></tr>
+    <tr><td class="mono">CONSUMER NEUTRALITY</td><td>UMCSI expectations extend the +6.6 bounce two more months (→ discretionary longs open up); or hard data joins sentiment (→ consumer shorts open up)</td><td class="mono">consumer_sentiment (monthly)</td></tr>
+  </table></div>
+</section>
+
+<hr class="sep">
+
+<!-- ============================== 11 PROVENANCE ============================== -->
+<section id="provenance">
+  <span class="secnum">11 · Provenance</span>
+  <h2>Methodology, citations &amp; sources</h2>
+  <h3>Deterministic engines (all readings 26 Jul 2026 unless dated)</h3>
+  <p class="src">market_state (Field of Play, 20%-rule) · macro_gdp (FRED GDPC1 + lead-correlation) · macro_rates (FRED CMT/TIPS/HY-OAS/H.4.1 + MOVE; credit-internals leg) · ism_manufacturing + ism_services (headline, sub-indices, 18-industry Performance rankings) · consumer_sentiment (UMCSI) · building_permits · small_business_optimism (NFIB) · money_supply (M2) · cyclical_commodities (copper/oil/lumber/iron-ore composite) · china_leading (Caixin vs official) · european_esi · coincident_indicators (confirmation layer) · market_internals (risk-appetite ratios + breadth) · vix_monitor (hysteresis traffic-light) · market_intake (daily-move news overlay) · fomc (meeting calendar). Every number in this dossier is an engine output; none were computed by hand.</p>
+  <h3>Course citations (Anton Kreil, ingested corpus — retrieval-gated ≥ 0.55)</h3>
+  <p class="src">Absolute-return L/S mandate — ITPL L8 33:30, L10 13:15 · Environment-driven net bias — PTM 2.0 L2 14:00 · Tilt bands ±10/20/30% — PTM 2.0 L40 (PRM) 1:34:44 · GDP→Market→Sector→Stocks ("go where the juice is") — PTM 2.0 L16 19:45 · GICS hierarchy — PTM 2.0 L16 25:30–31:20 · ISM = portfolio bias + trade-idea source — PTM 2.0 L7 1:16:39 · "Never trade the ISM alone" — PTM 2.0 L7 1:31:10 · GDP leads equities ~2 quarters — PTM 2.0 L3 18:40/39:05 · Real vs nominal rates — PTM 2.0 L4 40:17 · Diversification by correlation, not count — ITPL-09 19:19, PTM 2.0 L21 27:57 · GDX options structures — POTM V26 6:10 · Short guardrails ($20bn+) — PTM 2.0 L26.</p>
+  <h3>External information policy</h3>
+  <p class="src">No press articles, broker research or street forecasts were used anywhere in this dossier. Under the grounding contract, outside knowledge is never a driver: external data enters the system only as (a) objective published statistics pulled by deterministic engines from primary sources (FRED, ISM, SEC EDGAR, exchange data), or (b) the market_intake engine's news overlay, which supplies colour on a measured indicator move and nothing more. Where a thesis needs data no engine yet provides, that is recorded as a build gap and a tool is built against a primary source — it is not filled from the web. <em>"You have to do your own work, generate your own trade ideas."</em> <span class="tag anton">ANTON · PTM 2.0 L7 1:43:44</span></p>
+
+  <footer>
+    <p><b>Status &amp; disclaimers.</b> Paper portfolio — £20,000 notional, no live orders; drafting an idea never places a trade, and execution sits behind a separate risk-gate with per-order human approval. Equity/options advice is given under <span class="mono">trade_ready_by_track.equity_options = true</span> (ITPL + PTM 2.0 + POTM fully ingested); FX remains locked pending PFTM. This dossier is the sector-level pass of Anton's process only — no stock has been selected, sized or timed; every name must still survive valuation-outlier, financial-health, catalyst, timing and portfolio-risk checks. All probabilities are the agent's stated estimates, probability-weighted and never gospel. Generated 26 July 2026 · The Macro Playbook · Portfolio Dossier 01.</p>
+  </footer>
+</section>
+
+</div>
+</body>
+</html>
