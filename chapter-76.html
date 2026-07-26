@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>PTM 2.0 33 · Trade Idea Generation Template — Part 1 — The Macro Playbook — The Top-Down Macro Read</title>
+<title>POTM Options 22 · Long Straddles — The Non-Directional Volatility Bet — The Macro Playbook — The Top-Down Macro Read</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -274,7 +274,7 @@
       </a></li>
       
       <li><a href="chapter-43.html"
-             class="is-active">
+             class="">
         <span class="rn">33</span>
         <span class="rt">Trade Idea Generation Template — Part 1<small>PTM 2.0 · How to formalize the w</small></span>
       </a></li>
@@ -472,7 +472,7 @@
       </a></li>
       
       <li><a href="chapter-76.html"
-             class="">
+             class="is-active">
         <span class="rn">22</span>
         <span class="rt">Long Straddles — The Non-Directional Volatility Bet<small>POTM Options · Buy an ATM call and an</small></span>
       </a></li>
@@ -488,148 +488,196 @@
     
 <div class="wrap">
   <header class="hero">
-    <div class="hero__num reveal">PTM 2.0 · Chapter 33</div>
-    <h1 class="reveal d1">Trade Idea Generation Template — Part 1</h1>
-    <p class="hero__sub reveal d1">How to formalize the whole 22–33 idea-generation flow into one disciplined, repeatable template — and use it to pin down the numbers and price targets.</p>
-    <p class="hero__lead reveal d2">A fundamental long or short is not a trade idea until it has catalysts and a structure. This lesson pulls the entire quantitative + qualitative process into a single Trade Idea Template and walks the Zendesk (ZEN) May-2020 case so you can arrive at sensible price-target assumptions the same way every time.</p>
+    <div class="hero__num reveal">POTM Options · Chapter 22</div>
+    <h1 class="reveal d1">Long Straddles — The Non-Directional Volatility Bet</h1>
+    <p class="hero__sub reveal d1">Buy an ATM call and an ATM put on the same strike and expiry — a pure bet that the stock moves big either way, taught as groundwork, not as a retail edge.</p>
+    <p class="hero__lead reveal d2">The long straddle pairs a bought at-the-money call with a bought at-the-money put on the same strike and expiration: a non-directional, long-volatility bet that only pays if the move is large. Anton grades it Medium usefulness for retail but says it should really be Low — a market-maker&#39;s hedge, not a speculator&#39;s edge. It matters here only as the foundation for the directional strap and strip straddles that follow.</p>
     <div class="hero__chips reveal d3">
-      <span class="chip chip--signal"><span class="dot"></span>Run every idea through the same template — regularity + familiarity = consistency in process, and consistency in process leads to consistency in returns.</span>
+      <span class="chip chip--signal"><span class="dot"></span>Understand the construction, then don&#39;t trade it — it&#39;s the groundwork for the directional straddles next.</span>
       <span class="chip"><b>10</b>&nbsp;min read</span>
-      <span class="chip"><b>8</b>&nbsp;slides</span>
+      <span class="chip"><b>17</b>&nbsp;slides</span>
     </div>
   </header>
 
   
   <section class="gist reveal">
     <h2>The gist</h2>
-    <ul><li>Why a template at all: it is about discipline and consistency — Regularity + Familiarity = Consistency, and consistency in process leads to consistency in returns.</li><li>A fundamental long or short is NOT a fully-formed trade idea yet; it becomes one only once you add catalyst identification and a trade structure.</li><li>Trade structuring choices: outright stock (1-for-1, no leverage), on margin (US 50% overnight requirement ≈ 2-for-1), CFD (up to 5x, realistically ~4x on average), or directional stock-options structures — options are deferred to the POTM series; PTM ends in a long/short stock position.</li><li>The template consolidates videos 22–33 into one flow, split across a Quantitative &amp; Qualitative (Micro) Dashboard: forward-looking sector filters (Mkt Cap, %EG, %RG, P/E, PEG), backward-looking valuation (EV, EBIT/EBITDA, EV/EBIT, EV/EBITDA), P&amp;L margins, balance-sheet ratios, cash-flow, then the qualitative half (KPIs/MOP, earnings-call transcripts, management, board, insider ownership + transactions, analyst estimates/range/ratings, and Catalysts).</li><li>Part-1&#39;s job: get the numbers right and arrive at sensible, reasonable price-target (PT) assumptions — not exact science, but accurate and reasonable.</li><li>Zendesk (ZEN) May-2020 is a revenue-growth story, not an earnings-growth story: 2019 GAAP loss of −$169.7M vs non-GAAP profit of $36.8M, the difference due to share-based compensation and related expenses — so the work is done on the positive non-GAAP EPS.</li><li>Upper-bound PT = $76 × 1.8 = $136.80, where 1.8 = EPS2020/EPS2019 = $0.572 / $0.317 (≈80% earnings growth, holding the ~239 P/E constant).</li><li>Lower-bound PT ≈ $102.60 = $1.1bn 2020 sales × 10.31 (2019 sales multiple) = $11,341,000,000 ÷ 110,532,577 shares outstanding — the more realistic target for a revenue-growth name.</li></ul>
+    <ul><li>A long straddle = BUY 1x ATM call + BUY 1x ATM put with the SAME strike and SAME expiration — two transactions, a net DEBIT, and a bet on volatility, not direction.</li><li>It is non-directional: you assume no fundamental predisposition, only that the stock will move up and/or down in a big way.</li><li>Parameters: Non-Directional · Volatility · Simple · Two Transactions · Debit · Max Risk (Low, Defined) · Max Gain (Unlimited).</li><li>Payoff is V-shaped: maximum loss is the total premium paid if the stock sits AT the strike at expiry; upside is unlimited (from the call), downside gain is large (from the put).</li><li>Two breakevens: upper = strike + total premium; lower = strike − total premium. The stock must move well past a breakeven to profit, and IV is usually already bid up before a known catalyst.</li><li>Anton marks it Medium usefulness for retail but says it should really be Low — a &#39;boredom trade&#39; for anyone with a directional view; you&#39;d make more buying double the calls (if bullish) or double the puts (if bearish).</li><li>Its only genuine use is for an options market maker hedging a negative-selection short-volatility book — not the retail trader mandate.</li><li>Worked example — Company X at $50: $50 call @ $2 ($200) + $50 put @ $2 ($200) = $400 debit; breakevens $54 and $46; the stock had to move $8 (to $42 or $58) to make a meaningful $400 profit.</li></ul>
   </section>
   
 
   
   <section class="section" id="s1">
-    <div class="section__k">01 / 8</div>
-    <h3>Why bother with a template at all</h3>
+    <div class="section__k">01 / 11</div>
+    <h3>Volatility Bets 1 — the Long Straddle</h3>
     
-    <ul class="points"><li>It comes down to discipline and consistency — the template turns the whole idea-generation process into a formal checklist you run for every single idea.</li><li>The motto on the slide: Regularity + Familiarity = Consistency.</li><li>The more you fill it out, the more familiar and better you get — and even once you are good, you keep doing it out of discipline, on repeat, forever.</li><li>Consistency in process leads to consistency in returns.</li></ul>
+    <ul class="points"><li>Video 22 opens the volatility-strategy run: six more videos in quick succession before the final-exam prep in video 28.</li><li>The first two strategies (videos 22 and 23) are deliberately not useful for retail — they exist as groundwork.</li><li>The four strategies that follow have a directional element and ARE useful, but they require you to understand the long straddle first.</li></ul>
     
-    <p class="explain">The template is not busywork — it is the mechanism that makes the process repeatable. Anton frames discipline as the bridge between a good process and a consistent P&amp;L: you formalize the process into a consistent format so the outputs become consistent too.</p>
+    <p class="explain">Anton is explicit up front: he is teaching a strategy he will tell you not to trade, because you cannot understand the directional strap and strip straddles without first understanding the plain long straddle.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/ptm2-33/00-11-20.jpg" alt="Slide: Why bother with a template at all">
-      <figcaption>Slide · 00:11:20</figcaption>
+      <img loading="lazy" src="assets/slides/potm-22/00-02-30.jpg" alt="Slide: Volatility Bets 1 — the Long Straddle">
+      <figcaption>Slide · 00:02:30</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s2">
-    <div class="section__k">02 / 8</div>
-    <h3>A fundamental long/short is not yet a trade idea</h3>
+    <div class="section__k">02 / 11</div>
+    <h3>What we cover</h3>
     
-    <ul class="points"><li>Trade idea generation is not just fundamentals: it is fundamentals + timing + trade structure around catalysts.</li><li>After the first part of the process you have a fundamental long or short — but it is not a full trade idea until you add catalyst identification, which then biases your trade structure.</li><li>Timing is another ingredient of the overall process and is covered later in the PTM series.</li></ul>
+    <ul class="points"><li>Quick Explanation — what the trade is and who it&#39;s for.</li><li>When to Use the Strategy and How to Use the Strategy.</li><li>Break Even, Profit Calculations (Maximum Upside), Risk Calculations (Maximum Downside).</li><li>A fully worked Strategy Example.</li></ul>
     
-    <p class="explain">This lesson sits inside the ProTrader Systematic Process: long/short portfolio management on a 20-to-60-day horizon. A fundamental view is only the starting point — catalysts and structure are what turn it into something tradeable.</p>
+    <p class="explain">The same structured template used across the POTM course: define the trade, state when and how it&#39;s used, work the break-even and risk math, then ground it in a numeric example.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/ptm2-33/00-01-05.jpg" alt="Slide: A fundamental long/short is not yet a trade idea">
-      <figcaption>Slide · 00:01:05</figcaption>
+      <img loading="lazy" src="assets/slides/potm-22/00-03-35.jpg" alt="Slide: What we cover">
+      <figcaption>Slide · 00:03:35</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s3">
-    <div class="section__k">03 / 8</div>
-    <h3>What trade structuring actually means</h3>
+    <div class="section__k">03 / 11</div>
+    <h3>Quick explanation — buy the call, buy the put</h3>
     
-    <ul class="points"><li>Trade structuring = the options structures that fit the trade idea you have just generated.</li><li>Once a stock is a fundamental long/short with catalysts, you have choices: buy/short stock outright (1-for-1, cash-for-stock, no leverage).</li><li>On margin — e.g. the US 50% overnight margin requirement leverages you two-for-one.</li><li>Via CFD (international access) — a derivative, up to 5x leverage right now, but more realistically ~4x on average.</li><li>Or a plethora of directional stock-options structures (accessible to both US and international traders).</li><li>Options structures are NOT covered here — they are an entire series in themselves, taught in the POTM (Professional Options Trading Masterclass). PTM assumes you end in a long or short stock position, outright, on margin, or via CFD.</li></ul>
+    <ul class="points"><li>Buy 1x At The Money (ATM) call AND buy 1x ATM put with the SAME strike and SAME expiration.</li><li>Non-directional: no bullish or bearish inclination, so it assumes no fundamental predisposition on the underlying.</li><li>It is a bet that the stock will go up and/or down in a big way — a bet on volatility, not on direction.</li><li>Marked &#39;Medium Usefulness&#39; for retail — but in reality it should be &#39;Low&#39;; marked Medium only because it helps you understand more optimal strategies.</li><li>If you already hold stock (long or short) or hold a bullish/bearish predisposition, buying a call and a put together is neither a marginal benefit nor an effective hedge.</li></ul>
     
-    <p class="explain">Anton cements the definition so it does not get muddled later. The key point for PTM: everything in this series culminates in a long/short stock position; the option-structure layer is deferred to POTM.</p>
+    <p class="explain">The construction is trivial — two ATM options, same strike, same expiry — but the honest rating is Low: for anyone who already has a view or a position, holding a call and a put simultaneously adds nothing. It is included because the strap and strip straddles are built on it.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/ptm2-33/00-01-05.jpg" alt="Slide: What trade structuring actually means">
-      <figcaption>Slide · 00:01:05</figcaption>
+      <img loading="lazy" src="assets/slides/potm-22/00-06-20.jpg" alt="Slide: Quick explanation — buy the call, buy the put">
+      <figcaption>Slide · 00:06:20</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s4">
-    <div class="section__k">04 / 8</div>
-    <h3>The entire trade idea generation process (videos 22–33)</h3>
+    <div class="section__k">04 / 11</div>
+    <h3>The only real use: a market maker caught short volatility</h3>
     
-    <ul class="points"><li>Video 22 — Quantitative Processing 1: Forward-Looking Valuation.</li><li>Video 23 — Quantitative Processing 2: Forward-Looking Growth (earnings growth, revenue growth).</li><li>Video 24 — Quantitative Processing 3: Forward Growth Rating (PEG) &amp; backwards-looking statements.</li><li>Videos 25–26 — Mechanics of Long Ideas / Short Ideas: earnings-growth profiles for long vs short optimization.</li><li>Video 27 — Turnarounds and Value Traps: sub-optimal yet necessary EG profiles for portfolio diversification.</li><li>Video 28 — Data Mining &amp; Processing Mistakes (perfecting the quant); Video 29 — recap, putting it all together.</li><li>Videos 30–31 — Qualitative Assessment: identifying KPIs (business drivers + MOP inferral), then quality assessment and market expectations/range.</li><li>Video 32 — Identifying Catalysts: communication that moves the needle between earnings reports.</li><li>Video 33 — this template: formalizing the whole process into a consistent format.</li></ul>
+    <ul class="points"><li>The only genuine use of the long straddle is for a market maker in options who is caught short volatility in an asset and doesn&#39;t want to be.</li><li>In that instance it adds value to the market maker.</li><li>It adds NO value for those with a directional predisposition or those already holding stock and seeking an optimal hedge — i.e. the retail trader mandate.</li></ul>
     
-    <p class="explain">The template is the destination of the entire 22–33 arc. Everything you learned in those videos goes into it for every idea. (Macro / leading-indicator ideas mainly set the portfolio bias, but can also seed some ideas for diversification.)</p>
+    <p class="explain">The strategy has exactly one legitimate home: a market maker&#39;s defensive hedge. That is not you. Keep that distinction front of mind through the rest of the lesson.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/ptm2-33/00-05-45.jpg" alt="Slide: The entire trade idea generation process (videos 22–33)">
-      <figcaption>Slide · 00:05:45</figcaption>
+      <img loading="lazy" src="assets/slides/potm-22/00-07-00.jpg" alt="Slide: The only real use: a market maker caught short volatility">
+      <figcaption>Slide · 00:07:00</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s5">
-    <div class="section__k">05 / 8</div>
-    <h3>The Quantitative half of the (Micro) Dashboard</h3>
+    <div class="section__k">05 / 11</div>
+    <h3>Parameters at a glance</h3>
     
-    <ul class="points"><li>Forward-looking sector-filtering metrics: Market Capitalization (Mkt Cap), % Earnings Growth (EG), % Revenue Growth (RG), Price/Earnings (P/E), PEG Ratio.</li><li>Backward-looking valuation: Enterprise Value (EV), EBIT &amp; EBITDA, EV/EBIT, EV/EBITDA.</li><li>P&amp;L (backward-looking): Gross Margins/Gross Profit Ratio, Pre-tax Profit Ratio, Net (After-Tax) Margins/Ratio.</li><li>Balance Sheet: Debt-to-Equity, Interest Coverage, Current Ratio, Quick Ratio, Working Capital over Total Assets, Book Value Per Share.</li><li>P/L + BS combos: Sales-to-Assets, Return on Assets, Return on Equity (ROE); Cash Flow: Free Cash Flow Yield.</li></ul>
+    <ul class="points"><li>Non-Directional Bet · Volatility Bet.</li><li>Simple · Two Transactions · Debit.</li><li>Max Risk (Low, Defined) — you can only lose the premium paid.</li><li>Max Gain (Unlimited) — because of the long call leg.</li></ul>
     
-    <p class="explain">The quantitative half is how you filter at the sector level and drill down to positive and negative outliers. Forward metrics identify candidates; the backward-looking valuation, margin, balance-sheet and cash-flow blocks are the supporting evidence.</p>
+    <p class="explain">Simple to put on and risk-defined, but a costly debit strategy. The unlimited upside comes from the call; the well-defined downside is the total premium you paid for both legs.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/ptm2-33/00-13-25.jpg" alt="Slide: The Quantitative half of the (Micro) Dashboard">
-      <figcaption>Slide · 00:13:25</figcaption>
+      <img loading="lazy" src="assets/slides/potm-22/00-07-30.jpg" alt="Slide: Parameters at a glance">
+      <figcaption>Slide · 00:07:30</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s6">
-    <div class="section__k">06 / 8</div>
-    <h3>The Qualitative half of the (Micro) Dashboard</h3>
+    <div class="section__k">06 / 11</div>
+    <h3>When to use it — the honest answer is: don&#39;t</h3>
     
-    <ul class="points"><li>Key Performance Indicators (KPIs) unique to the company and sector — the business drivers of growth and valuation, from which the MOP (Management Operating Plan) is inferred.</li><li>Earnings-call transcripts (tying up loose ends, MOP inferred), management track record, and the board of directors.</li><li>Insider stock &amp; stock-option ownership, plus insider transaction history.</li><li>Research analyst estimates, the range, and the ratings.</li><li>Catalysts — meaningful new news that is not priced in — the essential ingredient that turns a fundamental view into a trade idea.</li></ul>
+    <ul class="points"><li>You express neither a directional nor even a neutral bias — only a bias of volatility: &#39;no matter which direction, I believe it will go big up or big down.&#39;</li><li>If the stock sits still or near the money at expiration, the whole debit is lost.</li><li>If it goes up big, you make less than if you&#39;d spent the same money on double the calls (or another bullish strategy).</li><li>If it goes down big, you make less than if you&#39;d spent the same money on double the puts (or another bearish strategy).</li><li>With a directional bias, alternative strategies deliver a much higher % ROI for the same dollar debit.</li></ul>
     
-    <p class="explain">You do qualitative work on the outliers surfaced by the quant. Catalysts are the forward-looking piece that defines a trade idea; without them you still only have a fundamental long or short.</p>
+    <p class="explain">The &#39;when to use&#39; section is a misnomer — the conclusion is don&#39;t. It is a &#39;boredom trade&#39; and &#39;I don&#39;t have a clue where it&#39;s going but I know it&#39;s going somewhere&#39; trade; in most retail cases the premium simply erodes to zero via time decay and both legs expire worthless.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/ptm2-33/00-12-00.jpg" alt="Slide: The Qualitative half of the (Micro) Dashboard">
-      <figcaption>Slide · 00:12:00</figcaption>
+      <img loading="lazy" src="assets/slides/potm-22/00-11-10.jpg" alt="Slide: When to use it — the honest answer is: don&#39;t">
+      <figcaption>Slide · 00:11:10</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s7">
-    <div class="section__k">07 / 8</div>
-    <h3>Part-1&#39;s job: get the numbers right, arrive at sensible PTs</h3>
+    <div class="section__k">07 / 11</div>
+    <h3>How the market maker actually uses it</h3>
     
-    <ul class="points"><li>The aim of this first part of the template: get the numbers right and arrive at sensible, reasonable price-target (PT) assumptions.</li><li>The &#39;E&#39; in the table denotes forward-looking estimates; stock prices before 2020 were taken at each year-end and rounded to the nearest dollar.</li><li>This is not an exact science — the goal is to be as accurate as possible and make reasonable assumptions so you can derive an expected stock-price move and the parameters you are operating in.</li><li>A commentary block under the table spells out what type of trade this is and lists the price targets, because the PTs are inferred from the quantitative data (growth + valuation).</li></ul>
+    <ul class="points"><li>A market maker holds a negative-selection portfolio — positions chosen by clients, not by the desk — and ends up short volatility.</li><li>If a big event hits overnight and volatility explodes, an unhedged short-vol book can blow up and lose the firm&#39;s money.</li><li>The defence: buy multiple long straddle positions across the whole market — even at index level in index options — to negate the risk.</li><li>Then slowly unwind both sides intraday, legging out, letting some expire, or a mix — always inside gross exposure limits.</li></ul>
     
-    <p class="explain">Part 1 is about pinning the quantitative picture and turning it into bounded price targets. The example that follows shows how the same P/E and same sales-multiple assumptions produce an upper and a lower bound.</p>
+    <p class="explain">For a market maker, the straddle is a fast, blunt hedge sprayed across the market to buy back volatility, then unwound methodically. This is the mechanic behind why markets, once volatility moves, can trend violently for days or weeks.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/ptm2-33/00-14-20.jpg" alt="Slide: Part-1&#39;s job: get the numbers right, arrive at sensible PTs">
-      <figcaption>Slide · 00:14:20</figcaption>
+      <img loading="lazy" src="assets/slides/potm-22/00-14-50.jpg" alt="Slide: How the market maker actually uses it">
+      <figcaption>Slide · 00:14:50</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s8">
-    <div class="section__k">08 / 8</div>
-    <h3>Worked example — Zendesk (ZEN), May 2020</h3>
+    <div class="section__k">08 / 11</div>
+    <h3>The retail trader mandate — you&#39;re not competing with market makers</h3>
     
-    <ul class="points"><li>Shares Outstanding = 110,532,577. ZEN is a LONG idea, and a revenue-growth story rather than an earnings-growth story.</li><li>2019: GAAP loss of −$169.7M vs non-GAAP profit of $36.8M — the difference is share-based compensation and related expenses; the work is done on the positive non-GAAP EPS.</li><li>Table (2017 / 2018 / 2019 / 2020 / 2021): Stock Price $34 / $58 / $76 / $136.80 (PT2) / $166.09 (PT3); EPS −0.13 / 0.21 / 0.317 / 0.572 (E) / 0.697 (E); Earnings Growth % 69 / 100 / 51 / 80 (E) / 22 (E); P/E N/A / 276 / 239 / 239 / 239.</li><li>Sales $M 430 / 598 / 814 / 1,100 (E) / 1,258 (E); Sales Growth % 37.8 / 39 / 36 / 35 (E) / 14.3 (E); Sales Multiple 8.74 / 10.71 / 10.31 / 13.74 / 14.64; Net Income (GAAP) $M −106 / −137 / −169.7 / N/A / 86.</li><li>Upper-bound PT (PT2) = $76 × 1.8 = $136.80, where 1.8 = EPS2020/EPS2019 = $0.572 / $0.317 (holding the ~239 P/E constant, ≈80% earnings growth) — a bullish upper bound.</li><li>That $136.80 × 110,532,577 shares implies an end-2020 market cap of ~$15.1bn, and ÷ $1.1bn sales gives an upper-bound 2020 sales multiple of 13.74.</li><li>Lower-bound PT (PT1) ≈ $102.60 = $1,100,000,000 × 10.31 (2019 sales multiple held constant) = $11,341,000,000 ÷ 110,532,577 shares — the more realistic target for a revenue-growth name.</li></ul>
+    <ul class="points"><li>Retail traders need directional, high reward-versus-risk / high-ROI strategies, because they already hold stock or hold a systematically generated bullish/bearish predisposition (as taught in the PTM series).</li><li>Retail traders want an edge and a marginal benefit that adds value to an existing position or predisposition.</li><li>Retail traders do NOT hedge negative-selection portfolios, nor &#39;nickel and dime&#39; (arbitrage) market makers on mispriced implied volatility.</li><li>Anton&#39;s warning: question the motives of any educator or broker who sells the long straddle to retail — most likely a commission/volume conflict of interest, otherwise they simply don&#39;t understand the mandate.</li></ul>
     
-    <p class="explain">The two bounds come from two constant-assumption methods: hold the P/E constant off forward EPS for the bullish upper bound, and hold the sales multiple constant off forward sales for the more realistic lower bound. GAAP vs non-GAAP handling is situational to ZEN and is where discretionary interpretation of each individual case occurs.</p>
+    <p class="explain">The line is drawn hard: the straddle&#39;s uses belong to the game of market making, not to retail speculation. Watch out for anyone advocating it as a viable retail strategy.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/ptm2-33/00-14-20.jpg" alt="Slide: Worked example — Zendesk (ZEN), May 2020">
-      <figcaption>Slide · 00:14:20</figcaption>
+      <img loading="lazy" src="assets/slides/potm-22/00-18-45.jpg" alt="Slide: The retail trader mandate — you&#39;re not competing with market makers">
+      <figcaption>Slide · 00:18:45</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s9">
+    <div class="section__k">09 / 11</div>
+    <h3>Break-evens and the calculations</h3>
+    
+    <ul class="points"><li>Leg A = buy 1x ATM call; Leg B = buy 1x ATM put, same expiration — an upper and a lower break-even.</li><li>Upper break-even = Strike of Leg A + (price of Leg A + price of Leg B) = strike + total premium.</li><li>Lower break-even = Strike of Leg B − (price of Leg A + price of Leg B) = strike − total premium.</li><li>Maximum profit is unlimited: made when price &gt; upper break-even OR price &lt; lower break-even.</li><li>Maximum loss is limited to the initial net debit; the trade returns a loss whenever price sits between the two break-evens.</li></ul>
+    
+    <p class="explain">The two break-evens sit a full premium above and below the strike, so the move must be large in either direction just to get to flat — and remember IV is usually already bid up ahead of any known catalyst.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-22/00-21-20.jpg" alt="Slide: Break-evens and the calculations">
+      <figcaption>Slide · 00:21:20</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s10">
+    <div class="section__k">10 / 11</div>
+    <h3>A time-horizon fallacy to avoid</h3>
+    
+    <ul class="points"><li>Longer-dated straddles give the holder more time to be right — but this is already reflected in the price.</li><li>Longer-term long straddles cost more and have wider break-evens than shorter-term ones.</li><li>So it&#39;s a fallacy that a longer-dated straddle has a higher chance of making money — the extra time is discounted into the higher volatility the market makers set.</li></ul>
+    
+    <p class="explain">More calendar time does not tilt the odds in your favour; the risk-reward over a long horizon is likely the same or worse, because the market makers price volatility across every time horizon.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-22/00-23-35.jpg" alt="Slide: A time-horizon fallacy to avoid">
+      <figcaption>Slide · 00:23:35</figcaption>
+    </figure>
+    
+    
+  </section>
+  
+  <section class="section" id="s11">
+    <div class="section__k">11 / 11</div>
+    <h3>Worked example — Company X at $50, $400 debit</h3>
+    
+    <ul class="points"><li>Setup: Company X at $50; ATM $50 call @ $2 = $200 (Leg A); ATM $50 put @ $2 = $200 (Leg B); net debit $400. Break-evens $54 and $46.</li><li>At $50 at expiry: both legs worthless — lose the full $400 (max loss, stock pinned at the strike).</li><li>At $52: calls worth $2 each ($200), puts worthless — net loss $200.</li><li>At $56: calls worth $6 each ($600), puts worthless — $200 profit.</li><li>At $47: calls worthless, puts worth $3 each ($300) — net loss $100.</li><li>At $42: calls worthless, puts worth about $8 each ($800) — $400 profit. The stock had to move $8 to make a meaningful profit.</li></ul>
+    
+    <p class="explain">The scenarios trace the V-shaped payoff: worst at the strike, improving as the stock travels either way. The takeaway Anton wants you to feel is the size of move required — an $8 swing from $50 down to $42 (or up to $58) just to bank a $400 profit.</p>
+    
+    <figure class="slide">
+      <img loading="lazy" src="assets/slides/potm-22/00-27-00.jpg" alt="Slide: Worked example — Company X at $50, $400 debit">
+      <figcaption>Slide · 00:27:00</figcaption>
     </figure>
     
     
@@ -642,25 +690,25 @@
     <h3>Glossary</h3>
     <ul class="glossary">
       
-      <li><span class="term">Trade Idea Template</span><div class="def">The Word-document checklist (downloadable with video 33) that formalizes the entire 22–33 idea-generation process into one consistent format, filled out for every idea.</div></li>
+      <li><span class="term">Long straddle</span><div class="def">Buying 1x ATM call and 1x ATM put with the same strike and expiration — a net-debit, non-directional bet that the underlying moves big in either direction.</div></li>
       
-      <li><span class="term">Trade structuring</span><div class="def">The options structures that fit a trade idea; more broadly the choice of how to take the position — outright stock, on margin, via CFD, or via directional options.</div></li>
+      <li><span class="term">Non-directional</span><div class="def">A position with no bullish or bearish bias; it profits from movement itself rather than from a chosen direction.</div></li>
       
-      <li><span class="term">Regularity + Familiarity = Consistency</span><div class="def">Anton&#39;s motto for the template: running the same process on repeat builds familiarity, and consistency in process leads to consistency in returns.</div></li>
+      <li><span class="term">At the money (ATM)</span><div class="def">An option whose strike equals (or is closest to) the current underlying price — the straddle uses ATM strikes for both legs.</div></li>
       
-      <li><span class="term">Micro Dashboard</span><div class="def">The combined Quantitative &amp; Qualitative dashboard — forward and backward sector filters plus KPIs, management, insiders, analysts, and catalysts.</div></li>
+      <li><span class="term">Net debit</span><div class="def">The total premium paid to open a position when the money spent (both bought legs) exceeds anything received; here it is the sum of the call and put premiums and the maximum loss.</div></li>
       
-      <li><span class="term">CFD</span><div class="def">Contract for Difference — a derivative (not the underlying stock) available to international traders, offering up to 5x leverage, realistically ~4x on average.</div></li>
+      <li><span class="term">Break-even</span><div class="def">The underlying price at which the position exactly recovers its cost — the straddle has two: strike + total premium (upper) and strike − total premium (lower).</div></li>
       
-      <li><span class="term">US 50% margin</span><div class="def">The US overnight margin requirement that lets you leverage a stock position roughly two-for-one.</div></li>
+      <li><span class="term">Leg</span><div class="def">One option component of a multi-part strategy; the straddle has Leg A (the ATM call) and Leg B (the ATM put).</div></li>
       
-      <li><span class="term">Price Target (PT)</span><div class="def">An inferred stock-price destination derived from the quantitative data; here bounded by an upper (constant P/E) and lower (constant sales multiple) estimate.</div></li>
+      <li><span class="term">Negative-selection portfolio</span><div class="def">A book of positions chosen by clients rather than by the desk; the market maker holds them to provide liquidity and earn commissions, not from any view.</div></li>
       
-      <li><span class="term">GAAP vs non-GAAP</span><div class="def">Reported earnings under standard accounting (GAAP) vs adjusted figures excluding items like share-based compensation (non-GAAP); ZEN&#39;s 2019 GAAP loss of −$169.7M vs non-GAAP profit of $36.8M.</div></li>
+      <li><span class="term">Short volatility</span><div class="def">Exposure that loses money when volatility rises; the market maker&#39;s inventory is typically short vol, which the long straddle can hedge.</div></li>
       
-      <li><span class="term">Sales multiple</span><div class="def">Market cap divided by sales (price-to-sales); ZEN&#39;s 2019 multiple of 10.31, held constant, produces the lower-bound PT.</div></li>
+      <li><span class="term">Boredom trade</span><div class="def">Anton&#39;s label for the long straddle in retail hands — a pointless &#39;I don&#39;t know where it&#39;s going but I know it&#39;s going somewhere&#39; guess with no real predisposition.</div></li>
       
-      <li><span class="term">POTM</span><div class="def">Professional Options Trading Masterclass — the separate series where the directional options structures deferred from PTM are taught.</div></li>
+      <li><span class="term">Retail trader mandate</span><div class="def">The requirement that a strategy give directional, high reward-versus-risk / high-ROI edge on top of an existing position or predisposition — which the long straddle does not.</div></li>
       
     </ul>
   </section>
@@ -668,12 +716,11 @@
 
   <nav class="pager">
     
-    <a class="prev" href="chapter-42.html">
-      <small>← 32 Previous</small><span>Trade Idea Generation – Identifying Catalysts</span></a>
+    <a class="prev" href="chapter-75.html">
+      <small>← 21 Previous</small><span>Volatility Masterclass 2 — Turning IV Into Expected Ranges</span></a>
     
     
-    <a class="next" href="chapter-44.html">
-      <small>34 Next →</small><span>Trade Idea Generation Template — Part 2</span></a>
+    <a class="next disabled"><small>End of the macro block</small><span>Portfolio construction is next</span></a>
     
   </nav>
 </div>
