@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>POTM Options 10 · The Covered Call Collar — The Macro Playbook — The Top-Down Macro Read</title>
+<title>POTM Options 20 · Volatility Masterclass 1 — Why Volatility Is Risk AND Reward — The Macro Playbook — The Top-Down Macro Read</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -400,7 +400,7 @@
       </a></li>
       
       <li><a href="chapter-64.html"
-             class="is-active">
+             class="">
         <span class="rn">10</span>
         <span class="rt">The Covered Call Collar<small>POTM Options · Extend the covered cal</small></span>
       </a></li>
@@ -460,7 +460,7 @@
       </a></li>
       
       <li><a href="chapter-74.html"
-             class="">
+             class="is-active">
         <span class="rn">20</span>
         <span class="rt">Volatility Masterclass 1 — Why Volatility Is Risk AND Reward<small>POTM Options · Volatility is the fluc</small></span>
       </a></li>
@@ -476,276 +476,196 @@
     
 <div class="wrap">
   <header class="hero">
-    <div class="hero__num reveal">POTM Options · Chapter 10</div>
-    <h1 class="reveal d1">The Covered Call Collar</h1>
-    <p class="hero__sub reveal d1">Extend the covered call by buying an OTM put, so you still bank a net credit but add a hard floor to your downside.</p>
-    <p class="hero__lead reveal d2">The covered call collar keeps everything the covered call gives you and adds a defined downside floor: you write an OTM call for premium and spend part of that premium on an OTM put. Structure it so the call credit exceeds the put cost and you get paid to hold a superior hedge, which is why its usefulness is HIGH versus the covered call&#39;s MEDIUM.</p>
+    <div class="hero__num reveal">POTM Options · Chapter 20</div>
+    <h1 class="reveal d1">Volatility Masterclass 1 — Why Volatility Is Risk AND Reward</h1>
+    <p class="hero__sub reveal d1">Volatility is the fluctuation in prices and returns — the risk you must seek out to earn any return at all.</p>
+    <p class="hero__lead reveal d2">Chris Quill reframes volatility as both risk and opportunity: without it there are no capital gains, but seeking it blindly is a mistake. Through a coin-toss game, the Sharpe ratio, and a live Tesla option chain, he shows why we gravitate toward better risk-adjusted returns and why implied volatility — the only unknown in option pricing — must be checked, not taken for granted.</p>
     <div class="hero__chips reveal d3">
-      <span class="chip chip--signal"><span class="dot"></span>Write an OTM call, buy a cheaper OTM put, keep the net credit.</span>
-      <span class="chip"><b>13</b>&nbsp;min read</span>
-      <span class="chip"><b>32</b>&nbsp;slides</span>
+      <span class="chip chip--signal"><span class="dot"></span>Seek volatility for return, but demand it be paid for — never accept the market maker&#39;s implied vol blind.</span>
+      <span class="chip"><b>9</b>&nbsp;min read</span>
+      <span class="chip"><b>15</b>&nbsp;slides</span>
     </div>
   </header>
 
   
   <section class="gist reveal">
     <h2>The gist</h2>
-    <ul><li>Structure: Long Stock + write OTM Call (Leg A) + buy OTM Put (Leg B), same expiry, sized to cover the stock owned.</li><li>The NET-CREDIT rule: structure it so the call credit exceeds the put cost, so the strategy pays a net credit; paying a debit defeats the purpose of the hedge.</li><li>Attributes: Non-Directional, Neutral, 2 transactions, Net Credit, Max Risk = Limited (floored at the put strike), Max Gain = Limited (capped at the call strike), Usefulness = HIGH.</li><li>Breakeven = Starting Point + Net Premium (SUBTRACT if it is a credit).</li><li>Max profit/share = (call-strike - Starting Point) + (call price - put price), made at the call strike.</li><li>Max loss/share = (Starting Point - put strike) - (call price - put price), made at the put strike; below the put strike every 1c fall is offset 1c by the put.</li><li>JNJ example: 300 sh avg $135.34, sell 3x $134 call @ $1.12, buy 3x $129 put @ $0.73 = net credit $0.39 ($117); breakeven $132.61; max-profit total $669; new execution $134.11.</li><li>Downside test: a -$7 FDA-failure crash to $127 floors the collar at -4.68% (put strike $129) versus -8.71% for a plain covered call.</li><li>Company X example: $50 stock, sell $52 call @ $1.00 + buy $47 put @ $0.50 = net credit $0.50, max profit $250.</li></ul>
+    <ul><li>Volatility = fluctuations in asset prices/returns, and it is BOTH risk AND reward — without it there would be no chance of generating capital gains, so we NEED it.</li><li>Coin-toss Game 1: choice A = +$200 heads / −$100 tails (expected return ($200×0.5)+(−$100×0.5) = $50/toss) beats B = +$25 flat — pick A on higher expected value.</li><li>Coin-toss Game 2: A = +$300 heads / −$150 tails (($300×0.5)+(−$150×0.5) = $75) vs B = +$75 flat ($75×1) — SAME expected value, so pick B for less volatility.</li><li>Cumulative-profit path: option A is jagged (peaks around $1,950), option B is a linear +$75/toss line — both land near ~$1,500, but A carries risk for no extra reward.</li><li>Realized vol = a stock&#39;s historical movement (ATR daily/weekly/monthly, or std-dev of returns); Implied vol = expected FUTURE movement, backed out of option prices — the ONLY unknown in Black-Scholes.</li><li>Trader 1 = 20% return / 30% annualized SD → Sharpe 0.66; Trader 2 = 19% return / 13% SD → Sharpe 1.46 — Trader 2 is better risk-adjusted (Sharpe = return ÷ SD).</li><li>Sharpe bands: 95% of retail are negative; profitable up to ~1; good &gt;1; professional ≥1.5 (capping ~2); high-level algos 1.5–3; long-only bull ≈ 1 — Long/Short + option hedges lowers risk while keeping/raising return.</li><li>TSLA (Hist Vol 36.55%, last ~$351.08, 350-strike calls, dividends zero): 9-day mid ~$9, 37-day ~$17.50, 324-day (Jan 18th 2019) ~$55 — about 6× the 9-day and 3× the 37-day; annualized IV roughly equal for 9d/37d but 3–4 points higher for the 324-day.</li></ul>
   </section>
   
 
   
   <section class="section" id="s1">
-    <div class="section__k">01 / 16</div>
-    <h3>One step beyond the covered call</h3>
+    <div class="section__k">01 / 11</div>
+    <h3>What volatility is — and why it&#39;s risk AND reward</h3>
     
-    <ul class="points"><li>Continues the retail-trader hedging series; video 9 covered the covered call, this takes it one step further.</li><li>Same process as every strategy video: quick explanation, when to use, how to use, breakeven / profit / risk calculations, then a formalized example.</li><li>Built directly on the video-9 example as an alternative to the plain covered call.</li></ul>
+    <ul class="points"><li>Volatility refers to the fluctuations in asset prices and asset returns.</li><li>A common mistake is to think of it only as risk — but it is also opportunity: if we didn&#39;t have volatility we couldn&#39;t trade and there would be no chance of capital gains. We NEED it.</li><li>Analysing volatility helps decide the market environment, profitable time horizons, profit targets, and risk limits (leverage and stops).</li><li>The greater the volatility, the WIDER you set targets and stops — but the LESS leverage you need, since the asset already provides the opportunity.</li></ul>
     
-    <p class="explain">The covered call collar is a direct extension of the covered call. You keep the same neutral setup and add a bought put for downside protection, and the chapter reuses the same worked example so you can compare the two side by side.</p>
+    <p class="explain">Quill opens by insisting volatility be held in two hands at once. It is the source of drawdown risk, but it is equally the source of every return — remove it and there is nothing to trade.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-10/00-00-25.jpg" alt="Slide: One step beyond the covered call">
-      <figcaption>Slide · 00:00:25</figcaption>
+      <img loading="lazy" src="assets/slides/potm-20/00-00-50.jpg" alt="Slide: What volatility is — and why it&#39;s risk AND reward">
+      <figcaption>Slide · 00:00:50</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s2">
-    <div class="section__k">02 / 16</div>
-    <h3>Quick explanation</h3>
+    <div class="section__k">02 / 11</div>
+    <h3>The coin-toss game — Round 1: expected value wins</h3>
     
-    <ul class="points"><li>Applied when you already hold a long stock position and do not expect the price to move much.</li><li>Profits from a stable stock price in the same way as the covered call.</li><li>Adds protection against a fall because it involves buying puts as well as writing calls.</li></ul>
+    <ul class="points"><li>Choice A: receive $200 for every heads, pay $100 for every tails.</li><li>Choice B: receive $25 for every coin toss, no matter what.</li><li>Expected return of A = ($200×0.5) + (−$100×0.5) = $50 per toss; B = $25 per toss.</li><li>The rational choice is A — its expected return per toss is higher.</li></ul>
     
-    <p class="explain">Same applications, benefits and drawbacks as the covered call, except you also get downside protection on your long stock if the stock actually goes down.</p>
+    <p class="explain">Expected return is the probability-weighted average of the outcomes. In Round 1 the volatile option A also pays more on average, so it simply wins.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-10/00-01-15.jpg" alt="Slide: Quick explanation">
-      <figcaption>Slide · 00:01:15</figcaption>
+      <img loading="lazy" src="assets/slides/potm-20/00-03-55.jpg" alt="Slide: The coin-toss game — Round 1: expected value wins">
+      <figcaption>Slide · 00:03:55</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s3">
-    <div class="section__k">03 / 16</div>
-    <h3>Same neutral bet, with a floor</h3>
+    <div class="section__k">03 / 11</div>
+    <h3>Round 2 — same expected value, less volatility wins</h3>
     
-    <ul class="points"><li>You are long stock and expect the price to remain neutral, with no material rise or fall.</li><li>It sacrifices some covered-call profitability to hedge against the stock falling by a decent amount.</li><li>Especially useful for long stock held in a pension, where you want the downside covered.</li></ul>
+    <ul class="points"><li>New choice A: +$300 for every heads, −$150 for every tails.</li><li>New choice B: +$75 for every coin toss.</li><li>Expected return of A = ($300×0.5) + (−$150×0.5) = $75; B = ($75×1) = $75 — identical.</li><li>The rational choice is now B: same expected return with less volatility.</li><li>What if the game is changed or stopped after you take a loss? Why risk periods of losses with no additional reward?</li></ul>
     
-    <p class="explain">The collar gives up a little of the covered call&#39;s upside in exchange for a meaningful downside hedge. For a long stock position in a pension it ensures the maximum loss is capped for the entire time to expiration, and you still receive a net credit.</p>
+    <p class="explain">When expected values tie, volatility is the deciding factor. The volatile path exposes you to loss stretches you are not compensated for — so you take the smooth one.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-10/00-05-00.jpg" alt="Slide: Same neutral bet, with a floor">
-      <figcaption>Slide · 00:05:00</figcaption>
+      <img loading="lazy" src="assets/slides/potm-20/00-06-00.jpg" alt="Slide: Round 2 — same expected value, less volatility wins">
+      <figcaption>Slide · 00:06:00</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s4">
-    <div class="section__k">04 / 16</div>
-    <h3>The formalized attributes</h3>
+    <div class="section__k">04 / 11</div>
+    <h3>The cumulative-profit chart — jagged vs linear</h3>
     
-    <ul class="points"><li>Non-Directional, Neutral, 2 transactions, Net Credit.</li><li>Maximum Risk = Limited; Maximum Gain = Limited (the long put is only limited because the stock can only fall to zero).</li><li>Usefulness = HIGH for the retail trader, versus MEDIUM for the covered call.</li></ul>
+    <ul class="points"><li>A simulated path of cumulative dollar profit over 20 coin tosses for each choice.</li><li>Option A (volatile) rises and falls repeatedly — dipping low early, spiking to a peak of ~$1,950, then settling near ~$1,500.</li><li>Option B (linear) climbs a straight +$75-per-toss line to ~$1,500.</li><li>Both end at roughly the same cumulative ~$1,500 — but A carried risk the whole way for no extra reward.</li><li>Apply leverage and it becomes obvious: you&#39;d leverage B indefinitely, while A would risk bankruptcy for no additional expected return.</li></ul>
     
-    <p class="explain">It is a fairly simple two-leg strategy with an upfront credit received. Both max risk and max gain are limited; the put&#39;s value is bounded only because a stock can fall no further than zero.</p>
+    <p class="explain">Even in a favourable draw for A, the two paths converge on the same endpoint. The volatility of A is pure downside — the exact intuition professionals use to prefer smooth compounding.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-10/00-05-50.jpg" alt="Slide: The formalized attributes">
-      <figcaption>Slide · 00:05:50</figcaption>
+      <img loading="lazy" src="assets/slides/potm-20/00-08-40.jpg" alt="Slide: The cumulative-profit chart — jagged vs linear">
+      <figcaption>Slide · 00:08:40</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s5">
-    <div class="section__k">05 / 16</div>
-    <h3>Why usefulness is HIGH, not MEDIUM</h3>
+    <div class="section__k">05 / 11</div>
+    <h3>Why it&#39;s relevant — realized vs implied volatility</h3>
     
-    <ul class="points"><li>As a long stock holder you give up some of the net credit you would get from just writing the call.</li><li>But if the stock falls through the put strike, the P&amp;L gain on the long put is meaningful enough to be a substantially better hedge.</li><li>Not receiving a net credit defeats the purpose and erases the collar&#39;s major advantage over the plain covered call.</li></ul>
+    <ul class="points"><li>Realized volatility measures how much an asset USED to move — via ATR (daily/weekly/monthly) or the std-dev distribution of historical returns.</li><li>Implied volatility measures how much it&#39;s EXPECTED to move in future — backed out of option prices.</li><li>Realized vol is taught in the PTM series; implied vol is the focus here — both matter for measuring risk and reward on a trade&#39;s time frame.</li><li>Volatility is also a measure of risk and reward across an entire portfolio, and of a portfolio&#39;s or trader&#39;s return ÷ risk.</li><li>In reality there are no free lunches — almost all returns are associated with a level of risk, so we must SEEK volatility to gain returns.</li></ul>
     
-    <p class="explain">The marginal benefit is being paid a credit AND owning a put that gives real downside protection. Once you erase that credit by paying a debit, that major advantage over the covered call disappears; getting paid and getting a superior hedge is the whole motivation.</p>
+    <p class="explain">The game generalizes: the smooth line has return with no risk, the volatile line has the same return with risk. Real markets never offer the smooth line for free — you must take on volatility to be paid.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-10/00-12-05.jpg" alt="Slide: Why usefulness is HIGH, not MEDIUM">
-      <figcaption>Slide · 00:12:05</figcaption>
+      <img loading="lazy" src="assets/slides/potm-20/00-07-40.jpg" alt="Slide: Why it&#39;s relevant — realized vs implied volatility">
+      <figcaption>Slide · 00:07:40</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s6">
-    <div class="section__k">06 / 16</div>
-    <h3>The four uses, plus a put</h3>
+    <div class="section__k">06 / 11</div>
+    <h3>Two traders — measuring with the Sharpe ratio</h3>
     
-    <ul class="points"><li>Mirrors the covered call&#39;s four uses: hedge a long position with positive P&amp;L and collect premium; hedge a long position with negative P&amp;L and collect premium; hedge a dividend-paying stock going ex-dividend soon and collect premium; and get a better execution price on an intended long position.</li><li>To each of the four, add on a long OTM put for downside protection.</li><li>A more complete hedge than the simple covered call.</li></ul>
+    <ul class="points"><li>Trader 1: 30% annualized standard deviation of the portfolio, 20% return at year end.</li><li>Trader 2: 13% annualized standard deviation, 19% return at year end.</li><li>Simplified Sharpe ratio = annualized return ÷ annualized standard deviation.</li><li>Trader 1 Sharpe = 20% ÷ 30% = 0.66; Trader 2 Sharpe = 19% ÷ 13% = 1.46.</li><li>Trader 2 is the better trader — nearly the same return for far less risk (a much higher risk-adjusted return).</li></ul>
     
-    <p class="explain">The four uses are identical to the covered call; the collar simply bolts a long OTM put onto each one so the downside of the long stock is protected as well.</p>
+    <p class="explain">Standard deviation is the industry-standard measure of volatility. The Sharpe ratio formalizes &#39;return per unit of risk&#39; — and by that measure the lower-return, lower-volatility trader is clearly superior.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-10/00-05-00.jpg" alt="Slide: The four uses, plus a put">
-      <figcaption>Slide · 00:05:00</figcaption>
+      <img loading="lazy" src="assets/slides/potm-20/00-09-40.jpg" alt="Slide: Two traders — measuring with the Sharpe ratio">
+      <figcaption>Slide · 00:09:40</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s7">
-    <div class="section__k">07 / 16</div>
-    <h3>How to put it on</h3>
+    <div class="section__k">07 / 11</div>
+    <h3>Sharpe benchmarks — and how to reach Trader 2</h3>
     
-    <ul class="points"><li>Two transactions: write enough calls to cover the long stock owned, and buy the same number of puts.</li><li>Use the same expiration for both, typically the nearest expiry (or longer if you expect stability for longer).</li><li>Write OTM calls at a strike only slightly higher than the current price; buy OTM puts, spending less on them than you receive for the calls so the trade is a net credit.</li><li>Do not write strikes so high that you take in too little premium to cover the puts and end up paying a debit.</li></ul>
+    <ul class="points"><li>Negative return → negative Sharpe: the bracket where ~95% of retail traders fall.</li><li>Decent, profitable traders: positive Sharpe up to about 1.</li><li>Good traders: Sharpe above 1; professionals aim above 1.5 and tend to cap out around 2; high-level algorithmic traders often achieve 1.5–3.</li><li>A long-only portfolio in a bull market yields a Sharpe of around 1.</li><li>Building diversified Long/Short portfolios reduces the risk component; adding options (at minimum put hedges on long-only books) lowers risk, maintains return, and smooths risk reward.</li></ul>
     
-    <p class="explain">The biggest decision is which strikes to use. You write the call because you think the stock will neither rise nor fall, and you spend part of that credit on a put to guard against an unforeseen drop, ensuring a net credit remains.</p>
+    <p class="explain">The whole demonstration points at one goal: gravitate toward Trader 2&#39;s profile. Long/Short structure plus options is how professionals raise the Sharpe rather than &#39;punting&#39; long-only.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-10/00-10-00.jpg" alt="Slide: How to put it on">
-      <figcaption>Slide · 00:10:00</figcaption>
+      <img loading="lazy" src="assets/slides/potm-20/00-11-50.jpg" alt="Slide: Sharpe benchmarks — and how to reach Trader 2">
+      <figcaption>Slide · 00:11:50</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s8">
-    <div class="section__k">08 / 16</div>
-    <h3>The JNJ setup</h3>
+    <div class="section__k">08 / 11</div>
+    <h3>Why we must measure volatility — the only unknown</h3>
     
-    <ul class="points"><li>You bought JNJ at $140; it is now $133.15, down $6.85 on the trade.</li><li>You now want to own 300 shares, buying an extra 200 at $133, for an average price of $135.34 across the 300.</li><li>Analyzing on Feb 19th, looking at the 2nd of March expiry, dividend of $0.84 coming Feb 26th.</li></ul>
+    <ul class="points"><li>The volatility of an underlying stock is a key factor in deciding whether to use options at all.</li><li>Implied volatility is used to calculate the option&#39;s premium and is the ONLY unknown in options pricing.</li><li>All other Black-Scholes inputs — spot price, strike price, risk-free rate, days to maturity, dividends — are simply known inputs.</li><li>Understanding WHY volatility goes up and down is the single most important thing for a retail trader, but calculating realized and implied vol matters too.</li><li>Market makers must price volatility themselves, using historical values and any upcoming catalysts inside the option&#39;s timeframe.</li></ul>
     
-    <p class="explain">The example scales the video-9 position up to 300 shares at a $135.34 average, then establishes a collar to protect it and bank premium ahead of the dividend.</p>
+    <p class="explain">Because IV is the one debatable input, it&#39;s where disagreement — and opportunity — lives. If your research says vol should be higher or lower than the market implies, you can trade that gap.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-10/00-15-00.jpg" alt="Slide: The JNJ setup">
-      <figcaption>Slide · 00:15:00</figcaption>
+      <img loading="lazy" src="assets/slides/potm-20/00-14-45.jpg" alt="Slide: Why we must measure volatility — the only unknown">
+      <figcaption>Slide · 00:14:45</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s9">
-    <div class="section__k">09 / 16</div>
-    <h3>Reading the options chain</h3>
+    <div class="section__k">09 / 11</div>
+    <h3>Term structure and catalysts — don&#39;t take IV for granted</h3>
     
-    <ul class="points"><li>Calls sit on the left of the chain, puts on the right.</li><li>Sell 3x $134 strike 2nd-of-March calls at $1.12 (you get lifted on your offer).</li><li>Buy 3x $129 strike 2nd-of-March puts at $0.73 (you lift the market maker&#39;s offer).</li></ul>
+    <ul class="points"><li>Longer time horizons raise an option&#39;s price — days-to-maturity is higher in the Black-Scholes calculation, and more can happen (risk AND opportunity).</li><li>Implied volatility gravitates higher into publicly KNOWN catalysts like earnings, because they present uncertainty.</li><li>If a catalyst turns out to be a non-event, volatility — and option prices — fall afterwards.</li><li>Risk reward therefore becomes an assessment of catalysts AND volatility within the time horizon you&#39;re considering.</li><li>The IV on your screen must be double-checked against your own calculations and critiqued against the catalysts you expect.</li></ul>
     
-    <p class="explain">Both legs use the same 2nd-of-March expiry, sized 3 contracts to cover the 300 shares. The call is sold slightly OTM above the price and the put is bought OTM below it.</p>
+    <p class="explain">The volatility term structure means longer contracts cost more and carry more of both risk and opportunity. Anticipated events pump IV before them and bleed it after — so the horizon and the calendar of catalysts both drive the price.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-10/00-16-20.jpg" alt="Slide: Reading the options chain">
-      <figcaption>Slide · 00:16:20</figcaption>
+      <img loading="lazy" src="assets/slides/potm-20/00-16-15.jpg" alt="Slide: Term structure and catalysts — don&#39;t take IV for granted">
+      <figcaption>Slide · 00:16:15</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s10">
-    <div class="section__k">10 / 16</div>
-    <h3>The net credit and breakeven</h3>
+    <div class="section__k">10 / 11</div>
+    <h3>TSLA worked example — the option chain</h3>
     
-    <ul class="points"><li>Net credit = $1.12 - $0.73 = $0.39 per contract; with the 100-share multiplier that is $0.39 x 300 = $117.</li><li>Breakeven = Starting Point $133 - $0.39 credit = $132.61.</li><li>You lift the market maker&#39;s offer on the put rather than bidding for it.</li></ul>
+    <ul class="points"><li>TSLA option chain: last ~$351.08, Bid 350.78, Ask 351.60, Hist Volatility 36.55%, volume 4,797,419.</li><li>350-strike calls: March 9th mid price ~$9, April 6th maturity ~$17.50, January 18th 2019 ~$55 (approximate figures).</li><li>The 324-day January 2019 contract is priced about 6× higher than the 9-day and about 3× higher than the 37-day option.</li><li>Annualized volatility is roughly the same for the 9-day and 37-day contracts, but 3–4 points higher for the 324-day contract.</li><li>Dividends for the stock are zero — so everything is known except implied volatility; because IV values are annualized, they are comparable across horizons.</li></ul>
     
-    <p class="explain">Because the call premium exceeds the put cost, the collar takes in a $0.39 net credit ($117), and the credit pulls the breakeven below the starting point to $132.61.</p>
+    <p class="explain">Most of the price step-up is days-to-maturity — more time means more can happen. But the longer contract also carries a slightly higher annualized IV, so it is genuinely being priced richer in volatility terms too.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-10/00-16-45.jpg" alt="Slide: The net credit and breakeven">
-      <figcaption>Slide · 00:16:45</figcaption>
+      <img loading="lazy" src="assets/slides/potm-20/00-17-10.jpg" alt="Slide: TSLA worked example — the option chain">
+      <figcaption>Slide · 00:17:10</figcaption>
     </figure>
     
     
   </section>
   
   <section class="section" id="s11">
-    <div class="section__k">11 / 16</div>
-    <h3>Max profit scenario</h3>
+    <div class="section__k">11 / 11</div>
+    <h3>Don&#39;t just accept the market maker&#39;s number</h3>
     
-    <ul class="points"><li>If JNJ closes at $134 ex-dividend on March 2nd, both the call and the put expire worthless and P&amp;L is maximized.</li><li>Stock: ($134 - $133) x 300 = $368; dividend: $0.84 x 300 = $184; options credit: $117; total = $669.</li><li>Execution improves by $0.84 + $0.39 = $1.23, cutting the $135.34 average to a new theoretical execution of $134.11 — turning a losing position into a winner.</li></ul>
+    <ul class="points"><li>Why take for granted that the volatility level used is reliable and correctly discounts all known and unknown catalysts?</li><li>Between the trade date and January 2019, Tesla will report 3 or 4 quarters of earnings and have multiple catalysts — announcements, product launches, problems — roughly every 1–2 weeks.</li><li>Treat the platform&#39;s numbers as the market maker&#39;s assessment of where they are happy to trade volatility long and short; they hedge, so they don&#39;t care about direction.</li><li>Buy an option at a higher IV than it deserves and the market maker can simply mark the price down the next day.</li><li>The worst thing you can do is accept the valuations blindly — that is &#39;literally just writing checks to the market makers.&#39;</li></ul>
     
-    <p class="explain">At the $134 call strike the collar makes its maximum, combining stock gain, the collected dividend and the options credit for $669, and the added $1.23 of value lowers the effective cost basis to $134.11.</p>
-    
-    <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-10/00-21-40.jpg" alt="Slide: Max profit scenario">
-      <figcaption>Slide · 00:21:40</figcaption>
-    </figure>
-    
-    
-  </section>
-  
-  <section class="section" id="s12">
-    <div class="section__k">12 / 16</div>
-    <h3>The downside test: an FDA failure</h3>
-    
-    <ul class="points"><li>A phase-three cardiovascular drug worth $7/share fails at the FDA; JNJ gaps $7 lower to $127 in the pre-market.</li><li>Plain covered call: 100 sh from $140, only the $0.80 credit as cushion; down $12.20/share = -8.71%, and it keeps growing if the stock falls further.</li><li>Collar: the $129 puts are in the money by $2; loss is floored at the put strike, so max loss is $6.34 off the $135.34 average = -4.68%.</li><li>Below $129 every 1c further fall in the stock is offset 1c by the put, so losses go no further.</li></ul>
-    
-    <p class="explain">This is the whole point of the collar. On a real shock the plain covered call keeps bleeding past -8.71%, but the collar&#39;s put pins the maximum loss at the $129 strike (-4.68%) no matter how far the stock falls.</p>
+    <p class="explain">The lesson closes on due diligence: measure IV yourself to confirm the platform is fair, judge it against the catalysts in the horizon, and only trade when the risk reward genuinely favours you. Video 21 shows how to calculate it.</p>
     
     <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-10/00-12-05.jpg" alt="Slide: The downside test: an FDA failure">
-      <figcaption>Slide · 00:12:05</figcaption>
-    </figure>
-    
-    
-  </section>
-  
-  <section class="section" id="s13">
-    <div class="section__k">13 / 16</div>
-    <h3>Breakeven and profit formulas</h3>
-    
-    <ul class="points"><li>Breakeven = Starting Point + Net Premium; if it is a credit the premium is negative, so you SUBTRACT it (a lower breakeven is preferable).</li><li>Split into Leg A (write the call) and Leg B (buy the put).</li><li>Max profit is made when the stock equals the Leg A call strike; profit is also made when the stock is &gt;= Starting Point but &lt; the call strike.</li><li>Profit per share = (underlying price - Starting Point) + (Leg A call price - Leg B put price), which can be a debit or a credit.</li></ul>
-    
-    <p class="explain">The credit lowers the breakeven below the reference price. The profit calculation adds two legs together: the stock&#39;s move plus the net options premium, maximized once the stock reaches the written call strike.</p>
-    
-    <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-10/00-28-05.jpg" alt="Slide: Breakeven and profit formulas">
-      <figcaption>Slide · 00:28:05</figcaption>
-    </figure>
-    
-    
-  </section>
-  
-  <section class="section" id="s14">
-    <div class="section__k">14 / 16</div>
-    <h3>Max loss and the opportunity-cost caveat</h3>
-    
-    <ul class="points"><li>Maximum loss occurs when the underlying equals the Leg B put strike (e.g. $129); both calls and puts expire worthless and you keep the credit.</li><li>Max loss per share = (Starting Point - Leg B put strike) - (Leg A call price - Leg B put price).</li><li>Protection is not full — you choose an OTM put strike, which sets the level where your maximum loss is pinned.</li><li>Opportunity cost: if the stock rallies above the Leg A call strike the calls can be assigned and you may be forced to sell at that strike, so it is a profit but less than just holding the stock; not ideal if a big up-move is expected (you can always close the short call).</li></ul>
-    
-    <p class="explain">The put strike sets a hard floor on the loss, but a slightly-OTM put means the floor sits a little below your cost. The trade-off on the upside is assignment risk: a big rally through the call strike caps your gain, so the collar is not for stocks you expect to jump.</p>
-    
-    <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-10/00-31-10.jpg" alt="Slide: Max loss and the opportunity-cost caveat">
-      <figcaption>Slide · 00:31:10</figcaption>
-    </figure>
-    
-    
-  </section>
-  
-  <section class="section" id="s15">
-    <div class="section__k">15 / 16</div>
-    <h3>Company X reference example</h3>
-    
-    <ul class="points"><li>Stock at $50; sell the $52 call at $1.00 and buy the $47 put at $0.50.</li><li>Net credit = $1.00 - $0.50 = $0.50.</li><li>Maximum profit = $250, made at the $52 call strike.</li></ul>
-    
-    <p class="explain">The generic template: an OTM call written above the price and a cheaper OTM put bought below it produces a $0.50 net credit and a $250 max profit at the call strike.</p>
-    
-    <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-10/00-35-25.jpg" alt="Slide: Company X reference example">
-      <figcaption>Slide · 00:35:25</figcaption>
-    </figure>
-    
-    
-  </section>
-  
-  <section class="section" id="s16">
-    <div class="section__k">16 / 16</div>
-    <h3>Where the max profit and loss sit</h3>
-    
-    <ul class="points"><li>Maximum gain is reached when the stock rises to at or slightly below the written call strike, then you hope for a rally once calls and puts have expired worthless.</li><li>Maximum loss is barriered at the bought put strike for the whole life of the trade.</li><li>Net conclusion: HIGH usefulness versus the covered call&#39;s MEDIUM, because you still receive a credit and gain real downside protection.</li></ul>
-    
-    <p class="explain">The strategy pays best on a neutral-to-slightly-up move into the call strike, while the bought put caps the downside throughout, which is exactly why it ranks above the plain covered call for the retail mandate. Next video: index hedging and portfolio hedges.</p>
-    
-    <figure class="slide">
-      <img loading="lazy" src="assets/slides/potm-10/00-35-50.jpg" alt="Slide: Where the max profit and loss sit">
-      <figcaption>Slide · 00:35:50</figcaption>
+      <img loading="lazy" src="assets/slides/potm-20/00-19-45.jpg" alt="Slide: Don&#39;t just accept the market maker&#39;s number">
+      <figcaption>Slide · 00:19:45</figcaption>
     </figure>
     
     
@@ -758,25 +678,25 @@
     <h3>Glossary</h3>
     <ul class="glossary">
       
-      <li><span class="term">Covered call collar</span><div class="def">Long stock plus a written OTM call (Leg A) and a bought OTM put (Leg B) at the same expiry, structured for a net credit; a neutral, non-directional strategy that caps both gain and loss.</div></li>
+      <li><span class="term">Volatility</span><div class="def">The fluctuations in an asset&#39;s prices and returns; a source of both risk and reward — without it there are no capital gains to make.</div></li>
       
-      <li><span class="term">Leg A</span><div class="def">The written (short) OTM call option; generates the premium credit and caps the upside at its strike.</div></li>
+      <li><span class="term">Expected return</span><div class="def">The probability-weighted average of an outcome&#39;s payoffs, e.g. ($300×0.5)+(−$150×0.5) = $75 per coin toss.</div></li>
       
-      <li><span class="term">Leg B</span><div class="def">The bought (long) OTM put option; costs premium but sets a hard floor on the downside at its strike.</div></li>
+      <li><span class="term">Realized volatility</span><div class="def">A measure of a stock&#39;s historical movements, e.g. via ATR (daily/weekly/monthly) or the standard-deviation distribution of past returns.</div></li>
       
-      <li><span class="term">Net credit</span><div class="def">The premium collected on the call minus the premium paid for the put; the collar must be structured so this is positive, otherwise the hedge&#39;s main advantage over the covered call is lost.</div></li>
+      <li><span class="term">Implied volatility (IV)</span><div class="def">A measure of a stock&#39;s expected future movement, backed out of option prices; the only unknown input in the Black-Scholes model.</div></li>
       
-      <li><span class="term">Breakeven</span><div class="def">Starting Point + Net Premium; because a collar is a credit, the premium is subtracted, giving a breakeven below the starting point (e.g. $132.61).</div></li>
+      <li><span class="term">Annualized standard deviation</span><div class="def">The industry-standard measure of volatility — the statistical dispersion of returns, scaled to a one-year figure so horizons are comparable.</div></li>
       
-      <li><span class="term">Starting point</span><div class="def">The reference/execution price used to calculate breakeven, profit and loss (e.g. $133 in the JNJ example).</div></li>
+      <li><span class="term">Sharpe ratio (simplified)</span><div class="def">Annualized return ÷ annualized standard deviation; e.g. 20% ÷ 30% = 0.66, or 19% ÷ 13% = 1.46. Higher = better risk-adjusted return.</div></li>
       
-      <li><span class="term">Maximum profit</span><div class="def">Made when the stock reaches the written call strike: (call-strike - Starting Point) + (call price - put price) per share.</div></li>
+      <li><span class="term">Volatility term structure</span><div class="def">How option prices and implied vol vary by maturity — longer horizons raise prices and often carry higher IV, because more can happen.</div></li>
       
-      <li><span class="term">Maximum loss</span><div class="def">Made when the stock reaches the bought put strike: (Starting Point - put strike) - (call price - put price) per share; below the strike every 1c fall is offset 1c by the put.</div></li>
+      <li><span class="term">Catalyst</span><div class="def">A publicly known event (e.g. earnings) that lifts implied volatility into it; if the event is a non-event, IV and option prices fall afterwards.</div></li>
       
-      <li><span class="term">Opportunity cost</span><div class="def">The risk that a rally above the written call strike gets your stock assigned, so you make less than if you had simply held the stock; you can always close the short call to avoid it.</div></li>
+      <li><span class="term">Black-Scholes inputs</span><div class="def">Spot price, strike price, risk-free rate, days to maturity, and dividends are all known; implied volatility is the only unknown, solved to get the premium.</div></li>
       
-      <li><span class="term">Usefulness ranking</span><div class="def">Anton&#39;s retail-mandate ranking; the covered call collar is HIGH (credit plus a genuine downside floor), the plain covered call is MEDIUM.</div></li>
+      <li><span class="term">Market maker</span><div class="def">The counterparty that prices and hedges options; they are direction-neutral and can mark implied vol down the next day, so their IV must be checked.</div></li>
       
     </ul>
   </section>
@@ -784,12 +704,11 @@
 
   <nav class="pager">
     
-    <a class="prev" href="chapter-63.html">
-      <small>← 09 Previous</small><span>The Covered Call</span></a>
+    <a class="prev" href="chapter-73.html">
+      <small>← 19 Previous</small><span>Ladder Spreads 2 — The Bear Put Ladder</span></a>
     
     
-    <a class="next" href="chapter-65.html">
-      <small>11 Next →</small><span>Index Options &amp; Portfolio Hedging</span></a>
+    <a class="next disabled"><small>End of the macro block</small><span>Portfolio construction is next</span></a>
     
   </nav>
 </div>
